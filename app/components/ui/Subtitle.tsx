@@ -11,10 +11,8 @@ export default function Subtitle({
     <p
       className={`
         max-w-2xl
-        text-lg
-        leading-8
+        leading-relaxed
         text-text-secondary
-        md:text-xl
         ${className}
       `}
     >
