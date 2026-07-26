@@ -32,7 +32,7 @@ export default function Navbar() {
             bg-clip-text
             text-2xl
             sm:text-3xl
-            lg:text-4xl
+            lg:text-1xl
             font-extrabold
             uppercase
             tracking-tight
