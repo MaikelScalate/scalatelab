@@ -68,11 +68,6 @@ export default function Navbar() {
     lg:px-6
     lg:py-3
     lg:text-base
-
-    !hover:scale-100
-    !hover:translate-y-0
-    hover:from-[#8B5CF6]
-    hover:to-[#EC4899]
   "
 >
   Escalemos tu marca
