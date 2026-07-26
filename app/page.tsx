@@ -1,4 +1,5 @@
 import Navbar from "./components/layout/Navbar";
+import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
@@ -11,12 +12,7 @@ export default function Home() {
 
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative z-10 flex min-h-screen items-center justify-center">
-        <h1 className="font-heading text-7xl font-bold">
-          Scalate
-        </h1>
-      </section>
+      <Hero />
     </main>
   );
 }
