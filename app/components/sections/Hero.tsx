@@ -17,7 +17,7 @@ export default function Hero() {
             <Title className="mb-6 max-w-[700px]">
               <>
                 Optimizamos tu tienda{" "}
-                <span className="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-4 py-2 align-middle">
+                <span className="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-2 py-2 align-middle">
   <Image
     src="/logoshopify.png"
     alt="Shopify"
