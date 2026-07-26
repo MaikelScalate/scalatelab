@@ -1,7 +1,7 @@
 import Button from "../ui/Button";
 export default function Navbar() {
   return (
-    <header className="fixed top-6 left-1/2 z-50 w-[94%] max-w-7xl -translate-x-1/2">
+    <header className="fixed top-6 left-1/2 z-50 w-[90%] max-w-6xl -translate-x-1/2">
       <nav className="flex h-16 items-center justify-between rounded-full border border-white/10 bg-[#111111]/80 px-4 backdrop-blur-2xl transition-all duration-300">
 
         {/* Logo */}
