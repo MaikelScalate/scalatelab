@@ -22,15 +22,14 @@ export default function Button({
         bg-gradient-to-r
         from-[#7C3AED]
         to-[#D946EF]
-        px-7
-        py-3
-        text-sm
         font-semibold
         text-white
         transition-all
         duration-300
-        hover:scale-105
-        hover:shadow-[0_0_35px_rgba(217,70,239,0.45)]
+        shadow-[0_0_25px_rgba(217,70,239,0.25)]
+        hover:-translate-y-1
+        hover:scale-[1.02]
+        hover:shadow-[0_0_45px_rgba(217,70,239,0.45)]
         active:scale-95
         ${className}
       `}

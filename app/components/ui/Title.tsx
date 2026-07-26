@@ -11,13 +11,10 @@ export default function Title({
     <h2
       className={`
         font-heading
-        text-4xl
         font-bold
         leading-tight
         tracking-tight
         text-white
-        md:text-5xl
-        lg:text-6xl
         ${className}
       `}
     >
