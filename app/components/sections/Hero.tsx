@@ -23,7 +23,7 @@ export default function Hero() {
     alt="Shopify"
     width={36}
     height={36}
-    className="h-16 w-auto"
+    className="h-25 w-auto"
   />
   <span>Shopify</span>
 </span>{" "}
