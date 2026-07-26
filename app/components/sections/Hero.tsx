@@ -1,4 +1,4 @@
-import Badge from "../ui/Badge";
+import Image from "next/image";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
@@ -12,18 +12,21 @@ export default function Hero() {
         <div className="grid items-center gap-20 lg:grid-cols-2">
 
           {/* Columna izquierda */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
 
-            <Badge className="mb-6">
-              Shopify Optimization
-            </Badge>
-
-            <Title className="mb-8">
+            <Title className="mb-6 max-w-[700px]">
               <>
                 Optimizamos tu tienda{" "}
-                <span className="inline-flex items-center rounded-2xl border border-white/10 bg-white/5 px-3 py-2 align-middle">
-                  🛍️ Shopify
-                </span>{" "}
+                <span className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-2 align-middle">
+  <Image
+    src="/logoshopify.png"
+    alt="Shopify"
+    width={36}
+    height={36}
+    className="h-9 w-auto"
+  />
+  <span>Shopify</span>
+</span>{" "}
                 para escalar sin aumentar tu inversión en publicidad.
               </>
             </Title>
