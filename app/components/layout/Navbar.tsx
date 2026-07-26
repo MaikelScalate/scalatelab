@@ -60,6 +60,13 @@ export default function Navbar() {
         {/* Botón */}
 <Button href="#contacto">
   Escalemos tu marca
+    className="
+      px-8
+  
+      py-4
+  
+      text-base
+    "
 </Button>
 
       </nav>
