@@ -1,3 +1,4 @@
+import HeroBackground from "../background/HeroBackground";
 import Image from "next/image";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
@@ -7,9 +8,21 @@ import Title from "../ui/Title";
 
 export default function Hero() {
   return (
-    <Section className="pt-28 pb-20 lg:pt-40 lg:pb-28">
-      <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
+    <Section
+  className="
+    relative
+    overflow-hidden
+
+    pt-28
+    pb-20
+
+    lg:pt-23
+    lg:pb-28
+  "
+>
+  <HeroBackground />
+      <Container className="relative z-10">
+        <div className="grid items-center gap-7 lg:grid-cols-2 lg:gap-16">
 
           {/* Columna izquierda */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -19,14 +32,14 @@ export default function Hero() {
     mb-6
     max-w-[720px]
 
-    text-6xl
+    text-3xl
     leading-tight
 
     sm:text-5xl
 
     lg:text-5xl
 
-    xl:text-6xl
+    xl:text-5xl
   "
 >
               <>
@@ -35,7 +48,7 @@ export default function Hero() {
   className="
     inline-flex
     items-center
-    gap-2
+    gap-1
 
     rounded-xl
 
@@ -56,13 +69,27 @@ export default function Hero() {
     alt="Shopify"
     width={36}
     height={36}
-    className="h-10 w-auto"
+    className="
+  h-12
+  sm:h-9
+  lg:h-11
+  xl:h-14
+  w-auto
+"
   />
-  <span className="text-2xl font-semibold">
+  <span
+  className="
+    text-3xl
+    sm:text-3xl
+    lg:text-3xl
+    xl:text-4xl
+    font-semibold
+  "
+>
   Shopify
 </span>
 </span>{" "}
-                para escalar sin aumentar tu inversión en publicidad.
+                para escalar sin invertir más en publi.
               </>
             </Title>
 
@@ -72,7 +99,7 @@ export default function Hero() {
 
     max-w-xl
 
-    text-lg
+    text-2lg
 
     leading-8
 
@@ -83,16 +110,22 @@ export default function Hero() {
 <span className="font-semibold text-white">
   optimizamos tiendas online para convertirlas en marcas sólidas
 </span>{" "}
-que crecen de forma rentable.
+que crecen de manera rentable.
             </Subtitle>
 
             <Button
   className="
-    px-8
+    px-6
+    py-3
+    text-2sm
 
-    py-4
+    sm:px-7
+    sm:py-3.5
+    sm:text-base
 
-    text-base
+    lg:px-8
+    lg:py-4
+    lg:text-2lg
   "
 >
               Quiero optimizar mi tienda online
@@ -103,7 +136,19 @@ que crecen de forma rentable.
           {/* Columna derecha */}
           <div className="relative flex h-[560px] items-center justify-center lg:h-[620px]">
 
-            <div className="h-full w-full rounded-[32px] border border-white/10 bg-[#111111]/70 backdrop-blur-xl">
+            <div
+  className="
+    h-full
+    w-full
+    max-w-[500px]
+    max-h-[500px]
+    rounded-[32px]
+    border
+    border-white/10
+    bg-[#111111]/70
+    backdrop-blur-xl
+  "
+>
 
             </div>
 
