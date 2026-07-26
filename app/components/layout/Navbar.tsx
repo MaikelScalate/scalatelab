@@ -1,3 +1,4 @@
+import Button from "../ui/Button";
 export default function Navbar() {
   return (
     <header className="fixed top-6 left-1/2 z-50 w-[94%] max-w-7xl -translate-x-1/2">
@@ -57,26 +58,9 @@ export default function Navbar() {
         </div>
 
         {/* Botón */}
-        <button
-          className="
-            rounded-full
-            bg-gradient-to-r
-            from-[#7C3AED]
-            to-[#D946EF]
-            px-7
-            py-3
-            text-sm
-            font-semibold
-            text-white
-            transition-all
-            duration-300
-            hover:scale-105
-            hover:shadow-[0_0_35px_rgba(217,70,239,0.45)]
-            active:scale-95
-          "
-        >
-          Escalemos tu marca
-        </button>
+<Button href="#contacto">
+  Escalemos tu marca
+</Button>
 
       </nav>
     </header>
