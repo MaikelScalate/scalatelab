@@ -89,7 +89,7 @@ export default function Hero() {
   Shopify
 </span>
 </span>{" "}
-                para facturar más sin invertir más en publi.
+                para escalar sin invertir más en publi.
               </>
             </Title>
 
