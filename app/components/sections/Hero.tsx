@@ -21,8 +21,8 @@ export default function Hero() {
   <Image
     src="/logoshopify.png"
     alt="Shopify"
-    width={36}
-    height={36}
+    width={46}
+    height={46}
     className="h-9 w-auto"
   />
   <span>Shopify</span>
