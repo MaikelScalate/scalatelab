@@ -1,0 +1,4 @@
+public/video-onboarding.mp4 filter=lfs diff=lfs merge=lfs -text
+public/video-web-onboarding.mp4 filter=lfs diff=lfs merge=lfs -text
+public/video-publi-onboarding.mp4 filter=lfs diff=lfs merge=lfs -text
+public/video-email-onboarding.mp4 filter=lfs diff=lfs merge=lfs -text
