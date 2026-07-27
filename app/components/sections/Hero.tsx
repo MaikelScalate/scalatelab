@@ -5,7 +5,7 @@ import Container from "../ui/Container";
 import Section from "../ui/Section";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
-
+import ShopifyDashboard from "./ShopifyDashboard";
 export default function Hero() {
   return (
     <Section
@@ -25,7 +25,20 @@ export default function Hero() {
         <div className="grid items-center gap-7 lg:grid-cols-2 lg:gap-16">
 
           {/* Columna izquierda */}
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <div
+  className="
+    flex
+    flex-col
+    items-center
+    text-center
+
+    mb-10
+
+    lg:mb-0
+    lg:items-start
+    lg:text-left
+  "
+>
 
             <Title
   className="
@@ -130,32 +143,43 @@ que crecen de manera rentable.
 >
               Quiero optimizar mi tienda online
             </Button>
-
-          </div>
-
-          {/* Columna derecha */}
-          <div className="relative flex h-[560px] items-center justify-center lg:h-[620px]">
-
-            <div
+        </div>
+        {/* Columna derecha */}
+<div
   className="
-    h-full
-    w-full
-    max-w-[500px]
-    max-h-[500px]
-    rounded-[32px]
-    border
-    border-white/10
-    bg-[#111111]/70
-    backdrop-blur-xl
+    relative
+
+    flex
+    justify-center
+    items-center
+
+    h-[320px]
+
+    sm:h-[420px]
+
+    lg:h-[700px]
   "
 >
+ <div
+  className="
+    origin-top
 
-            </div>
+    -translate-x-40
+    sm:-translate-x-40
+    lg:-translate-x-80
 
-          </div>
+    scale-[0.55]
+    sm:scale-[0.55]
+    lg:scale-100
 
-        </div>
-      </Container>
-    </Section>
-  );
+    transition-transform
+  "
+>
+  <ShopifyDashboard />
+</div>
+</div>
+</div>
+</Container>
+</Section>
+);
 }
