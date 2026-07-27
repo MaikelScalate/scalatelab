@@ -1,24 +1,45 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Button from "../ui/Button";
+
 export default function Navbar() {
+  const [isBottom, setIsBottom] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsBottom(window.scrollY > 350);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-  className="
-    fixed
-    top-6
-    left-1/2
-    z-50
+      className={`
+        fixed
+        left-1/2
+        z-50
 
-    w-[95%]
+        w-[95%]
+        sm:w-[92%]
+        lg:w-[90%]
 
-    sm:w-[92%]
+        max-w-4xl
 
-    lg:w-[90%]
+        -translate-x-1/2
 
-    max-w-4xl
+        transition-all
+        duration-700
+        ease-in-out
 
-    -translate-x-1/2
-  "
->
+        ${isBottom ? "bottom-6 top-auto" : "top-6 bottom-auto"}
+      `}
+    >
       <nav className="flex h-16 items-center justify-between rounded-full border border-white/10 bg-[#111111]/80 px-4 backdrop-blur-2xl transition-all duration-300">
 
         {/* Logo */}
@@ -77,20 +98,20 @@ export default function Navbar() {
         </div>
 
         {/* Botón */}
-<Button
-  href="#contacto"
-  className="
-    px-4
-    py-2
-    text-sm
+        <Button
+          href="#contacto"
+          className="
+            px-4
+            py-2
+            text-sm
 
-    lg:px-6
-    lg:py-3
-    lg:text-base
-  "
->
-  Escalemos tu marca
-</Button>
+            lg:px-6
+            lg:py-3
+            lg:text-base
+          "
+        >
+          Escalemos tu marca
+        </Button>
 
       </nav>
     </header>
