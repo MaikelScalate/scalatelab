@@ -106,9 +106,9 @@ export default function Hero() {
     lg:text-xl
   "
 >
-              Creamos y{" "}
+              Diseñamos y{" "}
 <span className="font-semibold text-white">
-  diseñamos tiendas online para convertirlas en marcas sólidas
+  transformamos tiendas online en marcas sólidas
 </span>{" "}
 que crecen de manera rentable.
             </Subtitle>
