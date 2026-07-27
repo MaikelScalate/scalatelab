@@ -25,7 +25,7 @@ export default function Navbar() {
         left-1/2
         z-50
 
-        w-[95%]
+        w-[85%]
         sm:w-[92%]
         lg:w-[90%]
 
@@ -40,7 +40,7 @@ export default function Navbar() {
         ${isBottom ? "bottom-6 top-auto" : "top-6 bottom-auto"}
       `}
     >
-      <nav className="flex h-16 items-center justify-between rounded-full border border-white/10 bg-[#111111]/80 px-4 backdrop-blur-2xl transition-all duration-300">
+      <nav className="flex h-14 items-center justify-between rounded-full border border-white/10 bg-[#111111]/80 px-4 backdrop-blur-2xl transition-all duration-300">
 
         {/* Logo */}
         <a
@@ -106,7 +106,7 @@ export default function Navbar() {
             text-sm
 
             lg:px-6
-            lg:py-3
+            lg:py-2
             lg:text-base
           "
         >

@@ -14,7 +14,7 @@ import {
   Settings,
 } from "lucide-react";
 export default function ShopifyDashboard() {
-    const MAX_SALES = 100_000;
+    const MAX_SALES = 999_999;
 
 const [sales, setSales] = useState(48200);
 const [orders, setOrders] = useState(1248);
@@ -318,7 +318,7 @@ useEffect(() => {
     w-full
     overflow-hidden
     whitespace-nowrap
-    text-[28px]
+    text-[30px]
     font-bold
     tracking-tight
     leading-none
@@ -412,6 +412,20 @@ useEffect(() => {
       viewBox="0 0 700 190"
       preserveAspectRatio="none"
     >
+      <path
+  d="
+    M0 125
+    C70 95 120 115 170 85
+    S280 40 340 70
+    S430 125 500 60
+    S620 15 700 40
+  "
+  fill="none"
+  stroke="#3B82F6"
+  strokeWidth="3"
+  strokeLinecap="round"
+  opacity="0.9"
+/>
       <path
         d="
           M0 145
