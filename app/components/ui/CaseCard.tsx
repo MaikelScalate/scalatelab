@@ -13,7 +13,7 @@ export default function CaseCard({ project }: Props) {
   return (
     <div
       className="
-        h-[420px]
+        h-[350px]
         rounded-[32px]
         border
         border-white/10
