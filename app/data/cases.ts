@@ -1,27 +1,19 @@
 export const cases = [
   {
-    name: "GOI",
-    image: "/cases/goi.webp",
-    href: "/casos/goi",
+    name: "Origenes",
+    image: "/images/origenes.png",
     hasPage: true,
   },
 
   {
-    name: "Better",
-    image: "/cases/better.webp",
-    hasPage: false,
-  },
-
-  {
-    name: "Keio",
-    image: "/cases/keio.webp",
-    href: "/casos/keio",
+    name: "MyWave",
+    image: "/images/mywave.png",
     hasPage: true,
   },
 
   {
-    name: "Cainté",
-    image: "/cases/cainte.webp",
-    hasPage: false,
+    name: "Vicca",
+    image: "/images/vicca.png",
+    hasPage: true,
   },
 ];
