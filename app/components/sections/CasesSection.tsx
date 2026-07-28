@@ -20,7 +20,7 @@ export default function CasesSection() {
               md:text-4xl
             "
           >
-            Cada marca es un mundo.
+            Cada marca es un mundo
           </h2>
 
           <p
