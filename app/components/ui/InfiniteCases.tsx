@@ -10,17 +10,13 @@ import CaseCard from "./CaseCard";
 import { cases } from "@/app/data/cases";
 
 export default function InfiniteCases() {
-  const loopCases = [...cases, ...cases];
+  const loopCases = Array.from({ length: 8 }, () => cases).flat();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const resumeTimeout = useRef<NodeJS.Timeout | null>(null);
   const x = useMotionValue(0);
   const initialized = useRef(false);
-  const [dragConstraints, setDragConstraints] = useState({
-  left: 0,
-  right: 0,
-  });
   const [paused, setPaused] = useState(false);
   const SPEED = 100;
   function scheduleResume() {
@@ -30,7 +26,7 @@ export default function InfiniteCases() {
 
   resumeTimeout.current = setTimeout(() => {
     setPaused(false);
-  }, 5000);
+  }, 3000);
 }
 useEffect(() => {
   function handlePointerDown(e: PointerEvent) {
@@ -44,27 +40,10 @@ useEffect(() => {
       }
     }
   }
-  function updateConstraints() {
-  if (!containerRef.current || !wrapperRef.current) return;
 
-  const totalWidth = containerRef.current.scrollWidth;
-  const visibleWidth = wrapperRef.current.offsetWidth;
-
-  const SIDE_PADDING = 32;
-
-  setDragConstraints({
-    left: -(totalWidth - visibleWidth) + SIDE_PADDING,
-    right: -SIDE_PADDING,
-  });
-}
-
-updateConstraints();
-
-window.addEventListener("resize", updateConstraints);
   window.addEventListener("pointerdown", handlePointerDown);
 
   return () => {
-    window.removeEventListener("resize", updateConstraints);
     window.removeEventListener("pointerdown", handlePointerDown);
 
     if (resumeTimeout.current) {
@@ -75,21 +54,24 @@ window.addEventListener("resize", updateConstraints);
   useAnimationFrame((_, delta) => {
   if (!containerRef.current) return;
   if (paused) return;
-  const width = containerRef.current.scrollWidth / 2;
+  const singleWidth = containerRef.current.scrollWidth / 8;
 
-  // Solo la primera vez
-  if (!initialized.current) {
-    x.set(-width);
-    initialized.current = true;
-  }
+if (!initialized.current) {
+  x.set(-singleWidth * 3);
+  initialized.current = true;
+}
 
-  // Movimiento hacia la derecha
-  x.set(x.get() + (SPEED * delta) / 1000);
+const next = x.get() + (SPEED * delta) / 1000;
 
-  // Reiniciar cuando vuelve al inicio
-  if (x.get() >= 0) {
-    x.set(-width);
-  }
+x.set(next);
+
+if (next >= -singleWidth * 2) {
+  x.set(next - singleWidth);
+}
+
+if (next <= -singleWidth * 4) {
+  x.set(next + singleWidth);
+}
 });
 
   return (
@@ -111,7 +93,6 @@ window.addEventListener("resize", updateConstraints);
 "
 
   drag="x"
-  dragConstraints={dragConstraints}
   dragDirectionLock
   dragMomentum
   dragElastic={0.08}
@@ -129,10 +110,20 @@ window.addEventListener("resize", updateConstraints);
       clearTimeout(resumeTimeout.current);
     }
   }}
+onDragEnd={() => {
+  const singleWidth =
+    containerRef.current!.scrollWidth / 8;
 
-  onDragEnd={() => {
-    scheduleResume();
-  }}
+  if (x.get() >= -singleWidth * 2) {
+    x.set(x.get() - singleWidth);
+  }
+
+  if (x.get() <= -singleWidth * 4) {
+    x.set(x.get() + singleWidth);
+  }
+
+  scheduleResume();
+}}
 >
         {loopCases.map((project, index) => (
           <div
