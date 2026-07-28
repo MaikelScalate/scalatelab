@@ -33,7 +33,7 @@ export default function CasesSection() {
               text-white/60
             "
           >
-            Descubre cómo transformamos las tiendas online con las que colaboramos.
+            Descubre cómo transformamos las tiendas online con las que trabajamos.
           </p>
 
         </div>
