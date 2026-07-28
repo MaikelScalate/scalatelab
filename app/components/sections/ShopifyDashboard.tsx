@@ -80,19 +80,29 @@ useEffect(() => {
 
 }, []);
   return (
+  <div
+    className="absolute -left-7 top-[42%] -translate-y-1/2"
+    style={{
+      perspective: "1800px",
+    }}
+  >
     <motion.div
       initial={{
-        opacity: 0,
-        x: 180,
-        scale: 0.95,
-        filter: "blur(12px)",
-      }}
+  opacity: 0,
+  x: 180,
+  scale: 0.95,
+  rotateY: -20,
+  rotateX: 8,
+  filter: "blur(12px)",
+}}
       animate={{
-        opacity: 1,
-        x: 0,
-        scale: 1,
-        filter: "blur(0px)",
-      }}
+  opacity: 1,
+  x: 0,
+  scale: 1,
+  rotateY: -20,
+  rotateX: 6,
+  filter: "blur(0px)",
+}}
       transition={{
         duration: 0.9,
         ease: [0.22, 1, 0.36, 1],
@@ -105,7 +115,7 @@ useEffect(() => {
 
         h-[600px]
         w-[900px]
-
+        [transform-style:preserve-3d]
         overflow-hidden
 
         rounded-[20px]
@@ -561,6 +571,7 @@ useEffect(() => {
   )}
 
 </AnimatePresence>
-</motion.div>
-  );
+    </motion.div>
+  </div>
+);
 }
