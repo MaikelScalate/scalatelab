@@ -81,7 +81,7 @@ useEffect(() => {
 }, []);
   return (
   <div
-    className="absolute -left-7 top-[42%] -translate-y-1/2"
+    className="absolute -left-5 top-[42%] -translate-y-1/2"
     style={{
       perspective: "1800px",
     }}
