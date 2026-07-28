@@ -20,6 +20,7 @@ export default function InfiniteCases() {
 
   const lastPointerX = useRef(0);
 const dragOffset = useRef(0);
+const dragTarget = useRef(0);
   const resumeTimeout = useRef<NodeJS.Timeout | null>(null);
   function scheduleResume() {
   if (resumeTimeout.current) {
@@ -92,8 +93,7 @@ function onPointerMove(e: PointerEvent) {
 
 lastPointerX.current = e.clientX;
 
-// Acumulamos el movimiento
-dragOffset.current += delta;
+dragTarget.current += delta;
 }
 
 function onPointerUp(e: PointerEvent) {
@@ -120,12 +120,14 @@ function onDocumentPointerDown(e: PointerEvent) {
     if (!paused.current) {
   offset.current -= SPEED * delta;
 }
+dragOffset.current +=
+  (dragTarget.current - dragOffset.current) * 0.18;
 
-// Aplicamos SIEMPRE el movimiento del usuario
-if (dragOffset.current !== 0) {
-  offset.current += dragOffset.current;
-  dragOffset.current = 0;
-}
+offset.current += dragOffset.current;
+
+dragTarget.current *= 0.82;
+
+dragOffset.current *= 0.82;
 
 recycle();
 applyTransform();
@@ -166,7 +168,16 @@ document.addEventListener("pointerdown", onDocumentPointerDown);
         ref={trackRef}
         className="flex w-max gap-8 px-12 will-change-transform"
       >
-        {[...cases, ...cases].map((project, index) => (
+        {[
+  ...cases,
+  ...cases,
+  ...cases,
+  ...cases,
+  ...cases,
+  ...cases,
+  ...cases,
+  ...cases,
+].map((project, index) => (
   <div
     key={`${project.name}-${index}`}
     className="w-[320px] shrink-0"
