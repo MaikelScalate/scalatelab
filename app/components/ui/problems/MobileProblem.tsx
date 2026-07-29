@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function MobileProblem() {
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-[#0B0B0D]">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden git add .">
 
       {/* Glow */}
       <motion.div
