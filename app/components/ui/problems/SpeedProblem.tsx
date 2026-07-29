@@ -193,6 +193,40 @@ export default function SpeedProblem() {
           r="4"
           fill="white"
         />
+        {/* Score */}
+
+<text
+  x="160"
+  y="170"
+  textAnchor="middle"
+  fill="white"
+  fontSize="56"
+  fontWeight="800"
+>
+  100
+</text>
+
+<text
+  x="210"
+  y="170"
+  fill="rgba(255,255,255,.45)"
+  fontSize="22"
+  fontWeight="700"
+>
+  /100
+</text>
+
+<text
+  x="160"
+  y="194"
+  textAnchor="middle"
+  fill={GREEN}
+  fontSize="12"
+  fontWeight="700"
+  letterSpacing="5"
+>
+  EXCELENTE
+</text>
                 <defs>
           <linearGradient
             id="needleGradient"
