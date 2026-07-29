@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function BrowserProblem() {
   return (
-    <div className="relative flex h-full items-center justify-center overflow-hidden bg-[#090909]">
+    <div className="relative flex h-full items-center justify-center overflow-hidden bg-[#121212]">
 
       {/* Glow */}
 
@@ -128,7 +128,7 @@ className="relative w-[280px] overflow-hidden rounded-2xl border border-white/10
 
         <span className="text-[6px] font-medium text-white">
 
-            Solicitar auditoría
+            COMPRAR AHORA
 
         </span>
 

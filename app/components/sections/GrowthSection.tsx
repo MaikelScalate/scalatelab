@@ -49,6 +49,7 @@ export default function GrowthSection() {
     grid
     max-w-[68rem]
     gap-4
+    items-start
     lg:grid-cols-2
     xl:grid-cols-3
   "

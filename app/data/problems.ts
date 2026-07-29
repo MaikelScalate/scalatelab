@@ -3,25 +3,25 @@ export const problems = [
     id: "browser",
     title: "Web sin optimizar",
     description:
-  "Atraes tráfico pero <strong>no te basas en datos para saber qué falla y</strong> construir una web única, preparada para <strong>convertir visitas en clientes</strong>.",
+  "Atraes tráfico pero <strong>no te basas en datos para saber qué falla y</strong> construir una web preparada para <strong>convertir visitas en clientes recurrentes</strong>.",
   },
   {
     id: "mobile",
     title: "Mala experiencia móvil",
     description:
-      "Desde el móvil, <strong>cada segundo cuenta.</strong> Si la experiencia no acompaña, las ventas tampoco lo harán.",
+      "Desde el móvil, <strong>cada segundo cuenta.</strong> Si la <strong>experiencia no acompaña,</strong> las <strong>ventas tampoco</strong> lo harán.",
   },
   {
     id: "ticket",
     title: "Ticket medio y recurrencia baja",
     description:
-      "Cada cliente <strong>debería gastar más y repetir.</strong> Pero <strong>sin un buen sistema</strong> de upsells/cross-sells y retención, adquirir clientes <strong>no será rentable.</strong>",
+      "Cada cliente <strong>debe gastar más y repetir.</strong> Pero <strong>sin un buen sistema</strong> de upsells/cross-sells y retención, adquirir clientes <strong>no será rentable.</strong>",
   },
   {
     id: "speed",
     title: "Velocidad de carga lenta",
     description:
-      "<strong>Una web que no carga,</strong> una web que no convierte. Imagina como <strong>afecta a las ventas. Cada segundo extra,</strong> un posible cliente menos.",
+      "<strong>Web que no carga,</strong> web que no convierte. Imagina como <strong>afecta a las ventas. Cada segundo extra,</strong> un posible cliente menos.",
   },
   {
     id: "funnel",
