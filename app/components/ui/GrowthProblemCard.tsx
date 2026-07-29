@@ -31,7 +31,7 @@ export default function GrowthProblemCard({
       transition={{
         duration: 0.7,
         delay,
-        ease: [0.22, 1, 0.36, 1],
+        ease: "easeInOut",
       }}
       className="
         group
@@ -43,21 +43,38 @@ export default function GrowthProblemCard({
         transition-all
         duration-500
         hover:-translate-y-1
-        hover:border-purple-500/40
+        hover:border-red-500/40
       "
     >
-      <div className="h-[250px]">
-        {children}
-      </div>
+      <div className="relative h-[300] overflow-hidden">
+
+  {children}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      bottom-0
+      left-0
+      right-0
+      h-20
+      bg-gradient-to-b
+      from-transparent
+      to-[#0B0B0D]
+    "
+  />
+
+</div>
 
       <div className="p-5">
         <h3 className="font-heading text-lg font-bold text-white">
           {title}
         </h3>
 
-        <p className="mt-1 text-sm leading-7 text-text-secondary">
-          {description}
-        </p>
+        <p
+  className="mt-1 text-sm leading-7 text-text-secondary [&_strong]:font-semibold [&_strong]:text-white"
+  dangerouslySetInnerHTML={{ __html: description }}
+/>
       </div>
     </motion.article>
   );
