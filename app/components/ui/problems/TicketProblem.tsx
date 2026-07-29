@@ -55,7 +55,38 @@ preserveAspectRatio="none"
           />
         ))}
       </svg>
+{/* Leyenda solo móvil */}
+<div
+  className="
+    absolute
+    top-3
+    left-15
+    z-30
+    -translate-x-1/2
+    rounded-xl
+    border
+    border-white/10
+    bg-[#111114]/80
+    px-3
+    py-2
+    backdrop-blur
+    md:hidden
+  "
+>
+  <div className="flex items-center gap-2 text-xs text-white/80">
+    <span className="h-3 w-3 rounded-full bg-[#ef4444]" />
+    <span>
+      <strong className="text-white">AOV:</strong> 23€
+    </span>
+  </div>
 
+  <div className="mt-2 flex items-center gap-2 text-xs text-white/80">
+    <span className="h-3 w-3 rounded-full bg-[#ff9a9a]" />
+    <span>
+      <strong className="text-white">LTV:</strong> 46€
+    </span>
+  </div>
+</div>
       {/* Graph */}
 
       <svg
@@ -204,8 +235,8 @@ C380 82 430 120 520 155
             y="72"
             textAnchor="middle"
             fill="white"
-            fontSize="9"
-            fontWeight="600"
+            fontSize="10"
+            fontWeight="650"
           >
             Primera compra
           </text>
@@ -223,10 +254,11 @@ C380 82 430 120 520 155
     duration: DURATION,
     repeat: Infinity,
     ease: "linear",
-    times: [0.20, 0.35, 0.55, 0.72, 0.87, 1],
+    times: [0.30, 0.45, 0.62, 0.77, 0.90, 1],
   }}
 />
 <motion.foreignObject
+className="hidden md:block"
   width="80"
   height="40"
   animate={{
@@ -238,13 +270,13 @@ C380 82 430 120 520 155
     duration: DURATION,
     repeat: Infinity,
     ease: "linear",
-    times: [0.20, 0.35, 0.55, 0.72, 0.87, 1],
+    times: [0.30, 0.45, 0.62, 0.77, 0.90, 1],
   }}
 >
   <div
     className="flex h-full w-full items-center justify-center rounded-xl border border-red-500/20 bg-[#111114]"
 >
-    <span className="text-[11px] text-white/60">
+    <span className="text-[13px] text-white/60">
       AOV:
       <span className="ml-1 font-semibold text-red-400">
         23€
@@ -264,10 +296,11 @@ C380 82 430 120 520 155
     duration: DURATION,
     repeat: Infinity,
     ease: "linear",
-    times: [0.20, 0.30, 0.40, 0.50, 0.62, 0.74, 0.87, 1],
+    times: [0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 1]
   }}
 />
 <motion.foreignObject
+className="hidden md:block"
   width="80"
   height="40"
   animate={{
@@ -279,13 +312,13 @@ C380 82 430 120 520 155
     duration: DURATION,
     repeat: Infinity,
     ease: "linear",
-    times: [0.20, 0.30, 0.40, 0.50, 0.62, 0.74, 0.87, 1],
+    times: [0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 1],
   }}
 >
   <div
     className="flex h-full w-full items-center justify-center rounded-xl border border-red-500/20 bg-[#111114]"
 >
-    <span className="text-[11px] text-white/60">
+    <span className="text-[13px] text-white/60">
       LTV:
       <span className="ml-1 font-semibold text-red-400">
         46€
@@ -307,16 +340,16 @@ C380 82 430 120 520 155
           -translate-x-1/2
         "
         animate={{
-          opacity: [0, 0, 0, 1, 1, 0],
-          y: [20, 20, 20, 0, 0, -8],
-          scale: [.95, .95, .95, 1, 1, .98],
-        }}
+  opacity: [0, 0, 1, 1, 1, 0],
+  y: [28, 28, -4, 0, 0, -8],
+  scale: [0.9, 0.9, 1.03, 1, 1, 0.98],
+}}
         transition={{
-          duration: DURATION,
-          repeat: Infinity,
-          ease: "easeOut",
-          times: [0, .70, .78, .86, .95, 1],
-        }}
+  duration: DURATION,
+  repeat: Infinity,
+  ease: "easeOut",
+  times: [0, 0.88, 0.91, 0.96, 0.99, 1],
+}}
       >
         <div
           className="
