@@ -242,9 +242,8 @@ C380 82 430 120 520 155
   }}
 >
   <div
-    xmlns="http://www.w3.org/1999/xhtml"
     className="flex h-full w-full items-center justify-center rounded-xl border border-red-500/20 bg-[#111114]"
-  >
+>
     <span className="text-[11px] text-white/60">
       AOV:
       <span className="ml-1 font-semibold text-red-400">
@@ -284,9 +283,8 @@ C380 82 430 120 520 155
   }}
 >
   <div
-    xmlns="http://www.w3.org/1999/xhtml"
     className="flex h-full w-full items-center justify-center rounded-xl border border-red-500/20 bg-[#111114]"
-  >
+>
     <span className="text-[11px] text-white/60">
       LTV:
       <span className="ml-1 font-semibold text-red-400">
