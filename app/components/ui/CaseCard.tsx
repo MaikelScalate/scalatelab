@@ -19,7 +19,7 @@ export default function CaseCard({ project }: Props) {
         group
         relative
         block
-        h-[350px]
+        h-[360px]
         overflow-hidden
         rounded-[32px]
         border

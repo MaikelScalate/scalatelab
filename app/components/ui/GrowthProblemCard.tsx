@@ -39,14 +39,14 @@ export default function GrowthProblemCard({
         rounded-[32px]
         border
         border-white/10
-        bg-[#0B0B0D]
+        bg-[#121212]
         transition-all
         duration-500
         hover:-translate-y-1
         hover:border-red-500/40
       "
     >
-      <div className="relative h-[300] overflow-hidden">
+      <div className="relative h-[300px] overflow-hidden">
 
   {children}
 
@@ -60,7 +60,7 @@ export default function GrowthProblemCard({
       h-20
       bg-gradient-to-b
       from-transparent
-      to-[#0B0B0D]
+      to-[#121212]
     "
   />
 
