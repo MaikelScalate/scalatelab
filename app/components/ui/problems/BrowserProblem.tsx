@@ -10,7 +10,13 @@ export default function BrowserProblem() {
 
       <motion.div
         animate={{
-          opacity: [0.08, 0.12, 0.35, 0.08],
+          opacity:[
+0,
+0.08,
+0.25,
+0.25,
+0
+],
           scale: [1, 1.02, 1.18, 1],
         }}
         transition={{
@@ -23,17 +29,46 @@ export default function BrowserProblem() {
 
       {/* Browser */}
 
-      <motion.div
-        animate={{
-  x: [0, 0, 0, 0, 0, -1, 1, -1, 1, 0],
+<motion.div
+
+initial={{
+  y: 380,
+  opacity: 0,
 }}
+
+animate={{
+  y: [
+    380, // fuera
+    380, // espera
+    0,   // entra
+    0,   // permanece
+    380  // sale hacia abajo
+  ],
+
+  opacity: [
+    0,
+    0,
+    1,
+    1,
+    1 // NO desaparece con opacity
+  ]
+}}
+
 transition={{
-  duration: 6,
+  duration: 8,
   repeat: Infinity,
-  times: [0, .75, .80, .84, .88, .91, .94, .97, .99, 1],
+  ease: [0.22,1,0.36,1],
+  times: [
+    0,
+    .10,
+    .35,
+    .70,
+    1
+  ]
 }}
-        className="relative w-[280px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111]"
-      >
+
+className="relative w-[280px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111]"
+>
 
         {/* Top */}
 
@@ -50,22 +85,6 @@ transition={{
         {/* Landing */}
 
         <motion.div
-
-          initial={{
-    y:260
-}}
-
-animate={{
-    y:[260,260,0,0]
-}}
-
-transition={{
-    duration:6,
-    repeat:Infinity,
-    times:[0,.18,.45,1],
-    ease:[0.22,1,0.36,1]
-}}
-
           className="relative p-2"
         >
 <div className="flex items-center justify-between">
@@ -203,17 +222,21 @@ transition={{
           <motion.div
 
             animate={{
-              y: [-20, 170, 170],
+              y:[
+-30,
+250,
+250
+],
               opacity: [0,1,1,0],
             }}
 
             transition={{
-              duration:5,
+              duration:8,
               repeat:Infinity,
-              times:[0,.25,.65,.75],
+              times:[0,.20,.52,.62]
             }}
 
-            className="pointer-events-none absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_15px_#22d3ee]"
+            className="pointer-events-none absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_35px_#22d3ee]"
           />
 
           {/* Issue 1 */}
@@ -225,9 +248,9 @@ transition={{
             }}
 
             transition={{
-              duration:5,
+              duration:8,
               repeat:Infinity,
-              times:[0,.58,.68,.78,.9,1],
+              times:[0,.32,.40,.68,.76]
             }}
     className="
     absolute
@@ -244,16 +267,14 @@ transition={{
     px-3
 py-2
 
-text-[7px]
-
-rounded-lg
+rounded-XL
 
 shadow-[0_0_20px_rgba(239,68,68,.12)]
     backdrop-blur
     "
 >
 
-    <p className="text-[6px] font-medium text-red-300">
+    <p className="text-[10px] font-semibold tracking-[0.03em] text-red-300">
 
         ⚠ FALTA UPSELL
 
@@ -269,9 +290,9 @@ animate={{
             }}
 
             transition={{
-              duration:5,
+              duration:8,
               repeat:Infinity,
-              times:[0,.58,.68,.78,.9,1],
+              times:[0,.42,.50,.72,.78]
             }}
 
     className="
@@ -299,7 +320,7 @@ shadow-[0_0_20px_rgba(239,68,68,.12)]
     "
 >
 
-    <p className="text-[6px] font-medium text-red-300">
+    <p className="text-[10px] font-semibold tracking-[0.03em] text-red-300">
 
         ⚠ POCO VISIBLE
 
@@ -313,19 +334,19 @@ shadow-[0_0_20px_rgba(239,68,68,.12)]
           <motion.div
 
             animate={{
-              opacity:[0,0,0,0,1,0],
-              scale:[.8,.8,.8,.8,1,1],
-            }}
+  opacity:[0,0,0,1,1,0],
+  scale:[.8,.8,.8,1,1,1],
+}}
 
             transition={{
-              duration:5,
+              duration:8,
               repeat:Infinity,
-              times:[0,.68,.75,.82,.9,1],
+              times:[0,.52,.60,.76,.79]
             }}
 
             className="
     absolute
-    right-13
+    right-3
     bottom-30
 
     rounded-md
@@ -347,7 +368,7 @@ shadow-[0_0_20px_rgba(239,68,68,.12)]
     "
 >
 
-    <p className="text-[6px] font-medium text-red-300">
+    <p className="text-[10px] font-semibold tracking-[0.03em] text-red-300">
 
         ⚠ CREAR SUSCRIPCIÓN
 

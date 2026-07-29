@@ -47,7 +47,7 @@ export default function GrowthSection() {
     mx-auto
     mt-12
     grid
-    max-w-6xl
+    max-w-[68rem]
     gap-4
     lg:grid-cols-2
     xl:grid-cols-3
