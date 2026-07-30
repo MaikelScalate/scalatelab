@@ -4,359 +4,281 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export default function FunnelProblem() {
+  const [progress, setProgress] = useState(0);
 
-const [step, setStep] = useState<
-  "product" |
-  "click" |
-  "added" |
-  "cart" |
-  "crosssell" |
-  "funnel"
->("product");
   useEffect(() => {
-    let cancelled = false;
+    let frame: number;
+    let start: number;
 
-    async function run() {
-      while (!cancelled) {
+    const duration = 4200;
 
-setStep("product");
+    const loop = (time: number) => {
+      if (!start) start = time;
 
-await new Promise(r => setTimeout(r, 2500));
+      const elapsed = (time - start) % duration;
 
-setStep("click");
+      setProgress(elapsed / duration);
 
-await new Promise(r => setTimeout(r, 180));
-
-setStep("added");
-
-await new Promise(r => setTimeout(r, 900));
-
-setStep("cart");
-
-await new Promise(r => setTimeout(r, 1800));
-
-setStep("crosssell");
-
-await new Promise(r => setTimeout(r, 1500));
-
-setStep("funnel");
-
-await new Promise(r => setTimeout(r, 2200));
-      }
-    }
-
-    run();
-
-    return () => {
-      cancelled = true;
+      frame = requestAnimationFrame(loop);
     };
+
+    frame = requestAnimationFrame(loop);
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (
-    <div
-      className="
-        relative
-        flex
-        h-full
-        w-full
-        items-center
-        justify-center
-        overflow-hidden
-        rounded-[28px]
-        border
-        border-white/5
-        bg-gradient-to-br
-        from-[#111318]
-        via-[#09090B]
-        to-[#040404]
-        shadow-[0_20px_80px_rgba(0,0,0,.45)]
-      "
-    >
-            <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(circle at 20% 20%, rgba(255,255,255,.04), transparent 30%),
-            radial-gradient(circle at 80% 10%, rgba(59,130,246,.06), transparent 35%)
-          `,
-        }}
+    <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[28px] bg-[#090909]">
+      <Funnel progress={progress} />
+    </div>
+  );
+}
+function Funnel({
+  progress,
+}: {
+  progress: number;
+}) {
+
+  const blocked = progress > 0.72 && progress < 0.90;
+
+  return (
+    <div className="relative h-[360px] w-[320px]">
+ <div className="absolute inset-0 flex items-center justify-center">
+  <div className="h-[320px] w-[320px] rounded-full bg-white/5 blur-[140px]" />
+</div>
+      <svg
+        width="320"
+        height="360"
+        viewBox="0 0 320 360"
+        className="absolute inset-0 z-10"
+      >
+        <defs>
+
+          <linearGradient
+            id="glass"
+            x1="0"
+            x2="0"
+            y1="0"
+            y2="1"
+          >
+            <stop
+              offset="0%"
+              stopColor="rgba(255,255,255,.14)"
+            />
+
+            <stop
+              offset="100%"
+              stopColor="rgba(255,255,255,.02)"
+            />
+
+          </linearGradient>
+<clipPath id="funnelClip">
+  <path
+    d="
+      M35 65
+      Q160 42 285 65
+      L215 210
+      L173 310
+      L147 310
+      L105 210
+      Z
+    "
+  />
+  <path
+  d="
+    M70 80
+    C105 70 130 66 160 66
+    C190 66 215 70 250 80
+
+    L205 176
+  "
+  fill="none"
+  stroke="rgba(255,255,255,.16)"
+  strokeWidth="2"
+/>
+</clipPath>
+        </defs>
+
+        <path
+  d="
+    M35 72
+    C70 58 110 52 160 52
+    C210 52 250 58 285 72
+
+    L230 185
+
+    C215 218 192 240 160 252
+
+    C128 240 105 218 90 185
+
+    Z
+  "
+  fill="url(#glass)"
+  stroke="rgba(255,255,255,.08)"
+  strokeWidth="2"
+/>
+<path
+  d="
+    M58 74
+    Q160 58 262 74
+    L202 198
+  "
+  fill="none"
+  stroke="rgba(255,255,255,.18)"
+  strokeWidth="2"
+/>
+        <path
+  d="
+    M147 212
+
+    C147 228 149 255 150 310
+
+    L170 310
+
+    C171 255 173 228 173 212
+
+    Z
+  "
+  fill="rgba(255,255,255,.05)"
+/>
+<path
+  d="
+    M102 198
+
+    C120 222 140 236 160 242
+
+    C180 236 200 222 218 198
+
+    Z
+  "
+  fill="rgba(255,60,60,.32)"
+/>
+      </svg>
+      <motion.div
+  className="absolute left-1/2 top-[308px] h-5 w-5 -translate-x-1/2 rounded-full bg-white"
+  animate={{
+    scale: blocked ? [1, 1.25, 1] : 1,
+  }}
+  transition={{
+    duration: 0.5,
+    repeat: blocked ? Infinity : 0,
+  }}
+/>
+{blocked && (
+  <motion.div
+    className="absolute left-1/2 top-[225px] h-3 w-24 -translate-x-1/2 rounded-full bg-red-500 blur-xl"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 0.9 }}
+    exit={{ opacity: 0 }}
+  />
+)}
+{blocked && (
+  <motion.div
+    className="absolute left-1/2 top-[185px] -translate-x-1/2 text-2xl text-red-500"
+    initial={{ opacity: 0, scale: 0.6 }}
+    animate={{ opacity: 1, scale: 1 }}
+  >
+    ⚠
+  </motion.div>
+)}
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-full
+          bg-white/5
+          blur-[100px]
+          opacity-20
+        "
       />
 
       <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px,#fff 1px,transparent 0)",
-          backgroundSize: "18px 18px",
-        }}
-      />
-      <motion.div
-  layout
-  animate={{
-    scale:
-      step === "funnel"
-        ? 0.58
-        : 1,
-
-    y:
-      step === "funnel"
-        ? -85
-        : 0,
+  className="absolute inset-0"
+  style={{
+    clipPath: "url(#funnelClip)",
   }}
-  transition={{
-    layout: {
-      duration: 0.45,
-    },
-    duration: 0.6,
-  }}
-  className="
-          relative
-          w-[240px]
-          rounded-3xl
-          border
-          border-white/10
-          bg-white/[0.03]
-          backdrop-blur-xl
-          p-5
-        "
-      >
-        <div className="mb-4 flex items-center justify-between">
-  <div className="h-2 w-12 rounded-full bg-white/20" />
-
-  <div className="flex gap-1">
-    <div className="h-2 w-2 rounded-full bg-white/20" />
-    <div className="h-2 w-2 rounded-full bg-white/20" />
-    <div className="h-2 w-2 rounded-full bg-white/20" />
-  </div>
+>
+  {[-36, 0, 36].map((offset) => (
+    <AnimatedUser
+      key={offset}
+      offset={offset}
+      progress={progress}
+    />
+  ))}
 </div>
-              {step === "product" ||
- step === "click" ||
- step === "added" ? (
-  <motion.div
-    layout
-    className="
-      relative
-      mb-5
-      flex
-      h-36
-      items-center
-      justify-center
-      overflow-hidden
-      rounded-2xl
-      bg-gradient-to-br
-      from-white/10
-      to-white/[0.03]
-    "
-  >
-    <div className="absolute h-24 w-24 rounded-full bg-red-500/10 blur-3xl" />
 
-    <div className="h-24 w-16 rounded-xl border border-white/10 bg-white/5" />
-  </motion.div>
-) : (
-  <motion.div
-    layout
-    className="mb-5 rounded-2xl border border-white/10 bg-white/5 p-4"
-  >
-    <div className="flex justify-between text-sm text-white/70">
-      <span>Order #1842</span>
-      <span>✓</span>
     </div>
+  );
+}
 
-    <div className="mt-3 h-px bg-white/10" />
+function AnimatedUser({
+  offset,
+  progress,
+}: {
+  offset: number;
+  progress: number;
+}) {
 
-    <div className="mt-3 flex justify-between text-white">
-      <span>1 Product</span>
-      <span>39,90 €</span>
-    </div>
-  </motion.div>
-)}
-                <motion.div
-  layout
-  className="text-white text-lg font-bold"
->
-  {step === "product" ||
- step === "click" ||
- step === "added"
-  ? "Product 1"
-  : "Checkout"}
-</motion.div>
-       <motion.div
-  layout
-  className="mt-1 text-sm text-white/50"
->
-{step === "product" ||
- step === "click" ||
- step === "added"
-  ? "Clothes Collection"
-  : "Ready to complete your purchase"}
-</motion.div>
-               {(step === "product" ||
-  step === "click" ||
-  step === "added") && (
-  <motion.div
-    layout
-    className="mt-2 flex items-center gap-2"
-  >
-    <span className="text-yellow-400 tracking-wide">
-      ★★★★★
-    </span>
+  const forward = progress < 0.82;
 
-    <span className="text-xs text-white/40">
-      (128)
-    </span>
-  </motion.div>
-)}
-                {step === "product" ||
- step === "click" ||
- step === "added" ? (
-  <div className="mt-4 flex items-end gap-3">
-    <span className="text-2xl font-black text-white">
-      39,90 €
-    </span>
+  const t = forward
+    ? progress / 0.82
+    : 1 - ((progress - 0.82) / 0.18);
 
-    <span className="text-sm text-white/30 line-through">
-      49,90 €
-    </span>
-  </div>
-) : (
-  <motion.div
-    layout
-    className="mt-5 space-y-3"
-  >
-    <div className="flex justify-between text-white/80 text-sm">
-      <span>Product</span>
-      <span>39,90 €</span>
-    </div>
+let y = -28 + t * 240;
 
-    <div className="h-px bg-white/10" />
+// Rebote al llegar al cuello
+if (t > 0.88) {
+  const bounce = Math.sin((t - 0.88) * Math.PI * 8) * 8;
+  y -= bounce;
+}
 
-    <div className="flex justify-between font-semibold text-white">
-      <span>Total</span>
-      <span>39,90 €</span>
-    </div>
-  </motion.div>
-)}
-                <motion.button
-  layout
-  animate={{
-    scale: step === "click" ? 0.93 : 1,
-    backgroundColor:
-      step === "added" || step === "cart"
-        ? "#22C55E"
-        : "#EF4444",
+  const x = offset * (1 - t * 0.94);
+
+const scale = 1 - t * 0.72;
+let color = "#FFFFFF";
+
+if (t > 0.45) color = "#22C55E"; // Verde
+
+if (t > 0.70) color = "#FACC15"; // Amarillo
+
+if (t > 0.88) color = "#EF4444"; // Rojo
+  return (
+    <div
+  className="absolute left-1/2 top-0 z-20"
+  style={{
+    transform: `
+      translate(${x}px, ${y}px)
+      scale(${scale})
+    `,
   }}
-  transition={{
-    duration: 0.25,
-  }}
-  className="
-    mt-6
-    w-full
-    rounded-xl
-    py-3
-    text-sm
-    font-bold
-    text-white
-    shadow-lg
-  "
 >
-  {step === "product" && "COMPRAR AHORA"}
-  {step === "click" && "COMPRAR AHORA"}
-  {step === "added" && "✓ AÑADIDO"}
-  {(step === "cart" ||
-  step === "crosssell" ||
-  step === "funnel") &&
-  "PAGO SEGURO"}
-</motion.button>
-{step === "crosssell" && (
-  <motion.div
-    initial={{
-      opacity: 0,
-      scale: 0.7,
-      y: -20,
-    }}
-    animate={{
-      opacity: 1,
-      scale: 1,
-      y: 0,
-    }}
-    exit={{
-      opacity: 0,
-    }}
-    transition={{
-      duration: 0.35,
-    }}
-    className="
-      absolute
-      top-8
-      left-1/2
-      -translate-x-1/2
-      rounded-2xl
-      border
-      border-yellow-400/30
-      bg-yellow-400/10
-      px-5
-      py-4
-      backdrop-blur-xl
-      shadow-xl
-    "
-  >
-    <div className="text-center">
-      <div className="text-2xl">
-        ⚠
-      </div>
-
-      <div className="mt-2 text-xs font-bold tracking-[0.2em] text-yellow-300">
-        ADD
-      </div>
-
-      <div className="text-sm font-semibold text-white">
-        CROSS-SELLS
-      </div>
+      <UserIcon color={color} />
     </div>
-  </motion.div>
-)}
-</motion.div>
-{step === "funnel" && (
-  <motion.div
-    initial={{
-      opacity: 0,
-      y: 40,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-    }}
-    transition={{
-      duration: 0.45,
-    }}
-    className="
-      absolute
-      bottom-10
-      left-1/2
-      -translate-x-1/2
-      flex
-      flex-col
-      items-center
-      gap-3
-    "
-  >
-    <div className="rounded-full bg-white/10 px-5 py-2 text-sm text-white">
-      Landing
-    </div>
+  );
+}
+function UserIcon({
+  color,
+}: {
+  color: string;
+}) {
+  return (
+    <div className="flex flex-col items-center">
 
-    <div className="h-6 w-px bg-white/20" />
+      <div
+  className="h-3 w-3 rounded-full"
+  style={{
+    background: color,
+  }}
+/>
 
-    <div className="rounded-full bg-white/10 px-5 py-2 text-sm text-white">
-      Checkout
-    </div>
+      <div
+  className="mt-1 h-4 w-6 rounded-full"
+  style={{
+    background: color,
+  }}
+/>
 
-    <div className="h-6 w-px bg-white/20" />
-
-    <div className="rounded-full bg-red-500/20 px-5 py-2 text-sm text-red-300">
-      Cross Sell
-    </div>
-  </motion.div>
-)}
     </div>
   );
 }
