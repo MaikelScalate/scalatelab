@@ -53,14 +53,27 @@ useMotionValueEvent(score, "change", (latest) => {
   setValue(Math.round(latest));
 });
 useEffect(() => {
-  const controls = animate(score, 48, {
-  duration: 10,
-  ease: "easeInOut",
-  repeat: Infinity,
-  repeatDelay: 0.6,
-});
+  let cancelled = false;
 
-  return () => controls.stop();
+  async function run() {
+    while (!cancelled) {
+      await animate(score, 48, {
+        duration: 10,
+        ease: "easeInOut",
+      });
+
+      // Espera 4 segundos mostrando la tarjeta
+      await new Promise((resolve) => setTimeout(resolve, 4000));
+
+      score.set(100);
+    }
+  }
+
+  run();
+
+  return () => {
+    cancelled = true;
+  };
 }, [score]);
   return (
     <div className="
@@ -90,13 +103,14 @@ shadow-[0_20px_80px_rgba(0,0,0,.45)]
         transparent 70%)
       `
       : `
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.05), transparent 30%),
-        radial-gradient(circle at 80% 10%, rgba(34,197,94,.06), transparent 35%),
-        radial-gradient(circle at 50% 100%, rgba(59,130,246,.04), transparent 40%)
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.04), transparent 30%),
+        radial-gradient(circle at 80% 10%, ${statusColor}22, transparent 35%),
+        radial-gradient(circle at 50% 100%, ${statusColor}10, transparent 45%)
       `,
   }}
   transition={{
-    duration: 0.5,
+    duration: 0.25,
+    ease: "linear",
   }}
 />
 
@@ -108,19 +122,25 @@ shadow-[0_20px_80px_rgba(0,0,0,.45)]
     backgroundSize: "18px 18px",
   }}
 />
-<div
+<motion.div
   className="
-  absolute
-  top-0
-  left-0
-  right-0
-  h-28
-  opacity-40
-  pointer-events-none
+    absolute
+    top-0
+    left-0
+    right-0
+    h-28
+    pointer-events-none
   "
-  style={{
-    background:
-      "linear-gradient(to bottom, rgba(255,255,255,.08), transparent)",
+  animate={{
+    background: `linear-gradient(
+      to bottom,
+      ${statusColor}22,
+      transparent
+    )`,
+  }}
+  transition={{
+    duration: 0.25,
+    ease: "linear",
   }}
 />
       {/* Glow */}
@@ -205,17 +225,15 @@ transform={`rotate(-140 ${SIZE / 2} ${SIZE / 2})`}
                   </svg>
                  <motion.div
   className="absolute"
+  style={{
+    bottom: "28px",
+    right: "18px",
+  }}
   animate={{
-    right: showWarning ? "50%" : 16,
-    bottom: showWarning ? "50%" : 16,
-    x: showWarning ? "50%" : 0,
-    y: showWarning ? "50%" : 0,
-    scale: showWarning ? 1.25 : 1,
+    opacity: showAlert && !showWarning ? 1 : 0,
+    scale: showAlert && !showWarning ? 1 : 0.8,
   }}
-  transition={{
-    duration: 0.45,
-    ease: "easeOut",
-  }}
+
 >
   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/15 border border-red-500/40">
     <span className="text-lg text-red-500 font-bold">
@@ -284,8 +302,9 @@ drop-shadow-[0_0_18px_rgba(255,255,255,.18)]
     border-red-500/30
     bg-red-500/10
     backdrop-blur-md
-    px-8
-    py-6
+    px-5
+py-6
+max-w-[240px]
   "
   animate={{
     opacity: showWarning ? 1 : 0,
@@ -309,21 +328,7 @@ drop-shadow-[0_0_18px_rgba(255,255,255,.18)]
     a las conversiones.
   </span>
 </motion.div>
-<div
-  className="
-  absolute
-  inset-0
-  rounded-[28px]
-  pointer-events-none
-  "
-  style={{
-    border:"1px solid rgba(255,255,255,.06)",
-    boxShadow:`
-      inset 0 1px rgba(255,255,255,.08),
-      0 20px 60px rgba(0,0,0,.35)
-    `,
-  }}
-/>
+
     </div>
   );
 }

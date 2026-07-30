@@ -114,7 +114,7 @@ export default function GrowthSection() {
               text-2lg
             "
           >
-            Quiero aplicar las soluciones →
+            Quiero aplicar las soluciones
           </Button>
 
         </div>
