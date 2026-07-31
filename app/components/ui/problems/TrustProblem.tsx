@@ -11,10 +11,12 @@ const negativeReview =
   "La web tardó demasiado y abandoné la compra.";
 const [review, setReview] = useState("");
 const [isPositive, setIsPositive] = useState(true);
+const [shake, setShake] = useState(false);
 useEffect(() => {
   let cancelled = false;
 
   async function run() {
+    while (!cancelled) {
     setStars(0);
 setReview("");
 setIsPositive(true);
@@ -54,6 +56,13 @@ await new Promise(r => setTimeout(r, 250));
 setStars(2);
 await new Promise(r => setTimeout(r, 250));
 setIsPositive(false);
+
+setShake(true);
+
+await new Promise(r => setTimeout(r, 350));
+
+setShake(false);
+
 // ✍️ Escribe la review negativa
 for (let i = 0; i <= negativeReview.length; i++) {
   if (cancelled) return;
@@ -64,6 +73,8 @@ for (let i = 0; i <= negativeReview.length; i++) {
 }
 
 await new Promise(r => setTimeout(r, 3500));
+
+} // ← cierre del while
  } 
   run();
 
@@ -106,15 +117,21 @@ await new Promise(r => setTimeout(r, 3500));
       />
 
       {/* Card */}
-      <motion.div
-        animate={{
-          y: [3, -3, 3],
-        }}
+        <motion.div
+  animate={{
+  y: [3, -3, 3],
+  x: shake ? [0, -2, 2, -2, 2, 0] : 0,
+}}
         transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+  y: {
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  },
+  x: {
+    duration: 0.35,
+  },
+}}
         className="
           relative
           z-20
@@ -141,9 +158,11 @@ await new Promise(r => setTimeout(r, 3500));
       animate={{
         scale: stars > i ? [0.8, 1.2, 1] : 1,
         color:
-          stars > i
-            ? "#FACC15"
-            : "rgba(255,255,255,.18)",
+  stars > i
+    ? isPositive
+      ? "#FACC15"
+      : "#EF4444"
+    : "rgba(255,255,255,.18)",
       }}
       transition={{
         duration: 0.25,
@@ -162,6 +181,18 @@ await new Promise(r => setTimeout(r, 3500));
 
           <p className="min-h-[52px] text-sm leading-6 text-white/90">
   {review}
+  <motion.span
+    animate={{
+      opacity: [1, 0, 1],
+    }}
+    transition={{
+      duration: 0.8,
+      repeat: Infinity,
+    }}
+    className="ml-0.5 text-white/40"
+  >
+    |
+  </motion.span>
 </p>
 
           <div className="mt-5 flex items-center justify-between">
@@ -205,7 +236,34 @@ await new Promise(r => setTimeout(r, 3500));
         </div>
 
       </motion.div>
-
+<motion.div
+  initial={{ opacity: 0, y: 8, scale: 0.9 }}
+  animate={{
+    opacity: isPositive ? 0 : 1,
+    y: isPositive ? 8 : 0,
+    scale: isPositive ? 0.9 : 1,
+  }}
+  transition={{
+    duration: 0.35,
+  }}
+  className="
+    absolute
+    top-8
+    rounded-full
+    border
+    border-red-500/20
+    bg-[#17171B]
+    px-4
+    py-2
+    text-xs
+    font-medium
+    text-red-400
+    shadow-lg
+    backdrop-blur-xl
+  "
+>
+  ⚠ Optimizar prueba social
+</motion.div>
     </div>
   );
 }
