@@ -247,21 +247,21 @@ await new Promise(r => setTimeout(r, 3500));
     duration: 0.35,
   }}
   className="
-    absolute
-    top-8
-    rounded-full
-    border
-    border-red-500/20
-    bg-[#17171B]
-    px-4
-    py-2
-    z-10
-    text-xs
-    font-medium
-    text-red-400
-    shadow-lg
-    backdrop-blur-xl
-  "
+absolute
+top-8
+z-40
+rounded-full
+border
+border-red-500/20
+bg-[#17171B]
+px-4
+py-2
+text-xs
+font-medium
+text-red-400
+shadow-lg
+backdrop-blur-xl
+"
 >
   ⚠ Optimizar prueba social
 </motion.div>
