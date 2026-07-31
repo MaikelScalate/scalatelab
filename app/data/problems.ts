@@ -27,7 +27,7 @@ export const problems = [
     id: "funnel",
     title: "Bajo enfoque en conversión",
     description:
-      "Muchos visitantes entran, <strong>muy pocos llegan al checkout.</strong> Tu web <strong>no guía correctamente</strong> al usuario.",
+      "Muchos visitantes entran, <strong>muy pocos realizan la compra.</strong> Tu web <strong>no guía correctamente</strong> al usuario.",
   },
   {
     id: "trust",
