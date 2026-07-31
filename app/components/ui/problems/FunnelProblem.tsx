@@ -55,103 +55,150 @@ function Funnel({
         <defs>
 
           <linearGradient
-            id="glass"
-            x1="0"
-            x2="0"
-            y1="0"
-            y2="1"
-          >
-            <stop
-              offset="0%"
-              stopColor="rgba(255,255,255,.14)"
-            />
+    id="glassOuter"
+    x1="0"
+    y1="0"
+    x2="0"
+    y2="1"
+>
+    <stop offset="0%" stopColor="rgba(255,255,255,.12)" />
+    <stop offset="45%" stopColor="rgba(255,255,255,.05)" />
+    <stop offset="100%" stopColor="rgba(255,255,255,.02)" />
+</linearGradient>
 
-            <stop
-              offset="100%"
-              stopColor="rgba(255,255,255,.02)"
-            />
+<linearGradient
+    id="glassInner"
+    x1="0"
+    y1="0"
+    x2="0"
+    y2="1"
+>
+    <stop offset="0%" stopColor="rgba(255,255,255,.05)" />
+    <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+</linearGradient>
 
-          </linearGradient>
+<linearGradient
+    id="dangerGlow"
+    x1="0"
+    y1="0"
+    x2="0"
+    y2="1"
+>
+    <stop offset="0%" stopColor="#ff5858" />
+    <stop offset="100%" stopColor="#8b1111" />
+</linearGradient>
 <clipPath id="funnelClip">
   <path
     d="
-      M35 65
-      Q160 42 285 65
-      L215 210
-      L173 310
-      L147 310
-      L105 210
+      M25 72
+      C65 55 112 48 160 48
+      C208 48 255 55 295 72
+      L228 198
+      C212 224 190 242 160 252
+      C130 242 108 224 92 198
+      L149 330
+      L171 330
       Z
     "
   />
-  <path
-  d="
-    M70 80
-    C105 70 130 66 160 66
-    C190 66 215 70 250 80
-
-    L205 176
-  "
-  fill="none"
-  stroke="rgba(255,255,255,.16)"
-  strokeWidth="2"
-/>
 </clipPath>
+
         </defs>
-
         <path
-  d="
-    M35 72
-    C70 58 110 52 160 52
-    C210 52 250 58 285 72
+    d="
+        M25 72
 
-    L230 185
+        C65 55 112 48 160 48
 
-    C215 218 192 240 160 252
+        C208 48 255 55 295 72
 
-    C128 240 105 218 90 185
+        L228 198
 
-    Z
-  "
-  fill="url(#glass)"
-  stroke="rgba(255,255,255,.08)"
-  strokeWidth="2"
+        C212 224 190 242 160 252
+
+        C130 242 108 224 92 198
+
+        Z
+    "
+    fill="url(#glassOuter)"
+    stroke="rgba(255,255,255,.08)"
+    strokeWidth="1.5"
 />
 <path
-  d="
-    M58 74
-    Q160 58 262 74
-    L202 198
-  "
-  fill="none"
-  stroke="rgba(255,255,255,.18)"
-  strokeWidth="2"
-/>
-        <path
-  d="
-    M147 212
+    d="
+        M42 82
 
-    C147 228 149 255 150 310
+        C76 69 117 63 160 63
 
-    L170 310
+        C203 63 244 69 278 82
 
-    C171 255 173 228 173 212
+        L220 188
 
-    Z
-  "
-  fill="rgba(255,255,255,.05)"
+        C204 211 185 226 160 234
+
+        C135 226 116 211 100 188
+
+        Z
+    "
+    fill="url(#glassInner)"
 />
 <path
-  d="
-    M102 198
+    d="
+        M149 245
 
-    C120 222 140 236 160 242
+        C149 258 150 285 151 330
 
-    C180 236 200 222 218 198
+        L169 330
 
-    Z
-  "
-  fill="rgba(255,60,60,.32)"
+        C170 285 171 258 171 245
+
+        Z
+    "
+    fill="rgba(255,255,255,.05)"
+/>
+<path
+    d="
+        M100 196
+
+        C118 220 140 235 160 242
+
+        C180 235 202 220 220 196
+
+        L220 215
+
+        C198 235 181 247 160 253
+
+        C139 247 122 235 100 215
+
+        Z
+    "
+    fill="url(#dangerGlow)"
+    opacity=".75"
+/>
+<path
+    d="
+        M62 79
+
+        C98 67 127 63 160 63
+
+        C193 63 222 67 258 79
+
+        L210 182
+    "
+    fill="none"
+    stroke="rgba(255,255,255,.14)"
+    strokeWidth="2"
+/>
+
+<path
+    d="
+        M92 190
+
+        C112 214 133 228 160 236
+    "
+    fill="none"
+    stroke="rgba(255,255,255,.08)"
+    strokeWidth="2"
 />
       </svg>
       <motion.div
@@ -194,9 +241,9 @@ function Funnel({
 
       <div
   className="absolute inset-0"
-  style={{
-    clipPath: "url(#funnelClip)",
-  }}
+  // style={{
+  //   clipPath: "url(#funnelClip)",
+  // }}
 >
   {[-36, 0, 36].map((offset) => (
     <AnimatedUser
