@@ -8,7 +8,7 @@ export default function TrustProblem() {
 const positiveReview =
   "Entrega rápida y excelente calidad. Muy recomendable.";
 const negativeReview =
-  "La web tardó demasiado, hice la compra y aún así llegó una semana tarde";
+  "La web tardó demasiado, compré y  llegó una semana tarde";
 const [review, setReview] = useState("");
 const [isPositive, setIsPositive] = useState(true);
 const [shake, setShake] = useState(false);
@@ -258,7 +258,9 @@ shadow-[0_20px_60px_rgba(0,0,0,.45)]
   }}
   className="
 absolute
-top-8
+-top-5
+left-1/2
+-translate-x-1/2
 z-50
 rounded-full
 border
