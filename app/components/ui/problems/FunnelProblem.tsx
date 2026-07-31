@@ -32,7 +32,7 @@ blur-[140px]
   "
 />
 <svg
-  className="absolute inset-0 h-full w-full z-10"
+  className="absolute inset-0 z-[5] h-full w-full"
   viewBox="0 0 500 300"
   fill="none"
 >
@@ -61,15 +61,16 @@ blur-[140px]
   />
 </svg>
 <div
-  className="absolute inset-0 opacity-[0.03]"
+  className="absolute inset-0 z-[1] opacity-[0.025]"
   style={{
     backgroundImage:
       "radial-gradient(circle at center, rgba(255,255,255,.75) .8px, transparent .8px)",
     backgroundSize: "22px 22px",
     maskImage:
-      "radial-gradient(circle at center, transparent 90px, black 180px)",
-    WebkitMaskImage:
-      "radial-gradient(circle at center, transparent 90px, black 180px)",
+"radial-gradient(circle at center, transparent 110px, rgba(0,0,0,.4) 170px, black 230px)",
+
+WebkitMaskImage:
+"radial-gradient(circle at center, transparent 110px, rgba(0,0,0,.4) 170px, black 230px)",
   }}
 />
 <motion.div
