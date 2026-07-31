@@ -111,19 +111,53 @@ await new Promise(r => setTimeout(r, 3500));
     blur-[120px]
   "
 />
-<div
-  className="absolute inset-0 z-[1] opacity-[0.025]"
-  style={{
-    backgroundImage:
-      "radial-gradient(circle at center, rgba(255,255,255,.75) .8px, transparent .8px)",
-    backgroundSize: "22px 22px",
-    maskImage:
-      "radial-gradient(circle at center, transparent 110px, rgba(0,0,0,.4) 170px, black 230px)",
-    WebkitMaskImage:
-      "radial-gradient(circle at center, transparent 110px, rgba(0,0,0,.4) 170px, black 230px)",
+<motion.div
+  className="absolute inset-0 z-0"
+  animate={{
+    background: isPositive
+      ? `
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.04), transparent 35%),
+        radial-gradient(circle at 80% 10%, rgba(250,204,21,.16), transparent 38%),
+        radial-gradient(circle at 50% 100%, rgba(250,204,21,.08), transparent 48%)
+      `
+      : `
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.03), transparent 35%),
+        radial-gradient(circle at 80% 10%, rgba(239,68,68,.18), transparent 38%),
+        radial-gradient(circle at 50% 100%, rgba(239,68,68,.10), transparent 48%)
+      `,
+  }}
+  transition={{
+    duration: 0.35,
+    ease: "linear",
   }}
 />
-
+<div
+  className="absolute inset-0 z-[1] opacity-[0.03]"
+  style={{
+    backgroundImage:
+      "radial-gradient(circle at 1px 1px,#fff 1px,transparent 0)",
+    backgroundSize: "18px 18px",
+  }}
+/>
+<motion.div
+  className="
+    absolute
+    top-0
+    left-0
+    right-0
+    h-28
+    pointer-events-none
+    z-[2]
+  "
+  animate={{
+    background: isPositive
+      ? "linear-gradient(to bottom, rgba(250,204,21,.12), transparent)"
+      : "linear-gradient(to bottom, rgba(239,68,68,.15), transparent)",
+  }}
+  transition={{
+    duration: 0.35,
+  }}
+/>
       {/* Card */}
         <motion.div
   animate={{
