@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion } from "motion/react";
 type Project = {
   name: string;
   image: string;
@@ -56,16 +56,49 @@ export default function CaseCard({ project }: Props) {
 
       {project.hasPage && project.href && (
         <div
-          className="
-            absolute
-            bottom-0
-            left-0
-            right-0
-            flex
-            justify-center
-            pb-8
-          "
-        >
+  className="
+    absolute
+    bottom-0
+    left-0
+    right-0
+    flex
+    justify-center
+    pb-8
+    relative
+    overflow-visible
+  "
+>
+  {[...Array(20)].map((_, i) => (
+  <motion.div
+    key={i}
+    className="
+absolute
+rounded-full
+bg-white
+shadow-[0_0_8px_rgba(255,255,255,.8)]
+"
+    style={{
+      width: 2 + Math.random() * 2,
+      height: 2 + Math.random() * 2,
+      left:
+        i < 10
+          ? `${8 + Math.random() * 18}%`
+          : `${74 + Math.random() * 18}%`,
+      top: `${-70 + Math.random() * 55}px`,
+    }}
+    animate={{
+      y: [0, -8, 0],
+      opacity: [0.15, 0.8, 0.15],
+      scale: [1, 1.4, 1],
+    }}
+    transition={{
+      duration: 2.5 + Math.random() * 2,
+      repeat: Infinity,
+      delay: Math.random() * 2,
+      ease: "easeInOut",
+    }}
+  />
+))}
           <Link
             href={project.href}
             onPointerDown={(e) => e.stopPropagation()}
