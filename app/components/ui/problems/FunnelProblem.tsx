@@ -32,12 +32,20 @@ blur-[140px]
   "
 />
 <svg
-  className="absolute inset-0 h-full w-full"
-  viewBox="0 0 500 260"
+  className="absolute inset-0 h-full w-full z-10"
+  viewBox="0 0 500 300"
   fill="none"
 >
   <motion.path
-    d="M250 0 L250 55 L330 110 L330 190 L420 240"
+    d="
+      M-40 95
+      L80 95
+      L150 145
+      L250 145
+      L330 190
+      L420 190
+      L540 255
+    "
     stroke="#ef4444"
     strokeWidth="2"
     strokeLinecap="round"
