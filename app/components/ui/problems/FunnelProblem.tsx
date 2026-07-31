@@ -31,13 +31,34 @@ blur-[140px]
     bg-red-500/15
   "
 />
+<svg
+  className="absolute inset-0 h-full w-full"
+  viewBox="0 0 500 260"
+  fill="none"
+>
+  <motion.path
+    d="M250 0 L250 55 L330 110 L330 190 L420 240"
+    stroke="#ef4444"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeDasharray="12 18"
+    animate={{
+      strokeDashoffset: [60, 0],
+    }}
+    transition={{
+      duration: 1.8,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+  />
+</svg>
 <div
   className="
     absolute
     inset-0
-    opacity-[0.06]
+    opacity-[0.035]
     [background-image:linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)]
-    [background-size:28px_28px]
+    [background-size:32px_32px]
   "
 />
 <motion.div
@@ -78,7 +99,7 @@ blur-[140px]
   className="
 relative
 z-20
--mt-6
+-mt-12
 overflow-hidden
 rounded-2xl
 drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
@@ -116,6 +137,56 @@ drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
     blur-xl
   "
 />
+</motion.div>
+<motion.div
+  animate={{
+    y: [0, -2, 0],
+    opacity: [0.9, 1, 0.9],
+  }}
+  transition={{
+    duration: 2,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="
+    absolute
+    left-1/2
+    top-[245px]
+    z-30
+    flex
+    -translate-x-1/2
+    items-center
+    gap-2
+    rounded-full
+    border
+    border-red-500/25
+    bg-[#171717]/90
+    px-4
+    py-2
+    backdrop-blur-xl
+  "
+>
+  <div
+    className="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      bg-red-500
+      text-sm
+      font-bold
+      text-white
+      shadow-[0_0_16px_rgba(239,68,68,.45)]
+    "
+  >
+    !
+  </div>
+
+  <span className="whitespace-nowrap text-sm font-semibold text-red-300">
+    1.5% tasa de conversión
+  </span>
 </motion.div>
 <motion.div
   animate={{
@@ -160,34 +231,7 @@ drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
     blur-[3px]
   "
 />
-<motion.div
-  animate={{
-    y: [0, -3, 0],
-    scale: [1, 1.02, 1],
-  }}
-  transition={{
-    duration: 2,
-    repeat: Infinity,
-  }}
-  className="
-    absolute
-    left-1/2
-    top-[42px]
-    z-30
-    -translate-x-1/2
-    rounded-full
-    border
-    border-red-500/30
-    bg-red-500/10
-    px-4
-    py-2
-    backdrop-blur-sm
-  "
->
-  <span className="text-sm font-medium text-red-300">
-    1.5% tasa de conversión
-  </span>
-</motion.div>
+
 {[...Array(10)].map((_, i) => (
   <motion.div
     key={i}
