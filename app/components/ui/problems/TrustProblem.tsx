@@ -10,13 +10,14 @@ const positiveReview =
 const negativeReview =
   "La web tardó demasiado y abandoné la compra.";
 const [review, setReview] = useState("");
+const [isPositive, setIsPositive] = useState(true);
 useEffect(() => {
   let cancelled = false;
 
   async function run() {
     setStars(0);
 setReview("");
-
+setIsPositive(true);
 await new Promise(r => setTimeout(r, 500));
 if (cancelled) return;
 
@@ -52,7 +53,7 @@ await new Promise(r => setTimeout(r, 250));
 
 setStars(2);
 await new Promise(r => setTimeout(r, 250));
-
+setIsPositive(false);
 // ✍️ Escribe la review negativa
 for (let i = 0; i <= negativeReview.length; i++) {
   if (cancelled) return;
@@ -165,25 +166,39 @@ await new Promise(r => setTimeout(r, 3500));
 
           <div className="mt-5 flex items-center justify-between">
 
-            <span className="text-xs font-medium text-white/50">
-              Laura M.
-            </span>
+            <motion.span
+  animate={{
+    opacity: isPositive ? 1 : 0.65,
+  }}
+  className="text-xs font-medium text-white/50"
+>
+  {isPositive ? "Laura M." : "Carlos R."}
+</motion.span>
 
-            <div
-              className="
-                rounded-full
-                border
-                border-green-500/25
-                bg-green-500/10
-                px-3
-                py-1
-                text-[11px]
-                font-semibold
-                text-green-400
-              "
-            >
-              ✓ Verificada
-            </div>
+            <motion.div
+  animate={{
+    scale: isPositive ? 1 : 0.95,
+    opacity: 1,
+  }}
+  transition={{
+    duration: 0.35,
+  }}
+  className={`
+    rounded-full
+    border
+    px-3
+    py-1
+    text-[11px]
+    font-semibold
+    ${
+      isPositive
+        ? "border-green-500/25 bg-green-500/10 text-green-400"
+        : "border-red-500/25 bg-red-500/10 text-red-400"
+    }
+  `}
+>
+  {isPositive ? "✓ Verificada" : "✕ Sin verificar"}
+</motion.div>
 
           </div>
 
