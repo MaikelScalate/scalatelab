@@ -70,34 +70,34 @@ export default function Navbar() {
         <div className="hidden items-center gap-10 lg:flex">
           <a
   href="#deficiencias"
-  className="text-sm font-medium text-white/70 transition hover:text-white"
+  className="text-base font-medium text-white/70 transition hover:text-white"
 >
   Deficiencias
 </a>
 
           <a
             href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
+            className="text-base font-medium text-white/70 transition hover:text-white"
           >
             Calculadora
           </a>
 
           <a
             href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
+            className="text-base font-medium text-white/70 transition hover:text-white"
           >
             Mejoras
           </a>
 
           <a
             href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
+            className="text-base font-medium text-white/70 transition hover:text-white"
           >
             Metodología
           </a>
           <a
             href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
+            className="text-base font-medium text-white/70 transition hover:text-white"
           >
               FAQ's
           </a>
