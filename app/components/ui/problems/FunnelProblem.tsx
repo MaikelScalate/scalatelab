@@ -19,6 +19,7 @@ export default function FunnelProblem() {
   }}
   className="
     absolute
+    z-0
     left-1/2
     top-1/2
 h-[420px]
@@ -220,6 +221,7 @@ top-[70px]
     pointer-events-none
     absolute
     inset-0
+    z-0
     bg-[radial-gradient(circle,transparent_45%,#090909_100%)]
   "
 />
