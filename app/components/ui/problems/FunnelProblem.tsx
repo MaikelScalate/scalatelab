@@ -31,6 +31,15 @@ blur-[140px]
     bg-red-500/15
   "
 />
+<div
+  className="
+    absolute
+    inset-0
+    opacity-[0.06]
+    [background-image:linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)]
+    [background-size:28px_28px]
+  "
+/>
 <motion.div
   animate={{
     scale: [1, 1.08, 1],
@@ -67,11 +76,12 @@ blur-[140px]
     ease: "easeInOut",
   }}
   className="
-  relative
-  z-20
-  overflow-hidden
-  rounded-2xl
-  drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
+relative
+z-20
+-mt-6
+overflow-hidden
+rounded-2xl
+drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
 "
 >
   <Image
@@ -104,30 +114,6 @@ blur-[140px]
     from-red-500/45
     to-transparent
     blur-xl
-  "
-/>
-  <motion.div
-  animate={{
-    x: [-120, 220],
-  }}
-  transition={{
-    duration: 2,
-    repeat: Infinity,
-    ease: "linear",
-    repeatDelay: 1,
-  }}
-  className="
-    pointer-events-none
-    absolute
-    top-0
-    h-full
-    w-10
-    rotate-12
-    bg-gradient-to-r
-    from-transparent
-    via-white/20
-    to-transparent
-    blur-md
   "
 />
 </motion.div>
@@ -176,23 +162,31 @@ blur-[140px]
 />
 <motion.div
   animate={{
-    scale: [1, 1.15, 1],
-    opacity: [0.6, 1, 0.6],
+    y: [0, -3, 0],
+    scale: [1, 1.02, 1],
   }}
   transition={{
-    duration: 1.8,
+    duration: 2,
     repeat: Infinity,
   }}
   className="
     absolute
-    right-[58px]
-top-[70px]
-    text-[42px]
-    text-red-500
-    drop-shadow-[0_0_18px_rgba(239,68,68,.8)]
+    left-1/2
+    top-[42px]
+    z-30
+    -translate-x-1/2
+    rounded-full
+    border
+    border-red-500/30
+    bg-red-500/10
+    px-4
+    py-2
+    backdrop-blur-sm
   "
 >
-    ⚠
+  <span className="text-sm font-medium text-red-300">
+    1.5% tasa de conversión
+  </span>
 </motion.div>
 {[...Array(10)].map((_, i) => (
   <motion.div
