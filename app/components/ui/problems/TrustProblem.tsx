@@ -87,34 +87,42 @@ await new Promise(r => setTimeout(r, 3500));
 
       {/* Glow */}
       <motion.div
-        animate={{
-          opacity: [0.18, 0.3, 0.18],
-          scale: [1, 1.08, 1],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          absolute
-          h-[300px]
-          w-[300px]
-          rounded-full
-          bg-yellow-500/10
-          blur-[120px]
-        "
-      />
-
-      {/* Dots */}
-      <div
-        className="absolute inset-0 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at center, rgba(255,255,255,.8) .8px, transparent .8px)",
-          backgroundSize: "22px 22px",
-        }}
-      />
+  animate={{
+    opacity: isPositive
+      ? [0.18, 0.30, 0.18]
+      : [0.28, 0.45, 0.28],
+    scale: [1, 1.08, 1],
+  }}
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  style={{
+    background: isPositive
+      ? "radial-gradient(circle, rgba(250,204,21,.18) 0%, transparent 70%)"
+      : "radial-gradient(circle, rgba(239,68,68,.20) 0%, transparent 70%)",
+  }}
+  className="
+    absolute
+    h-[300px]
+    w-[300px]
+    rounded-full
+    blur-[120px]
+  "
+/>
+<div
+  className="absolute inset-0 z-[1] opacity-[0.025]"
+  style={{
+    backgroundImage:
+      "radial-gradient(circle at center, rgba(255,255,255,.75) .8px, transparent .8px)",
+    backgroundSize: "22px 22px",
+    maskImage:
+      "radial-gradient(circle at center, transparent 110px, rgba(0,0,0,.4) 170px, black 230px)",
+    WebkitMaskImage:
+      "radial-gradient(circle at center, transparent 110px, rgba(0,0,0,.4) 170px, black 230px)",
+  }}
+/>
 
       {/* Card */}
         <motion.div
@@ -132,19 +140,21 @@ await new Promise(r => setTimeout(r, 3500));
     duration: 0.35,
   },
 }}
-        className="
-          relative
-          z-20
-          w-[240px]
-          overflow-hidden
-          rounded-2xl
-          border
-          border-white/5
-          bg-gradient-to-b
-          from-[#1B1B1F]
-          to-[#111113]
-          shadow-[0_20px_60px_rgba(0,0,0,.45)]
-        "
+        className={`
+relative
+z-20
+w-[240px]
+overflow-hidden
+rounded-2xl
+border
+${isPositive
+    ? "border-yellow-500/15"
+    : "border-red-500/20"}
+bg-gradient-to-b
+from-[#1B1B1F]
+to-[#111113]
+shadow-[0_20px_60px_rgba(0,0,0,.45)]
+`}
       >
 
         {/* Header */}
@@ -249,7 +259,7 @@ await new Promise(r => setTimeout(r, 3500));
   className="
 absolute
 top-8
-z-40
+z-50
 rounded-full
 border
 border-red-500/20
