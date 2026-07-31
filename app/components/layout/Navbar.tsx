@@ -72,28 +72,34 @@ export default function Navbar() {
             href="#"
             className="text-sm font-medium text-white/70 transition hover:text-white"
           >
+            Deficiencias
+          </a>
+
+          <a
+            href="#"
+            className="text-sm font-medium text-white/70 transition hover:text-white"
+          >
+            Calculadora
+          </a>
+
+          <a
+            href="#deficiencias"
+            className="text-sm font-medium text-white/70 transition hover:text-white"
+          >
+            Mejoras
+          </a>
+
+          <a
+            href="#"
+            className="text-sm font-medium text-white/70 transition hover:text-white"
+          >
             Metodología
           </a>
-
           <a
             href="#"
             className="text-sm font-medium text-white/70 transition hover:text-white"
           >
-            Casos de éxito
-          </a>
-
-          <a
-            href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
-          >
-            Servicios
-          </a>
-
-          <a
-            href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
-          >
-            FAQ
+              FAQ's
           </a>
         </div>
 
