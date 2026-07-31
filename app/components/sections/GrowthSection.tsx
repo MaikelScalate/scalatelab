@@ -15,7 +15,10 @@ import { problems } from "@/app/data/problems";
 
 export default function GrowthSection() {
   return (
-    <Section className="pt-10 pb-32">
+    <Section
+      id="deficiencias"
+      className="pt-10 pb-32"
+    >
 
       <Container>
 
