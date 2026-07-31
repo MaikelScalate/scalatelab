@@ -263,7 +263,15 @@ drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
       bottom: `${60 + Math.random() * 45}px`,
     }}
   >
-    <div className="h-1 w-1 rounded-full bg-red-500" />
+    <div
+  className="
+    h-1.5
+    w-1.5
+    rounded-full
+    bg-red-400
+    shadow-[0_0_10px_rgba(239,68,68,.9)]
+  "
+/>
   </motion.div>
 ))}
 <div
