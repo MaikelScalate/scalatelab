@@ -8,7 +8,7 @@ export default function TrustProblem() {
 const positiveReview =
   "Entrega rápida y excelente calidad. Muy recomendable.";
 const negativeReview =
-  "La web tardó demasiado y abandoné la compra.";
+  "La web tardó demasiado, hice la compra y aún así llegó una semana tarde";
 const [review, setReview] = useState("");
 const [isPositive, setIsPositive] = useState(true);
 const [shake, setShake] = useState(false);
