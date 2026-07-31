@@ -29,7 +29,7 @@ export default function Navbar() {
         sm:w-[92%]
         lg:w-[90%]
 
-        max-w-4xl
+        max-w-5xl
 
         -translate-x-1/2
 
