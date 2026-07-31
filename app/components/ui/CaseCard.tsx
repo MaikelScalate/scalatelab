@@ -56,86 +56,86 @@ export default function CaseCard({ project }: Props) {
 
       {project.hasPage && project.href && (
         <div
-  className="
-    absolute
-    bottom-0
-    left-0
-    right-0
-    flex
-    justify-center
-    pb-8
-    relative
-    overflow-visible
-  "
->
-  {[...Array(20)].map((_, i) => (
-  <motion.div
-    key={i}
-    className="
-absolute
-rounded-full
-bg-white
-shadow-[0_0_8px_rgba(255,255,255,.8)]
-"
-    style={{
-      width: 2 + Math.random() * 2,
-      height: 2 + Math.random() * 2,
-      left:
-        i < 10
-          ? `${8 + Math.random() * 18}%`
-          : `${74 + Math.random() * 18}%`,
-      top: `${-70 + Math.random() * 55}px`,
-    }}
-    animate={{
-      y: [0, -8, 0],
-      opacity: [0.15, 0.8, 0.15],
-      scale: [1, 1.4, 1],
-    }}
-    transition={{
-      duration: 2.5 + Math.random() * 2,
-      repeat: Infinity,
-      delay: Math.random() * 2,
-      ease: "easeInOut",
-    }}
-  />
-))}
+          className="
+            absolute
+            bottom-0
+            left-0
+            right-0
+            flex
+            justify-center
+            pb-8
+          "
+        >
           <Link
             href={project.href}
             onPointerDown={(e) => e.stopPropagation()}
             className="
-              flex
-              items-center
-              gap-2
-              rounded-full
-              border
-              border-white/10
-              bg-white/10
-              px-5
-              py-2.5
-              text-sm
-              font-medium
-              text-white
-              backdrop-blur-md
-              transition-all
-              duration-300
-              group-hover:bg-purple
-              group-hover:text-white
-              group-active:bg-purple
-              group-active:text-white
-            "
+relative
+overflow-hidden
+flex
+items-center
+gap-2
+rounded-full
+border
+border-white/10
+bg-white/10
+px-5
+py-2.5
+text-sm
+font-medium
+text-white
+backdrop-blur-md
+transition-all
+duration-300
+group-hover:bg-purple
+group-hover:text-white
+group-active:bg-purple
+group-active:text-white
+"
           >
-            Ver proyecto
+            <div className="absolute inset-0 overflow-hidden rounded-full pointer-events-none">
+  {[...Array(14)].map((_, i) => (
+    <motion.div
+      key={i}
+      className="
+        absolute
+        h-[2px]
+        w-[2px]
+        rounded-full
+        bg-white
+      "
+      style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+      }}
+      animate={{
+        opacity: [0, 0.8, 0],
+        y: [2, -2, 2],
+        scale: [0.8, 1.3, 0.8],
+      }}
+      transition={{
+        duration: 2 + Math.random(),
+        repeat: Infinity,
+        delay: Math.random() * 2,
+        ease: "easeInOut",
+      }}
+    />
+  ))}
+</div>
+<span className="relative z-10">Ver proyecto</span>
 
-            <span
-              className="
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-                group-active:translate-x-1
-              "
-            >
-              →
-            </span>
+<span
+  className="
+    relative
+    z-10
+    transition-transform
+    duration-300
+    group-hover:translate-x-1
+    group-active:translate-x-1
+  "
+>
+  →
+</span>
           </Link>
         </div>
       )}
