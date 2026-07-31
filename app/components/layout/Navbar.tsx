@@ -69,11 +69,11 @@ export default function Navbar() {
         {/* Menú */}
         <div className="hidden items-center gap-10 lg:flex">
           <a
-            href="#"
-            className="text-sm font-medium text-white/70 transition hover:text-white"
-          >
-            Deficiencias
-          </a>
+  href="#deficiencias"
+  className="text-sm font-medium text-white/70 transition hover:text-white"
+>
+  Deficiencias
+</a>
 
           <a
             href="#"
@@ -83,7 +83,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#deficiencias"
+            href="#"
             className="text-sm font-medium text-white/70 transition hover:text-white"
           >
             Mejoras
