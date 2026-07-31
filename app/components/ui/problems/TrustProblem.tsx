@@ -244,41 +244,40 @@ shadow-[0_20px_60px_rgba(0,0,0,.45)]
           </div>
 
         </div>
-  <motion.div
-    initial={{ opacity: 0, y: 8, scale: 0.9 }}
-    animate={{
-      opacity: isPositive ? 0 : 1,
-      y: isPositive ? 8 : 0,
-      scale: isPositive ? 0.9 : 1,
-    }}
-    transition={{
-      duration: 0.35,
-    }}
-    className="
-      absolute
-      left-1/2
-      top-0
-      z-50
-      -translate-x-1/2
-      -translate-y-1/2
-      whitespace-nowrap
-      rounded-full
-      border
-      border-red-500/20
-      bg-[#17171B]
-      px-4
-      py-2
-      text-xs
-      font-medium
-      text-red-400
-      shadow-lg
-      backdrop-blur-xl
-    "
-  >
-    ⚠ Optimizar prueba social
-  </motion.div>
-      </motion.div>
 
+      </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 8, scale: 0.9 }}
+  animate={{
+    opacity: isPositive ? 0 : 1,
+    y: isPositive ? 8 : 0,
+    scale: isPositive ? 0.9 : 1,
+  }}
+  transition={{
+    duration: 0.35,
+  }}
+  className="
+absolute
+top-10
+left-1/2
+z-50
+-translate-x-1/2
+whitespace-nowrap
+rounded-full
+border
+border-red-500/20
+bg-[#17171B]
+px-4
+py-2
+text-xs
+font-medium
+text-red-400
+shadow-lg
+backdrop-blur-xl
+"
+>
+  ⚠ Optimizar prueba social
+</motion.div>
     </div>
   );
 }
