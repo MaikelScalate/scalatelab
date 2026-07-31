@@ -61,13 +61,12 @@ blur-[140px]
   />
 </svg>
 <div
-  className="
-    absolute
-    inset-0
-    opacity-[0.035]
-    [background-image:linear-gradient(rgba(255,255,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.08)_1px,transparent_1px)]
-    [background-size:32px_32px]
-  "
+  className="absolute inset-0 opacity-[0.025]"
+  style={{
+    backgroundImage:
+      "radial-gradient(circle at center, rgba(255,255,255,.75) .8px, transparent .8px)",
+    backgroundSize: "22px 22px",
+  }}
 />
 <motion.div
   animate={{
