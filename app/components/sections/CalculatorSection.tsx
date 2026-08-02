@@ -36,14 +36,11 @@ export default function CalculatorSection() {
 
         </div>
 
-        {/* MÁS ESPACIO */}
         <div className="mt-20">
           <Calculator />
         </div>
 
-        {/* MÁS ESPACIO */}
         <div className="mt-20 flex justify-center">
-
           <Button
             className="
               h-12
@@ -53,7 +50,6 @@ export default function CalculatorSection() {
           >
             Quiero dejar de perder ventas
           </Button>
-
         </div>
 
       </Container>

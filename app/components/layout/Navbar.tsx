@@ -76,7 +76,7 @@ export default function Navbar() {
 </a>
 
           <a
-            href="#"
+            href="#calculadora"
             className="text-base font-medium text-white/70 transition hover:text-white"
           >
             Calculadora
