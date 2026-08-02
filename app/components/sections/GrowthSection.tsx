@@ -17,7 +17,7 @@ export default function GrowthSection() {
   return (
     <Section
       id="deficiencias"
-      className="pt-10 pb-32"
+      className="pt-10 pb-22"
     >
 
       <Container>
