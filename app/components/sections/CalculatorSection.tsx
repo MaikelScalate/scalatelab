@@ -36,7 +36,7 @@ export default function CalculatorSection() {
 
         </div>
 
-        <div className="mt-20">
+        <div className="mt-10">
           <Calculator />
         </div>
 
