@@ -13,6 +13,22 @@ type Props = {
 };
 
 export default function CaseCard({ project }: Props) {
+  const particles = [
+  { left: "8%", top: "25%", duration: 2.1, delay: 0.1 },
+  { left: "16%", top: "60%", duration: 2.8, delay: 0.3 },
+  { left: "24%", top: "35%", duration: 2.4, delay: 0.7 },
+  { left: "33%", top: "70%", duration: 2.6, delay: 1.0 },
+  { left: "44%", top: "22%", duration: 2.2, delay: 0.4 },
+  { left: "56%", top: "65%", duration: 2.5, delay: 1.3 },
+  { left: "68%", top: "30%", duration: 2.9, delay: 0.6 },
+  { left: "80%", top: "55%", duration: 2.3, delay: 1.5 },
+  { left: "90%", top: "40%", duration: 2.7, delay: 0.9 },
+  { left: "12%", top: "45%", duration: 2.4, delay: 1.8 },
+  { left: "38%", top: "18%", duration: 2.6, delay: 0.2 },
+  { left: "62%", top: "78%", duration: 2.8, delay: 1.2 },
+  { left: "74%", top: "15%", duration: 2.3, delay: 0.8 },
+  { left: "95%", top: "68%", duration: 2.7, delay: 1.6 },
+];
   return (
     <div
       className={`
@@ -94,7 +110,7 @@ group-active:text-white
 "
           >
             <div className="absolute inset-0 overflow-hidden rounded-full pointer-events-none">
-  {[...Array(14)].map((_, i) => (
+  {particles.map((particle, i) => (
     <motion.div
       key={i}
       className="
@@ -105,20 +121,20 @@ group-active:text-white
         bg-white
       "
       style={{
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-      }}
+  left: particle.left,
+  top: particle.top,
+}}
       animate={{
         opacity: [0, 0.8, 0],
         y: [2, -2, 2],
         scale: [0.8, 1.3, 0.8],
       }}
       transition={{
-        duration: 2 + Math.random(),
-        repeat: Infinity,
-        delay: Math.random() * 2,
-        ease: "easeInOut",
-      }}
+  duration: particle.duration,
+  repeat: Infinity,
+  delay: particle.delay,
+  ease: "easeInOut",
+}}
     />
   ))}
 </div>
