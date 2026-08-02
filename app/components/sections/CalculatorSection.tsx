@@ -45,7 +45,7 @@ export default function CalculatorSection() {
             className="
               h-12
               px-8
-              text-lg
+              text-2lg
             "
           >
             Quiero dejar de perder ventas
