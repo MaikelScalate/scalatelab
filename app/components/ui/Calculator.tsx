@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 
+import {
+  Users,
+  ShoppingBag,
+  Percent,
+  CreditCard,
+} from "lucide-react";
+
 export default function Calculator() {
 
   const [sessions, setSessions] = useState(50000);
@@ -61,36 +68,48 @@ style={{
     "
   >
 
-    <p className="text-sm font-semibold text-white">
-      👥 Sesiones al mes
+    <div className="flex items-start justify-between gap-8">
+
+  <div>
+
+    <p className="flex items-center gap-2 text-sm font-semibold text-white">
+      <Users
+        size={17}
+        strokeWidth={2.3}
+        className="text-[#8B5CF6]"
+      />
+      Sesiones al mes
     </p>
 
     <p className="mt-1 text-sm text-white/45">
       Visitas mensuales de tu tienda.
     </p>
 
-    <div
-className="
-mt-1
-flex
-items-center
-justify-end
-gap-5
-"
->
+  </div>
 
+  <div className="flex items-center gap-5">
       <input
-  type="number"
-  value={sessions}
+  style={{
+    width: `${Math.max(
+      sessions.toLocaleString("es-ES").length + 2,
+      8
+    )}ch`,
+  }}
+  type="text"
+  inputMode="numeric"
+  pattern="[0-9]*"
+  value={sessions.toLocaleString("es-ES")}
   min={500}
-  max={200000}
+  max={150000}
   step={500}
   onChange={(e) => {
 
-    let value = Number(e.target.value);
+    let value = Number(
+  e.target.value.replace(/\./g, "")
+);
 
     if (value < 500) value = 500;
-    if (value > 200000) value = 200000;
+    if (value > 150000) value = 150000;
 
     setSessions(value);
 
@@ -103,12 +122,13 @@ setOrders(newOrders);
 
   }}
   className="
-    w-32
-    rounded-xl
+    w-auto
+    rounded-2xl
     border
     border-white/10
-    bg-[#16161B]
-    py-2
+    bg-[#18181D]
+    h-12
+px-3
     text-center
     font-semibold
     text-white
@@ -117,15 +137,17 @@ setOrders(newOrders);
 />
 
       <span className="text-white/40">
-        200.000
-      </span>
+  150.000
+</span>
 
-    </div>
+</div>
 
-    <input
+</div>
+
+<input
   type="range"
   min="500"
-max="200000"
+max="150000"
 step="500"
   value={sessions}
   onChange={(e) => {
@@ -158,9 +180,14 @@ step="500"
     p-6
   "
 >
-  <p className="text-sm font-semibold text-white">
-    🛒 Pedidos al mes
-  </p>
+  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+  <ShoppingBag
+    size={17}
+    strokeWidth={2.3}
+    className="text-[#8B5CF6]"
+  />
+  Pedidos al mes
+</p>
 
   <p className="mt-1 text-sm text-white/45">
     Número de pedidos mensuales.
@@ -169,14 +196,24 @@ step="500"
   <div className="mt-1 flex items-center justify-end gap-5">
 
     <input
-  type="number"
-  value={orders}
+  type="text"
+inputMode="numeric"
+pattern="[0-9]*"
+value={orders.toLocaleString("es-ES")}
+  style={{
+  width: `${Math.max(
+    orders.toLocaleString("es-ES").length + 2,
+    7
+  )}ch`,
+}}
   min={1}
   max={10000}
   step={1}
   onChange={(e) => {
 
-  let value = Number(e.target.value);
+  let value = Number(
+  e.target.value.replace(/\./g, "")
+);
 
   if (value < 1) value = 1;
   if (value > 10000) value = 10000;
@@ -196,12 +233,13 @@ step="500"
 
 }}
   className="
-    w-32
-    rounded-xl
+    w-auto
+    rounded-2xl
     border
     border-white/10
-    bg-[#16161B]
-    py-2
+    bg-[#18181D]
+    h-12
+px-3
     text-center
     font-semibold
     text-white
@@ -248,9 +286,14 @@ step="1"
     p-6
   "
 >
-  <p className="text-sm font-semibold text-white">
-    📈 Tasa de conversión
-  </p>
+  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+  <Percent
+    size={17}
+    strokeWidth={2.3}
+    className="text-[#8B5CF6]"
+  />
+  Tasa de conversión
+</p>
 
   <p className="mt-1 text-sm text-white/45">
     Porcentaje de visitantes que compran.
@@ -259,14 +302,26 @@ step="1"
   <div className="mt-1 flex items-center justify-end gap-5">
 
     <input
-  type="number"
-  value={conversion}
+ type="text"
+inputMode="decimal"
+value={`${conversion.toFixed(1)} %`}
+style={{
+  width: `${Math.max(
+    `${conversion.toFixed(1)} %`.length + 3,
+    8
+  )}ch`,
+}}
   min={0}
   max={10}
   step={0.1}
   onChange={(e) => {
 
-    let value = Number(e.target.value);
+    let value = Number(
+  e.target.value
+    .replace("%", "")
+    .replace(",", ".")
+    .trim()
+);
 
     if (value < 0) value = 0;
     if (value > 10) value = 10;
@@ -281,12 +336,13 @@ step="1"
 
   }}
   className="
-    w-32
-    rounded-xl
+    w-auto
+    rounded-2xl
     border
     border-white/10
-    bg-[#16161B]
-    py-2
+    bg-[#18181D]
+    h-12
+px-3
     text-center
     font-semibold
     text-white
@@ -335,9 +391,14 @@ step="1"
     p-6
   "
 >
-  <p className="text-sm font-semibold text-white">
-    💳 Ticket medio
-  </p>
+  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+  <CreditCard
+    size={17}
+    strokeWidth={2.3}
+    className="text-[#8B5CF6]"
+  />
+  Ticket medio
+</p>
 
   <p className="mt-1 text-sm text-white/45">
     Importe medio por pedido.
@@ -346,14 +407,27 @@ step="1"
   <div className="mt-1 flex items-center justify-end gap-5">
 
     <input
-  type="number"
-  value={ticket}
+    style={{
+  width: `${Math.max(
+    `${ticket.toLocaleString("es-ES")} €`.length + 3,
+    8
+  )}ch`,
+}}
+  type="text"
+inputMode="numeric"
+pattern="[0-9]*"
+value={`${ticket.toLocaleString("es-ES")} €`}
   min={10}
   max={250}
   step={1}
   onChange={(e) => {
 
-    let value = Number(e.target.value);
+    let value = Number(
+  e.target.value
+    .replace(/\./g, "")
+    .replace("€", "")
+    .trim()
+);
 
     if (value < 10) value = 10;
     if (value > 250) value = 250;
@@ -362,12 +436,13 @@ step="1"
 
   }}
   className="
-    w-32
-    rounded-xl
+    w-auto
+    rounded-2xl
     border
     border-white/10
-    bg-[#16161B]
-    py-2
+    bg-[#18181D]
+    h-12
+px-3
     text-center
     font-semibold
     text-white
