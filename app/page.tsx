@@ -2,6 +2,7 @@ import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import CasesSection from "./components/sections/CasesSection";
 import GrowthSection from "./components/sections/GrowthSection";
+import CalculatorSection from "./components/sections/CalculatorSection";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-text">
@@ -17,6 +18,7 @@ export default function Home() {
       <CasesSection />
 
       <GrowthSection/>
+      <CalculatorSection />
     </main>
   );
 }
