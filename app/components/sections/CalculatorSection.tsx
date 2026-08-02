@@ -8,18 +8,18 @@ import Calculator from "../ui/Calculator";
 export default function CalculatorSection() {
   return (
     <Section
-      id="calculadora"
-      className="py-36"
-    >
+  id="calculadora"
+  className="pt-10 pb-32"
+>
       <Container>
 
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-6xl text-center">
 
           <Title
             className="
-              text-[1.9rem]
-              sm:text-4xl
-              lg:text-[2.8rem]
+              text-[1.8rem]
+    sm:text-[2.2rem]
+    lg:text-[2.5rem]
             "
           >
             Calcula cuánto{" "}
@@ -30,8 +30,8 @@ export default function CalculatorSection() {
           </Title>
 
           <Subtitle className="mx-auto mt-6 max-w-3xl text-lg">
-            Descubre cuánto podrías llegar a ganar mejorando pequeñas métricas
-            importantes de tu Shopify sin invertir más en publicidad.
+            Y descubre cuánto podrías llegar a ganar mejorando métricas
+            clave de tu Shopify sin invertir más en publicidad.
           </Subtitle>
 
         </div>
