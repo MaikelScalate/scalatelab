@@ -4,6 +4,18 @@ import Image from "next/image";
 import { motion } from "motion/react";
 
 export default function FunnelProblem() {
+  const particles = [
+  { left: 45, bottom: 62 },
+  { left: 47, bottom: 74 },
+  { left: 49, bottom: 86 },
+  { left: 50, bottom: 98 },
+  { left: 52, bottom: 70 },
+  { left: 53, bottom: 82 },
+  { left: 55, bottom: 95 },
+  { left: 56, bottom: 108 },
+  { left: 48, bottom: 118 },
+  { left: 54, bottom: 126 },
+];
   return (
     <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] bg-[#090909]">
 {/* Background Glow */}
@@ -244,7 +256,7 @@ drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
   "
 />
 
-{[...Array(10)].map((_, i) => (
+{particles.map((particle, i) => (
   <motion.div
     key={i}
     animate={{
@@ -259,19 +271,19 @@ drop-shadow-[0_0_35px_rgba(255,70,70,.18)]
     }}
     className="absolute"
     style={{
-      left: `${44 + Math.random() * 12}%`,
-      bottom: `${60 + Math.random() * 45}px`,
+      left: `${particle.left}%`,
+      bottom: `${particle.bottom}px`,
     }}
   >
     <div
-  className="
-    h-1.5
-    w-1.5
-    rounded-full
-    bg-red-400
-    shadow-[0_0_10px_rgba(239,68,68,.9)]
-  "
-/>
+      className="
+        h-1.5
+        w-1.5
+        rounded-full
+        bg-red-400
+        shadow-[0_0_10px_rgba(239,68,68,.9)]
+      "
+    />
   </motion.div>
 ))}
 <div
