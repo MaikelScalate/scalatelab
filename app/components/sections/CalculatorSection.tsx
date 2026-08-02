@@ -30,8 +30,8 @@ export default function CalculatorSection() {
           </Title>
 
           <Subtitle className="mx-auto mt-6 max-w-3xl text-lg">
-            Y descubre cuánto podrías llegar a ganar mejorando métricas
-            clave de tu Shopify sin invertir más en publicidad.
+            Y cuánto podrías ganar mejorando métricas
+            clave de tu Shopify sin más publicidad.
           </Subtitle>
 
         </div>
