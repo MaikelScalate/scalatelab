@@ -46,7 +46,7 @@ style={{
 
         <div className="border-r border-white/10 p-10">
         <h3 className="mb-8 text-lg font-semibold text-white">
-  Introduce tus métricas
+  Introduce tus métricas actuales
 </h3>
 
 <div className="space-y-7">
