@@ -29,7 +29,7 @@ export default function CalculatorSection() {
             dejas sobre la mesa.
           </Title>
 
-          <Subtitle className="mx-auto mt-6 max-w-3xl text-lg">
+          <Subtitle  className="    mx-auto    mt-6    max-w-3xl    text-base    sm:text-lg  ">
             Y cuánto podrías ganar mejorando métricas
             clave de tu Shopify sin más publicidad.
           </Subtitle>
