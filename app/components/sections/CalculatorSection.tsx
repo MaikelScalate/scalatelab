@@ -40,7 +40,7 @@ export default function CalculatorSection() {
   <Calculator />
 </div>
 
-<div className="mt-0 lg:mt-1 flex justify-center">
+<div className="mt-[-50px] lg:mt-1 flex justify-center">
           <Button
             className="
               h-12
