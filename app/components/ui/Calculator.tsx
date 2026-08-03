@@ -127,8 +127,29 @@ else {
 
         {/* IZQUIERDA */}
 
-       <div className="border-b lg:border-b-0 lg:border-r border-white/10 p-6 lg:p-10">
-          <h3 className="mb-8 text-lg font-semibold text-white">
+      <div
+  className="
+    border-b
+    lg:border-b-0
+    lg:border-r
+    border-white/10
+    p-6
+    lg:p-10
+    flex
+    flex-col
+    items-center
+    lg:items-stretch
+  "
+>
+          <h3
+  className="
+    mb-8
+    w-full
+    text-lg
+    font-semibold
+    text-white
+  "
+>
             Introduce tus métricas actuales
           </h3>
 
@@ -597,7 +618,16 @@ px-3
 
         {/* ================= DERECHA ================= */}
 
-        <div className="p-6 lg:p-10">
+        <div
+  className="
+    p-6
+    lg:p-10
+    flex
+    flex-col
+    items-center
+    lg:items-stretch
+  "
+>
 
           <div className="space-y-5 lg:space-y-6 flex flex-col items-center lg:items-stretch">
 
