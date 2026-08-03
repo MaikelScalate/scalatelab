@@ -22,9 +22,12 @@ export default function Calculator() {
 
   const improvedTicket = ticket + 10;
 
-  const improvedOrders = Math.round(
+  const improvedOrders = Math.min(
+  Math.round(
     sessions * (improvedConversion / 100)
-  );
+  ),
+  7000
+);
 
   const improvedRevenue =
     improvedOrders * improvedTicket;
@@ -71,8 +74,9 @@ let score = Math.min(
   revenueScore
 );
 if (
-  revenue >= 1300000 &&
+  revenue >= 1400000 &&
   conversion >= 5 &&
+  sessions >= 100000 &&
   ticket >= 200
 ) {
   score = 100;
@@ -122,12 +126,12 @@ else {
 
         {/* IZQUIERDA */}
 
-        <div className="border-r border-white/10 p-10">
+       <div className="border-b lg:border-b-0 lg:border-r border-white/10 p-6 lg:p-10">
           <h3 className="mb-8 text-lg font-semibold text-white">
             Introduce tus métricas actuales
           </h3>
 
-          <div className="space-y-7">
+          <div className="space-y-5 lg:space-y-7">
 
             <div
               className="
@@ -135,7 +139,7 @@ else {
       border
       border-white/10
       bg-white/[0.03]
-      p-6
+    p-5 lg:p-6
     "
             >
 
@@ -227,10 +231,13 @@ px-3
                   setSessions(newSessions);
 
                   setOrders(
-                    Math.round(
-                      newSessions * (conversion / 100)
-                    )
-                  );
+  Math.min(
+    Math.round(
+      newSessions * (conversion / 100)
+    ),
+    7000
+  )
+);
                 }}
                 className="
     mt-3
@@ -248,7 +255,7 @@ px-3
     border
     border-white/10
     bg-white/[0.03]
-    p-6
+  p-5 lg:p-6
   "
             >
               <div className="flex items-start justify-between gap-8">
@@ -345,9 +352,12 @@ px-3
 
                   setOrders(newOrders);
 
-                  setConversion(
-                    (newOrders / sessions) * 100
-                  );
+                  const newConversion = Math.min(
+  (newOrders / sessions) * 100,
+  10
+);
+
+setConversion(newConversion);
                 }}
                 className="
     mt-3
@@ -365,7 +375,7 @@ px-3
     border
     border-white/10
     bg-white/[0.03]
-    p-6
+  p-5 lg:p-6
   "
             >
               <div className="flex items-start justify-between gap-8">
@@ -417,10 +427,13 @@ px-3
                       setConversion(value);
 
                       setOrders(
-                        Math.round(
-                          sessions * (value / 100)
-                        )
-                      );
+  Math.min(
+    Math.round(
+      sessions * (value / 100)
+    ),
+    7000
+  )
+);
 
                     }}
                     className="
@@ -458,10 +471,13 @@ px-3
                   setConversion(newConversion);
 
                   setOrders(
-                    Math.round(
-                      sessions * (newConversion / 100)
-                    )
-                  );
+  Math.min(
+    Math.round(
+      sessions * (newConversion / 100)
+    ),
+    7000
+  )
+);
                 }}
                 className="
     mt-3
@@ -479,7 +495,7 @@ px-3
     border
     border-white/10
     bg-white/[0.03]
-    p-6
+  p-5 lg:p-6
   "
             >
               <div className="flex items-start justify-between gap-8">
@@ -574,9 +590,9 @@ px-3
 
         {/* ================= DERECHA ================= */}
 
-        <div className="p-10">
+        <div className="p-6 lg:p-10">
 
-          <div className="space-y-6">
+          <div className="space-y-5 lg:space-y-6">
 
             {/* FACTURACIÓN */}
 
@@ -679,7 +695,7 @@ px-3
         border
         border-white/10
         bg-white/[0.03]
-        p-6
+      p-5 lg:p-6
       "
             >
               {score >= 90 ? (
