@@ -108,16 +108,15 @@ else {
   return (
     <div
   className="
-    mx-auto
-    w-[90%]
-    sm:w-[96%]
-    lg:w-full
-    max-w-7xl
-    overflow-hidden
-    rounded-[34px]
-    border
-    border-white/10
-    shadow-[0_0_80px_rgba(130,60,255,.08)]
+  mx-auto
+  max-w-7xl
+  scale-90
+  origin-top
+  overflow-hidden
+  rounded-[34px]
+  border
+  border-white/10
+  shadow-[0_0_80px_rgba(130,60,255,.08)]
 "
       style={{
         background:
