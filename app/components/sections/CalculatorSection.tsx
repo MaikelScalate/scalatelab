@@ -36,7 +36,7 @@ export default function CalculatorSection() {
 
         </div>
 
-        <div className="-mx-3 lg:mx-0 mt-10">
+        <div className="-mx-2 lg:mx-0 mt-10">
   <Calculator />
 </div>
 
@@ -46,7 +46,6 @@ export default function CalculatorSection() {
               h-12
               px-8
               text-2lg
-              align-items: center
             "
           >
             Quiero dejar de perder ventas
