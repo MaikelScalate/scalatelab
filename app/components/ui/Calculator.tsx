@@ -139,6 +139,7 @@ else {
     flex-col
     items-center
     lg:items-stretch
+    w-full
   "
 >
           <h3
@@ -153,7 +154,17 @@ else {
             Introduce tus métricas actuales
           </h3>
 
-          <div className="space-y-5 lg:space-y-7 flex flex-col items-center lg:items-stretch">
+          <div
+  className="
+    space-y-5
+    lg:space-y-7
+    flex
+    flex-col
+    items-center
+    lg:items-stretch
+    w-full
+  "
+>
 
             <div
   className="
@@ -621,6 +632,7 @@ px-3
         <div
   className="
     p-6
+    w-full
     lg:p-10
     flex
     flex-col
@@ -629,7 +641,17 @@ px-3
   "
 >
 
-          <div className="space-y-5 lg:space-y-6 flex flex-col items-center lg:items-stretch">
+          <div
+  className="
+    space-y-5
+    lg:space-y-6
+    flex
+    flex-col
+    items-center
+    lg:items-stretch
+    w-full
+  "
+>
 
             {/* FACTURACIÓN */}
 
