@@ -12,7 +12,10 @@ import {
 
 export default function ImprovementsSection() {
   return (
-    <Section className="pt-5 py-32">
+    <Section
+  id="mejoras"
+  className="pt-15 py-32"
+>
       <Container>
         <div className="mx-auto max-w-4xl text-center">
           <Title
