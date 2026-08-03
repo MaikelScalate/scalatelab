@@ -9,7 +9,7 @@ export default function CalculatorSection() {
   return (
     <Section
   id="calculadora"
-  className="pt-20 pb-32"
+  className="pt-10 pb-32"
 >
       <Container>
 
