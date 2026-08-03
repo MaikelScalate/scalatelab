@@ -109,6 +109,8 @@ else {
     <div
   className="
   mx-auto
+  w-[98vw]
+  lg:w-auto
   max-w-7xl
   scale-90
   origin-top
@@ -387,7 +389,7 @@ setConversion(newConversion);
                   </p>
 
                   <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
-                    Porcentaje de visitantes que compran.
+                    Porcentaje de compradores.
                   </p>
 
                 </div>
