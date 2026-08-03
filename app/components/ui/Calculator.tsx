@@ -195,7 +195,7 @@ else {
 
                     }}
                     className="
-    w-[890px] lg:w-[130px]
+    w-[90px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
