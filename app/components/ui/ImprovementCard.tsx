@@ -1,15 +1,24 @@
+import { motion } from "motion/react";
+const particles = [
+  { left: "70%", top: "12%", duration: 2.6, delay: 0.2 },
+  { left: "76%", top: "20%", duration: 2.9, delay: 0.7 },
+  { left: "82%", top: "28%", duration: 2.4, delay: 0.4 },
+  { left: "88%", top: "15%", duration: 3.0, delay: 1.0 },
+  { left: "92%", top: "35%", duration: 2.7, delay: 0.8 },
+  { left: "80%", top: "42%", duration: 2.5, delay: 1.2 },
+  { left: "72%", top: "50%", duration: 2.8, delay: 0.5 },
+  { left: "90%", top: "55%", duration: 2.3, delay: 1.5 },
+];
 interface ImprovementCardProps {
   children: React.ReactNode;
   title: string;
   description: string;
-  tags: string[];
 }
 
 export default function ImprovementCard({
   children,
   title,
   description,
-  tags,
 }: ImprovementCardProps) {
   return (
     <div
@@ -53,7 +62,7 @@ hover:shadow-[0_0_80px_rgba(139,92,246,.14)]
     w-52
     rounded-full
     border
-    border-white/5
+    border-white/[0.025]
   "
 />
 <div
@@ -81,6 +90,46 @@ hover:shadow-[0_0_80px_rgba(139,92,246,.14)]
     border-white/[0.02]
   "
 />
+<div
+  className="
+    absolute
+    top-0
+    right-0
+    w-[180px]
+    h-[180px]
+    overflow-hidden
+    pointer-events-none
+  "
+>
+  {particles.map((particle, i) => (
+    <motion.div
+      key={i}
+      className="
+        absolute
+        h-[2px]
+        w-[2px]
+        rounded-full
+        bg-white
+      "
+      style={{
+        left: particle.left,
+        top: particle.top,
+      }}
+      animate={{
+        opacity: [0.15, 0.9, 0.15],
+        y: [4, -5, 4],
+        x: [0, -3, 0],
+        scale: [0.8, 1.5, 0.8],
+      }}
+      transition={{
+        duration: particle.duration,
+        repeat: Infinity,
+        delay: particle.delay,
+        ease: "easeInOut",
+      }}
+    />
+  ))}
+</div>
       {/* Barra superior */}
 
       <div
