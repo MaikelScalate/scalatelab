@@ -109,8 +109,6 @@ else {
     <div
   className="
   mx-auto
-  w-[98vw]
-  lg:w-auto
   max-w-7xl
   scale-90
   origin-top
@@ -146,7 +144,7 @@ else {
     "
             >
 
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-8">
 
                 <div>
 
@@ -255,7 +253,7 @@ px-3
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-8">
 
                 <div>
 
@@ -375,7 +373,7 @@ setConversion(newConversion);
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-8">
 
                 <div>
 
@@ -495,7 +493,7 @@ px-3
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-8">
 
                 <div>
 
