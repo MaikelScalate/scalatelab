@@ -157,9 +157,11 @@ else {
 
             <div
   className="
-    w-full
-    max-w-[430px]
-    lg:max-w-none
+    w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
     rounded-3xl
     border
       border-white/10
@@ -270,9 +272,11 @@ px-3
 
             <div
   className="
-    w-full
-    max-w-[430px]
-    lg:max-w-none
+    w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
     rounded-3xl
     border
     border-white/10
@@ -393,9 +397,11 @@ setConversion(newConversion);
 
            <div
   className="
-    w-full
-    max-w-[430px]
-    lg:max-w-none
+    w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
     rounded-3xl
     border
     border-white/10
@@ -516,9 +522,11 @@ px-3
 
             <div
   className="
-    w-full
-    max-w-[430px]
-    lg:max-w-none
+    w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
     rounded-3xl
     border
     border-white/10
@@ -635,9 +643,11 @@ px-3
 
             <div
   className="
-        w-full
-        max-w-[430px]
-        lg:max-w-none
+        w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
         rounded-3xl
         border
         border-white/10
@@ -676,9 +686,11 @@ lg:text-6xl
 
             <div
   className="
-        w-full
-        max-w-[430px]
-        lg:max-w-none
+        w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
         rounded-3xl
         border
         border-purple/20
@@ -734,9 +746,11 @@ lg:text-6xl
 
             <div
   className="
-        w-full
-        max-w-[430px]
-        lg:max-w-none
+        w-[94%]
+max-w-[430px]
+lg:w-full
+lg:max-w-none
+mx-auto
         rounded-3xl
         flex
         items-center
