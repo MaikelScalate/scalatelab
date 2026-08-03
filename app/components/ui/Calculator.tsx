@@ -688,7 +688,7 @@ lg:text-6xl
         p-7
       "
             >
-              <p className="text-xs uppercase tracking-[0.22em] text-purple">
+              <p className="text-xs uppercase tracking-[0.22em] text-pink-400">
                 Veamos cuánto dejas sobre la mesa
               </p>
 
