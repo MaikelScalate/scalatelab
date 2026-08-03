@@ -132,12 +132,15 @@ else {
             Introduce tus métricas actuales
           </h3>
 
-          <div className="space-y-5 lg:space-y-7">
+          <div className="space-y-5 lg:space-y-7 flex flex-col items-center lg:items-stretch">
 
             <div
-              className="
-      rounded-3xl
-      border
+  className="
+    w-full
+    max-w-[430px]
+    lg:max-w-none
+    rounded-3xl
+    border
       border-white/10
       bg-white/[0.03]
     p-5 lg:p-6
@@ -245,7 +248,10 @@ px-3
             {/* PEDIDOS */}
 
             <div
-              className="
+  className="
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
     border-white/10
@@ -364,8 +370,11 @@ setConversion(newConversion);
 
             {/* CONVERSIÓN */}
 
-            <div
-              className="
+           <div
+  className="
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
     border-white/10
@@ -485,7 +494,10 @@ px-3
             {/* TICKET */}
 
             <div
-              className="
+  className="
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
     border-white/10
