@@ -31,7 +31,7 @@ export default function CalculatorSection() {
 
           <Subtitle  className="    mx-auto    mt-6    max-w-3xl    text-base    sm:text-lg  ">
             Y cuánto podrías ganar mejorando métricas
-            clave de tu Shopify sin más publicidad.
+            clave sin invertir más en publicidad.
           </Subtitle>
 
         </div>
