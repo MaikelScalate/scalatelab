@@ -61,89 +61,83 @@ lg:text-[2.5rem]
     lg:px-20
   "
 >
-    <div
+   <div
   className="
     absolute
     left-1/2
     top-0
-    h-80
-    w-[700px]
     -translate-x-1/2
-    rounded-full
-    bg-[#8B5CF6]/10
-    blur-[120px]
+
+    h-[170px]
+    w-[980px]
+
+    opacity-25
+
+    bg-[radial-gradient(circle,rgba(255,255,255,.65)_1px,transparent_1px)]
+    [background-size:17px_17px]
+
+    [clip-path:polygon(0_0,100%_0,72%_100%,28%_100%)]
+
+    [mask-image:radial-gradient(circle_at_center,white,transparent_82%)]
+
     pointer-events-none
   "
 />
-
 <div
   className="
     absolute
-    inset-0
-    opacity-[0.035]
-    bg-[radial-gradient(circle,rgba(255,255,255,.7)_1px,transparent_1px)]
-    [background-size:22px_22px]
+    left-1/2
+    top-6
+    -translate-x-1/2
+
+    h-40
+    w-[700px]
+
+    rounded-full
+
+    bg-white/10
+
+    blur-[95px]
+
     pointer-events-none
   "
 />
-    <div className="relative mb-8 text-center">
+<div className="relative -mt-0 mb-8 text-center z-10">
+    {/* Línea */}
 
-  {/* Línea superior */}
+<div
+  className="
+    mx-auto
+    mb-5
+    h-[3px]
+    w-72
+    rounded-full
+    bg-gradient-to-r
+    from-transparent
+    via-[#8B5CF6]
+    to-transparent
+  "
+/>
 
-  <div
-    className="
-      mx-auto
-      mb-8
-      h-[2px]
-w-56
-      rounded-full
-      bg-gradient-to-r
-      from-transparent
-      via-[#8B5CF6]
-      to-transparent
-    "
-  />
+<p
+  className="
+    text-[2.9rem]
+    font-bold
+    text-white
+  "
+>
+  Los 3 pilares
+</p>
 
-  {/* Puntos */}
-
-  <div
-    className="
-      absolute
-      left-1/2
-      top-6
-      h-32
-      w-[700px]
-      -translate-x-1/2
-      opacity-30
-animate-[pulse_6s_ease-in-out_infinite]
-      bg-[radial-gradient(circle,rgba(255,255,255,.18)_1px,transparent_1px)]
-      [background-size:14px_14px]
-      pointer-events-none
-    "
-  />
-
-  <p
-    className="
-      relative
-      text-[2.8rem]
-      font-heading
-      font-bold
-      text-white
-    "
-  >
-    Los 3 pilares
-  </p>
-
-  <p
-    className="
-      relative
-      mt-2
-      text-lg
-      text-white/50
-    "
-  >
-    para escalar tu E-commerce
-  </p>
+<p
+  className="
+    mt-2
+    text-lg
+    text-white/45
+  "
+>
+  para escalar tu E-commerce
+</p>
 
 </div>
 <div
@@ -151,7 +145,7 @@ animate-[pulse_6s_ease-in-out_infinite]
     grid
     grid-cols-1
 lg:grid-cols-3
-gap-12
+gap-4
   "
 >
           <ImprovementCard
