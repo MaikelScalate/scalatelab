@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 interface ImprovementCardProps {
   children: React.ReactNode;
   title: string;
@@ -12,16 +12,25 @@ export default function ImprovementCard({
   title,
   description,
 }: ImprovementCardProps) {
-    const particles = useMemo(
-  () =>
+const [particles, setParticles] = useState<
+  {
+    left: string;
+    top: string;
+    duration: number;
+    delay: number;
+  }[]
+>([]);
+
+useEffect(() => {
+  setParticles(
     Array.from({ length: 45 }, () => ({
       left: `${50 + Math.random() * 48}%`,
       top: `${Math.random() * 60}%`,
       duration: 2 + Math.random() * 1.5,
       delay: Math.random() * 2,
-    })),
-  []
-);
+    }))
+  );
+}, []);
   return (
     <div
       className="
