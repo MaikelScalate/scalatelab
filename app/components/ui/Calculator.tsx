@@ -108,15 +108,16 @@ else {
   return (
     <div
   className="
-  mx-auto
-  max-w-7xl
-  scale-90
-  origin-top
-  overflow-hidden
-  rounded-[34px]
-  border
-  border-white/10
-  shadow-[0_0_80px_rgba(130,60,255,.08)]
+    mx-auto
+    w-[94%]
+    sm:w-[96%]
+    lg:w-full
+    max-w-7xl
+    overflow-hidden
+    rounded-[34px]
+    border
+    border-white/10
+    shadow-[0_0_80px_rgba(130,60,255,.08)]
 "
       style={{
         background:
@@ -157,11 +158,9 @@ else {
 
             <div
   className="
-    w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
       border-white/10
@@ -272,11 +271,9 @@ px-3
 
             <div
   className="
-    w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
     border-white/10
@@ -397,11 +394,9 @@ setConversion(newConversion);
 
            <div
   className="
-    w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
     border-white/10
@@ -522,11 +517,9 @@ px-3
 
             <div
   className="
-    w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+    w-full
+    max-w-[430px]
+    lg:max-w-none
     rounded-3xl
     border
     border-white/10
@@ -643,11 +636,9 @@ px-3
 
             <div
   className="
-        w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+        w-full
+        max-w-[430px]
+        lg:max-w-none
         rounded-3xl
         border
         border-white/10
@@ -686,11 +677,9 @@ lg:text-6xl
 
             <div
   className="
-        w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+        w-full
+        max-w-[430px]
+        lg:max-w-none
         rounded-3xl
         border
         border-purple/20
@@ -746,11 +735,9 @@ mx-auto
 
             <div
   className="
-        w-[94%]
-max-w-[430px]
-lg:w-full
-lg:max-w-none
-mx-auto
+        w-full
+        max-w-[430px]
+        lg:max-w-none
         rounded-3xl
         flex
         items-center
