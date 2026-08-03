@@ -11,117 +11,188 @@ import {
 
 export default function Calculator() {
 
-  const [sessions, setSessions] = useState(50000);
-  const [orders, setOrders] = useState(1250);
- const [conversion, setConversion] = useState(2.5);
- const [ticket, setTicket] = useState(51);
+  const [sessions, setSessions] = useState(45000);
+  const [orders, setOrders] = useState(810);
+  const [conversion, setConversion] = useState(1.8);
+  const [ticket, setTicket] = useState(65);
 
-const revenue = orders * ticket;
+  const revenue = orders * ticket;
 
-const improvedConversion = conversion + 1;
+  const improvedConversion = conversion + 1;
 
-const improvedTicket = ticket + 10;
+  const improvedTicket = ticket + 10;
 
-const improvedOrders = Math.round(
-  sessions * (improvedConversion / 100)
+  const improvedOrders = Math.round(
+    sessions * (improvedConversion / 100)
+  );
+
+  const improvedRevenue =
+    improvedOrders * improvedTicket;
+
+  const extraRevenue =
+    improvedRevenue - revenue;
+  let conversionScore = 0;
+
+if (conversion >= 5) conversionScore = 30;
+else if (conversion >= 4) conversionScore = 25;
+else if (conversion >= 3) conversionScore = 20;
+else if (conversion >= 2) conversionScore = 14;
+else if (conversion >= 1) conversionScore = 8;
+
+let ticketScore = 0;
+
+if (ticket >= 150) ticketScore = 25;
+else if (ticket >= 120) ticketScore = 22;
+else if (ticket >= 100) ticketScore = 18;
+else if (ticket >= 80) ticketScore = 14;
+else if (ticket >= 60) ticketScore = 10;
+
+let sessionsScore = 0;
+
+if (sessions >= 150000) sessionsScore = 15;
+else if (sessions >= 100000) sessionsScore = 12;
+else if (sessions >= 70000) sessionsScore = 9;
+else if (sessions >= 40000) sessionsScore = 6;
+else if (sessions >= 20000) sessionsScore = 3;
+
+let revenueScore = 0;
+
+if (revenue >= 1300000) revenueScore = 25;
+else if (revenue >= 700000) revenueScore = 20;
+else if (revenue >= 350000) revenueScore = 15;
+else if (revenue >= 150000) revenueScore = 10;
+else if (revenue >= 50000) revenueScore = 5;
+
+let score = Math.min(
+  100,
+  conversionScore +
+  ticketScore +
+  sessionsScore +
+  revenueScore
 );
-
-const improvedRevenue =
-  improvedOrders * improvedTicket;
-
-const extraRevenue =
-  improvedRevenue - revenue;
+if (
+  revenue >= 1300000 &&
+  conversion >= 5 &&
+  ticket >= 200
+) {
+  score = 100;
+}
+  let scoreTitle = "";
+  let scoreText = "";
+const isTop = revenue >= 1300000;
+  if (score < 50) {
+    scoreTitle = "Baja";
+    scoreText = "Tu tienda pierde ventas.";
+  }
+  else if (score < 75) {
+    scoreTitle = "Media";
+    scoreText = "Hay mucho potencial de mejora.";
+  }
+  else if (score < 90) {
+    scoreTitle = "Excelente";
+    scoreText = "¡Excelente! Y puedes escalar mucho más.";
+  }
+  else if (isTop) {
+  scoreTitle = "Top 1%";
+  scoreText = "Formas parte del 1% en E-commerce.";
+}
+else {
+  scoreTitle = "Excelente";
+  scoreText = "¡Excelente! Y puedes escalar mucho más.";
+}
   return (
     <div
-      className="
+  className="
   mx-auto
   max-w-7xl
+  scale-90
+  origin-top
   overflow-hidden
   rounded-[34px]
   border
   border-white/10
   shadow-[0_0_80px_rgba(130,60,255,.08)]
 "
-style={{
-  background:
-    "radial-gradient(circle at top left, rgba(109,91,255,.10), transparent 35%), radial-gradient(circle at bottom right, rgba(232,74,194,.08), transparent 45%), #0D0D12",
-}}
+      style={{
+        background:
+          "radial-gradient(circle at top left, rgba(109,91,255,.10), transparent 35%), radial-gradient(circle at bottom right, rgba(232,74,194,.08), transparent 45%), #0D0D12",
+      }}
     >
       <div className="grid lg:grid-cols-[58%_42%]">
 
         {/* IZQUIERDA */}
 
         <div className="border-r border-white/10 p-10">
-        <h3 className="mb-8 text-lg font-semibold text-white">
-  Introduce tus métricas actuales
-</h3>
+          <h3 className="mb-8 text-lg font-semibold text-white">
+            Introduce tus métricas actuales
+          </h3>
 
-<div className="space-y-7">
+          <div className="space-y-7">
 
-  <div
-    className="
+            <div
+              className="
       rounded-3xl
       border
       border-white/10
       bg-white/[0.03]
       p-6
     "
-  >
+            >
 
-    <div className="flex items-start justify-between gap-8">
+              <div className="flex items-start justify-between gap-8">
 
-  <div>
+                <div>
 
-    <p className="flex items-center gap-2 text-sm font-semibold text-white">
-      <Users
-        size={17}
-        strokeWidth={2.3}
-        className="text-[#8B5CF6]"
-      />
-      Sesiones al mes
-    </p>
+                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                    <Users
+                      size={17}
+                      strokeWidth={2.3}
+                      className="text-[#8B5CF6]"
+                    />
+                    Sesiones al mes
+                  </p>
 
-    <p className="mt-1 text-sm text-white/45">
-      Visitas mensuales de tu tienda.
-    </p>
+                  <p className="mt-1 text-sm text-white/45">
+                    Visitas mensuales de tu tienda.
+                  </p>
 
-  </div>
+                </div>
 
-  <div className="flex items-center gap-5">
-      <input
-  style={{
-    width: `${Math.max(
-      sessions.toLocaleString("es-ES").length + 2,
-      8
-    )}ch`,
-  }}
-  type="text"
-  inputMode="numeric"
-  pattern="[0-9]*"
-  value={sessions.toLocaleString("es-ES")}
-  min={500}
-  max={150000}
-  step={500}
-  onChange={(e) => {
+                <div className="flex items-center gap-5">
+                  <input
+                    style={{
+                      width: `${Math.max(
+                        sessions.toLocaleString("es-ES").length + 2,
+                        8
+                      )}ch`,
+                    }}
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={sessions.toLocaleString("es-ES")}
+                    min={0}
+                    max={150000}
+                    step={500}
+                    onChange={(e) => {
 
-    let value = Number(
-  e.target.value.replace(/\./g, "")
-);
+                      let value = Number(
+                        e.target.value.replace(/\./g, "")
+                      );
 
-    if (value < 500) value = 500;
-    if (value > 150000) value = 150000;
+                      if (value < 0) value = 0;
+                      if (value > 150000) value = 150000;
 
-    setSessions(value);
+                      setSessions(value);
 
-    const newOrders = Math.min(
-  Math.round(value * (conversion / 100)),
-  10000
-);
+                      const newOrders = Math.min(
+                        Math.round(value * (conversion / 100)),
+                        7000
+                      );
 
-setOrders(newOrders);
+                      setOrders(newOrders);
 
-  }}
-  className="
+                    }}
+                    className="
     w-auto
     rounded-2xl
     border
@@ -134,105 +205,113 @@ px-3
     text-white
     outline-none
   "
-/>
+                  />
 
-      <span className="text-white/40">
-  150.000
-</span>
+                  <span className="text-white/40">
+                    150.000
+                  </span>
 
-</div>
+                </div>
 
-</div>
+              </div>
 
-<input
-  type="range"
-  min="500"
-max="150000"
-step="500"
-  value={sessions}
-  onChange={(e) => {
-  const newSessions = Number(e.target.value);
+              <input
+                type="range"
+                min="0"
+                max="150000"
+                step="500"
+                value={sessions}
+                onChange={(e) => {
+                  const newSessions = Number(e.target.value);
 
-  setSessions(newSessions);
+                  setSessions(newSessions);
 
-  setOrders(
-    Math.round(
-      newSessions * (conversion / 100)
-    )
-  );
-}}
-  className="
+                  setOrders(
+                    Math.round(
+                      newSessions * (conversion / 100)
+                    )
+                  );
+                }}
+                className="
     mt-3
     w-full
     accent-[#8B5CF6]
 "
-/>
+              />
 
-  </div>
-{/* PEDIDOS */}
+            </div>
+            {/* PEDIDOS */}
 
-<div
-  className="
+            <div
+              className="
     rounded-3xl
     border
     border-white/10
     bg-white/[0.03]
     p-6
   "
->
-  <p className="flex items-center gap-2 text-sm font-semibold text-white">
-  <ShoppingBag
-    size={17}
-    strokeWidth={2.3}
-    className="text-[#8B5CF6]"
-  />
-  Pedidos al mes
-</p>
+            >
+              <div className="flex items-start justify-between gap-8">
 
-  <p className="mt-1 text-sm text-white/45">
-    Número de pedidos mensuales.
-  </p>
+                <div>
 
-  <div className="mt-1 flex items-center justify-end gap-5">
+                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                    <ShoppingBag
+                      size={17}
+                      strokeWidth={2.3}
+                      className="text-[#8B5CF6]"
+                    />
+                    Pedidos al mes
+                  </p>
 
-    <input
-  type="text"
-inputMode="numeric"
-pattern="[0-9]*"
-value={orders.toLocaleString("es-ES")}
-  style={{
-  width: `${Math.max(
-    orders.toLocaleString("es-ES").length + 2,
-    7
-  )}ch`,
-}}
-  min={1}
-  max={10000}
-  step={1}
-  onChange={(e) => {
+                  <p className="mt-1 text-sm text-white/45">
+                    Número de pedidos mensuales.
+                  </p>
 
-  let value = Number(
-  e.target.value.replace(/\./g, "")
-);
+                </div>
 
-  if (value < 1) value = 1;
-  if (value > 10000) value = 10000;
+                <div className="flex items-center gap-5">
 
-  let newConversion =
-    (value / sessions) * 100;
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={orders.toLocaleString("es-ES")}
+                    style={{
+                      width: `${Math.max(
+                        orders.toLocaleString("es-ES").length + 2,
+                        7
+                      )}ch`,
+                    }}
+                    min={1}
+                    max={7000}
+                    step={1}
+                    onChange={(e) => {
 
-  if (newConversion > 10) {
-    newConversion = 10;
-    value = Math.round(
-      sessions * 0.10
-    );
-  }
+                      let value = Number(
+                        e.target.value.replace(/\./g, "")
+                      );
 
-  setOrders(value);
-  setConversion(newConversion);
+                      if (value < 1) value = 1;
+                      if (value > 7000) value = 7000;
 
-}}
-  className="
+                      let newConversion =
+                        (value / sessions) * 100;
+
+                      const maxConversion = 10;
+
+if (newConversion > maxConversion) {
+  newConversion = maxConversion;
+  value = Math.round(
+    sessions * (maxConversion / 100)
+  );
+}
+
+                      setOrders(value);
+                      setConversion(newConversion);
+
+                    }}
+                    className="
     w-auto
     rounded-2xl
     border
@@ -245,97 +324,106 @@ px-3
     text-white
     outline-none
   "
-/>
+                  />
 
-    <span className="text-white/40">
-      10.000
-    </span>
-  </div>
+                  <span className="text-white/40">
+                  7000
+                  </span>
 
-  <input
-  type="range"
-  min="1"
-max="10000"
-step="1"
-  value={orders}
-  onChange={(e) => {
-  const newOrders = Number(e.target.value);
+                </div>
 
-  setOrders(newOrders);
+              </div>
 
-  setConversion(
-    (newOrders / sessions) * 100
-  );
-}}
-  className="
+              <input
+                type="range"
+                min="1"
+                max="7000"
+                step="1"
+                value={orders}
+                onChange={(e) => {
+                  const newOrders = Number(e.target.value);
+
+                  setOrders(newOrders);
+
+                  setConversion(
+                    (newOrders / sessions) * 100
+                  );
+                }}
+                className="
     mt-3
     w-full
     accent-[#8B5CF6]
 "
-/>
-</div>
+              />
+            </div>
 
-{/* CONVERSIÓN */}
+            {/* CONVERSIÓN */}
 
-<div
-  className="
+            <div
+              className="
     rounded-3xl
     border
     border-white/10
     bg-white/[0.03]
     p-6
   "
->
-  <p className="flex items-center gap-2 text-sm font-semibold text-white">
-  <Percent
-    size={17}
-    strokeWidth={2.3}
-    className="text-[#8B5CF6]"
-  />
-  Tasa de conversión
-</p>
+            >
+              <div className="flex items-start justify-between gap-8">
 
-  <p className="mt-1 text-sm text-white/45">
-    Porcentaje de visitantes que compran.
-  </p>
+                <div>
 
-  <div className="mt-1 flex items-center justify-end gap-5">
+                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                    <Percent
+                      size={17}
+                      strokeWidth={2.3}
+                      className="text-[#8B5CF6]"
+                    />
+                    Tasa de conversión
+                  </p>
 
-    <input
- type="text"
-inputMode="decimal"
-value={`${conversion.toFixed(1)} %`}
-style={{
-  width: `${Math.max(
-    `${conversion.toFixed(1)} %`.length + 3,
-    8
-  )}ch`,
-}}
-  min={0}
-  max={10}
-  step={0.1}
-  onChange={(e) => {
+                  <p className="mt-1 text-sm text-white/45">
+                    Porcentaje de visitantes que compran.
+                  </p>
 
-    let value = Number(
-  e.target.value
-    .replace("%", "")
-    .replace(",", ".")
-    .trim()
-);
+                </div>
 
-    if (value < 0) value = 0;
-    if (value > 10) value = 10;
+                <div className="flex items-center gap-5">
 
-    setConversion(value);
+                  <input
+                    type="text"
+                    inputMode="decimal"
+                    value={`${conversion.toFixed(1)} %`}
+                    style={{
+                      width: `${Math.max(
+                        `${conversion.toFixed(1)} %`.length + 3,
+                        8
+                      )}ch`,
+                    }}
+                    min={0}
+                    max={10}
+                    step={0.1}
+                    onChange={(e) => {
 
-    setOrders(
-      Math.round(
-        sessions * (value / 100)
-      )
-    );
+                      let value = Number(
+                        e.target.value
+                          .replace("%", "")
+                          .replace(",", ".")
+                          .trim()
+                      );
 
-  }}
-  className="
+                      if (value < 0) value = 0;
+                      if (value > 10) value = 10;
+
+                      setConversion(value);
+
+                      setOrders(
+                        Math.round(
+                          sessions * (value / 100)
+                        )
+                      );
+
+                    }}
+                    className="
     w-auto
     rounded-2xl
     border
@@ -348,94 +436,103 @@ px-3
     text-white
     outline-none
   "
-/>
+                  />
 
-    <span className="text-white/40">
-      10%
-    </span>
-  </div>
+                  <span className="text-white/40">
+                    10%
+                  </span>
 
-  <input
-  type="range"
-  min="0"
-  max="10"
-  step="0.1"
-  value={conversion}
-  onChange={(e) => {
-  const newConversion = Number(e.target.value);
+                </div>
 
-  setConversion(newConversion);
+              </div>
 
-  setOrders(
-    Math.round(
-      sessions * (newConversion / 100)
-    )
-  );
-}}
-  className="
+              <input
+                type="range"
+                min="0"
+                max="10"
+                step="0.1"
+                value={conversion}
+                onChange={(e) => {
+                  const newConversion = Number(e.target.value);
+
+                  setConversion(newConversion);
+
+                  setOrders(
+                    Math.round(
+                      sessions * (newConversion / 100)
+                    )
+                  );
+                }}
+                className="
     mt-3
     w-full
     accent-[#8B5CF6]
 "
-/>
-</div>
+              />
+            </div>
 
-{/* TICKET */}
+            {/* TICKET */}
 
-<div
-  className="
+            <div
+              className="
     rounded-3xl
     border
     border-white/10
     bg-white/[0.03]
     p-6
   "
->
-  <p className="flex items-center gap-2 text-sm font-semibold text-white">
-  <CreditCard
-    size={17}
-    strokeWidth={2.3}
-    className="text-[#8B5CF6]"
-  />
-  Ticket medio
-</p>
+            >
+              <div className="flex items-start justify-between gap-8">
 
-  <p className="mt-1 text-sm text-white/45">
-    Importe medio por pedido.
-  </p>
+                <div>
 
-  <div className="mt-1 flex items-center justify-end gap-5">
+                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                    <CreditCard
+                      size={17}
+                      strokeWidth={2.3}
+                      className="text-[#8B5CF6]"
+                    />
+                    Ticket medio
+                  </p>
 
-    <input
-    style={{
-  width: `${Math.max(
-    `${ticket.toLocaleString("es-ES")} €`.length + 3,
-    8
-  )}ch`,
-}}
-  type="text"
-inputMode="numeric"
-pattern="[0-9]*"
-value={`${ticket.toLocaleString("es-ES")} €`}
-  min={10}
-  max={250}
-  step={1}
-  onChange={(e) => {
+                  <p className="mt-1 text-sm text-white/45">
+                    Importe medio por pedido.
+                  </p>
 
-    let value = Number(
-  e.target.value
-    .replace(/\./g, "")
-    .replace("€", "")
-    .trim()
-);
+                </div>
 
-    if (value < 10) value = 10;
-    if (value > 250) value = 250;
+                <div className="flex items-center gap-5">
 
-    setTicket(value);
+                  <input
+                    style={{
+                      width: `${Math.max(
+                        `${ticket.toLocaleString("es-ES")} €`.length + 3,
+                        8
+                      )}ch`,
+                    }}
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    value={`${ticket.toLocaleString("es-ES")} €`}
+                    min={10}
+                    max={250}
+                    step={1}
+                    onChange={(e) => {
 
-  }}
-  className="
+                      let value = Number(
+                        e.target.value
+                          .replace(/\./g, "")
+                          .replace("€", "")
+                          .trim()
+                      );
+
+                      if (value < 10) value = 10;
+                      if (value > 250) value = 250;
+
+                      setTicket(value);
+
+                    }}
+                    className="
     w-auto
     rounded-2xl
     border
@@ -448,40 +545,43 @@ px-3
     text-white
     outline-none
   "
-/>
+                  />
 
-    <span className="text-white/40">
-      250€
-    </span>
-  </div>
+                  <span className="text-white/40">
+                    250€
+                  </span>
 
-  <input
-  type="range"
-  min="10"
-  max="250"
-  value={ticket}
-  onChange={(e) => setTicket(Number(e.target.value))}
-  className="
+                </div>
+
+              </div>
+
+              <input
+                type="range"
+                min="10"
+                max="250"
+                value={ticket}
+                onChange={(e) => setTicket(Number(e.target.value))}
+                className="
     mt-3
     w-full
     accent-[#8B5CF6]
 "
-/>
-</div>
-</div>
+              />
+            </div>
+          </div>
 
         </div>
 
-       {/* ================= DERECHA ================= */}
+        {/* ================= DERECHA ================= */}
 
-<div className="p-10">
+        <div className="p-10">
 
-  <div className="space-y-6">
+          <div className="space-y-6">
 
-    {/* FACTURACIÓN */}
+            {/* FACTURACIÓN */}
 
-    <div
-      className="
+            <div
+              className="
         rounded-3xl
         border
         border-white/10
@@ -489,12 +589,12 @@ px-3
         p-8
         text-center
       "
-    >
-      <p className="text-xs uppercase tracking-[0.22em] text-white/45">
-        Tu facturación mensual
-      </p>
-      <h2
-        className="
+            >
+              <p className="text-xs uppercase tracking-[0.22em] text-white/45">
+                Tu facturación mensual
+              </p>
+              <h2
+                className="
           mt-4
           bg-gradient-to-r
           from-[#6D5BFF]
@@ -504,19 +604,19 @@ px-3
           font-bold
           text-transparent
         "
-      >
-        {revenue.toLocaleString("es-ES")}€
-      </h2>
+              >
+                {revenue.toLocaleString("es-ES")}€
+              </h2>
 
-      <p className="mt-3 text-sm text-white/50">
-        Esta es tu facturación mensual estimada.
-      </p>
-    </div>
+              <p className="mt-3 text-sm text-white/50">
+                Esta es tu facturación mensual estimada.
+              </p>
+            </div>
 
-    {/* POTENCIAL */}
+            {/* POTENCIAL */}
 
-    <div
-      className="
+            <div
+              className="
         rounded-3xl
         border
         border-purple/20
@@ -525,17 +625,17 @@ px-3
         to-pink-500/10
         p-7
       "
-    >
-      <p className="text-xs uppercase tracking-[0.22em] text-purple">
-        Veamos cuánto dejas sobre la mesa
-      </p>
+            >
+              <p className="text-xs uppercase tracking-[0.22em] text-purple">
+                Veamos cuánto dejas sobre la mesa
+              </p>
 
-      <p className="mt-4 text-white/70">
-        Mejorando solo un 1% tu tasa de conversión y 10€ tu ticket medio podrías facturar:
-      </p>
+              <p className="mt-4 text-white/70">
+                Mejorando solo un 1% más tu tasa de conversión y +10€ tu ticket medio podrías facturar:
+              </p>
 
-      <h3
-        className="
+              <h3
+                className="
           mt-5
           bg-gradient-to-r
           from-[#6D5BFF]
@@ -545,12 +645,12 @@ px-3
           font-bold
           text-transparent
         "
-      >
-        {improvedRevenue.toLocaleString("es-ES")}€
-      </h3>
+              >
+                {improvedRevenue.toLocaleString("es-ES")}€
+              </h3>
 
-      <div
-        className="
+              <div
+                className="
           mt-4
           inline-flex
           rounded-full
@@ -563,15 +663,15 @@ px-3
           font-semibold
           text-white
         "
-      >
-        +{extraRevenue.toLocaleString("es-ES")}€ adicionales al mes
-      </div>
-    </div>
+              >
+                +{extraRevenue.toLocaleString("es-ES")}€ adicionales al mes
+              </div>
+            </div>
 
-    {/* PUNTUACIÓN */}
+            {/* PUNTUACIÓN */}
 
-    <div
-      className="
+            <div
+              className="
         flex
         items-center
         gap-6
@@ -581,42 +681,136 @@ px-3
         bg-white/[0.03]
         p-6
       "
+            >
+              {score >= 90 ? (
+
+  <div
+    className="
+      relative
+      flex
+      h-20
+      w-20
+      items-center
+      justify-center
+      rounded-full
+      bg-gradient-to-br
+      from-[#6D5BFF]
+      via-[#8B5CF6]
+      to-[#E84AC2]
+      p-[6px]
+    "
+  >
+    <div
+      className="
+        flex
+        h-full
+        w-full
+        items-center
+        justify-center
+        rounded-full
+        bg-[#0D0D12]
+        text-3xl
+        font-bold
+        text-white
+      "
     >
-      <div
-        className="
-          flex
-          h-20
-          w-20
-          items-center
-          justify-center
-          rounded-full
-          border-[6px]
-          border-yellow-400
-          text-3xl
-          font-bold
-          text-yellow-400
-        "
-      >
-        62
-      </div>
-
-      <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-          Puntuación
-        </p>
-
-        <p className="mt-2 text-2xl font-bold text-yellow-400">
-          Media
-        </p>
-
-        <p className="mt-1 text-sm text-white/55">
-          Tu tienda tiene margen de mejora.
-        </p>
-      </div>
+      {score}
     </div>
-</div>
   </div>
-</div>
-</div>
-  );
+
+) : (
+
+  <div
+    className={`
+      flex
+      h-20
+      w-20
+      items-center
+      justify-center
+      rounded-full
+      border-[6px]
+      text-3xl
+      font-bold
+      ${
+        score < 50
+          ? "border-red-400/90 text-red-400"
+          : score < 75
+          ? "border-yellow-400/90 text-yellow-400"
+          : "border-green-400/90 text-green-400"
+      }
+    `}
+  >
+    {score}
+  </div>
+
+)}
+
+              <div className="flex flex-col justify-center flex-1">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/45">
+                  Puntuación
+                </p>
+
+                <p
+                  className={`
+    mt-2
+    text-2xl
+    font-bold
+    ${score < 50
+  ? "text-red-400"
+  : score < 75
+    ? "text-yellow-400"
+    : score < 90
+      ? "text-green-400"
+      : "text-white"
+}
+  `}
+                >
+                  {scoreTitle}
+                </p>
+
+                <p className="mt-1 text-sm text-white/55">
+                  {scoreText}
+                </p>
+
+                <div className="mt-5 flex items-center gap-3">
+
+                  <div className="flex-1 h-2 rounded-full bg-white/10 overflow-hidden">
+
+                    <div
+                      className={`
+h-full
+rounded-full
+bg-gradient-to-r
+${score < 50
+                          ? "from-red-500 to-orange-500"
+                          : score < 75
+                            ? "from-yellow-400 to-orange-400"
+                            : score < 90
+                              ? "from-green-400 to-green-500"
+                              : "from-[#6D5BFF] via-[#8B5CF6] to-[#E84AC2]"
+                        }
+`}
+                      style={{ width: `${score}%` }}
+                    />
+
+                  </div>
+
+                  <span className="text-xs text-white/40">
+                    100%
+                  </span>
+
+                </div> {/* fin barra */}
+
+              </div> {/* fin columna derecha de la puntuación */}
+
+            </div> {/* fin tarjeta PUNTUACIÓN */}
+
+          </div> {/* fin space-y-6 */}
+
+        </div> {/* fin p-10 */}
+
+      </div> {/* fin grid */}
+
+    </div>
+  )
 }
