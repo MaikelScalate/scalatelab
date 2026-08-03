@@ -158,7 +158,7 @@ else {
             <div
   className="
     w-full
-    max-w-[400px]
+    max-w-[380px]
     lg:max-w-none
     rounded-3xl
     border
@@ -271,7 +271,7 @@ px-3
             <div
   className="
     w-full
-    max-w-[400px]
+    max-w-[380px]
     lg:max-w-none
     rounded-3xl
     border
@@ -394,7 +394,7 @@ setConversion(newConversion);
            <div
   className="
     w-full
-    max-w-[400px]
+    max-w-[380px]
     lg:max-w-none
     rounded-3xl
     border
@@ -517,7 +517,7 @@ px-3
             <div
   className="
     w-full
-    max-w-[400px]
+    max-w-[380px]
     lg:max-w-none
     rounded-3xl
     border
@@ -636,7 +636,7 @@ px-3
             <div
   className="
         w-full
-        max-w-[400px]
+        max-w-[380px]
         lg:max-w-none
         rounded-3xl
         border
@@ -677,7 +677,7 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-[400px]
+        max-w-[380px]
         lg:max-w-none
         rounded-3xl
         border
@@ -735,7 +735,7 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-[400px]
+        max-w-[380px]
         lg:max-w-none
         rounded-3xl
         flex
