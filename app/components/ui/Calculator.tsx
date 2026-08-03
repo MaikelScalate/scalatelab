@@ -142,13 +142,7 @@ else {
     border-white/10
     p-6
     lg:p-10
-    flex
-    flex-col
-    items-center
-    lg:items-stretch
     w-full
-    max-w-[420px]
-    lg:max-w-none
 "
 >
           <h3
@@ -165,13 +159,12 @@ else {
 
           <div
   className="
-    space-y-5
-    lg:space-y-7
-    flex
-    flex-col
-    items-center
-    lg:items-stretch
+    mx-auto
     w-full
+    max-w-[360px]
+    space-y-5
+    lg:max-w-none
+    lg:space-y-7
   "
 >
 
@@ -641,27 +634,20 @@ px-3
         <div
   className="
     p-6
-    w-full
-    max-w-[420px]
-    lg:max-w-none
     lg:p-10
-    flex
-    flex-col
-    items-center
-    lg:items-stretch
+    w-full
 "
 >
 
           <div
   className="
-    space-y-5
-    lg:space-y-6
-    flex
-    flex-col
-    items-center
-    lg:items-stretch
+    mx-auto
     w-full
-  "
+    max-w-[360px]
+    space-y-5
+    lg:max-w-none
+    lg:space-y-6
+"
 >
 
             {/* FACTURACIÓN */}
