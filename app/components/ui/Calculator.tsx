@@ -192,7 +192,7 @@ else {
 
                     }}
                     className="
-    w-[95px] lg:w-[115px]
+    w-[85px] lg:w-[105px]
     rounded-2xl
     border
     border-white/10
@@ -314,7 +314,7 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-[95px] lg:w-[115px]
+    w-[85px] lg:w-[105px]
     rounded-2xl
     border
     border-white/10
@@ -432,7 +432,7 @@ setConversion(newConversion);
 
                     }}
                     className="
-    w-[95px] lg:w-[115px]
+    w-[85px] lg:w-[105px]
     rounded-2xl
     border
     border-white/10
@@ -544,7 +544,7 @@ px-3
 
                     }}
                     className="
-    w-[95px] lg:w-[115px]
+    w-[85px] lg:w-[105px]
     rounded-2xl
     border
     border-white/10
