@@ -1,14 +1,6 @@
+"use client";
 import { motion } from "motion/react";
-const particles = [
-  { left: "70%", top: "12%", duration: 2.6, delay: 0.2 },
-  { left: "76%", top: "20%", duration: 2.9, delay: 0.7 },
-  { left: "82%", top: "28%", duration: 2.4, delay: 0.4 },
-  { left: "88%", top: "15%", duration: 3.0, delay: 1.0 },
-  { left: "92%", top: "35%", duration: 2.7, delay: 0.8 },
-  { left: "80%", top: "42%", duration: 2.5, delay: 1.2 },
-  { left: "72%", top: "50%", duration: 2.8, delay: 0.5 },
-  { left: "90%", top: "55%", duration: 2.3, delay: 1.5 },
-];
+import { useMemo } from "react";
 interface ImprovementCardProps {
   children: React.ReactNode;
   title: string;
@@ -20,6 +12,16 @@ export default function ImprovementCard({
   title,
   description,
 }: ImprovementCardProps) {
+    const particles = useMemo(
+  () =>
+    Array.from({ length: 45 }, () => ({
+      left: `${50 + Math.random() * 48}%`,
+      top: `${Math.random() * 60}%`,
+      duration: 2 + Math.random() * 1.5,
+      delay: Math.random() * 2,
+    })),
+  []
+);
   return (
     <div
       className="

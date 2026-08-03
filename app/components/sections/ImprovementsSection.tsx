@@ -26,7 +26,7 @@ lg:text-[2.5rem]
     leading-tight
   "
 >
-  Así logramos que tu marca{" "}
+  Así hacemos que tu marca{" "}
 <span
   className="
     bg-gradient-to-r
@@ -149,15 +149,9 @@ gap-4
   "
 >
           <ImprovementCard
-            title="Mismo tráfico, más clientes"
-            description="Optimizamos el recorrido del usuario para aumentar la tasa de conversión mediante mejoras de CRO, UX y eliminación de fricciones."
-            tags={[
-              "Optimización CRO",
-"Experiencia UX",
-"Checkout",
-"Confianza",
-            ]}
-          >
+  title="Mismo tráfico, más clientes"
+  description="Optimizamos el recorrido del usuario para aumentar la tasa de conversión mediante mejoras de CRO, UX y eliminación de fricciones."
+>
             <Target
               size={64}
               strokeWidth={1.7}
@@ -171,12 +165,6 @@ drop-shadow-[0_0_20px_rgba(139,92,246,.45)]
           <ImprovementCard
             title="Mismos clientes, más facturación"
             description="Incrementamos el ticket medio utilizando bundles, upsells y una estructura de compra diseñada para aumentar el valor de cada pedido."
-            tags={[
-              "Bundles",
-"Upsells",
-"Cross-sells",
-"Ticket medio",
-            ]}
           >
             <TrendingUp
               size={64}
@@ -191,12 +179,6 @@ drop-shadow-[0_0_20px_rgba(139,92,246,.45)]
           <ImprovementCard
             title="Clientes estables, negocio recurrente"
             description="Creamos estrategias para que vuelvan a comprar aumentando el valor de vida de cada cliente y reduciendo el coste de adquisición."
-            tags={[
-              "Email",
-"Retención",
-"LTV",
-"Fidelización",
-            ]}
           >
             <RefreshCw
               size={64}
