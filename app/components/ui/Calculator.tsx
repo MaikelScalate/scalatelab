@@ -144,7 +144,7 @@ else {
     "
             >
 
-              <div className="flex items-start justify-between gap-8">
+              <div className="flex items-start justify-between gap-3 lg:gap-8">
 
                 <div>
 
@@ -163,7 +163,7 @@ else {
 
                 </div>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-2 lg:gap-5">
                   <input
                     type="text"
                     inputMode="numeric"
@@ -192,7 +192,7 @@ else {
 
                     }}
                     className="
-    w-[85px] lg:w-[105px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -206,7 +206,7 @@ px-3
   "
                   />
 
-                  <span className="text-white/40">
+                  <span className="text-xs lg:text-sm text-white/40">
                     150.000
                   </span>
 
@@ -253,7 +253,7 @@ px-3
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-8">
+              <div className="flex items-start justify-between gap-3 lg:gap-8">
 
                 <div>
 
@@ -272,7 +272,7 @@ px-3
 
                 </div>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -314,7 +314,7 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-[85px] lg:w-[105px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -328,7 +328,7 @@ px-3
   "
                   />
 
-                  <span className="text-white/40">
+                  <span className="text-xs lg:text-sm text-white/40">
                   7000
                   </span>
 
@@ -373,7 +373,7 @@ setConversion(newConversion);
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-8">
+              <div className="flex items-start justify-between gap-3 lg:gap-8">
 
                 <div>
 
@@ -392,7 +392,7 @@ setConversion(newConversion);
 
                 </div>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -432,7 +432,7 @@ setConversion(newConversion);
 
                     }}
                     className="
-    w-[85px] lg:w-[105px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -446,7 +446,7 @@ px-3
   "
                   />
 
-                  <span className="text-white/40">
+                  <span className="text-xs lg:text-sm text-white/40">
                     10%
                   </span>
 
@@ -493,7 +493,7 @@ px-3
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-8">
+              <div className="flex items-start justify-between gap-3 lg:gap-8">
 
                 <div>
 
@@ -512,7 +512,7 @@ px-3
 
                 </div>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-2 lg:gap-5">
 
                   <input
                     style={{
@@ -544,7 +544,7 @@ px-3
 
                     }}
                     className="
-    w-[85px] lg:w-[105px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -558,7 +558,7 @@ px-3
   "
                   />
 
-                  <span className="text-white/40">
+                  <span className="text-xs lg:text-sm text-white/40">
                     250€
                   </span>
 
