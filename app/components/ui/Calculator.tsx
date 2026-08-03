@@ -247,8 +247,9 @@ px-3
                   />
 
                   <span className="text-xs lg:text-sm text-white/40">
-                    150.000
-                  </span>
+  <span className="lg:hidden">150k</span>
+  <span className="hidden lg:inline">150.000</span>
+</span>
 
                 </div>
 
