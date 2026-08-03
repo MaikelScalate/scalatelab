@@ -599,12 +599,15 @@ px-3
 
         <div className="p-6 lg:p-10">
 
-          <div className="space-y-5 lg:space-y-6">
+          <div className="space-y-5 lg:space-y-6 flex flex-col items-center lg:items-stretch">
 
             {/* FACTURACIÓN */}
 
             <div
-              className="
+  className="
+        w-full
+        max-w-[430px]
+        lg:max-w-none
         rounded-3xl
         border
         border-white/10
@@ -619,11 +622,14 @@ px-3
               <h2
                 className="
           mt-4
+          break-words
           bg-gradient-to-r
           from-[#6D5BFF]
           to-[#E84AC2]
           bg-clip-text
-          text-6xl
+          text-4xl
+sm:text-5xl
+lg:text-6xl
           font-bold
           text-transparent
         "
@@ -639,7 +645,10 @@ px-3
             {/* POTENCIAL */}
 
             <div
-              className="
+  className="
+        w-full
+        max-w-[430px]
+        lg:max-w-none
         rounded-3xl
         border
         border-purple/20
@@ -694,11 +703,14 @@ px-3
             {/* PUNTUACIÓN */}
 
             <div
-              className="
+  className="
+        w-full
+        max-w-[430px]
+        lg:max-w-none
+        rounded-3xl
         flex
         items-center
         gap-6
-        rounded-3xl
         border
         border-white/10
         bg-white/[0.03]
