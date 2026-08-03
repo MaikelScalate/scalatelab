@@ -109,6 +109,7 @@ else {
     <div
   className="
   mx-auto
+  w-full
   max-w-7xl
   scale-90
   origin-top
@@ -125,11 +126,9 @@ else {
     >
       <div
   className="
-    grid
-    justify-items-center
-    lg:justify-items-stretch
-    lg:grid-cols-[58%_42%]
-  "
+grid
+lg:grid-cols-[58%_42%]
+"
 >
 
         {/* IZQUIERDA */}
@@ -143,6 +142,10 @@ else {
     p-6
     lg:p-10
     w-full
+    flex
+    flex-col
+    items-center
+    lg:items-stretch
 "
 >
           <h3
@@ -159,13 +162,13 @@ else {
 
           <div
   className="
-    mx-auto
     w-full
-    max-w-[360px]
+    max-w-[340px]
+    mx-auto
     space-y-5
     lg:max-w-none
     lg:space-y-7
-  "
+"
 >
 
             <div
@@ -636,14 +639,18 @@ px-3
     p-6
     lg:p-10
     w-full
+    flex
+    flex-col
+    items-center
+    lg:items-stretch
 "
 >
 
           <div
   className="
-    mx-auto
     w-full
-    max-w-[360px]
+    max-w-[340px]
+    mx-auto
     space-y-5
     lg:max-w-none
     lg:space-y-6
