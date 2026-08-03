@@ -9,7 +9,7 @@ export default function CalculatorSection() {
   return (
     <Section
   id="calculadora"
-  className="pt-10 pb-32"
+  className="pt-20 pb-32"
 >
       <Container>
 
@@ -40,7 +40,7 @@ export default function CalculatorSection() {
           <Calculator />
         </div>
 
-        <div className="mt-20 flex justify-center">
+        <div className="mt-1 flex justify-center">
           <Button
             className="
               h-12
