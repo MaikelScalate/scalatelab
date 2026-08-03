@@ -49,6 +49,7 @@ else if (ticket >= 120) ticketScore = 22;
 else if (ticket >= 100) ticketScore = 18;
 else if (ticket >= 80) ticketScore = 14;
 else if (ticket >= 60) ticketScore = 10;
+else ticketScore = 0;
 
 let sessionsScore = 0;
 
@@ -147,7 +148,7 @@ else {
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <Users
                       size={17}
                       strokeWidth={2.3}
@@ -156,7 +157,7 @@ else {
                     Sesiones al mes
                   </p>
 
-                  <p className="mt-1 text-sm text-white/45">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Visitas mensuales de tu tienda.
                   </p>
 
@@ -164,12 +165,6 @@ else {
 
                 <div className="flex items-center gap-5">
                   <input
-                    style={{
-                      width: `${Math.max(
-                        sessions.toLocaleString("es-ES").length + 2,
-                        8
-                      )}ch`,
-                    }}
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
@@ -197,7 +192,7 @@ else {
 
                     }}
                     className="
-    w-auto
+    w-[95px] lg:w-[115px]
     rounded-2xl
     border
     border-white/10
@@ -262,7 +257,7 @@ px-3
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <ShoppingBag
                       size={17}
                       strokeWidth={2.3}
@@ -271,7 +266,7 @@ px-3
                     Pedidos al mes
                   </p>
 
-                  <p className="mt-1 text-sm text-white/45">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Número de pedidos mensuales.
                   </p>
 
@@ -319,7 +314,7 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-auto
+    w-[95px] lg:w-[115px]
     rounded-2xl
     border
     border-white/10
@@ -382,7 +377,7 @@ setConversion(newConversion);
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <Percent
                       size={17}
                       strokeWidth={2.3}
@@ -391,7 +386,7 @@ setConversion(newConversion);
                     Tasa de conversión
                   </p>
 
-                  <p className="mt-1 text-sm text-white/45">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Porcentaje de visitantes que compran.
                   </p>
 
@@ -437,7 +432,7 @@ setConversion(newConversion);
 
                     }}
                     className="
-    w-auto
+    w-[95px] lg:w-[115px]
     rounded-2xl
     border
     border-white/10
@@ -502,7 +497,7 @@ px-3
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-sm font-semibold text-white">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <CreditCard
                       size={17}
                       strokeWidth={2.3}
@@ -511,7 +506,7 @@ px-3
                     Ticket medio
                   </p>
 
-                  <p className="mt-1 text-sm text-white/45">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Importe medio por pedido.
                   </p>
 
@@ -530,7 +525,7 @@ px-3
                     inputMode="numeric"
                     pattern="[0-9]*"
                     value={`${ticket.toLocaleString("es-ES")} €`}
-                    min={10}
+                    min={0}
                     max={250}
                     step={1}
                     onChange={(e) => {
@@ -542,14 +537,14 @@ px-3
                           .trim()
                       );
 
-                      if (value < 10) value = 10;
+                      if (value < 0) value = 0;
                       if (value > 250) value = 250;
 
                       setTicket(value);
 
                     }}
                     className="
-    w-auto
+    w-[95px] lg:w-[115px]
     rounded-2xl
     border
     border-white/10
@@ -573,7 +568,7 @@ px-3
 
               <input
                 type="range"
-                min="10"
+                min="0"
                 max="250"
                 value={ticket}
                 onChange={(e) => setTicket(Number(e.target.value))}
