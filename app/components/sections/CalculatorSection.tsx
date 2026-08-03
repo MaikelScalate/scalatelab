@@ -46,6 +46,7 @@ export default function CalculatorSection() {
               h-12
               px-8
               text-2lg
+              align-items: center
             "
           >
             Quiero dejar de perder ventas
