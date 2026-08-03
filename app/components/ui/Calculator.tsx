@@ -109,7 +109,7 @@ else {
     <div
   className="
     mx-auto
-    w-[94%]
+    w-[90%]
     sm:w-[96%]
     lg:w-full
     max-w-7xl
