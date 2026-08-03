@@ -123,7 +123,14 @@ else {
           "radial-gradient(circle at top left, rgba(109,91,255,.10), transparent 35%), radial-gradient(circle at bottom right, rgba(232,74,194,.08), transparent 45%), #0D0D12",
       }}
     >
-      <div className="grid lg:grid-cols-[58%_42%]">
+      <div
+  className="
+    grid
+    justify-items-center
+    lg:justify-items-stretch
+    lg:grid-cols-[58%_42%]
+  "
+>
 
         {/* IZQUIERDA */}
 
@@ -140,7 +147,9 @@ else {
     items-center
     lg:items-stretch
     w-full
-  "
+    max-w-[420px]
+    lg:max-w-none
+"
 >
           <h3
   className="
@@ -633,12 +642,14 @@ px-3
   className="
     p-6
     w-full
+    max-w-[420px]
+    lg:max-w-none
     lg:p-10
     flex
     flex-col
     items-center
     lg:items-stretch
-  "
+"
 >
 
           <div
