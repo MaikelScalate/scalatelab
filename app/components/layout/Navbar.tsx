@@ -113,8 +113,8 @@ export default function Navbar() {
     py-1.5
     text-[13px]
 
-    sm:px-4
-    sm:py-2
+    sm:px-5
+    sm:py-2.5
     sm:text-sm
 
     lg:px-6
