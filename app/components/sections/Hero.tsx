@@ -45,7 +45,7 @@ export default function Hero() {
     mb-6
     max-w-[720px]
 
-    text-[1.6rem]
+    text-3xl
     leading-tight
 
     sm:text-5xl
