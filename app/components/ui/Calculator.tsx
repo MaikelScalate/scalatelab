@@ -188,7 +188,7 @@ lg:max-w-none
     "
             >
 
-              <div className="grid w-full grid-cols-[minmax(0,1fr)_140px] lg:grid-cols-[minmax(0,1fr)_180px] items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -201,21 +201,13 @@ lg:max-w-none
                     Sesiones al mes
                   </p>
 
-                  <p className="
-  mt-1
-  text-xs
-  lg:text-sm
-  text-white/45
-  whitespace-nowrap
-  overflow-hidden
-  text-ellipsis
-">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Visitas mensuales de tu tienda.
                   </p>
 
                 </div>
 
-                <div className="flex w-full justify-end items-center gap-2 lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
                   <input
                     type="text"
                     inputMode="numeric"
@@ -244,10 +236,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-full
-max-w-[80px]
-min-w-0
-lg:max-w-[110px]
+    w-[80px]
 lg:w-[110px]
 tabular-nums
     lg:w-[110px]
@@ -317,7 +306,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="grid w-full grid-cols-[minmax(0,1fr)_140px] lg:grid-cols-[minmax(0,1fr)_180px] items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -330,21 +319,13 @@ lg:max-w-none
                     Pedidos al mes
                   </p>
 
-                  <p className="
-  mt-1
-  text-xs
-  lg:text-sm
-  text-white/45
-  whitespace-nowrap
-  overflow-hidden
-  text-ellipsis
-">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Número de pedidos mensuales.
                   </p>
 
                 </div>
 
-                <div className="flex w-full justify-end items-center gap-2 lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -380,10 +361,7 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-full
-max-w-[80px]
-min-w-0
-lg:max-w-[110px]
+    w-[80px]
 lg:w-[110px]
 tabular-nums
     rounded-2xl
@@ -448,7 +426,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="grid w-full grid-cols-[minmax(0,1fr)_140px] lg:grid-cols-[minmax(0,1fr)_180px] items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -461,21 +439,13 @@ lg:max-w-none
                     Tasa de conversión
                   </p>
 
-                  <p className="
-  mt-1
-  text-xs
-  lg:text-sm
-  text-white/45
-  whitespace-nowrap
-  overflow-hidden
-  text-ellipsis
-">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Porcentaje de compradores.
                   </p>
 
                 </div>
 
-                <div className="flex w-full justify-end items-center gap-2 lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -509,10 +479,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-full
-max-w-[80px]
-min-w-0
-lg:max-w-[110px]
+    w-[80px]
 lg:w-[110px]
 tabular-nums
     rounded-2xl
@@ -578,7 +545,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="grid w-full grid-cols-[minmax(0,1fr)_140px] lg:grid-cols-[minmax(0,1fr)_180px] items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -591,21 +558,13 @@ lg:max-w-none
                     Ticket medio
                   </p>
 
-                  <p className="
-  mt-1
-  text-xs
-  lg:text-sm
-  text-white/45
-  whitespace-nowrap
-  overflow-hidden
-  text-ellipsis
-">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Importe medio por pedido.
                   </p>
 
                 </div>
 
-                <div className="flex w-full justify-end items-center gap-2 lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -631,10 +590,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-full
-max-w-[80px]
-min-w-0
-lg:max-w-[110px]
+    w-[80px]
 lg:w-[110px]
 tabular-nums
     rounded-2xl
@@ -705,6 +661,7 @@ lg:max-w-none
 
             <div
   className="
+        w-full
         w-full
 lg:max-w-none
         lg:max-w-none
@@ -804,6 +761,7 @@ lg:max-w-none
 
             <div
   className="
+        w-full
         w-full
 lg:max-w-none
         lg:max-w-none
