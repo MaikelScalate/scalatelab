@@ -188,7 +188,7 @@ lg:max-w-none
     "
             >
 
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex items-start gap-3">
 
                 <div>
 
@@ -207,7 +207,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex items-center gap-2 lg:gap-5">
+                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
                   <input
                     type="text"
                     inputMode="numeric"
@@ -302,7 +302,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex items-start gap-3">
 
                 <div>
 
@@ -321,7 +321,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex items-center gap-2 lg:gap-5">
+                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
 
                   <input
                     type="text"
@@ -420,7 +420,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex items-start gap-3">
 
                 <div>
 
@@ -439,7 +439,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex items-center gap-2 lg:gap-5">
+                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
 
                   <input
                     type="text"
@@ -538,7 +538,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start justify-between gap-3 lg:gap-8">
+              <div className="flex items-start gap-3">
 
                 <div>
 
@@ -557,7 +557,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex items-center gap-2 lg:gap-5">
+                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
 
                   <input
                     type="text"
