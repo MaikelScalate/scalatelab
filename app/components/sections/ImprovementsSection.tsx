@@ -1,8 +1,10 @@
+"use client";
 import Section from "../ui/Section";
 import Container from "../ui/Container";
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
 import ImprovementCard from "../ui/ImprovementCard";
+import { motion } from "motion/react";
 
 import {
   Target,
@@ -27,18 +29,42 @@ lg:text-[2.5rem]
   "
 >
   Así hacemos que tu marca{" "}
-<span
-  className="
-    bg-gradient-to-r
-    from-[#6D5BFF]
-    via-[#8B5CF6]
-    to-[#E84AC2]
-    bg-clip-text
-    text-transparent
-  "
+<motion.span
+  className="relative inline-flex items-center px-3 py-1"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.7 }}
 >
-  venda más.
-</span>
+  <motion.div
+    className="
+      absolute
+      inset-0
+      rounded-xl
+      bg-gradient-to-r
+      from-[#6D5BFF]
+      via-[#8B5CF6]
+      to-[#E84AC2]
+      z-0
+      origin-left
+    "
+    variants={{
+      hidden: {
+        scaleX: 0,
+      },
+      visible: {
+        scaleX: 1,
+        transition: {
+          duration: 2.2,      // ← más lenta
+          ease: [0.22, 1, 0.36, 1],
+        },
+      },
+    }}
+  />
+
+  <span className="relative z-10 text-white">
+    venda más.
+  </span>
+</motion.span>
 </Title>
 
         </div>
@@ -52,9 +78,9 @@ lg:text-[2.5rem]
     overflow-hidden
     rounded-[42px]
     border
-    border-white/[0.08]
+    border-white/[0.15]
     bg-[linear-gradient(180deg,#171720_0%,#111116_100%)]
-    shadow-[0_0_80px_rgba(139,92,246,.05)]
+    shadow-[0_0_20px_rgba(139,92,246,0.4)]
     px-14
     pb-14
     py-[0.1rem]
@@ -102,6 +128,7 @@ lg:text-[2.5rem]
     pointer-events-none
   "
 />
+
 <div className="relative -mt-0 mb-8 text-center z-10">
     {/* Línea */}
 
@@ -177,7 +204,7 @@ drop-shadow-[0_0_20px_rgba(139,92,246,.45)]
           </ImprovementCard>
 
           <ImprovementCard
-            title="Clientes estables, negocio recurrente"
+            title="Clientes recurrentes, negocio estable"
             description="Creamos estrategias para que vuelvan a comprar aumentando el valor de vida de cada cliente y reduciendo el coste de adquisición."
           >
             <RefreshCw
