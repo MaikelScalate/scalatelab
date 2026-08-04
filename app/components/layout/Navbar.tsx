@@ -105,19 +105,20 @@ export default function Navbar() {
 
         {/* Botón */}
         <Button
-          href="#contacto"
-          className="
-            px-4
-            py-2
-            text-sm
+  href="#contacto"
+  className="
+    whitespace-nowrap
+    px-4
+    py-2
+    text-sm
 
-            lg:px-6
-            lg:py-2
-            lg:text-base
-          "
-        >
-          Escalemos tu marca
-        </Button>
+    lg:px-6
+    lg:py-2
+    lg:text-base
+  "
+>
+  Escalemos tu marca
+</Button>
 
       </nav>
     </header>
