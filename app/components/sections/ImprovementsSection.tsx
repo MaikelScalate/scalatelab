@@ -85,7 +85,7 @@ lg:scale-[0.90]
     shadow-[0_0_20px_rgba(139,92,246,0.4)]
     px-3
 sm:px-8
-lg:px-25
+lg:px-23
     pb-14
     py-[0.1rem]
   "
