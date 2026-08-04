@@ -177,16 +177,15 @@ lg:max-w-none
             <div
   className="
     w-full
-    w-full
-lg:max-w-none
-    lg:max-w-none
+    min-h-[130px]
     rounded-3xl
     border
-      border-white/10
-      bg-white/[0.03]
-    p-5 lg:p-6
-    "
-            >
+    border-white/10
+    bg-white/[0.03]
+    p-5
+    lg:p-6
+"
+>
 
               <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
@@ -296,16 +295,15 @@ px-3
             <div
   className="
     w-full
-    w-full
-lg:max-w-none
-    lg:max-w-none
+    min-h-[130px]
     rounded-3xl
     border
     border-white/10
     bg-white/[0.03]
-  p-5 lg:p-6
-  "
-            >
+    p-5
+    lg:p-6
+"
+>
               <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
@@ -416,16 +414,15 @@ setConversion(newConversion);
            <div
   className="
     w-full
-    w-full
-lg:max-w-none
-    lg:max-w-none
+    min-h-[130px]
     rounded-3xl
     border
     border-white/10
     bg-white/[0.03]
-  p-5 lg:p-6
-  "
-            >
+    p-5
+    lg:p-6
+"
+>
               <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
@@ -536,15 +533,15 @@ px-3
             <div
   className="
     w-full
-lg:max-w-none
-    lg:max-w-none
+    min-h-[130px]
     rounded-3xl
     border
     border-white/10
     bg-white/[0.03]
-  p-5 lg:p-6
-  "
-            >
+    p-5
+    lg:p-6
+"
+>
               <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
@@ -677,20 +674,28 @@ lg:max-w-none
                 Tu facturación mensual
               </p>
               <h2
-                className="
-          mt-4
-          break-words
-          bg-gradient-to-r
-          from-[#6D5BFF]
-          to-[#E84AC2]
-          bg-clip-text
-          text-4xl
-sm:text-5xl
-lg:text-6xl
-          font-bold
-          text-transparent
-        "
-              >
+  className="
+    mt-4
+    h-[72px]
+    lg:h-[88px]
+    flex
+    items-center
+    justify-center
+    whitespace-nowrap
+    overflow-hidden
+    text-ellipsis
+    bg-gradient-to-r
+    from-[#6D5BFF]
+    to-[#E84AC2]
+    bg-clip-text
+    text-[30px]
+    sm:text-[42px]
+    lg:text-6xl
+    font-bold
+    text-transparent
+    tabular-nums
+"
+>
                 {revenue.toLocaleString("es-ES")}€
               </h2>
 
@@ -724,17 +729,25 @@ lg:max-w-none
               </p>
 
               <h3
-                className="
-          mt-5
-          bg-gradient-to-r
-          from-[#6D5BFF]
-          to-[#E84AC2]
-          bg-clip-text
-          text-5xl
-          font-bold
-          text-transparent
-        "
-              >
+  className="
+    mt-5
+    h-[64px]
+    flex
+    items-center
+    whitespace-nowrap
+    overflow-hidden
+    text-ellipsis
+    bg-gradient-to-r
+    from-[#6D5BFF]
+    to-[#E84AC2]
+    bg-clip-text
+    text-[34px]
+    lg:text-5xl
+    font-bold
+    text-transparent
+    tabular-nums
+"
+>
                 {improvedRevenue.toLocaleString("es-ES")}€
               </h3>
 
@@ -765,6 +778,7 @@ lg:max-w-none
         w-full
 lg:max-w-none
         lg:max-w-none
+        min-h-[150px]
         rounded-3xl
         flex
         items-center
