@@ -140,8 +140,8 @@ lg:grid-cols-[58%_42%]
     lg:border-b-0
     lg:border-r
     border-white/10
-    p-4
-sm:p-6
+    p-3
+sm:p-5
 lg:p-10
     w-full
     flex
