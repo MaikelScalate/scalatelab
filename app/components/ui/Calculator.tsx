@@ -329,7 +329,7 @@ lg:max-w-none
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    value={orders.toLocaleString("es-ES")}
+                    value="7000"
                     min={1}
                     max={7000}
                     step={1}
