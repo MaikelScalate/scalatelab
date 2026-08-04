@@ -16,7 +16,7 @@ export default function ImprovementsSection() {
   return (
     <Section
   id="mejoras"
-  className="pt-0 py-32"
+  className="pt-5 py-32"
 >
       <Container>
         <div className="mx-auto max-w-4xl text-center">
@@ -85,7 +85,7 @@ lg:scale-[0.90]
     shadow-[0_0_20px_rgba(139,92,246,0.4)]
     px-3
 sm:px-8
-lg:px-20
+lg:px-25
     pb-14
     py-[0.1rem]
   "
