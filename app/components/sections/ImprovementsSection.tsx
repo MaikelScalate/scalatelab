@@ -86,7 +86,9 @@ lg:scale-[0.90]
     px-3
 sm:px-8
 lg:px-23
-    pb-12
+    pb-8
+sm:pb-10
+lg:pb-12
     py-[0.1rem]
   "
 >
