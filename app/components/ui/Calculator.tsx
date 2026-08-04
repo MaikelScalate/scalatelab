@@ -139,8 +139,9 @@ lg:grid-cols-[58%_42%]
     lg:border-b-0
     lg:border-r
     border-white/10
-    p-6
-    lg:p-10
+    p-4
+sm:p-6
+lg:p-10
     w-full
     flex
     flex-col
@@ -174,7 +175,9 @@ lg:grid-cols-[58%_42%]
             <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -288,7 +291,9 @@ px-3
             <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -411,7 +416,9 @@ setConversion(newConversion);
            <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -534,7 +541,9 @@ px-3
             <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -663,7 +672,9 @@ px-3
             <div
   className="
         w-full
-        max-w-[360px]
+        max-w-full
+sm:max-w-[360px]
+lg:max-w-none
         lg:max-w-none
         rounded-3xl
         border
@@ -704,7 +715,9 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-[360px]
+        max-w-full
+sm:max-w-[360px]
+lg:max-w-none
         lg:max-w-none
         rounded-3xl
         border
@@ -762,7 +775,9 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-[360px]
+        max-w-full
+sm:max-w-[360px]
+lg:max-w-none
         lg:max-w-none
         rounded-3xl
         flex
