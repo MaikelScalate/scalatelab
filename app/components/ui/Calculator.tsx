@@ -357,7 +357,7 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-[80px] lg:w-[110px]
+    w-[95px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -473,7 +473,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[80px] lg:w-[110px]
+    w-[95px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -583,7 +583,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[80px] lg:w-[110px]
+    w-[95px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
