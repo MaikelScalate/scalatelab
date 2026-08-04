@@ -111,7 +111,8 @@ else {
   mx-auto
   w-full
   max-w-7xl
-  scale-90
+  scale-100
+lg:scale-90
   origin-top
   overflow-hidden
   rounded-[34px]
@@ -164,7 +165,8 @@ lg:p-10
           <div
   className="
     w-full
-    max-w-[340px]
+    max-w-full
+lg:max-w-none
     mx-auto
     space-y-5
     lg:max-w-none
@@ -175,8 +177,7 @@ lg:p-10
             <div
   className="
     w-full
-    max-w-full
-sm:max-w-[360px]
+    w-full
 lg:max-w-none
     lg:max-w-none
     rounded-3xl
@@ -291,8 +292,7 @@ px-3
             <div
   className="
     w-full
-    max-w-full
-sm:max-w-[360px]
+    w-full
 lg:max-w-none
     lg:max-w-none
     rounded-3xl
@@ -416,8 +416,7 @@ setConversion(newConversion);
            <div
   className="
     w-full
-    max-w-full
-sm:max-w-[360px]
+    w-full
 lg:max-w-none
     lg:max-w-none
     rounded-3xl
@@ -541,8 +540,7 @@ px-3
             <div
   className="
     w-full
-    max-w-full
-sm:max-w-[360px]
+    w-full
 lg:max-w-none
     lg:max-w-none
     rounded-3xl
@@ -659,7 +657,8 @@ px-3
           <div
   className="
     w-full
-    max-w-[340px]
+    max-w-full
+lg:max-w-none
     mx-auto
     space-y-5
     lg:max-w-none
@@ -672,8 +671,7 @@ px-3
             <div
   className="
         w-full
-        max-w-full
-sm:max-w-[360px]
+        w-full
 lg:max-w-none
         lg:max-w-none
         rounded-3xl
@@ -715,8 +713,7 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-full
-sm:max-w-[360px]
+        w-full
 lg:max-w-none
         lg:max-w-none
         rounded-3xl
@@ -775,8 +772,7 @@ lg:max-w-none
             <div
   className="
         w-full
-        max-w-full
-sm:max-w-[360px]
+        w-full
 lg:max-w-none
         lg:max-w-none
         rounded-3xl
