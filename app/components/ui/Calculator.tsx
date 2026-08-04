@@ -236,7 +236,9 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[90px] lg:w-[110px]
+    w-[90px]
+    lg:w-[110px]
+    tabular-nums
     rounded-2xl
     border
     border-white/10
