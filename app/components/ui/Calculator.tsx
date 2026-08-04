@@ -188,9 +188,9 @@ lg:max-w-none
     "
             >
 
-              <div className="flex items-start gap-3">
+              <div className="flex w-full items-start gap-3">
 
-                <div>
+                <div className="flex-1 min-w-0">
 
                   <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <Users
@@ -207,7 +207,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
                   <input
                     type="text"
                     inputMode="numeric"
@@ -302,9 +302,9 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start gap-3">
+              <div className="flex w-full items-start gap-3">
 
-                <div>
+                <div className="flex-1 min-w-0">
 
                   <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <ShoppingBag
@@ -321,7 +321,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
 
                   <input
                     type="text"
@@ -420,9 +420,9 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start gap-3">
+              <div className="flex w-full items-start gap-3">
 
-                <div>
+                <div className="flex-1 min-w-0">
 
                   <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <Percent
@@ -439,7 +439,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
 
                   <input
                     type="text"
@@ -538,9 +538,9 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex items-start gap-3">
+              <div className="flex w-full items-start gap-3">
 
-                <div>
+                <div className="flex-1 min-w-0">
 
                   <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <CreditCard
@@ -557,7 +557,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="ml-auto flex w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
 
                   <input
                     type="text"
