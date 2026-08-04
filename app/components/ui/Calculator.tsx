@@ -191,7 +191,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <Users
                       size={17}
                       strokeWidth={2.3}
@@ -200,7 +200,7 @@ lg:max-w-none
                     Sesiones al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Visitas mensuales de tu tienda.
                   </p>
 
@@ -306,7 +306,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <ShoppingBag
                       size={17}
                       strokeWidth={2.3}
@@ -315,7 +315,7 @@ lg:max-w-none
                     Pedidos al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Número de pedidos mensuales.
                   </p>
 
@@ -431,7 +431,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <Percent
                       size={17}
                       strokeWidth={2.3}
@@ -440,7 +440,7 @@ lg:max-w-none
                     Tasa de conversión
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Porcentaje de compradores.
                   </p>
 
@@ -556,7 +556,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <CreditCard
                       size={17}
                       strokeWidth={2.3}
@@ -565,7 +565,7 @@ lg:max-w-none
                     Ticket medio
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Importe medio por pedido.
                   </p>
 
