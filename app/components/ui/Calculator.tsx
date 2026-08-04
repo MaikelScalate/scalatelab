@@ -139,8 +139,9 @@ lg:grid-cols-[58%_42%]
     lg:border-b-0
     lg:border-r
     border-white/10
-    p-6
-    lg:p-10
+    p-4
+sm:p-6
+lg:p-10
     w-full
     flex
     flex-col
@@ -174,7 +175,9 @@ lg:grid-cols-[58%_42%]
             <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -188,7 +191,7 @@ lg:grid-cols-[58%_42%]
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <Users
                       size={17}
                       strokeWidth={2.3}
@@ -197,7 +200,7 @@ lg:grid-cols-[58%_42%]
                     Sesiones al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Visitas mensuales de tu tienda.
                   </p>
 
@@ -288,7 +291,9 @@ px-3
             <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -301,7 +306,7 @@ px-3
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <ShoppingBag
                       size={17}
                       strokeWidth={2.3}
@@ -310,7 +315,7 @@ px-3
                     Pedidos al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Número de pedidos mensuales.
                   </p>
 
@@ -411,7 +416,9 @@ setConversion(newConversion);
            <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -424,7 +431,7 @@ setConversion(newConversion);
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <Percent
                       size={17}
                       strokeWidth={2.3}
@@ -433,7 +440,7 @@ setConversion(newConversion);
                     Tasa de conversión
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Porcentaje de compradores.
                   </p>
 
@@ -534,7 +541,9 @@ px-3
             <div
   className="
     w-full
-    max-w-[360px]
+    max-w-full
+sm:max-w-[360px]
+lg:max-w-none
     lg:max-w-none
     rounded-3xl
     border
@@ -547,7 +556,7 @@ px-3
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
                     <CreditCard
                       size={17}
                       strokeWidth={2.3}
@@ -556,7 +565,7 @@ px-3
                     Ticket medio
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
                     Importe medio por pedido.
                   </p>
 
@@ -663,7 +672,9 @@ px-3
             <div
   className="
         w-full
-        max-w-[360px]
+        max-w-full
+sm:max-w-[360px]
+lg:max-w-none
         lg:max-w-none
         rounded-3xl
         border
@@ -704,7 +715,9 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-[360px]
+        max-w-full
+sm:max-w-[360px]
+lg:max-w-none
         lg:max-w-none
         rounded-3xl
         border
@@ -762,7 +775,9 @@ lg:text-6xl
             <div
   className="
         w-full
-        max-w-[360px]
+        max-w-full
+sm:max-w-[360px]
+lg:max-w-none
         lg:max-w-none
         rounded-3xl
         flex

@@ -36,7 +36,7 @@ export default function CalculatorSection() {
 
         </div>
 
-        <div className="-mx-4 lg:mx-0 mt-10">
+        <div className="mt-8 px-2 sm:px-4 lg:px-0">
   <Calculator />
 </div>
 
