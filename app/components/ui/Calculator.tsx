@@ -328,12 +328,6 @@ lg:max-w-none
                     inputMode="numeric"
                     pattern="[0-9]*"
                     value={orders.toLocaleString("es-ES")}
-                    style={{
-                      width: `${Math.max(
-                        orders.toLocaleString("es-ES").length + 2,
-                        7
-                      )}ch`,
-                    }}
                     min={1}
                     max={7000}
                     step={1}
@@ -451,12 +445,6 @@ lg:max-w-none
                     type="text"
                     inputMode="decimal"
                     value={`${conversion.toFixed(1)} %`}
-                    style={{
-                      width: `${Math.max(
-                        `${conversion.toFixed(1)} %`.length + 3,
-                        8
-                      )}ch`,
-                    }}
                     min={0}
                     max={10}
                     step={0.1}
@@ -572,12 +560,6 @@ lg:max-w-none
                 <div className="flex items-center gap-2 lg:gap-5">
 
                   <input
-                    style={{
-                      width: `${Math.max(
-                        `${ticket.toLocaleString("es-ES")} €`.length + 3,
-                        8
-                      )}ch`,
-                    }}
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
