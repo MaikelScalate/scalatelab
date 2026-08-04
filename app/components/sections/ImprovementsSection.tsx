@@ -72,7 +72,7 @@ lg:text-[2.5rem]
         <div
   className="
     relative
-    -mt-6
+    mt-4
 sm:mt-0
 scale-[0.95]
 lg:scale-[0.90]
