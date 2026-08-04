@@ -108,14 +108,9 @@ export default function Navbar() {
   href="#contacto"
   className="
     whitespace-nowrap
-
     px-3
     py-1.5
-    text-[13px]
-
-    sm:px-4
-    sm:py-2
-    sm:text-sm
+    text-sm
 
     lg:px-6
     lg:py-2
