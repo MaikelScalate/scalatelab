@@ -188,7 +188,7 @@ lg:max-w-none
     "
             >
 
-              <div className="flex w-full items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -207,7 +207,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
                   <input
                     type="text"
                     inputMode="numeric"
@@ -236,7 +236,9 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[90px]
+    w-[80px]
+lg:w-[110px]
+tabular-nums
     lg:w-[110px]
     tabular-nums
     rounded-2xl
@@ -304,7 +306,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex w-full items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -323,7 +325,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -359,7 +361,9 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-[95px] lg:w-[110px]
+    w-[80px]
+lg:w-[110px]
+tabular-nums
     rounded-2xl
     border
     border-white/10
@@ -422,7 +426,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex w-full items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -441,7 +445,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -475,7 +479,9 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[95px] lg:w-[110px]
+    w-[80px]
+lg:w-[110px]
+tabular-nums
     rounded-2xl
     border
     border-white/10
@@ -530,7 +536,6 @@ px-3
             <div
   className="
     w-full
-    w-full
 lg:max-w-none
     lg:max-w-none
     rounded-3xl
@@ -540,7 +545,7 @@ lg:max-w-none
   p-5 lg:p-6
   "
             >
-              <div className="flex w-full items-start gap-3">
+              <div className="grid w-full grid-cols-[1fr_130px] lg:grid-cols-[1fr_170px] items-start gap-3">
 
                 <div className="flex-1 min-w-0">
 
@@ -559,7 +564,7 @@ lg:max-w-none
 
                 </div>
 
-                <div className="flex shrink-0 w-[130px] justify-end items-center gap-2 lg:w-[170px] lg:gap-5">
+                <div className="flex justify-end items-center gap-2 lg:gap-5">
 
                   <input
                     type="text"
@@ -585,7 +590,9 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[95px] lg:w-[110px]
+    w-[80px]
+lg:w-[110px]
+tabular-nums
     rounded-2xl
     border
     border-white/10
@@ -655,7 +662,6 @@ lg:max-w-none
             <div
   className="
         w-full
-        w-full
 lg:max-w-none
         lg:max-w-none
         rounded-3xl
@@ -696,7 +702,6 @@ lg:text-6xl
 
             <div
   className="
-        w-full
         w-full
 lg:max-w-none
         lg:max-w-none
@@ -755,7 +760,6 @@ lg:max-w-none
 
             <div
   className="
-        w-full
         w-full
 lg:max-w-none
         lg:max-w-none
