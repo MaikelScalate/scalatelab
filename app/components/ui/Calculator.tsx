@@ -201,7 +201,15 @@ lg:max-w-none
                     Sesiones al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="
+  mt-1
+  text-xs
+  lg:text-sm
+  text-white/45
+  whitespace-nowrap
+  overflow-hidden
+  text-ellipsis
+">
                     Visitas mensuales de tu tienda.
                   </p>
 
@@ -322,7 +330,15 @@ lg:max-w-none
                     Pedidos al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="
+  mt-1
+  text-xs
+  lg:text-sm
+  text-white/45
+  whitespace-nowrap
+  overflow-hidden
+  text-ellipsis
+">
                     Número de pedidos mensuales.
                   </p>
 
@@ -445,7 +461,15 @@ lg:max-w-none
                     Tasa de conversión
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="
+  mt-1
+  text-xs
+  lg:text-sm
+  text-white/45
+  whitespace-nowrap
+  overflow-hidden
+  text-ellipsis
+">
                     Porcentaje de compradores.
                   </p>
 
@@ -567,7 +591,15 @@ lg:max-w-none
                     Ticket medio
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="
+  mt-1
+  text-xs
+  lg:text-sm
+  text-white/45
+  whitespace-nowrap
+  overflow-hidden
+  text-ellipsis
+">
                     Importe medio por pedido.
                   </p>
 
