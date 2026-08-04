@@ -36,6 +36,8 @@ useEffect(() => {
       className="
         group
         relative
+        w-full
+max-w-none
         overflow-hidden
         rounded-[30px]
         border
@@ -43,7 +45,8 @@ border-[#8B5CF6]/20
 bg-[#121218]
 shadow-[0_0_45px_rgba(139,92,246,.08)]
         min-h-[340px]
-        p-6
+        p-5
+sm:p-6
         transition-all
         duration-300
         hover:-translate-y-1

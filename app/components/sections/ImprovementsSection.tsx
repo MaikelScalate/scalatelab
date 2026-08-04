@@ -16,7 +16,7 @@ export default function ImprovementsSection() {
   return (
     <Section
   id="mejoras"
-  className="pt-15 py-32"
+  className="pt-5 py-32"
 >
       <Container>
         <div className="mx-auto max-w-4xl text-center">
@@ -72,19 +72,22 @@ lg:text-[2.5rem]
         <div
   className="
     relative
-    mt-0
+    -mt-6
+sm:mt-0
+scale-[0.95]
+lg:scale-[0.90]
     mx-auto
-    scale-[0.90]
     overflow-hidden
     rounded-[42px]
     border
     border-white/[0.15]
     bg-[linear-gradient(180deg,#171720_0%,#111116_100%)]
     shadow-[0_0_20px_rgba(139,92,246,0.4)]
-    px-14
+    px-3
+sm:px-8
+lg:px-20
     pb-14
     py-[0.1rem]
-    lg:px-20
   "
 >
    <div
@@ -151,9 +154,10 @@ lg:text-[2.5rem]
     text-[2.9rem]
     font-bold
     text-white
+    whitespace-nowrap
   "
 >
-  Los 3 pilares
+  Los 3 Pilares
 </p>
 
 <p
