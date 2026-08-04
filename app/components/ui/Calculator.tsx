@@ -111,8 +111,7 @@ else {
   mx-auto
   w-full
   max-w-7xl
-  scale-100
-lg:scale-90
+  scale-90
   origin-top
   overflow-hidden
   rounded-[34px]
@@ -140,9 +139,8 @@ lg:grid-cols-[58%_42%]
     lg:border-b-0
     lg:border-r
     border-white/10
-    p-3
-sm:p-5
-lg:p-10
+    p-6
+    lg:p-10
     w-full
     flex
     flex-col
@@ -165,8 +163,7 @@ lg:p-10
           <div
   className="
     w-full
-    max-w-full
-lg:max-w-none
+    max-w-[340px]
     mx-auto
     space-y-5
     lg:max-w-none
@@ -177,8 +174,7 @@ lg:max-w-none
             <div
   className="
     w-full
-    w-full
-lg:max-w-none
+    max-w-[360px]
     lg:max-w-none
     rounded-3xl
     border
@@ -192,7 +188,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <Users
                       size={17}
                       strokeWidth={2.3}
@@ -201,7 +197,7 @@ lg:max-w-none
                     Sesiones al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Visitas mensuales de tu tienda.
                   </p>
 
@@ -292,8 +288,7 @@ px-3
             <div
   className="
     w-full
-    w-full
-lg:max-w-none
+    max-w-[360px]
     lg:max-w-none
     rounded-3xl
     border
@@ -306,7 +301,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <ShoppingBag
                       size={17}
                       strokeWidth={2.3}
@@ -315,7 +310,7 @@ lg:max-w-none
                     Pedidos al mes
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Número de pedidos mensuales.
                   </p>
 
@@ -328,6 +323,12 @@ lg:max-w-none
                     inputMode="numeric"
                     pattern="[0-9]*"
                     value={orders.toLocaleString("es-ES")}
+                    style={{
+                      width: `${Math.max(
+                        orders.toLocaleString("es-ES").length + 2,
+                        7
+                      )}ch`,
+                    }}
                     min={1}
                     max={7000}
                     step={1}
@@ -357,7 +358,7 @@ if (newConversion > maxConversion) {
 
                     }}
                     className="
-    w-[95px] lg:w-[110px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -410,8 +411,7 @@ setConversion(newConversion);
            <div
   className="
     w-full
-    w-full
-lg:max-w-none
+    max-w-[360px]
     lg:max-w-none
     rounded-3xl
     border
@@ -424,7 +424,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <Percent
                       size={17}
                       strokeWidth={2.3}
@@ -433,7 +433,7 @@ lg:max-w-none
                     Tasa de conversión
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Porcentaje de compradores.
                   </p>
 
@@ -445,6 +445,12 @@ lg:max-w-none
                     type="text"
                     inputMode="decimal"
                     value={`${conversion.toFixed(1)} %`}
+                    style={{
+                      width: `${Math.max(
+                        `${conversion.toFixed(1)} %`.length + 3,
+                        8
+                      )}ch`,
+                    }}
                     min={0}
                     max={10}
                     step={0.1}
@@ -473,7 +479,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[95px] lg:w-[110px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -528,8 +534,7 @@ px-3
             <div
   className="
     w-full
-    w-full
-lg:max-w-none
+    max-w-[360px]
     lg:max-w-none
     rounded-3xl
     border
@@ -542,7 +547,7 @@ lg:max-w-none
 
                 <div>
 
-                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white sm:whitespace-nowrap">
+                  <p className="flex items-center gap-2 text-xs lg:text-sm font-semibold text-white whitespace-nowrap">
                     <CreditCard
                       size={17}
                       strokeWidth={2.3}
@@ -551,7 +556,7 @@ lg:max-w-none
                     Ticket medio
                   </p>
 
-                  <p className="mt-1 text-xs lg:text-sm text-white/45 sm:whitespace-nowrap">
+                  <p className="mt-1 text-xs lg:text-sm text-white/45 whitespace-nowrap">
                     Importe medio por pedido.
                   </p>
 
@@ -560,6 +565,12 @@ lg:max-w-none
                 <div className="flex items-center gap-2 lg:gap-5">
 
                   <input
+                    style={{
+                      width: `${Math.max(
+                        `${ticket.toLocaleString("es-ES")} €`.length + 3,
+                        8
+                      )}ch`,
+                    }}
                     type="text"
                     inputMode="numeric"
                     pattern="[0-9]*"
@@ -583,7 +594,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[95px] lg:w-[110px]
+    w-[80px] lg:w-[110px]
     rounded-2xl
     border
     border-white/10
@@ -639,8 +650,7 @@ px-3
           <div
   className="
     w-full
-    max-w-full
-lg:max-w-none
+    max-w-[340px]
     mx-auto
     space-y-5
     lg:max-w-none
@@ -653,8 +663,7 @@ lg:max-w-none
             <div
   className="
         w-full
-        w-full
-lg:max-w-none
+        max-w-[360px]
         lg:max-w-none
         rounded-3xl
         border
@@ -695,8 +704,7 @@ lg:text-6xl
             <div
   className="
         w-full
-        w-full
-lg:max-w-none
+        max-w-[360px]
         lg:max-w-none
         rounded-3xl
         border
@@ -754,8 +762,7 @@ lg:max-w-none
             <div
   className="
         w-full
-        w-full
-lg:max-w-none
+        max-w-[360px]
         lg:max-w-none
         rounded-3xl
         flex
