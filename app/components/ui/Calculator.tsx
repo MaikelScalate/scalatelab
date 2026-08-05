@@ -233,7 +233,7 @@ lg:max-w-none
 
                     }}
                     className="
-    w-[90px]
+    w-[93px]
 lg:w-[110px]
 tabular-nums
     lg:w-[110px]
