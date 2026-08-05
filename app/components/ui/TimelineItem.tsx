@@ -16,60 +16,90 @@ export default function TimelineItem({
   const Icon = step.icon;
 
   return (
-    <div className="mb-32 flex flex-col items-center">
+    <>
+      {/* ================= MOBILE ================= */}
 
-      {/* Icono */}
+      <div className="mb-32 flex flex-col items-center lg:hidden">
 
-      <div className="flex h-20
-w-20 items-center justify-center rounded-full
-border
-border-purple/40
-bg-white/[0.03]
-backdrop-blur bg-[#111]">
-        <Icon className="h-7 w-7 text-purple" />
+        <div className="flex h-20 w-20 items-center justify-center rounded-full border border-purple/40 bg-white/[0.03] backdrop-blur">
+          <Icon className="h-7 w-7 text-purple" />
+        </div>
+
       </div>
 
-      {/* Línea superior */}
+      {/* ================= DESKTOP ================= */}
 
-      <div className="h-12 w-px bg-purple/30" />
+      <div className="
+hidden
+lg:grid
+lg:grid-cols-[1fr_100px_1fr]
+gap-16
+items-center
+mb-32
+">
 
-      {/* Número */}
+        {/* Texto */}
 
-      <span className="text-6xl font-bold text-purple/20">
-        {step.number}
-      </span>
+        <div>
 
-      {/* Título */}
+          <span className="text-4xl font-bold text-purple">
+            {step.number}
+          </span>
 
-      <h3 className="mt-3 text-3xl font-bold text-white">
-        {step.title}
-      </h3>
+          <h3 className="mt-4 text-5xl font-bold leading-tight text-white">
+            {step.title}
+          </h3>
 
-      {/* Texto */}
+          <p className="mt-6 text-xl leading-9 text-white/60">
+            {step.text}
+          </p>
 
-      <p className="mt-4 max-w-2xl text-center text-white/60">
-        {step.text}
-      </p>
+        </div>
 
-      {/* Imagen */}
+        {/* Línea */}
 
-      <div className="mt-10 w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-[#121212]">
-        <video
-  src={step.animation}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full"
-></video>
+        <div className="relative flex justify-center">
+  <div
+    className="
+      relative
+      z-10
+      flex
+      h-20
+      w-20
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-purple/40
+      bg-[#111]
+      backdrop-blur
+    "
+  >
+    <Icon className="h-8 w-8 text-purple" />
+  </div>
+
+</div>
+
+        {/* Vídeo */}
+
+        <div>
+
+          <div className="overflow-hidden rounded-[30px] border border-white/10 bg-[#121212]">
+
+            <video
+              src={step.animation}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full"
+            />
+
+          </div>
+
+        </div>
+
       </div>
-
-      {/* Línea inferior */}
-
-      {!isLast && (
-        <div className="h-24 w-px bg-purple/30" />
-      )}
-
-    </div>
+    </>
   );
 }
