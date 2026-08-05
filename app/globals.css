@@ -56,3 +56,42 @@ body {
   background: #3a78f2;
   color: white;
 }
+@keyframes timelineGlow {
+
+0%{
+transform:
+translate(-50%,0);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+90%{
+opacity:1;
+}
+
+100%{
+transform:
+translate(-50%,1800px);
+opacity:0;
+}
+
+}
+
+.animate-timelineGlow{
+
+animation:
+timelineGlow 5s linear infinite;
+
+background:
+
+linear-gradient(
+to bottom,
+transparent,
+#ffffff,
+transparent
+);
+
+}
