@@ -1,5 +1,5 @@
 "use client";
-
+import TimelineGlow from "./TimelineGlow";
 import { motion } from "framer-motion";
 import TimelineItem from "./TimelineItem";
 import { timeline } from "./TimelineData";
@@ -41,21 +41,43 @@ bg-white/10
     -translate-x-1/2
     origin-top
     bg-gradient-to-b
-    from-purple
-    via-[#A855F7]
-    to-purple
+from-purple/30
+via-purple
+to-purple/30
   "
 />
-      {timeline.map((step, index) => (
+<div className="absolute inset-0 pointer-events-none z-0">
+  <TimelineGlow />
+</div>
 
-        <TimelineItem
-          key={step.number}
-          step={step}
-          isLast={index === timeline.length - 1}
-        />
+<div className="relative z-10">
 
-      ))}
+  {timeline.map((step, index) => (
 
-    </div>
-  );
+    <TimelineItem
+      key={step.number}
+      step={step}
+      isLast={index === timeline.length - 1}
+    />
+
+  ))}
+
+</div>
+
+<div className="relative z-10">
+
+  {timeline.map((step, index) => (
+
+    <TimelineItem
+      key={step.number}
+      step={step}
+      isLast={index === timeline.length - 1}
+    />
+
+  ))}
+
+</div>
+
+</div>
+);
 }
