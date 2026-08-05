@@ -61,7 +61,7 @@ body {
 0%{
 transform:
 translate(-50%,0);
-opacity:0;
+opacity:.15;
 }
 
 10%{
@@ -75,7 +75,7 @@ opacity:1;
 100%{
 transform:
 translate(-50%,1800px);
-opacity:0;
+opacity:.15;
 }
 
 }
@@ -83,15 +83,6 @@ opacity:0;
 .animate-timelineGlow{
 
 animation:
-timelineGlow 5s linear infinite;
-
-background:
-
-linear-gradient(
-to bottom,
-transparent,
-#ffffff,
-transparent
-);
+timelineGlow 7s linear infinite;
 
 }

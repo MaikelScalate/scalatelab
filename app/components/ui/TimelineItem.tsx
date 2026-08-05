@@ -70,9 +70,10 @@ mb-32
       justify-center
       rounded-full
       border
-      border-purple/40
-      bg-[#111]
-      backdrop-blur
+      border-white/10
+bg-white/[0.03]
+backdrop-blur-xl
+shadow-[0_0_30px_rgba(125,38,205,.12)]
     "
   >
     <Icon className="h-8 w-8 text-purple" />
