@@ -64,20 +64,6 @@ to-purple/30
 
 </div>
 
-<div className="relative z-10">
-
-  {timeline.map((step, index) => (
-
-    <TimelineItem
-      key={step.number}
-      step={step}
-      isLast={index === timeline.length - 1}
-    />
-
-  ))}
-
-</div>
-
 </div>
 );
 }
