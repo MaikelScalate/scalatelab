@@ -90,7 +90,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#"
+            href="#metodologia"
             className="text-base font-medium text-white/70 transition hover:text-white"
           >
             Metodología
