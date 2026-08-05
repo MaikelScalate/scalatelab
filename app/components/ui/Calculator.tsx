@@ -110,7 +110,7 @@ else {
   pt-2
   max-w-7xl
   scale-100
-lg:scale-70
+lg:scale-88
   origin-top
   overflow-hidden
   rounded-[34px]

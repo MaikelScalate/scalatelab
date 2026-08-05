@@ -36,7 +36,7 @@ export default function CalculatorSection() {
 
         </div>
 
-        <div className="mt-8 px-0 sm:px-4 lg:px-0">
+        <div className="mt-8 mb-[-50px] px-0 sm:px-4 lg:px-0">
   <Calculator />
 </div>
 
