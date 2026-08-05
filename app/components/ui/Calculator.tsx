@@ -22,11 +22,8 @@ export default function Calculator() {
 
   const improvedTicket = ticket + 10;
 
-  const improvedOrders = Math.min(
-  Math.round(
-    sessions * (improvedConversion / 100)
-  ),
-  7000
+  const improvedOrders = Math.round(
+  sessions * (improvedConversion / 100)
 );
 
   const improvedRevenue =
@@ -110,6 +107,7 @@ else {
   className="
   mx-auto
   w-full
+  pt-2
   max-w-7xl
   scale-100
 lg:scale-90
@@ -466,11 +464,8 @@ setConversion(newConversion);
                       setConversion(value);
 
                       setOrders(
-  Math.min(
-    Math.round(
-      sessions * (value / 100)
-    ),
-    7000
+  Math.round(
+    sessions * (value / 100)
   )
 );
 
