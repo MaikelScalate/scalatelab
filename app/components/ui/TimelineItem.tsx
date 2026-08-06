@@ -43,14 +43,14 @@ const isInView = useInView(iconRef, {
 
       <motion.div
   ref={iconRef}
-  className="
-hidden
-lg:grid
-lg:grid-cols-[1fr_100px_1fr]
-gap-16
-items-center
-mb-32
-"
+  className={`
+  hidden
+  lg:grid
+  lg:grid-cols-[1fr_100px_1fr]
+  gap-16
+  items-center
+  ${isLast ? "mb-10" : "mb-32"}
+`}
 >
 
         {/* Texto */}
