@@ -60,11 +60,12 @@ rotate: mobileInView ? 0 : -8,
     }}
     transition={{ duration: .45 }}
     className="
-      relative
-      z-20
-      flex
-      h-20
-      w-20
+  relative
+  -mt-6
+  z-20
+  flex
+  h-20
+  w-20
       items-center
       justify-center
       rounded-full
@@ -104,6 +105,19 @@ rotate: mobileInView ? 0 : -8,
     </motion.div>
 
   </motion.div>
+<div
+  className="
+    relative
+    z-20
+    mt-10
+    rounded-[28px]
+    bg-[#000]
+    backdrop-blur-md
+    border border-blue/60
+    px-6
+    py-6
+  "
+>
 
   {/* Número */}
 
@@ -118,7 +132,12 @@ rotate: mobileInView ? 0 : -8,
   delay: .05,
 }}
 
-    className="mt-6 text-4xl font-bold"
+    className="
+block
+text-center
+text-4xl
+font-bold
+"
 
   >
 
@@ -175,7 +194,7 @@ rotate: mobileInView ? 0 : -8,
     {step.text}
 
   </motion.p>
-
+ </div>
   {/* Vídeo */}
 
   <motion.div
@@ -198,7 +217,8 @@ rotate: mobileInView ? 0 : -8,
 
     className="
 relative
-mt-8
+z-30
+mt-16
 w-full
 overflow-hidden
 rounded-[28px]
@@ -348,6 +368,7 @@ bg-[#121212]
   </motion.div>
 
 </div>
+
 
         {/* Vídeo */}
 
