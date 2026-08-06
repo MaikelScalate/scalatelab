@@ -7,7 +7,7 @@ import Timeline from "../ui/Timeline";
 
 export default function MethodSection() {
   return (
-    <Section id="metodologia" className="py-32">
+    <Section id="metodologia" className="pt-12 py-32">
 
       <Container>
 
@@ -15,8 +15,8 @@ export default function MethodSection() {
 
           <Title
 className="
-text-5xl
-lg:text-7xl
+text-4xl
+lg:text-6xl
 "
 >
             Nuestro Método Paso a Paso
@@ -25,9 +25,9 @@ lg:text-7xl
           <Subtitle
 className="
 mx-auto
-mt-8
-max-w-3xl
-text-xl
+mt-6
+max-w-2xl
+text-lg
 "
 >
             Descubre cómo analizamos, encontramos cuellos de botella y aplicamos
@@ -36,13 +36,13 @@ text-xl
 
         </div>
 
-        <div className="mt-28 lg:mt-36">
+        <div className="mt-6 lg:mt-32">
 
   <Timeline />
 
 </div>
 
-        <div className="mt-24 flex justify-center">
+        <div className="mt-0 flex justify-center">
 
           <Button
                       className="
@@ -51,7 +51,7 @@ text-xl
                         text-2lg
                       "
                     >
-                       Mejoremos tu tienda online
+                       Escalemos tu tienda online
                     </Button>
 
         </div>
