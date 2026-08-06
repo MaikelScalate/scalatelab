@@ -23,13 +23,12 @@ const { scrollYProgress } = useScroll({
 
       {/* Línea se añadirá aquí */}
       <div
-className="
-hidden
-lg:block
+  className="
 absolute
 left-1/2
-top-[-100px]
-bottom-[0]
+top-0
+lg:top-[-100px]
+bottom-0
 w-px
 bg-white/10
 -translate-x-1/2
@@ -40,19 +39,20 @@ bg-white/10
     scaleY: scrollYProgress,
   }}
   className="
-    hidden
-    lg:block
     absolute
     left-1/2
-    top-[-100px]
+    top-0
+    lg:top-[-100px]
     bottom-0
-    w-px
-    -translate-x-1/2
+    w-[2px]
     origin-top
+    -translate-x-1/2
+    rounded-full
     bg-gradient-to-b
     from-purple
     via-[#A855F7]
     to-purple
+    shadow-[0_0_18px_rgba(168,85,247,.9)]
   "
 />
 
