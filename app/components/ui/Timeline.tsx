@@ -18,7 +18,7 @@ const { scrollYProgress } = useScroll({
   return (
     <div
   ref={ref}
-  className="relative mx-auto mt-24 w-full max-w-[1280px] lg:scale-[0.96]"
+  className="relative mx-auto mt-24 w-full max-w-[1280px] lg:scale-[0.97]"
 >
 
       {/* Línea se añadirá aquí */}
