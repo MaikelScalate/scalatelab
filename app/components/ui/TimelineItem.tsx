@@ -22,10 +22,9 @@ export default function TimelineItem({
   isLast,
 }: Props) {
   const Icon = step.icon;
-const ref = useRef(null);
 const iconRef = useRef(null);
 const isInView = useInView(iconRef, {
-  amount: 0.9,
+  margin: "-20% 0px -20% 0px",
 });
   return (
     <>
