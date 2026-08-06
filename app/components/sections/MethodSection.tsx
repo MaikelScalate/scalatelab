@@ -14,14 +14,19 @@ export default function MethodSection() {
         <div className="mx-auto max-w-5xl text-center">
 
           <Title
-  className="
-    text-2xl
-    sm:text-3xl
-    lg:text-6xl
-  "
+className="
+text-4xl
+lg:text-6xl
+"
 >
-            Nuestro Método Paso a Paso
-          </Title>
+  <span className="lg:hidden">
+    Nuestro Método
+  </span>
+
+  <span className="hidden lg:inline">
+    Nuestro Método Paso a Paso
+  </span>
+</Title>
 
           <Subtitle
   className="
