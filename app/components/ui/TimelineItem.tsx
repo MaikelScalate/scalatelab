@@ -22,8 +22,9 @@ export default function TimelineItem({
   isLast,
 }: Props) {
   const Icon = step.icon;
-const iconRef = useRef(null);
-const isInView = useInView(iconRef, {
+const mobileRef = useRef(null);
+
+const isInView = useInView(mobileRef, {
   margin: "-20% 0px -20% 0px",
 });
   return (
@@ -31,7 +32,7 @@ const isInView = useInView(iconRef, {
       {/* ================= MOBILE ================= */}
 
 <motion.div
-  ref={iconRef}
+  ref={mobileRef}
   className="relative mb-24 flex flex-col items-center lg:hidden"
 >
 
@@ -232,7 +233,6 @@ bg-[#121212]
       {/* ================= DESKTOP ================= */}
 
       <motion.div
-  ref={iconRef}
   className={`
   hidden
   lg:grid
