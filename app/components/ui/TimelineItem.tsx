@@ -25,7 +25,7 @@ export default function TimelineItem({
 const ref = useRef(null);
 const iconRef = useRef(null);
 const isInView = useInView(iconRef, {
-  amount: 1,
+  amount: 0.9,
 });
   return (
     <>
