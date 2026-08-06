@@ -9,9 +9,9 @@ export const timeline = [
   {
     number: "01",
     icon: Search,
-    title: "Analizamos tu eCommerce",
+    title: "Analizamos tu marca",
     text:
-      "Auditamos tu tienda para detectar oportunidades, fricciones y cuellos de botella.",
+      "Auditamos exhaustivamente el CRO de tu marca para detectar puntos de fuga, fricciones y cuellos de botella que impiden el crecimiento.",
     animation: "/animations/analysis.mp4",
   },
   {
@@ -19,15 +19,15 @@ export const timeline = [
     icon: Target,
     title: "Diseñamos la estrategia",
     text:
-      "Priorizamos las mejoras con mayor impacto sobre conversión y ticket medio.",
+      "Priorizamos las mejoras con mayor impacto sobre la conversión, ticket medio y recurrencia.",
     animation: "/animations/strategy.mp4",
   },
   {
     number: "03",
     icon: Code2,
-    title: "Implementamos mejoras",
+    title: "Aplicamos las mejoras",
     text:
-      "Aplicamos CRO, UX, rendimiento, contenido y automatizaciones.",
+      "Creamos una web que resuelve esas fallas. Con un diseño más atractivo, persuasivo y, aún más importante, optimizado para vender más.",
     animation: "/animations/build.mp4",
   },
   {
@@ -35,7 +35,7 @@ export const timeline = [
     icon: TrendingUp,
     title: "Medimos y escalamos",
     text:
-      "Analizamos resultados para seguir aumentando ventas de forma continua.",
+      "Analizamos resultados y en base a tu plan de acción personalizado, mejoramos otras áreas como email marketing, tráfico y mucho más.",
     animation: "/animations/growth.mp4",
   },
 ];

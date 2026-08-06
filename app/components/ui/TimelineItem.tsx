@@ -6,6 +6,7 @@ import {
 } from "framer-motion";
 
 import { useRef } from "react";
+import AnalysisAnimation from "./animations/AnalysisAnimation";
 type Props = {
   step: {
     number: string;
@@ -242,14 +243,18 @@ bg-[#121212]
     pointer-events-none
   "
 />
-    <video
-      src={step.animation}
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="relative z-10 w-full"
-    />
+    {step.number === "01" ? (
+  <AnalysisAnimation />
+) : (
+  <video
+    src={step.animation}
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="relative z-10 w-full"
+  />
+)}
 
   </motion.div>
 
@@ -406,14 +411,18 @@ bg-[#121212]
 "
 >
 
-            <video
-              src={step.animation}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full"
-            />
+            {step.number === "01" ? (
+  <AnalysisAnimation />
+) : (
+  <video
+    src={step.animation}
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full"
+  />
+)}
 
           </motion.div>
 
