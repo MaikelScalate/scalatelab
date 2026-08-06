@@ -1,3 +1,11 @@
+"use client";
+
+import {
+  motion,
+  useInView,
+} from "framer-motion";
+
+import { useRef } from "react";
 type Props = {
   step: {
     number: string;
@@ -14,7 +22,11 @@ export default function TimelineItem({
   isLast,
 }: Props) {
   const Icon = step.icon;
-
+const ref = useRef(null);
+const iconRef = useRef(null);
+const isInView = useInView(iconRef, {
+  amount: 1,
+});
   return (
     <>
       {/* ================= MOBILE ================= */}
@@ -29,37 +41,88 @@ export default function TimelineItem({
 
       {/* ================= DESKTOP ================= */}
 
-      <div className="
+      <motion.div
+  ref={iconRef}
+  className="
 hidden
 lg:grid
 lg:grid-cols-[1fr_100px_1fr]
 gap-16
 items-center
 mb-32
-">
+"
+>
 
         {/* Texto */}
 
         <div>
 
-          <span className="text-4xl font-bold text-purple">
-            {step.number}
-          </span>
+          <motion.span
+  animate={{
+    color: isInView ? "#A855F7" : "#5F5F66",
+    opacity: isInView ? 1 : 0.45,
+  }}
+  transition={{ duration: 0.45 }}
+  className="text-4xl font-bold"
+>
+  {step.number}
+</motion.span>
+<motion.h3
+  animate={{
+    opacity: isInView ? 1 : 0.45,
+    y: isInView ? 0 : 18,
+  }}
+  transition={{
+    duration: 0.45,
+    delay: 0.05,
+  }}
+  className="
+    mt-4
+    text-5xl
+    font-bold
+    leading-tight
+    text-white
+  "
+>
+  {step.title}
+</motion.h3>
 
-          <h3 className="mt-4 text-5xl font-bold leading-tight text-white">
-            {step.title}
-          </h3>
-
-          <p className="mt-6 text-xl leading-9 text-white/60">
-            {step.text}
-          </p>
+          <motion.p
+  animate={{
+  opacity: isInView ? 1 : 0.55,
+  y: isInView ? 0 : 12,
+}}
+  transition={{
+  duration: 0.45,
+  delay: 0.10,
+}}
+  className="mt-6 text-xl leading-9 text-white/60"
+>
+  {step.text}
+</motion.p>
 
         </div>
 
         {/* Línea */}
 
         <div className="relative flex justify-center">
-  <div
+
+  <motion.div
+    animate={{
+      borderColor: isInView
+        ? "rgba(125,38,205,.9)"
+        : "rgba(255,255,255,.10)",
+
+      boxShadow: isInView
+        ? "0 0 45px rgba(125,38,205,.45)"
+        : "0 0 0 rgba(0,0,0,0)",
+
+      scale: isInView ? 1.08 : 1,
+      rotate: isInView ? 0 : -8,
+    }}
+    transition={{
+      duration: .55,
+    }}
     className="
       relative
       z-10
@@ -70,22 +133,61 @@ mb-32
       justify-center
       rounded-full
       border
-      border-white/10
-bg-white/[0.03]
-backdrop-blur-xl
-shadow-[0_0_30px_rgba(125,38,205,.12)]
+      bg-white/[0.03]
+      backdrop-blur-xl
     "
   >
-    <Icon className="h-8 w-8 text-purple" />
-  </div>
+
+    <motion.div
+      animate={{
+        color: isInView
+          ? "#A855F7"
+          : "#8A8A8A",
+          scale: isInView ? 1 : .8,
+      }}
+    >
+      <Icon className="h-8 w-8" />
+    </motion.div>
+
+  </motion.div>
 
 </div>
 
         {/* Vídeo */}
 
-        <div>
+          <motion.div
 
-          <div className="overflow-hidden rounded-[30px] border border-white/10 bg-[#121212]">
+animate={{
+
+scale: isInView ? 1.03 : .97,
+borderColor: isInView
+  ? "rgba(125,38,205,.55)"
+  : "rgba(255,255,255,.08)",
+
+boxShadow: isInView
+  ? "0 0 80px rgba(125,38,205,.28)"
+  : "0 0 0 rgba(0,0,0,0)"
+
+}}
+
+transition={{
+
+duration:.6
+
+}}
+
+className="
+
+overflow-hidden
+
+rounded-[30px]
+
+border
+
+bg-[#121212]
+
+"
+>
 
             <video
               src={step.animation}
@@ -96,11 +198,11 @@ shadow-[0_0_30px_rgba(125,38,205,.12)]
               className="w-full"
             />
 
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
 
-      </div>
-    </>
-  );
-}
+      </>
+
+  )
+ }
