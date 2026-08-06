@@ -1,12 +1,25 @@
 "use client";
-import TimelineGlow from "./TimelineGlow";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+} from "framer-motion";
+
+import { useRef } from "react";
 import TimelineItem from "./TimelineItem";
 import { timeline } from "./TimelineData";
 
 export default function Timeline() {
+  const ref = useRef(null);
+
+const { scrollYProgress } = useScroll({
+  target: ref,
+  offset: ["start center", "end center"],
+});
   return (
-    <div className="relative mx-auto mt-24 w-full max-w-[1280px]">
+    <div
+  ref={ref}
+  className="relative mx-auto mt-24 w-full max-w-[1280px] lg:scale-[0.96]"
+>
 
       {/* Línea se añadirá aquí */}
       <div
@@ -23,12 +36,8 @@ bg-white/10
 "
 />
 <motion.div
-  initial={{ scaleY: 0 }}
-  whileInView={{ scaleY: 1 }}
-  viewport={{ once: true, amount: 0.25 }}
-  transition={{
-    duration: 2,
-    ease: "easeOut",
+  style={{
+    scaleY: scrollYProgress,
   }}
   className="
     hidden
@@ -41,14 +50,11 @@ bg-white/10
     -translate-x-1/2
     origin-top
     bg-gradient-to-b
-from-purple/30
-via-purple
-to-purple/30
+    from-purple
+    via-[#A855F7]
+    to-purple
   "
 />
-<div className="absolute inset-0 pointer-events-none z-0">
-  <TimelineGlow />
-</div>
 
 <div className="relative z-10">
 

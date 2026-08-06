@@ -44,9 +44,15 @@ text-xl
 
         <div className="mt-24 flex justify-center">
 
-          <Button>
-            Mejoremos mi tienda online
-          </Button>
+          <Button
+                      className="
+                        h-12
+                        px-8
+                        text-2lg
+                      "
+                    >
+                       Mejoremos tu tienda online
+                    </Button>
 
         </div>
 

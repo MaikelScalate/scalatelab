@@ -48,7 +48,7 @@ export default function CalculatorSection() {
               text-2lg
             "
           >
-            Quiero dejar de perder ventas
+             Quiero dejar de perder ventas
           </Button>
         </div>
 
