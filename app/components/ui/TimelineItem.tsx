@@ -23,9 +23,14 @@ export default function TimelineItem({
 }: Props) {
   const Icon = step.icon;
 const mobileRef = useRef(null);
+const desktopRef = useRef(null);
 
-const isInView = useInView(mobileRef, {
+const mobileInView = useInView(mobileRef, {
   margin: "-20% 0px -20% 0px",
+});
+
+const desktopInView = useInView(desktopRef, {
+  amount: 0.9,
 });
   return (
     <>
@@ -40,18 +45,18 @@ const isInView = useInView(mobileRef, {
 
   <motion.div
     animate={{
-      borderColor: isInView
+      borderColor: mobileInView
         ? "rgba(125,38,205,.9)"
         : "rgba(255,255,255,.10)",
-      background: isInView
+      background: mobileInView
   ? "linear-gradient(180deg, rgba(168,85,247,.14), rgba(125,38,205,.05))"
   : "rgba(255,255,255,.03)",
-      boxShadow: isInView
+      boxShadow: mobileInView
         ? "0 0 35px rgba(125,38,205,.35)"
         : "0 0 0 rgba(0,0,0,0)",
 
-      scale: isInView ? 1.08 : 1,
-rotate: isInView ? 0 : -8,
+      scale: mobileInView ? 1.08 : 1,
+rotate: mobileInView ? 0 : -8,
     }}
     transition={{ duration: .45 }}
     className="
@@ -70,8 +75,8 @@ rotate: isInView ? 0 : -8,
   >
 <motion.div
   animate={{
-    opacity: isInView ? 1 : 0,
-    scale: isInView ? 1.4 : .8,
+    opacity: mobileInView ? 1 : 0,
+    scale: mobileInView ? 1.4 : .8,
   }}
   transition={{ duration: .45 }}
   className="
@@ -85,11 +90,11 @@ rotate: isInView ? 0 : -8,
 />
  <motion.div
   animate={{
-    color: isInView
+    color: mobileInView
       ? "#A855F7"
       : "#8A8A8A",
 
-    scale: isInView
+    scale: mobileInView
       ? 1
       : .8,
   }}
@@ -104,9 +109,9 @@ rotate: isInView ? 0 : -8,
 
   <motion.span
   animate={{
-    color: isInView ? "#A855F7" : "#5F5F66",
-    opacity: isInView ? 1 : .45,
-    y: isInView ? 0 : 12,
+    color: mobileInView ? "#A855F7" : "#5F5F66",
+    opacity: mobileInView ? 1 : .45,
+    y: mobileInView ? 0 : 12,
   }}
   transition={{
   duration: .45,
@@ -126,8 +131,8 @@ rotate: isInView ? 0 : -8,
   <motion.h3
 
     animate={{
-      opacity: isInView ? 1 : .45,
-      y: isInView ? 0 : 12,
+      opacity: mobileInView ? 1 : .45,
+      y: mobileInView ? 0 : 12,
     }}
 
     className="
@@ -148,8 +153,8 @@ rotate: isInView ? 0 : -8,
 
   <motion.p
   animate={{
-    opacity: isInView ? 1 : .55,
-    y: isInView ? 0 : 12,
+    opacity: mobileInView ? 1 : .55,
+    y: mobileInView ? 0 : 12,
   }}
   transition={{
     duration: .45,
@@ -177,13 +182,13 @@ rotate: isInView ? 0 : -8,
 
     animate={{
 
-      scale: isInView ? 1.02 : .98,
+      scale: mobileInView ? 1.02 : .98,
 
-      borderColor: isInView
+      borderColor: mobileInView
         ? "rgba(125,38,205,.55)"
         : "rgba(255,255,255,.08)",
 
-      boxShadow: isInView
+      boxShadow: mobileInView
   ? "0 0 80px rgba(125,38,205,.30), 0 0 120px rgba(125,38,205,.15)"
         : "0 0 0 rgba(0,0,0,0)"
 
@@ -204,7 +209,7 @@ bg-[#121212]
   >
 <motion.div
   animate={{
-    opacity: isInView ? 1 : 0,
+    opacity: mobileInView ? 1 : 0,
   }}
   transition={{ duration: .5 }}
   className="
@@ -233,6 +238,7 @@ bg-[#121212]
       {/* ================= DESKTOP ================= */}
 
       <motion.div
+  ref={desktopRef}
   className={`
   hidden
   lg:grid
@@ -249,8 +255,8 @@ bg-[#121212]
 
           <motion.span
   animate={{
-    color: isInView ? "#A855F7" : "#5F5F66",
-    opacity: isInView ? 1 : 0.45,
+    color: desktopInView ? "#A855F7" : "#5F5F66",
+    opacity: desktopInView ? 1 : 0.45,
   }}
   transition={{ duration: 0.45 }}
   className="text-4xl font-bold"
@@ -259,8 +265,8 @@ bg-[#121212]
 </motion.span>
 <motion.h3
   animate={{
-    opacity: isInView ? 1 : 0.45,
-    y: isInView ? 0 : 18,
+    opacity: desktopInView ? 1 : 0.45,
+    y: desktopInView ? 0 : 18,
   }}
   transition={{
     duration: 0.45,
@@ -279,8 +285,8 @@ bg-[#121212]
 
           <motion.p
   animate={{
-  opacity: isInView ? 1 : 0.55,
-  y: isInView ? 0 : 12,
+  opacity: desktopInView ? 1 : 0.55,
+  y: desktopInView ? 0 : 12,
 }}
   transition={{
   duration: .45,
@@ -299,16 +305,16 @@ bg-[#121212]
 
   <motion.div
     animate={{
-      borderColor: isInView
+      borderColor: desktopInView
         ? "rgba(125,38,205,.9)"
         : "rgba(255,255,255,.10)",
 
-      boxShadow: isInView
+      boxShadow: desktopInView
         ? "0 0 45px rgba(125,38,205,.45)"
         : "0 0 0 rgba(0,0,0,0)",
 
-      scale: isInView ? 1.08 : 1,
-      rotate: isInView ? 0 : -8,
+      scale: desktopInView ? 1.08 : 1,
+      rotate: desktopInView ? 0 : -8,
     }}
     transition={{
       duration: .55,
@@ -330,10 +336,10 @@ bg-[#121212]
 
     <motion.div
       animate={{
-        color: isInView
+        color: desktopInView
           ? "#A855F7"
           : "#8A8A8A",
-          scale: isInView ? 1 : .8,
+          scale: desktopInView ? 1 : .8,
       }}
     >
       <Icon className="h-8 w-8" />
@@ -349,12 +355,12 @@ bg-[#121212]
 
 animate={{
 
-scale: isInView ? 1.03 : .97,
-borderColor: isInView
+scale: desktopInView ? 1.03 : .97,
+borderColor: desktopInView
   ? "rgba(125,38,205,.55)"
   : "rgba(255,255,255,.08)",
 
-boxShadow: isInView
+boxShadow: desktopInView
   ? "0 0 80px rgba(125,38,205,.28)"
   : "0 0 0 rgba(0,0,0,0)"
 
