@@ -7,7 +7,15 @@ import Timeline from "../ui/Timeline";
 
 export default function MethodSection() {
   return (
-    <Section id="metodologia" className="pt-12 py-32">
+    <Section
+  id="metodologia"
+  className="
+    pt-0
+    pb-24
+    lg:pt-16
+    lg:pb-32
+  "
+>
 
       <Container>
 
