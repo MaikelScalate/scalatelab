@@ -15,7 +15,7 @@ export default function MethodSection() {
 
           <Title
   className="
-    text-3xl
+    text-2xl
     sm:text-3xl
     lg:text-6xl
   "

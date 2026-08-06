@@ -26,7 +26,7 @@ const { scrollYProgress } = useScroll({
   className="
 absolute
 left-1/2
-top-0
+top-[-60px]
 lg:top-[-100px]
 bottom-0
 w-px
@@ -41,8 +41,8 @@ bg-white/10
   className="
     absolute
     left-1/2
-    top-0
-    lg:top-[-100px]
+    top-[-60px]
+lg:top-[-100px]
     bottom-0
     w-[2px]
     origin-top
