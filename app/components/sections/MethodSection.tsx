@@ -14,21 +14,23 @@ export default function MethodSection() {
         <div className="mx-auto max-w-5xl text-center">
 
           <Title
-className="
-text-4xl
-lg:text-6xl
-"
+  className="
+    text-3xl
+    sm:text-3xl
+    lg:text-6xl
+  "
 >
             Nuestro Método Paso a Paso
           </Title>
 
           <Subtitle
-className="
-mx-auto
-mt-6
-max-w-2xl
-text-lg
-"
+  className="
+    mx-auto
+    mt-6
+    max-w-2xl
+    text-base
+    lg:text-lg
+  "
 >
             Descubre cómo analizamos, encontramos cuellos de botella y aplicamos
             sistemas para aportar resultados a cualquier marca E-commerce.
