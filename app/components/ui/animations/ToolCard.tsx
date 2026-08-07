@@ -6,75 +6,101 @@ type Props = {
   title: string;
   logo: string;
   glow: string;
+  initialX?: number;
+  initialY?: number;
+  delay?: number;
 };
 
 export default function ToolCard({
   title,
   logo,
   glow,
+  initialX = 0,
+  initialY = 30,
+  delay = 0,
 }: Props) {
   return (
     <motion.div
       initial={{
-        opacity: 0,
-        y: 30,
-        scale: .9,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        scale: 1,
-      }}
-      transition={{
-        duration: .55,
-      }}
+  opacity: 0,
+  x: initialX,
+  y: initialY,
+  scale: 0.85,
+}}
+
+animate={{
+    opacity:1,
+    x:0,
+    y:[0,-6,0,6,0],
+    scale:[1,.98,1],
+}}
+
+transition={{
+    opacity:{
+        duration:.7,
+        delay,
+    },
+    x:{
+        duration:.7,
+        delay,
+        type:"spring",
+        stiffness:90,
+    },
+    y:{
+        duration:4,
+        repeat:Infinity,
+        ease:"easeInOut",
+        delay:delay+1,
+    },
+    scale:{
+        duration:4,
+        repeat:Infinity,
+        ease:"easeInOut",
+        delay:delay+1,
+    }
+}}
       className="
         relative
-        w-[180px]
-        rounded-[22px]
+        flex
+        h-[88px]
+        w-[160px]
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-[20px]
         border
         border-white/10
         bg-white/[0.04]
         backdrop-blur-xl
-        overflow-hidden
       "
     >
       {/* Glow */}
 
       <div
-        className="absolute inset-0 opacity-30 blur-3xl"
+        className="
+          absolute
+          inset-0
+          opacity-25
+          blur-3xl
+        "
         style={{
           background: glow,
         }}
       />
 
-      {/* Contenido */}
+      {/* Logo */}
 
-      <div className="relative z-10 p-5">
-
-        <img
-          src={logo}
-          alt={title}
-          className="
-            h-12
-            w-auto
-            object-contain
-          "
-        />
-
-        <p
-          className="
-            mt-4
-            text-lg
-            font-semibold
-            text-white
-          "
-        >
-          {title}
-        </p>
-
-      </div>
-
+      <img
+        src={logo}
+        alt={title}
+        className="
+          relative
+          z-10
+          max-h-[52px]
+          max-w-[125px]
+          object-contain
+        "
+      />
     </motion.div>
   );
 }
