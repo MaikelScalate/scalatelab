@@ -79,7 +79,7 @@ export default function Hero() {
 >
   <Image
     src="/logoshopify.png"
-    alt="Shopify"
+    alt="Shopify Logo"
     width={36}
     height={36}
     className="
