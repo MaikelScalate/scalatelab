@@ -333,11 +333,11 @@ bg-[#121212]
   <motion.div
     animate={{
       borderColor: desktopInView
-  ? "rgba(59,130,246,.95)"
+  ? "rgba(125,38,205,.55)"
   : "rgba(255,255,255,.10)",
 
 boxShadow: desktopInView
-  ? "0 0 45px rgba(59,130,246,.45)"
+  ? "0 0 45px rgba(125,38,205,.55)"
   : "0 0 0 rgba(0,0,0,0)",
 
       scale: desktopInView ? 1.08 : 1,
