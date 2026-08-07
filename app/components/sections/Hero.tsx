@@ -77,19 +77,17 @@ export default function Hero() {
     align-middle
   "
 >
-  <Image
-    src="/logoshopify.png"
-    alt="Shopify Logo"
-    width={36}
-    height={36}
-    className="
-  h-12
-  sm:h-9
-  lg:h-11
-  xl:h-14
-  w-auto
-"
-  />
+  <img
+  src="/logoshopify.png"
+  alt="Shopify Logo"
+  className="
+    h-12
+    sm:h-9
+    lg:h-11
+    xl:h-14
+    w-auto
+  "
+/>
   <span
   className="
     text-3xl
