@@ -158,7 +158,7 @@ font-bold
     className="
       mt-4
       text-center
-      text-3xl
+      text-2xl
       font-bold
       text-white
     "
@@ -299,7 +299,7 @@ bg-[#121212]
   }}
   className="
     mt-4
-    text-5xl
+    text-4xl
     font-bold
     leading-tight
     text-white
