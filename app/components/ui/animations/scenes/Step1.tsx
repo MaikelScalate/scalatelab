@@ -201,7 +201,7 @@ border-purple/30
       <div className="absolute right-[6%] bottom-[8%]">
         <ToolCard
           title=""
-          logo="/logo-shopify.png"
+          logo="/logo-shopify1.png"
           glow="rgba(34,197,94,.45)"
           initialX={300}
           initialY={120}
