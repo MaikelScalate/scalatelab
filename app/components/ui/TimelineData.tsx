@@ -11,7 +11,7 @@ export const timeline = [
     icon: Search,
     title: "Analizamos tu marca",
     text:
-      "Auditamos exhaustivamente el CRO de tu marca para detectar puntos de fuga, fricciones y cuellos de botella que impiden el crecimiento.",
+      "Auditamos exhaustivamente el CRO de tu marca para detectar fugas y cuellos de botella que impiden el crecimiento.",
     animation: "/animations/analysis.mp4",
   },
   {
@@ -27,7 +27,7 @@ export const timeline = [
     icon: Code2,
     title: "Aplicamos las mejoras",
     text:
-      "Creamos una web que resuelve esas fallas. Con un diseño más atractivo, persuasivo y, aún más importante, optimizado para vender más.",
+      "Creamos una web más atractiva, persuasiva y, aún más importante, optimizada para vender más.",
     animation: "/animations/build.mp4",
   },
   {
@@ -35,7 +35,7 @@ export const timeline = [
     icon: TrendingUp,
     title: "Medimos y escalamos",
     text:
-      "Analizamos resultados y en base a tu plan de acción personalizado, mejoramos otras áreas como email marketing, tráfico y mucho más.",
+      "Analizamos resultados y mejoramos otras áreas como email marketing, tráfico y mucho más.",
     animation: "/animations/growth.mp4",
   },
 ];
