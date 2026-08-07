@@ -15,7 +15,7 @@ import {
 export default function ImprovementsSection() {
   return (
     <Section
-  id="mejoras"
+  id="pilares"
   className="pt-5 py-32"
 >
       <Container>
