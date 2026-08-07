@@ -85,21 +85,21 @@ border-purple/30
           className="
             flex
             items-center
-            gap-4
+            gap-5
             rounded-2xl
             border
             border-white/10
             bg-black/40
-            px-6
-            py-3
+            px-7
+            py-4
             backdrop-blur-xl
           "
         >
           <div
             className="
               flex
-              h-12
-              w-12
+              h-8
+              w-11
               items-center
               justify-center
               rounded-xl
@@ -112,12 +112,9 @@ border-purple/30
             01
           </div>
 
-          <div>
-            <p className="text-xs uppercase tracking-[.25em] text-blue-400">
-              Paso
-            </p>
+          <div className="whitespace-nowrap">
 
-            <h2 className="text-xl font-semibold text-white">
+            <h2 className="text-lg font-semibold text-white">
               Auditamos toda tu tienda
             </h2>
           </div>
@@ -126,38 +123,36 @@ border-purple/30
 
       {/* Logo */}
 
-      <motion.div
-        animate={{
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 2.5,
-          repeat: Infinity,
-        }}
-        className="
-          absolute
-          left-1/2
-          top-[58%]
-          z-30
-          flex
-          h-[110px]
-          w-[110px]
-          -translate-x-1/2
-          -translate-y-1/2
-          items-center
-          justify-center
-          rounded-full
-          bg-gradient-to-br
-          from-blue-500
-          via-[#7C3AED]
-          to-fuchsia-500
-        "
-      >
-        <img
-          src="/logo-scalate.png"
-          className="h-full w-full object-contain p-6"
-        />
-      </motion.div>
+      {/* Logo */}
+
+<motion.div
+  animate={{
+    scale: [1, 1.05, 1],
+  }}
+  transition={{
+    duration: 2.5,
+    repeat: Infinity,
+  }}
+  className="
+    absolute
+    left-1/2
+    top-[58%]
+    z-30
+    -translate-x-1/2
+    -translate-y-1/2
+  "
+>
+  <img
+    src="/logo-scalate.png"
+    alt="Scalate"
+    className="
+      w-[110px]
+      h-[110px]
+      object-contain
+      drop-shadow-[0_0_40px_rgba(124,58,237,.45)]
+    "
+  />
+</motion.div>
 
       {/* Analytics */}
 

@@ -8,27 +8,35 @@ import Step1 from "./scenes/Step1";
 import Step2 from "./scenes/Step2";
 import Step3 from "./scenes/Step3";
 
-export default function AnalysisAnimation() {
+type Props = {
+  play: boolean;
+};
+
+export default function AnalysisAnimation({
+  play,
+}: Props) {
 
 const [step,setStep]=useState(1);
 
-useEffect(()=>{
+useEffect(() => {
 
-const timer1=setTimeout(()=>setStep(2),4000);
+  if (!play) return;
 
-const timer2=setTimeout(()=>setStep(3),8000);
+  setStep(1);
 
-const timer3=setTimeout(()=>setStep(1),12000);
+  const timer1 = setTimeout(() => setStep(2), 5000);
 
-return ()=>{
+  const timer2 = setTimeout(() => setStep(3), 10000);
 
-clearTimeout(timer1);
-clearTimeout(timer2);
-clearTimeout(timer3);
+  const timer3 = setTimeout(() => setStep(1), 15000);
 
-};
+  return () => {
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+    clearTimeout(timer3);
+  };
 
-},[step]);
+}, [play]);
 
 return(
 

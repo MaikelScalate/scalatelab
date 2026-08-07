@@ -244,7 +244,9 @@ bg-[#121212]
   "
 />
     {step.number === "01" ? (
-  <AnalysisAnimation />
+  <AnalysisAnimation
+  play={mobileInView}
+/>
 ) : (
   <video
     src={step.animation}
@@ -412,7 +414,9 @@ bg-[#121212]
 >
 
             {step.number === "01" ? (
-  <AnalysisAnimation />
+  <AnalysisAnimation
+  play={desktopInView}
+/>
 ) : (
   <video
     src={step.animation}

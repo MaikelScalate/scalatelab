@@ -83,10 +83,10 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#mejoras"
+            href="#pilares"
             className="text-base font-medium text-white/70 transition hover:text-white"
           >
-            Mejoras
+            Pilares
           </a>
 
           <a
