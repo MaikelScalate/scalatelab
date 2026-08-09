@@ -113,7 +113,7 @@ export default function Step2() {
               text-purple-400
             "
           >
-            02
+            1.2
           </div>
 
           <h2 className="text-lg font-semibold text-white">

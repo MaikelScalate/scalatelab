@@ -413,27 +413,32 @@ export default function StrategyAnimation({
                 stiffness: 90,
               }}
               className="
-                absolute
-                left-1/2
-                top-[57%]
-                z-30
-                flex
-                h-[120px]
-                w-[120px]
-                -translate-x-1/2
-                -translate-y-1/2
-                flex-col
-                items-center
-                justify-center
-                rounded-[20px]
-                border
-                border-purple-400/30
-                bg-gradient-to-br
-                from-purple-500/20
-                via-[#171426]
-                to-[#0f1017]
-                shadow-[0_0_55px_rgba(139,92,246,.25)]
-              "
+  absolute
+  left-1/2
+  top-[57%]
+  z-30
+  flex
+  h-[88px]
+  w-[88px]
+  -translate-x-1/2
+  -translate-y-1/2
+  flex-col
+  items-center
+  justify-center
+  rounded-[16px]
+  border
+  border-purple-400/30
+  bg-gradient-to-br
+  from-purple-500/20
+  via-[#171426]
+  to-[#0f1017]
+  shadow-[0_0_40px_rgba(139,92,246,.25)]
+
+  lg:h-[120px]
+  lg:w-[120px]
+  lg:rounded-[20px]
+  lg:shadow-[0_0_55px_rgba(139,92,246,.25)]
+"
             >
               <motion.div
                 animate={{

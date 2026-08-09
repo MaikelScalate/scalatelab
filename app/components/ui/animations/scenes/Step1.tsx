@@ -109,7 +109,7 @@ border-purple/30
               text-purple-400
             "
           >
-            01
+            1.1
           </div>
 
           <div className="whitespace-nowrap">

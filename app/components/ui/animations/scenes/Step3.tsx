@@ -118,7 +118,7 @@ export default function Step3() {
               text-purple-400
             "
           >
-            03
+            1.3
           </div>
 
           <h2 className="text-lg font-semibold text-white">
