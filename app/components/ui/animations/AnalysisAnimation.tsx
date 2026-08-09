@@ -19,23 +19,21 @@ export default function AnalysisAnimation({
 const [step,setStep]=useState(1);
 
 useEffect(() => {
-
   if (!play) return;
 
   setStep(1);
 
-  const timer1 = setTimeout(() => setStep(2), 5000);
-
-  const timer2 = setTimeout(() => setStep(3), 10000);
-
-  const timer3 = setTimeout(() => setStep(1), 15000);
+  const interval = setInterval(() => {
+    setStep((current) => {
+      if (current === 1) return 2;
+      if (current === 2) return 3;
+      return 1;
+    });
+  }, 5000);
 
   return () => {
-    clearTimeout(timer1);
-    clearTimeout(timer2);
-    clearTimeout(timer3);
+    clearInterval(interval);
   };
-
 }, [play]);
 
 return(

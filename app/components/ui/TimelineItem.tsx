@@ -7,6 +7,7 @@ import {
 
 import { useRef } from "react";
 import AnalysisAnimation from "./animations/AnalysisAnimation";
+import StrategyAnimation from "./animations/StrategyAnimation";
 type Props = {
   step: {
     number: string;
@@ -244,9 +245,9 @@ bg-[#121212]
   "
 />
     {step.number === "01" ? (
-  <AnalysisAnimation
-  play={mobileInView}
-/>
+  <AnalysisAnimation play={mobileInView} />
+) : step.number === "02" ? (
+  <StrategyAnimation play={mobileInView} />
 ) : (
   <video
     src={step.animation}
@@ -414,9 +415,9 @@ bg-[#121212]
 >
 
             {step.number === "01" ? (
-  <AnalysisAnimation
-  play={desktopInView}
-/>
+  <AnalysisAnimation play={desktopInView} />
+) : step.number === "02" ? (
+  <StrategyAnimation play={desktopInView} />
 ) : (
   <video
     src={step.animation}
