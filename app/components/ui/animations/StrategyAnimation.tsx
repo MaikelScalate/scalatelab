@@ -200,7 +200,7 @@ export default function StrategyAnimation({
                     text-white
                   "
                 >
-                  Diseñamos la estrategia
+                  Pasamos el plan a objetivos
                 </h2>
               </div>
             </motion.div>
