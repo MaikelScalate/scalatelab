@@ -224,18 +224,21 @@ export default function StrategyAnimation({
                 ease: "easeOut",
               }}
               className="
-                absolute
-                left-[18%]
-                top-[57%]
-                z-10
-                h-px
-                w-[17%]
-                origin-left
-                bg-gradient-to-r
-                from-transparent
-                via-purple-500/40
-                to-purple-400
-              "
+  absolute
+  left-[18%]
+  top-[57%]
+  z-10
+  hidden
+  h-px
+  w-[17%]
+  origin-left
+  bg-gradient-to-r
+  from-transparent
+  via-purple-500/40
+  to-purple-400
+
+  lg:block
+"
             />
 
             {/* ================================================= */}
@@ -257,17 +260,20 @@ export default function StrategyAnimation({
                 ease: "easeOut",
               }}
               className="
-                absolute
-                left-[62%]
-                top-[43%]
-                z-10
-                h-px
-                w-[13%]
-                origin-left
-                bg-gradient-to-r
-                from-purple-400
-                to-purple-400/20
-              "
+  absolute
+  left-[calc(30%+40px)]
+  top-[43%]
+  z-10
+  h-px
+  w-[calc(63%-88px)]
+  origin-left
+  bg-gradient-to-r
+  from-purple-400
+  to-purple-400/20
+
+  lg:left-[62%]
+  lg:w-[13%]
+"
             />
 
             {/* ================================================= */}
@@ -289,17 +295,20 @@ export default function StrategyAnimation({
                 ease: "easeOut",
               }}
               className="
-                absolute
-                left-[62%]
-                top-[57%]
-                z-10
-                h-px
-                w-[13%]
-                origin-left
-                bg-gradient-to-r
-                from-purple-400
-                to-purple-400/20
-              "
+  absolute
+  left-[calc(30%+40px)]
+  top-[57%]
+  z-10
+  h-px
+  w-[calc(63%-88px)]
+  origin-left
+  bg-gradient-to-r
+  from-purple-400
+  to-purple-400/20
+
+  lg:left-[62%]
+  lg:w-[13%]
+"
             />
 
             {/* ================================================= */}
@@ -321,17 +330,20 @@ export default function StrategyAnimation({
                 ease: "easeOut",
               }}
               className="
-                absolute
-                left-[62%]
-                top-[71%]
-                z-10
-                h-px
-                w-[13%]
-                origin-left
-                bg-gradient-to-r
-                from-purple-400
-                to-purple-400/20
-              "
+  absolute
+  left-[calc(30%+40px)]
+  top-[71%]
+  z-10
+  h-px
+  w-[calc(63%-88px)]
+  origin-left
+  bg-gradient-to-r
+  from-purple-400
+  to-purple-400/20
+
+  lg:left-[62%]
+  lg:w-[13%]
+"
             />
 
             {/* ================================================= */}
@@ -356,21 +368,23 @@ export default function StrategyAnimation({
                 stiffness: 90,
               }}
               className="
-                absolute
-                left-[7%]
-                top-[43%]
-                z-20
-                flex
-                h-[82px]
-                w-[92px]
-                items-center
-                justify-center
-                rounded-2xl
-                border
-                border-white/10
-                bg-white/[0.04]
-                backdrop-blur-xl
-              "
+  absolute
+  left-[7%]
+  top-[43%]
+  z-20
+  hidden
+  h-[82px]
+  w-[92px]
+  items-center
+  justify-center
+  rounded-2xl
+  border
+  border-white/10
+  bg-white/[0.04]
+  backdrop-blur-xl
+
+  lg:flex
+"
             >
               <div
                 className="
@@ -414,12 +428,12 @@ export default function StrategyAnimation({
               }}
               className="
   absolute
-  left-1/2
+  left-[30%]
   top-[57%]
   z-30
   flex
-  h-[88px]
-  w-[88px]
+  h-[120px]
+  w-[120px]
   -translate-x-1/2
   -translate-y-1/2
   flex-col
@@ -434,6 +448,7 @@ export default function StrategyAnimation({
   to-[#0f1017]
   shadow-[0_0_40px_rgba(139,92,246,.25)]
 
+  lg:left-1/2
   lg:h-[120px]
   lg:w-[120px]
   lg:rounded-[20px]
