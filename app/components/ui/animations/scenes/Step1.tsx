@@ -103,10 +103,10 @@ border-purple/30
               items-center
               justify-center
               rounded-xl
-              bg-blue-500/15
+              bg-purple-500/15
               text-xl
               font-bold
-              text-blue-400
+              text-purple-400
             "
           >
             01
