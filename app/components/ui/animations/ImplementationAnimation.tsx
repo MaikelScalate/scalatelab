@@ -797,7 +797,7 @@ function PhoneOrders({
             text-white
           "
         >
-          Últimos pedidos
+          Nuevos pedidos
         </h3>
 
         <div className="mt-4 h-px bg-white/5" />
