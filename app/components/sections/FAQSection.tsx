@@ -115,18 +115,29 @@ export default function FAQSection() {
 
         <div className="relative z-10 mx-auto mb-6 max-w-4xl text-center sm:mb-8 lg:mb-6">
           <div
-            className="
-              mb-4
-              text-[11px]
-              font-medium
-              uppercase
-              tracking-[0.28em]
-              text-purple-400
-              sm:text-xs
-            "
-          >
-            FAQ's
-          </div>
+  className="
+    mb-4
+    inline-flex
+    items-center
+    justify-center
+    rounded-full
+    border
+    border-fuchsia-300/15
+    bg-fuchsia-400/[0.08]
+    px-4
+    py-1.5
+    text-[10px]
+    font-medium
+    uppercase
+    tracking-[0.24em]
+    text-fuchsia-300
+    shadow-[0_0_25px_rgba(217,70,239,0.05)]
+    backdrop-blur-sm
+    sm:text-[11px]
+  "
+>
+  FAQ&apos;s
+</div>
 
           <Title
             className="
