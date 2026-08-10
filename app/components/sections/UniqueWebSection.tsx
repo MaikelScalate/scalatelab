@@ -81,36 +81,6 @@ export default function UniqueWebSection() {
         lg:py-24
       "
     >
-      {/* ========================================================= */}
-      {/* BACKGROUND GLOW */}
-      {/* ========================================================= */}
-
-      <motion.div
-        aria-hidden="true"
-        animate={
-          prefersReducedMotion
-            ? { opacity: 0.08 }
-            : {
-                x: [-40, 35, -40],
-                y: [-20, 30, -20],
-                scale: [1, 1.08, 1],
-                opacity: [0.07, 0.13, 0.07],
-              }
-        }
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-[30%]
-          h-[520px]
-          w-[760px]
-          -translate-x-1/2
-          rounded-full
-          bg-purple-600
-          blur-[150px]
-        "
-      />
 
       <motion.div
         aria-hidden="true"
