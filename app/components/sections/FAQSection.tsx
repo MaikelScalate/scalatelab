@@ -15,42 +15,41 @@ const faqItems: FAQItem[] = [
   {
     question: "¿Os basáis en mejorar solo mi tienda Shopify?",
     answer:
-      "Trabajamos principalmente sobre Shopify, analizando tu tienda desde una perspectiva global. No nos limitamos a modificar elementos visuales: buscamos oportunidades en la experiencia, estructura, conversión y funcionamiento de tu E-commerce para conseguir que rinda mejor.",
-  },
+"No. Nuestro enfoque principal es optimizar tu tienda online, ya que da igual cuánto tráfico generes: si tu web no está preparada para convertir, estarás perdiendo dinero. Una vez optimizada, podemos trabajar otras áreas para seguir creciendo.",  },
   {
     question: "¿Y si mi web ya está bien diseñada?",
     answer:
-      "Que una web se vea bien no significa necesariamente que esté convirtiendo todo lo que podría. Analizamos cómo interactúan los usuarios con tu tienda para detectar fricciones, puntos de fuga y oportunidades de mejora. Nuestro objetivo no es cambiar tu web por cambiarla, sino potenciar lo que ya funciona y mejorar lo que puede estar frenando tus resultados.",
+      "Que una web se vea bien no significa que esté convirtiendo todo lo que podría. En Scalate, analizamos cómo interactúan los usuarios con tu tienda para potenciar lo que ya funciona y mejorar lo que frena mejores resultados.",
   },
   {
     question: "¿Cómo sabéis qué mejorar en mi tienda?",
     answer:
-      "No hacemos cambios basándonos únicamente en gustos o intuiciones. Analizamos tu marca, tu tienda, el recorrido de compra y las métricas relevantes para identificar dónde existen oportunidades reales de mejora. Después priorizamos las acciones según su impacto potencial.",
+      "No hacemos cambios basándonos únicamente en gustos o intuiciones. Analizamos tu marca, tu tienda, el recorrido de compra y las métricas relevantes para identificar dónde existen oportunidades reales de mejora. Después priorizamos según su impacto potencial.",
   },
   {
     question: "¿Qué hacéis exactamente para analizarla?",
     answer:
-      "Realizamos un análisis exhaustivo de tu E-commerce para detectar fricciones, cuellos de botella y oportunidades. Revisamos la experiencia de usuario, estructura, comunicación, recorrido de compra y diferentes elementos que pueden estar afectando al rendimiento de la tienda.",
+      "Realizamos un análisis exhaustivo de tu E-commerce mediante diversas plataformas (Shopify, GA4, GSC, Clarity y más) para detectar fricciones, cuellos de botella y oportunidades de mejora. Una vez realizada la auditoría, te presentamos un plan de acción claro y detallado para optimizar tu tienda.",
   },
   {
     question: "¿Qué métricas mejoráis en mi E-commerce?",
     answer:
-      "Trabajamos principalmente sobre métricas relacionadas directamente con el crecimiento y la rentabilidad del E-commerce, como la tasa de conversión, el AOV o ticket medio y el LTV. Dependiendo de cada marca, también podemos identificar otras métricas que tengan un impacto relevante en el negocio.",
+      "Trabajamos principalmente sobre métricas relacionadas con el crecimiento y la rentabilidad de tu marca, como son la tasa de conversión, el ticket medio y la recurrencia. Dependiendo de cada marca, también podemos identificar otras métricas relevantes.",
   },
   {
-    question: "¿Tengo que depender de desarrolladores?",
+    question: "¿Dependeré de desarrolladores o deberé modificar código?",
     answer:
-      "No debería ser necesario depender constantemente de un desarrollador para cada pequeño cambio. Buscamos construir una base flexible y bien estructurada que puedas evolucionar y adaptar a las necesidades de tu marca sin convertir cada modificación en un proyecto técnico.",
+      "No. En la parte de diseño, creamos una web estructurada que puedas modificar y adaptar a las necesidades de tu marca sin tocar código. Una vez creada, podrás cambiarla a tu gusto.",
   },
   {
     question: "¿Cuánto dura el análisis y optimización?",
     answer:
-      "El tiempo depende del punto de partida de cada marca, del estado actual de la tienda y del alcance de las mejoras necesarias. Primero analizamos qué necesita realmente tu E-commerce y, a partir de ahí, definimos el trabajo y las prioridades.",
+"El tiempo depende del punto de partida de cada marca y de las mejoras que necesite. Normalmente, un proceso completo y bien ejecutado se desarrolla en un plazo de entre 30 y 60 días.",
   },
-  {
+{
     question: "¿Cómo es trabajar con vosotros?",
     answer:
-      "Trabajamos de forma cercana y orientada a resultados. Primero entendemos tu marca y analizamos dónde existen oportunidades. Después planteamos una estrategia, diseñamos las mejoras, las implementamos y seguimos evaluando qué funciona para continuar optimizando el E-commerce.",
+"Trabajamos de forma cercana, con comunicación directa y constante. Analizamos tu marca, aportamos recomendaciones estratégicas y te acompañamos en cada mejora para hacer crecer tu E-commerce.",
   },
 ];
 
@@ -71,7 +70,7 @@ export default function FAQSection() {
         pb-24
         sm:pt-24
         sm:pb-28
-        lg:pt-28
+        lg:pt-24
         lg:pb-32
       "
     >
@@ -84,7 +83,7 @@ export default function FAQSection() {
   className="
     pointer-events-none
     absolute
-    -right-[200px]
+    -right-[400px]
     -top-[-180px]
     h-[600px]
     w-[600px]
@@ -115,7 +114,7 @@ export default function FAQSection() {
   className="
     pointer-events-none
     absolute
-    -left-[180px]
+    -left-[300px]
     -bottom-[160px]
     h-[600px]
     w-[600px]

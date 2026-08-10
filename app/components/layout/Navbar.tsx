@@ -96,7 +96,7 @@ export default function Navbar() {
             Metodología
           </a>
           <a
-            href="#"
+            href="#faq"
             className="text-base font-medium text-white/70 transition hover:text-white"
           >
               FAQ's
