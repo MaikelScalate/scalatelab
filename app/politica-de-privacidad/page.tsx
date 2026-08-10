@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
+import Footer from "../components/sections/Footer";
 export default function PrivacyPolicyPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
@@ -733,6 +733,7 @@ export default function PrivacyPolicyPage() {
           </div>
         </article>
       </section>
+      <Footer />
     </main>
   );
 }
