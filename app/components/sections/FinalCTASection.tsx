@@ -83,14 +83,14 @@ lg:py-16
     h-[300px]
     w-[300px]
     rounded-full
-    bg-blue-600/20
+    bg-blue-600/30
     blur-[90px]
 
     lg:-left-[350px]
     lg:-top-[400px]
     lg:h-[650px]
     lg:w-[650px]
-    lg:bg-blue-600/20
+    lg:bg-blue-600/30
     lg:blur-[170px]
   "
 />
@@ -110,7 +110,7 @@ lg:py-16
     h-[320px]
     w-[320px]
     rounded-full
-    bg-purple-600/25
+    bg-purple-600/30
     blur-[95px]
 
     lg:-right-[260px]
@@ -118,7 +118,7 @@ lg:py-16
     lg:h-[700px]
     lg:w-[700px]
     lg:-translate-y-1/2
-    lg:bg-purple-600/20
+    lg:bg-purple-600/30
     lg:blur-[180px]
   "
 />
