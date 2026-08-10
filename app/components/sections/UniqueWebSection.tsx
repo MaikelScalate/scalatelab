@@ -169,7 +169,13 @@ export default function UniqueWebSection() {
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mx-auto mb-16 w-full text-center"
+          className="
+  mx-auto
+  mb-10
+  w-full
+  text-center
+  sm:mb-16
+"
         >
           <div
             className="
@@ -218,14 +224,15 @@ export default function UniqueWebSection() {
           <h2
   className="
     mx-auto
-    w-fit
-    whitespace-nowrap
+    w-full
     text-center
-    text-[21px]
+    text-[24px]
     font-semibold
-    leading-[1.08]
+    leading-[1.12]
     tracking-[-0.035em]
     text-white
+    sm:whitespace-nowrap
+    sm:w-fit
     sm:text-3xl
     lg:text-5xl
   "
@@ -239,15 +246,19 @@ export default function UniqueWebSection() {
           <p
   className="
     mx-auto
-    mt-7
+    mt-5
     w-full
-    whitespace-nowrap
+    max-w-[340px]
     text-center
-    text-[14px]
-    leading-7
+    text-[13px]
+    leading-6
     text-white/50
+    sm:mt-7
+    sm:max-w-none
+    sm:whitespace-nowrap
     sm:text-base
     lg:text-lg
+    lg:leading-7
   "
 >
   Una web diseñada alrededor de tu marca, tus clientes y tus objetivos de crecimiento.
@@ -387,9 +398,12 @@ export default function UniqueWebSection() {
                   className="
                     absolute
                     left-1/2
-                    top-1/2
-                    w-[82%]
-                    max-w-[430px]
+                    top-[56%]
+                    w-[105%]
+                    max-w-[500px]
+                    sm:top-1/2
+                    sm:w-[82%]
+                    sm:max-w-[430px]
                     will-change-transform
                     -translate-x-1/2
                     -translate-y-1/2
