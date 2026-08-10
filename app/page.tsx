@@ -7,6 +7,7 @@ import ImprovementsSection from "./components/sections/ImprovementsSection";
 import MethodSection from "./components/sections/MethodSection";
 import UniqueWebSection from "./components/sections/UniqueWebSection";
 import FAQSection from "./components/sections/FAQSection";
+import FinalCTASection from "./components/sections/FinalCTASection";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-text">
@@ -27,6 +28,7 @@ export default function Home() {
       <MethodSection />
       <UniqueWebSection />
       <FAQSection />
+      <FinalCTASection />
     </main>
   );
 }

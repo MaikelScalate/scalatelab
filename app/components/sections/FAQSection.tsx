@@ -93,33 +93,17 @@ export default function FAQSection() {
   "
 />
 
-{/* Glow azul/morado central */}
-<div
-  className="
-    pointer-events-none
-    absolute
-    left-1/2
-    top-[35%]
-    h-[500px]
-    w-[700px]
-    -translate-x-1/2
-    rounded-full
-    bg-violet-500/[0.055]
-    blur-[170px]
-  "
-/>
-
 {/* Glow morado inferior izquierdo */}
 <div
   className="
     pointer-events-none
     absolute
     -left-[300px]
-    -bottom-[160px]
+    -bottom-[-190px]
     h-[600px]
     w-[600px]
     rounded-full
-    bg-purple-700/15
+    bg-purple-700/10
     blur-[150px]
   "
 />

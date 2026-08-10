@@ -5,16 +5,40 @@ import Button from "../ui/Button";
 
 export default function Navbar() {
   const [isBottom, setIsBottom] = useState(false);
+  const [hideNavbar, setHideNavbar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsBottom(window.scrollY > 350);
+      const finalCTA = document.getElementById("contacto");
+
+      if (!finalCTA) return;
+
+      const rect = finalCTA.getBoundingClientRect();
+
+      // El navbar desaparece cuando el Final CTA
+      // entra aproximadamente en la mitad de la pantalla.
+      const isFinalCTAVisible =
+        rect.top < window.innerHeight * 0.5;
+
+      setHideNavbar(isFinalCTAVisible);
+
+      // Antes de llegar al CTA, el navbar baja después de 350px.
+      setIsBottom(
+        window.scrollY > 350 && !isFinalCTAVisible
+      );
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, []);
 
@@ -37,12 +61,35 @@ export default function Navbar() {
         duration-700
         ease-in-out
 
-        ${isBottom ? "bottom-6 top-auto" : "top-6 bottom-auto"}
+        ${
+          hideNavbar
+            ? "pointer-events-none translate-y-24 opacity-0"
+            : isBottom
+              ? "top-auto bottom-6 translate-y-0 opacity-100"
+              : "top-6 bottom-auto translate-y-0 opacity-100"
+        }
       `}
     >
-      <nav className="flex h-14 items-center justify-between rounded-full border border-white/10 bg-[#111111]/80 px-4 backdrop-blur-2xl transition-all duration-300">
+      <nav
+        className="
+          flex
+          h-14
+          items-center
+          justify-between
+          rounded-full
+          border
+          border-white/10
+          bg-[#111111]/80
+          px-4
+          backdrop-blur-2xl
+          transition-all
+          duration-300
+        "
+      >
+        {/* =====================================================
+            LOGO
+            ===================================================== */}
 
-        {/* Logo */}
         <a
           href="/"
           className="
@@ -52,8 +99,6 @@ export default function Navbar() {
             to-[#D946EF]
             bg-clip-text
             text-2xl
-            sm:text-3xl
-            lg:text-1xl
             font-extrabold
             uppercase
             tracking-tight
@@ -61,65 +106,104 @@ export default function Navbar() {
             transition-all
             duration-300
             hover:scale-105
+
+            sm:text-3xl
+            lg:text-1xl
           "
         >
           SCALATE
         </a>
 
-        {/* Menú */}
+        {/* =====================================================
+            MENÚ
+            ===================================================== */}
+
         <div className="hidden items-center gap-10 lg:flex">
           <a
-  href="#deficiencias"
-  className="text-base font-medium text-white/70 transition hover:text-white"
->
-  Deficiencias
-</a>
+            href="#deficiencias"
+            className="
+              text-base
+              font-medium
+              text-white/70
+              transition
+              hover:text-white
+            "
+          >
+            Deficiencias
+          </a>
 
           <a
             href="#calculadora"
-            className="text-base font-medium text-white/70 transition hover:text-white"
+            className="
+              text-base
+              font-medium
+              text-white/70
+              transition
+              hover:text-white
+            "
           >
             Calculadora
           </a>
 
           <a
             href="#pilares"
-            className="text-base font-medium text-white/70 transition hover:text-white"
+            className="
+              text-base
+              font-medium
+              text-white/70
+              transition
+              hover:text-white
+            "
           >
             Pilares
           </a>
 
           <a
             href="#metodologia"
-            className="text-base font-medium text-white/70 transition hover:text-white"
+            className="
+              text-base
+              font-medium
+              text-white/70
+              transition
+              hover:text-white
+            "
           >
             Metodología
           </a>
+
           <a
             href="#faq"
-            className="text-base font-medium text-white/70 transition hover:text-white"
+            className="
+              text-base
+              font-medium
+              text-white/70
+              transition
+              hover:text-white
+            "
           >
-              FAQ's
+            FAQ's
           </a>
         </div>
 
-        {/* Botón */}
+        {/* =====================================================
+            BOTÓN
+            ===================================================== */}
+
         <Button
-  href="#contacto"
-  className="
-    whitespace-nowrap
-    px-3
-    py-1.5
-    text-sm
+          href="#contacto"
+          className="
+            whitespace-nowrap
+            px-3
+            py-1.5
+            text-sm
 
-    lg:px-6
-    lg:py-2
-    lg:text-base
-  "
->
-  Escalemos tu marca
-</Button>
-
+            lg:px-6
+            lg:py-2
+            lg:text-base
+          "
+        >
+          Escalemos tu marca
+        </Button>
       </nav>
     </header>
   );
