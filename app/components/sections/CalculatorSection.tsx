@@ -51,7 +51,11 @@ export default function CalculatorSection() {
              Quiero dejar de perder ventas
           </Button>
         </div>
-
+      <div className="mt-12 h-12  flex justify-center lg:hidden">
+  <Button className="w-full max-w-[280px]">
+    Quiero dejar de perder ventas
+  </Button>
+</div>
       </Container>
     </Section>
   );
