@@ -83,7 +83,7 @@ lg:py-16
     h-[300px]
     w-[300px]
     rounded-full
-    bg-blue-600/30
+    bg-blue-600/40
     blur-[90px]
 
     lg:-left-[350px]
@@ -110,7 +110,7 @@ lg:py-16
     h-[320px]
     w-[320px]
     rounded-full
-    bg-purple-600/30
+    bg-purple-600/40
     blur-[95px]
 
     lg:-right-[260px]
