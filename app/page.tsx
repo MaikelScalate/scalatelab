@@ -5,6 +5,7 @@ import GrowthSection from "./components/sections/GrowthSection";
 import CalculatorSection from "./components/sections/CalculatorSection";
 import ImprovementsSection from "./components/sections/ImprovementsSection";
 import MethodSection from "./components/sections/MethodSection";
+import UniqueWebSection from "./components/sections/UniqueWebSection";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-text">
@@ -23,6 +24,7 @@ export default function Home() {
       <CalculatorSection />
       <ImprovementsSection />
       <MethodSection />
+      <UniqueWebSection />
     </main>
   );
 }
