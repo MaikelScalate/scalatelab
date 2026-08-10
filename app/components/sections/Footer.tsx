@@ -382,7 +382,7 @@ export default function Footer() {
                   {/* INSTAGRAM */}
 
                   <a
-                    href="#"
+                    href="https://www.instagram.com/maikelgudinecom/"
                     className="
                       inline-flex
                       items-center
@@ -434,7 +434,7 @@ export default function Footer() {
                   {/* LINKEDIN */}
 
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/maikel-gudin-096a862b8/"
                     className="
                       inline-flex
                       items-center
@@ -477,7 +477,7 @@ export default function Footer() {
                   {/* YOUTUBE */}
 
                   <a
-                    href="#"
+                    href="https://www.youtube.com/@MaikelGudinEcom"
                     className="
                       inline-flex
                       items-center
@@ -516,7 +516,34 @@ export default function Footer() {
 
                     YouTube
                   </a>
+{/* TIKTOK */}
 
+<a
+  href="https://www.tiktok.com/@maikelgudinecom"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex
+    items-center
+    gap-2
+    text-sm
+    text-white/60
+    transition-colors
+    duration-200
+    hover:text-white
+  "
+>
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.2v13.1a2.85 2.85 0 1 1-2.85-2.85c.15 0 .3.01.45.04V9.05a6.1 6.1 0 0 0-.45-.02A6.05 6.05 0 1 0 15.82 15V8.56a8.05 8.05 0 0 0 4.7 1.51V6.87a4.83 4.83 0 0 1-.93-.18Z" />
+  </svg>
+
+  TikTok
+</a>
                 </div>
 
               </div>
@@ -686,7 +713,7 @@ export default function Footer() {
               {/* INSTAGRAM */}
 
               <a
-                href="#"
+                href="https://www.instagram.com/maikelgudinecom/"
                 aria-label="Instagram"
                 className="
                   flex
@@ -739,7 +766,7 @@ export default function Footer() {
               {/* LINKEDIN */}
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/maikel-gudin-096a862b8/"
                 aria-label="LinkedIn"
                 className="
                   flex
@@ -787,7 +814,7 @@ export default function Footer() {
               {/* YOUTUBE */}
 
               <a
-                href="#"
+                href="https://www.youtube.com/@MaikelGudinEcom"
                 aria-label="YouTube"
                 className="
                   flex
@@ -832,6 +859,40 @@ export default function Footer() {
                   />
                 </svg>
               </a>
+              {/* TIKTOK */}
+
+<a
+  href="https://www.tiktok.com/@maikelgudinecom"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="TikTok"
+  className="
+    flex
+    h-10
+    w-10
+    items-center
+    justify-center
+    rounded-xl
+    border
+    border-white/[0.08]
+    bg-white/[0.03]
+    text-white/55
+    transition-all
+    duration-300
+    hover:border-white/[0.16]
+    hover:bg-white/[0.06]
+    hover:text-white
+  "
+>
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.2v13.1a2.85 2.85 0 1 1-2.85-2.85c.15 0 .3.01.45.04V9.05a6.1 6.1 0 0 0-.45-.02A6.05 6.05 0 1 0 15.82 15V8.56a8.05 8.05 0 0 0 4.7 1.51V6.87a4.83 4.83 0 0 1-.93-.18Z" />
+  </svg>
+</a>
             </div>
           </div>
 
