@@ -91,7 +91,7 @@ export default function UniqueWebSection() {
           prefersReducedMotion
             ? { opacity: 0.08 }
             : {
-                x: [40, 35, -40],
+                x: [-40, 35, -40],
                 y: [-20, 30, -20],
                 scale: [1, 1.08, 1],
                 opacity: [0.07, 0.13, 0.07],
