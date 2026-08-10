@@ -35,7 +35,7 @@ export const timeline = [
     icon: TrendingUp,
     title: "Medimos y escalamos",
     text:
-      "Analizamos resultados y mejoramos otras áreas como email marketing, tráfico y mucho más.",
+      "Analizamos resultados y te ayudamos a mejorar otras áreas como email marketing, tráfico y mucho más.",
     animation: "/animations/growth.mp4",
   },
 ];
