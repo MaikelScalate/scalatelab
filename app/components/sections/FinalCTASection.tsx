@@ -175,7 +175,7 @@ lg:py-16
                 xl:text-[2.5rem]
               "
             >
-              Transformemos tu marca para escalar.
+              Transformemos tu marca para escalar
             </Title>
 
             {/* =================================================
