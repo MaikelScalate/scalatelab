@@ -77,14 +77,14 @@ lg:py-16
   className="
     pointer-events-none
     absolute
-    -left-[250px]
-    -top-[250px]
+    -left-[180px]
+    -top-[180px]
     z-[1]
-    h-[420px]
-    w-[420px]
+    h-[300px]
+    w-[300px]
     rounded-full
-    bg-blue-600/30
-    blur-[120px]
+    bg-blue-600/20
+    blur-[90px]
 
     lg:-left-[350px]
     lg:-top-[400px]
@@ -104,14 +104,14 @@ lg:py-16
   className="
     pointer-events-none
     absolute
-    -right-[300px]
-    -bottom-[300px]
+    -right-[180px]
+    -bottom-[180px]
     z-[1]
-    h-[440px]
-    w-[440px]
+    h-[320px]
+    w-[320px]
     rounded-full
-    bg-purple-600/40
-    blur-[125px]
+    bg-purple-600/25
+    blur-[95px]
 
     lg:-right-[260px]
     lg:-bottom-[800px]
