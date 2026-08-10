@@ -605,7 +605,7 @@ export default function Footer() {
               >
 
                 <a
-                  href="/politica-de-privacidad/page.tsx"
+                  href="/politica-de-privacidad"
                   className="
                     transition-colors
                     duration-200
@@ -618,11 +618,24 @@ export default function Footer() {
                 <span className="text-white/15">
                   |
                 </span>
+<a
+  href="/politica-de-cookies"
+  className="
+    transition-colors
+    duration-200
+    hover:text-white/60
+  "
+>
+  Política de Cookies
+</a>
 
+<span className="text-white/15">
+  |
+</span>
                 {/* COOKIE SETTINGS */}
 
                 <button
-                  type="/politica-de-cookies"
+                  type="button"
                   onClick={openCookieSettings}
                   className="
                     transition-colors
@@ -945,7 +958,30 @@ export default function Footer() {
             >
               |
             </span>
+<a
+  href="/politica-de-cookies"
+  className="
+    text-xs
+    text-white/35
+    underline-offset-4
+    transition-colors
+    duration-200
+    hover:text-white/60
+    hover:underline
+  "
+>
+  Política de Cookies
+</a>
 
+<span
+  className="
+    mx-3
+    text-xs
+    text-white/20
+  "
+>
+  |
+</span>
             <button
               type="button"
               onClick={openCookieSettings}
