@@ -267,8 +267,9 @@ export default function UniqueWebSection() {
   relative
   mx-auto
   w-full
-  scale-[0.9]
+  scale-100
   max-w-[1190px]
+  lg:scale-[0.9]
   overflow-hidden
   rounded-[24px]
   border
@@ -369,7 +370,7 @@ export default function UniqueWebSection() {
                   className="
                     absolute
                     left-1/2
-                    top-[56%]
+                    top-[62%]
                     w-[105%]
                     max-w-[500px]
                     sm:top-1/2
@@ -1012,7 +1013,7 @@ export default function UniqueWebSection() {
     items-center
   "
 >
-  <div className="mt-[-35px] flex justify-center">
+  <div className="mt-[-20px] flex justify-center">
   
             <motion.div
               whileHover={prefersReducedMotion ? undefined : { y: -3, scale: 1.025 }}

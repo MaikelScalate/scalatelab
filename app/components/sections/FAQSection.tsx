@@ -169,7 +169,8 @@ export default function FAQSection() {
     z-10
     mx-auto
     max-w-6xl
-    scale-[0.91]
+    scale-100
+  lg:scale-[0.91]
     overflow-hidden
     rounded-2xl
     border
