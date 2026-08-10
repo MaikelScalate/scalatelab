@@ -24,7 +24,7 @@ export default function MethodSection() {
           <Title
 className="
 text-4xl
-lg:text-6xl
+lg:text-5xl
 "
 >
   <span className="lg:hidden">
@@ -57,7 +57,7 @@ lg:text-6xl
 
 </div>
 
-        <div className="mt-0 flex justify-center">
+        <div className="mt-[-50px] flex justify-center">
 
           <Button
                       className="

@@ -36,22 +36,10 @@ export default function CalculatorSection() {
 
         </div>
 
-        <div className="mt-8 mb-[-50px] px-0 sm:px-4 lg:px-0">
+        <div className="mt-6 mb-[0px] px-0 sm:px-4 lg:px-0 lg:mb-[-60]">
   <Calculator />
 </div>
-
-<div className="mt-[-70px] lg:mt-1 flex justify-center">
-          <Button
-            className="
-              h-12
-              px-8
-              text-2lg
-            "
-          >
-             Quiero dejar de perder ventas
-          </Button>
-        </div>
-      <div className="mt-12 h-12  flex justify-center lg:hidden">
+      <div className="mt-12 h-12  flex justify-center lg:mt-0">
   <Button className="w-full max-w-[280px]">
     Quiero dejar de perder ventas
   </Button>

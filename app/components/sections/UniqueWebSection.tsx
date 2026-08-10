@@ -37,10 +37,9 @@ export default function UniqueWebSection() {
   );
 
   const isInView = useInView(sectionRef, {
-    amount: 0.25,
-    once: false,
-  });
-
+  amount: 0.25,
+  once: true,
+});
   const benefits = [
     {
       number: "01",
@@ -92,7 +91,7 @@ export default function UniqueWebSection() {
           prefersReducedMotion
             ? { opacity: 0.08 }
             : {
-                x: [-40, 35, -40],
+                x: [40, 35, -40],
                 y: [-20, 30, -20],
                 scale: [1, 1.08, 1],
                 opacity: [0.07, 0.13, 0.07],
@@ -171,10 +170,11 @@ export default function UniqueWebSection() {
           }}
           className="
   mx-auto
-  mb-10
+  mb-4
   w-full
   text-center
-  sm:mb-16
+  sm:mb-6
+  lg:mb-8
 "
         >
           <div
@@ -234,7 +234,7 @@ export default function UniqueWebSection() {
     sm:whitespace-nowrap
     sm:w-fit
     sm:text-3xl
-    lg:text-5xl
+    lg:text-4xl
   "
 >
   ¿Qué consigues con una{" "}
@@ -297,6 +297,7 @@ export default function UniqueWebSection() {
   relative
   mx-auto
   w-full
+  scale-[0.9]
   max-w-[1190px]
   overflow-hidden
   rounded-[24px]
@@ -1041,7 +1042,7 @@ export default function UniqueWebSection() {
     items-center
   "
 >
-  <div className="mt-0 flex justify-center">
+  <div className="mt-[-35px] flex justify-center">
   
             <motion.div
               whileHover={prefersReducedMotion ? undefined : { y: -3, scale: 1.025 }}
