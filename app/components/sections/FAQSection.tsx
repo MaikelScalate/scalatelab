@@ -67,11 +67,11 @@ export default function FAQSection() {
         relative
         overflow-hidden
         pt-20
-        pb-24
+        pb-12
         sm:pt-24
         sm:pb-28
         lg:pt-24
-        lg:pb-32
+        lg:pb-14
       "
     >
       {/* =========================================================

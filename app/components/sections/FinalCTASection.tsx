@@ -14,11 +14,11 @@ export default function FinalCTASection() {
         relative
         overflow-hidden
         pt-0
-        pb-16
+        pb-6
         sm:pt-10
         sm:pb-20
         lg:pt-12
-        lg:pb-24
+        lg:pb-14
       "
     >
       <Container>
