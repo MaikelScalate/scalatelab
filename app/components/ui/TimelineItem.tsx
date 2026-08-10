@@ -38,7 +38,9 @@ export default function TimelineItem({
 
   return (
     <>
-      {/* ================= MOBILE ================= */}
+      {/* ========================================================= */}
+      {/* ========================= MOBILE ======================= */}
+      {/* ========================================================= */}
 
       <motion.div
         ref={mobileRef}
@@ -125,76 +127,91 @@ export default function TimelineItem({
           </motion.div>
         </motion.div>
 
-        {/* ================= NÚMERO ================= */}
+        {/* ===================================================== */}
+        {/* FONDO NEGRO DETRÁS DEL NÚMERO + TÍTULO + TEXTO       */}
+        {/* ===================================================== */}
 
-        <motion.span
-          animate={{
-            color: mobileInView
-              ? "#A855F7"
-              : "#5F5F66",
-
-            opacity: mobileInView ? 1 : 0.45,
-
-            y: mobileInView ? 0 : 12,
-          }}
-          transition={{
-            duration: 0.45,
-            delay: 0.05,
-          }}
+        <div
           className="
-            block
-            text-center
-            text-4xl
-            font-bold
+            relative
+            z-10
+            w-full
+            px-1
+            py-2
           "
         >
-          {step.number}
-        </motion.span>
+          {/* ================= NÚMERO ================= */}
 
-        {/* ================= TÍTULO ================= */}
+          <motion.span
+            animate={{
+              color: mobileInView
+                ? "#A855F7"
+                : "#5F5F66",
 
-        <motion.h3
-          animate={{
-            opacity: mobileInView ? 1 : 0.45,
-            y: mobileInView ? 0 : 12,
-          }}
-          transition={{
-            duration: 0.45,
-            delay: 0.05,
-          }}
-          className="
-            mt-4
-            text-center
-            text-2xl
-            font-bold
-            text-white
-          "
-        >
-          {step.title}
-        </motion.h3>
+              opacity: mobileInView ? 1 : 0.45,
 
-        {/* ================= TEXTO ================= */}
+              y: mobileInView ? 0 : 12,
+            }}
+            transition={{
+              duration: 0.45,
+              delay: 0.05,
+            }}
+            className="
+              mt-10
+              block
+              text-center
+              text-4xl
+              font-bold
+            "
+          >
+            {step.number}
+          </motion.span>
 
-        <motion.p
-          animate={{
-            opacity: mobileInView ? 1 : 0.55,
-            y: mobileInView ? 0 : 12,
-          }}
-          transition={{
-            duration: 0.45,
-            delay: 0.1,
-          }}
-          className="
-            mt-5
-            max-w-sm
-            text-center
-            text-base
-            leading-8
-            text-white/60
-          "
-        >
-          {step.text}
-        </motion.p>
+          {/* ================= TÍTULO ================= */}
+
+          <motion.h3
+            animate={{
+              opacity: mobileInView ? 1 : 0.45,
+              y: mobileInView ? 0 : 12,
+            }}
+            transition={{
+              duration: 0.45,
+              delay: 0.05,
+            }}
+            className="
+              mt-4
+              text-center
+              text-2xl
+              font-bold
+              text-white
+            "
+          >
+            {step.title}
+          </motion.h3>
+
+          {/* ================= TEXTO ================= */}
+
+          <motion.p
+            animate={{
+              opacity: mobileInView ? 1 : 0.55,
+              y: mobileInView ? 0 : 12,
+            }}
+            transition={{
+              duration: 0.45,
+              delay: 0.1,
+            }}
+            className="
+              mt-5
+              max-w-sm
+              text-center
+              text-base
+              leading-8
+              text-white/60
+            "
+          >
+            {step.text}
+          </motion.p>
+        </div>
 
         {/* ================= ANIMACIÓN ================= */}
 
@@ -247,18 +264,20 @@ export default function TimelineItem({
           {/* Scene correspondiente */}
 
           {step.number === "01" ? (
-  <AnalysisAnimation play={mobileInView} />
-) : step.number === "02" ? (
-  <StrategyAnimation play={mobileInView} />
-) : step.number === "03" ? (
-  <ImplementationAnimation play={mobileInView} />
-) : (
-  <ScalingAnimation play={mobileInView} />
-)}
+            <AnalysisAnimation play={mobileInView} />
+          ) : step.number === "02" ? (
+            <StrategyAnimation play={mobileInView} />
+          ) : step.number === "03" ? (
+            <ImplementationAnimation play={mobileInView} />
+          ) : (
+            <ScalingAnimation play={mobileInView} />
+          )}
         </motion.div>
       </motion.div>
 
-      {/* ================= DESKTOP ================= */}
+      {/* ========================================================= */}
+      {/* ========================= DESKTOP ====================== */}
+      {/* ========================================================= */}
 
       <motion.div
         ref={desktopRef}
@@ -416,14 +435,14 @@ export default function TimelineItem({
           {/* Scene correspondiente */}
 
           {step.number === "01" ? (
-  <AnalysisAnimation play={desktopInView} />
-) : step.number === "02" ? (
-  <StrategyAnimation play={desktopInView} />
-) : step.number === "03" ? (
-  <ImplementationAnimation play={desktopInView} />
-) : (
-  <ScalingAnimation play={desktopInView} />
-)}
+            <AnalysisAnimation play={desktopInView} />
+          ) : step.number === "02" ? (
+            <StrategyAnimation play={desktopInView} />
+          ) : step.number === "03" ? (
+            <ImplementationAnimation play={desktopInView} />
+          ) : (
+            <ScalingAnimation play={desktopInView} />
+          )}
         </motion.div>
       </motion.div>
     </>
