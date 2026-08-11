@@ -1,6 +1,12 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const apiKey = process.env.RESEND_API_KEY;
+
+if (!apiKey) {
+  throw new Error("Falta RESEND_API_KEY en las variables de entorno.");
+}
+
+const resend = new Resend(apiKey);
 
 export async function POST(request: Request) {
   try {
@@ -51,8 +57,16 @@ export async function POST(request: Request) {
         <h2>Marca</h2>
 
         <p><strong>Años en el mercado:</strong> ${years || "No indicado"}</p>
-        <p><strong>Gestión del ecosistema E-commerce:</strong> ${manager || "No indicado"}</p>
-        <p><strong>Facturación media mensual:</strong> ${revenue || "No indicado"}</p>
+
+        <p>
+          <strong>Gestión del ecosistema E-commerce:</strong>
+          ${manager || "No indicado"}
+        </p>
+
+        <p>
+          <strong>Facturación media mensual:</strong>
+          ${revenue || "No indicado"}
+        </p>
 
         <p>
           <strong>Objetivo a 6-12 meses:</strong><br />
@@ -62,21 +76,6 @@ export async function POST(request: Request) {
         <p>
           <strong>Obstáculos:</strong><br />
           ${obstacles || "No indicado"}
-        </p>
-
-        <p>
-          <strong>Motivo para trabajar con SCALATE:</strong><br />
-          ${reason || "No indicado"}
-        </p>
-
-        <p>
-          <strong>Áreas a mejorar:</strong><br />
-          ${areas || "No indicado"}
-        </p>
-
-        <p>
-          <strong>Inversión:</strong><br />
-          ${investment || "No indicado"}
         </p>
 
         <h2>Compromiso</h2>
@@ -94,14 +93,13 @@ export async function POST(request: Request) {
       </div>
     `;
 
-    const { data: emailData, error } =
-      await resend.emails.send({
-        from: "SCALATE <formularios@scalatelab.com>",
-        to: ["maikel@scalatelab.com"],
-        replyTo: email,
-        subject: `Nueva solicitud de ${name}`,
-        html,
-      });
+    const { data: emailData, error } = await resend.emails.send({
+      from: "SCALATE <formularios@scalatelab.com>",
+      to: ["maikel@scalatelab.com"],
+      replyTo: email,
+      subject: `Nueva solicitud de ${name}`,
+      html,
+    });
 
     if (error) {
       console.error("Resend error:", error);

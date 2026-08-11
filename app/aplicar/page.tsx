@@ -132,7 +132,55 @@ const handleSubmit = async (
   const canSubmit =
     formData.commitment === YES_COMMITMENT &&
     privacyAccepted;
+const handleWhatsApp = () => {
+  if (!canSubmit) return;
 
+  const callingCode = getCountryCallingCode(phoneCountry);
+
+  const message = `
+Hola SCALATE 👋
+
+Quiero solicitar información para llevar mi marca al siguiente nivel.
+
+DATOS PERSONALES
+
+Nombre: ${formData.name}
+Email: ${formData.email}
+Teléfono: ${formData.phone ? `+${callingCode} ${formData.phone}` : "No indicado"}
+Web: ${formData.website}
+Cargo: ${formData.role || "No indicado"}
+
+MARCA
+
+Años en el mercado: ${formData.years || "No indicado"}
+Gestión del E-commerce: ${formData.manager || "No indicado"}
+Facturación media mensual: ${formData.revenue || "No indicado"}
+
+Objetivo a 6-12 meses:
+${formData.objective || "No indicado"}
+
+Obstáculos:
+${formData.obstacles || "No indicado"}
+
+Motivo para trabajar con SCALATE:
+${formData.reason || "No indicado"}
+
+Áreas a mejorar:
+${formData.areas || "No indicado"}
+
+Inversión:
+${formData.investment || "No indicado"}
+
+COMPROMISO
+
+${formData.commitment}
+`.trim();
+
+  const whatsappUrl =
+    `https://wa.me/34610086292?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappUrl, "_blank");
+};
   /*
    * =========================================================
    * PANTALLA DE CONFIRMACIÓN
@@ -466,7 +514,7 @@ const handleSubmit = async (
             sm:leading-8
           "
         >
-          Queremos entender dónde está tu marca, cuáles son los objetivos y qué está impidiendo
+          Queremos entender dónde está tu marca, cuáles son tus objetivos y qué está impidiendo
           que llegues allí. Cuéntanos tu situación y estudiaremos tu caso.
         </p>
       </section>
@@ -974,6 +1022,47 @@ const handleSubmit = async (
               >
                 {isSending ? "Enviando solicitud..." : "Enviar solicitud →"}
               </button>
+              <button
+  type="button"
+  disabled={!canSubmit}
+  onClick={handleWhatsApp}
+  className={`
+    mt-3
+    inline-flex
+    w-full
+    items-center
+    justify-center
+    rounded-full
+    border
+    px-6
+    py-4
+    font-semibold
+    transition-all
+    duration-300
+
+    ${
+      canSubmit
+        ? `
+          cursor-pointer
+          border-[#25D366]/40
+          bg-[#25D366]/10
+          text-[#25D366]
+          hover:-translate-y-1
+          hover:bg-[#25D366]/15
+          hover:border-[#25D366]/60
+          active:scale-95
+        `
+        : `
+          cursor-not-allowed
+          border-white/[0.08]
+          bg-white/[0.03]
+          text-white/20
+        `
+    }
+  `}
+>
+  Enviar por WhatsApp
+</button>
               {submitError && (
   <p className="mt-4 text-center text-sm text-red-400">
     {submitError}
