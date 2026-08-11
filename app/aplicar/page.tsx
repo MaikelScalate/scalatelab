@@ -140,7 +140,7 @@ const handleWhatsApp = () => {
   const message = `
 Hola SCALATE 👋
 
-Quiero solicitar información para llevar mi marca al siguiente nivel.
+Quiero aportar mis respuestas para llevar mi marca al siguiente nivel.
 
 DATOS PERSONALES
 
@@ -161,15 +161,6 @@ ${formData.objective || "No indicado"}
 
 Obstáculos:
 ${formData.obstacles || "No indicado"}
-
-Motivo para trabajar con SCALATE:
-${formData.reason || "No indicado"}
-
-Áreas a mejorar:
-${formData.areas || "No indicado"}
-
-Inversión:
-${formData.investment || "No indicado"}
 
 COMPROMISO
 
