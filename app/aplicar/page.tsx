@@ -138,7 +138,7 @@ const handleWhatsApp = () => {
   const callingCode = getCountryCallingCode(phoneCountry);
 
   const message = `
-Hola SCALATE 👋
+Hola Maikel 👋
 
 Quiero aportar mis respuestas para llevar mi marca al siguiente nivel.
 
