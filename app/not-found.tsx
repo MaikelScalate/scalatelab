@@ -63,7 +63,7 @@ export default function NotFound() {
           404
         </p>
 
-        <h1 className="mt-6 text-3xl font-semibold tracking-tight sm:text-5xl">
+        <h1 className="mt-6 text-2xl font-semibold tracking-tight sm:text-5xl">
           Parece que te has perdido.
         </h1>
 
