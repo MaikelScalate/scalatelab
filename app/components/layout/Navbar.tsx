@@ -190,7 +190,7 @@ export default function Navbar() {
             ===================================================== */}
 
         <Button
-          href="#contacto"
+          href="./aplicar"
           className="
             whitespace-nowrap
             px-3

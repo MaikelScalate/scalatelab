@@ -17,7 +17,13 @@ const defaultPreferences: CookiePreferences = {
   marketing: false,
 };
 
-export default function Footer() {
+type FooterProps = {
+  desktopOnly?: boolean;
+};
+
+export default function Footer({
+  desktopOnly = false,
+}: FooterProps) {
   const [showBanner, setShowBanner] = useState(false);
   const [showCookieQuick, setShowCookieQuick] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -125,7 +131,7 @@ export default function Footer() {
               =================================================
               ================================================= */}
 
-          <div className="lg:hidden">
+          <div className={desktopOnly ? "hidden" : "lg:hidden"}>
 
             {/* =================================================
                 MARCA
@@ -352,14 +358,40 @@ export default function Footer() {
                   >
                     Política de privacidad
                   </a>
+<a
+  href="/politica-de-cookies"
+  className="
+    text-sm
+    text-white/60
+    transition-colors
+    duration-200
+    hover:text-white
+  "
+>
+  Política de Cookies
+</a>
 
+<button
+  type="button"
+  onClick={openCookieSettings}
+  className="
+    text-left
+    text-sm
+    text-white/60
+    transition-colors
+    duration-200
+    hover:text-white
+  "
+>
+  Ajustes de Cookies
+</button>
                 </div>
 
               </div>
 
 
               {/* =================================================
-                  HABLEMOS
+                  REDES
                   ================================================= */}
 
               <div>
@@ -593,61 +625,6 @@ export default function Footer() {
                 © 2026 Scalate. Todos los derechos reservados.
               </p>
 
-
-              <div
-                className="
-                  flex
-                  items-center
-                  gap-3
-                  text-xs
-                  text-white/30
-                "
-              >
-
-                <a
-                  href="/politica-de-privacidad"
-                  className="
-                    transition-colors
-                    duration-200
-                    hover:text-white/60
-                  "
-                >
-                  Política de privacidad
-                </a>
-
-                <span className="text-white/15">
-                  |
-                </span>
-<a
-  href="/politica-de-cookies"
-  className="
-    transition-colors
-    duration-200
-    hover:text-white/60
-  "
->
-  Política de Cookies
-</a>
-
-<span className="text-white/15">
-  |
-</span>
-                {/* COOKIE SETTINGS */}
-
-                <button
-                  type="button"
-                  onClick={openCookieSettings}
-                  className="
-                    transition-colors
-                    duration-200
-                    hover:text-white/60
-                  "
-                >
-                  Ajustes de Cookies
-                </button>
-
-              </div>
-
             </div>
 
           </div>
@@ -660,11 +637,12 @@ export default function Footer() {
             ===================================================== */}
 
         <div
-          className="
-            hidden
-            lg:block
-          "
-        >
+  className={
+    desktopOnly
+      ? "block"
+      : "hidden lg:block"
+  }
+>
           {/* =================================================
               PARTE SUPERIOR
               ================================================= */}
