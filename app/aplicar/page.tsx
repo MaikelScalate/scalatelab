@@ -480,7 +480,7 @@ ${formData.commitment}
 
         <h1
           className="
-            text-[2.3rem]
+            text-[2.2rem]
             font-semibold
             leading-[1.04]
             tracking-[-0.055em]
