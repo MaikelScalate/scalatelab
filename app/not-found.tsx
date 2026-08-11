@@ -68,7 +68,7 @@ export default function NotFound() {
         </h1>
 
         <p className="mt-5 max-w-xl text-base leading-7 text-white/50 sm:text-lg">
-          Pero tranquilidad. Lo que buscas no es una página...
+          Pero calma. Lo que buscas no es una página...
           <br />
           es tu siguiente nivel.
         </p>
