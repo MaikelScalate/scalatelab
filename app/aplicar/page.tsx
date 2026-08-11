@@ -480,7 +480,7 @@ ${formData.commitment}
 
         <h1
           className="
-            text-[2.5rem]
+            text-[2.3rem]
             font-semibold
             leading-[1.04]
             tracking-[-0.055em]
@@ -1191,13 +1191,13 @@ function Background() {
         className="
           pointer-events-none
           fixed
-          left-[-520px]
+          left-[-620px]
           top-[20px]
           z-0
           h-[700px]
           w-[700px]
           rounded-full
-          bg-blue-600/30
+          bg-blue-600/40
           blur-[180px]
 
           sm:left-[-580px]
@@ -1224,13 +1224,13 @@ function Background() {
         className="
           pointer-events-none
           fixed
-          right-[-520px]
+          right-[-620px]
           top-[80px]
           z-0
           h-[700px]
           w-[700px]
           rounded-full
-          bg-purple-600/35
+          bg-purple-600/40
           blur-[180px]
 
           sm:right-[-580px]
