@@ -6,86 +6,97 @@ export default function CookiePolicyPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
 
-      {/* =====================================================
-          HEX GRID — PARTE SUPERIOR
-          ===================================================== */}
+{/* =====================================================
+    FONDO — IGUAL QUE APLICAR
+    ===================================================== */}
 
-      <div
-        aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute
-          inset-x-0
-          top-0
-          z-0
-          h-[520px]
-          opacity-35
-        "
-        style={{
-          backgroundImage: "url('/backgrounds/hex-grid.svg')",
-          backgroundRepeat: "repeat",
-          backgroundSize: "100px",
-          maskImage:
-            "linear-gradient(to bottom, black 0%, black 45%, transparent 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, black 0%, black 45%, transparent 100%)",
-        }}
-      />
+{/* BASE NEGRA */}
+<div
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    fixed
+    inset-0
+    z-0
+    bg-[#05060b]
+  "
+/>
 
-      {/* =====================================================
-          GLOW AZUL — SUPERIOR IZQUIERDA
-          ===================================================== */}
+{/* HEXÁGONOS */}
+<div
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    fixed
+    inset-0
+    z-0
+    opacity-35
+  "
+  style={{
+    backgroundImage:
+      "url('/backgrounds/hex-grid.svg')",
+    backgroundRepeat: "repeat",
+    backgroundSize: "100px",
+  }}
+/>
 
-      <div
-        aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute
-          -left-[280px]
-          -top-[220px]
-          z-0
-          h-[600px]
-          w-[600px]
-          rounded-full
-          bg-blue-600/[0.12]
-          blur-[170px]
-        "
-      />
+{/* GLOW AZUL */}
+<div
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    fixed
+    left-[-420px]
+    top-[20px]
+    z-0
+    h-[700px]
+    w-[700px]
+    rounded-full
+    bg-blue-600/30
+    blur-[180px]
 
-      {/* =====================================================
-          GLOW MORADO — DERECHA / PARTE INFERIOR
-          ===================================================== */}
+    sm:left-[-580px]
+    sm:top-[-20px]
+    sm:h-[800px]
+    sm:w-[800px]
 
-      <div
-        aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute
-          -right-[300px]
-          top-[520px]
-          z-0
-          h-[650px]
-          w-[650px]
-          rounded-full
-          bg-purple-600/[0.10]
-          blur-[180px]
-        "
-      />
+    lg:left-[-800px]
+    lg:top-[-80px]
+    lg:h-[900px]
+    lg:w-[900px]
+    lg:bg-blue-600/25
+    lg:blur-[210px]
+  "
+/>
 
-      {/* =====================================================
-          OSCURECER EL FONDO
-          ===================================================== */}
+{/* GLOW MORADO */}
+<div
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    fixed
+    right-[-420px]
+    top-[80px]
+    z-0
+    h-[700px]
+    w-[700px]
+    rounded-full
+    bg-purple-600/35
+    blur-[180px]
 
-      <div
-        aria-hidden="true"
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          z-[1]
-          bg-black/[0.35]
-        "
-      />
+    sm:right-[-580px]
+    sm:top-[20px]
+    sm:h-[800px]
+    sm:w-[800px]
+
+    lg:right-[-850px]
+    lg:top-[-60px]
+    lg:h-[900px]
+    lg:w-[900px]
+    lg:bg-purple-600/28
+    lg:blur-[210px]
+  "
+/>
 
       {/* =====================================================
           HEADER
