@@ -293,6 +293,18 @@ export default function Footer({
                   >
                     Metodología
                   </a>
+                  <a
+                    href="#faq"
+                    className="
+                      text-sm
+                      text-white/60
+                      transition-colors
+                      duration-200
+                      hover:text-white
+                    "
+                  >
+                    FAQ&apos;s
+                  </a>
 
                 </div>
 
@@ -319,19 +331,6 @@ export default function Footer({
                 </p>
 
                 <div className="flex flex-col gap-3.5">
-
-                  <a
-                    href="#faq"
-                    className="
-                      text-sm
-                      text-white/60
-                      transition-colors
-                      duration-200
-                      hover:text-white
-                    "
-                  >
-                    FAQ&apos;s
-                  </a>
 
                   <a
                     href="#contacto"
