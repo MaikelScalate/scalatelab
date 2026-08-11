@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     const html = `
       <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.6;">
         <h1 style="margin-bottom: 24px;">
-          Nueva solicitud — SCALATE
+          Nuevo formulario — SCALATE
         </h1>
 
         <h2>Datos personales</h2>
@@ -97,7 +97,7 @@ export async function POST(request: Request) {
       from: "SCALATE <formularios@scalatelab.com>",
       to: ["maikel@scalatelab.com"],
       replyTo: email,
-      subject: `Nueva solicitud de ${name}`,
+      subject: `Nuevo formulario de ${name}`,
       html,
     });
 
