@@ -185,7 +185,7 @@ export default function Footer({
               <div className="mt-7">
 
                 <Button
-                  href="#contacto"
+                  href="./aplicar"
                   className="
                     px-5
                     py-2.5
