@@ -1191,7 +1191,7 @@ function Background() {
         className="
           pointer-events-none
           fixed
-          left-[-720px]
+          left-[-520px]
           top-[20px]
           z-0
           h-[700px]
@@ -1200,7 +1200,7 @@ function Background() {
           bg-blue-600/30
           blur-[180px]
 
-          sm:left-[-380px]
+          sm:left-[-580px]
           sm:top-[-20px]
           sm:h-[800px]
           sm:w-[800px]
@@ -1224,7 +1224,7 @@ function Background() {
         className="
           pointer-events-none
           fixed
-          right-[-720px]
+          right-[-520px]
           top-[80px]
           z-0
           h-[700px]
@@ -1233,7 +1233,7 @@ function Background() {
           bg-purple-600/35
           blur-[180px]
 
-          sm:right-[-380px]
+          sm:right-[-580px]
           sm:top-[20px]
           sm:h-[800px]
           sm:w-[800px]
