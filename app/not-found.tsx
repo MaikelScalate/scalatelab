@@ -24,7 +24,7 @@ export default function NotFound() {
           h-[600px]
           w-[600px]
           rounded-full
-          bg-blue-600/30
+          bg-blue-600/20
           blur-[180px]
         "
       />
@@ -39,7 +39,7 @@ export default function NotFound() {
           h-[600px]
           w-[600px]
           rounded-full
-          bg-purple-600/30
+          bg-purple-600/20
           blur-[180px]
         "
       />
