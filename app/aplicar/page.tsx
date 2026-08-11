@@ -1200,7 +1200,7 @@ function Background() {
           bg-blue-600/30
           blur-[180px]
 
-          sm:left-[-580px]
+          sm:left-[-380px]
           sm:top-[-20px]
           sm:h-[800px]
           sm:w-[800px]
@@ -1233,7 +1233,7 @@ function Background() {
           bg-purple-600/35
           blur-[180px]
 
-          sm:right-[-580px]
+          sm:right-[-380px]
           sm:top-[20px]
           sm:h-[800px]
           sm:w-[800px]
