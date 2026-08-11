@@ -1191,13 +1191,13 @@ function Background() {
         className="
           pointer-events-none
           fixed
-          left-[-620px]
+          left-[-420px]
           top-[20px]
           z-0
           h-[700px]
           w-[700px]
           rounded-full
-          bg-blue-600/40
+          bg-blue-600/30
           blur-[180px]
 
           sm:left-[-580px]
@@ -1224,13 +1224,13 @@ function Background() {
         className="
           pointer-events-none
           fixed
-          right-[-620px]
+          right-[-420px]
           top-[80px]
           z-0
           h-[700px]
           w-[700px]
           rounded-full
-          bg-purple-600/40
+          bg-purple-600/35
           blur-[180px]
 
           sm:right-[-580px]
