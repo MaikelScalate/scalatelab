@@ -333,7 +333,7 @@ export default function Footer({
                 <div className="flex flex-col gap-3.5">
 
                   <a
-                    href="#contacto"
+                    href="./aplicar"
                     className="
                       text-sm
                       text-white/60
