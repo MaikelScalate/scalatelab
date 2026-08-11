@@ -60,6 +60,7 @@ lg:text-5xl
         <div className="mt-[-50px] flex justify-center">
 
           <Button
+          href="./aplicar"
                       className="
                         h-12
                         px-8

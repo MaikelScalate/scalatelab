@@ -207,6 +207,7 @@ lg:py-16
 
             <div className="mt-8 flex justify-center">
               <Button
+              href="./aplicar"
                 className="
                   px-6
                   py-3

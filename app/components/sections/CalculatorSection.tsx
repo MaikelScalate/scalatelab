@@ -40,7 +40,7 @@ export default function CalculatorSection() {
   <Calculator />
 </div>
       <div className="mt-12 h-12  flex justify-center lg:mt-0">
-  <Button className="w-full max-w-[280px]">
+  <Button href="./aplicar" className="w-full max-w-[280px]">
     Quiero dejar de perder ventas
   </Button>
 </div>

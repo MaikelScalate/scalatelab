@@ -74,20 +74,43 @@ export default function AplicarPage() {
     updateField("commitment", value);
   };
 
-  const handleSubmit = (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+const [isSending, setIsSending] = useState(false);
+const [submitError, setSubmitError] = useState("");
 
-    if (formData.commitment !== YES_COMMITMENT) {
-      return;
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  if (formData.commitment !== YES_COMMITMENT) {
+    return;
+  }
+
+  if (!privacyAccepted) {
+    return;
+  }
+
+  setIsSending(true);
+  setSubmitError("");
+
+  try {
+    const response = await fetch("/api/aplicar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        result?.error || "No se ha podido enviar la solicitud."
+      );
     }
 
-    if (!privacyAccepted) {
-      return;
-    }
-
-    console.log("Solicitud SCALATE:", formData);
+    console.log("Solicitud enviada correctamente:", result);
 
     setSubmitted(true);
 
@@ -95,7 +118,16 @@ export default function AplicarPage() {
       top: 0,
       behavior: "smooth",
     });
-  };
+  } catch (error) {
+    console.error("Error enviando solicitud:", error);
+
+    setSubmitError(
+      "No se ha podido enviar la solicitud. Inténtalo de nuevo."
+    );
+  } finally {
+    setIsSending(false);
+  }
+};
 
   const canSubmit =
     formData.commitment === YES_COMMITMENT &&
@@ -904,8 +936,8 @@ export default function AplicarPage() {
 
             <div className="mt-8">
               <button
-                type="submit"
-                disabled={!canSubmit}
+  type="submit"
+  disabled={!canSubmit || isSending}
                 className={`
                   inline-flex
                   w-full
@@ -940,8 +972,13 @@ export default function AplicarPage() {
                   }
                 `}
               >
-                Enviar solicitud →
+                {isSending ? "Enviando solicitud..." : "Enviar solicitud →"}
               </button>
+              {submitError && (
+  <p className="mt-4 text-center text-sm text-red-400">
+    {submitError}
+  </p>
+)}
             </div>
 
             {!privacyAccepted &&

@@ -111,6 +111,7 @@ export default function GrowthSection() {
         <div className="mt-16 flex justify-center">
 
           <Button
+          href="./aplicar"
             className="
               h-11
               px-6
