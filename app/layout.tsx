@@ -15,7 +15,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Scalate | E-commerce Growth Company",
   description:
-    "Agencia especializada en optimización de conversiones (CRO), diseño web y crecimiento para marcas e-commerce.",
+    "Empresa especializada en optimización, diseño y escalado de Tiendas Shopify sin invertir más presupuesto en publicidad.",
 
   metadataBase: new URL("https://scalatelab.com"),
 
