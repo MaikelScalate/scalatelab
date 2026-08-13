@@ -85,36 +85,36 @@ const improvements: Improvement[] = [
 const challengePoints = [
   {
     number: "1.1",
-    title: "Experiencia de compra",
-    text: "Replantear los principales puntos de contacto para crear una navegación más clara.",
+    title: "Una marca a la altura",
+    text: "Trasladar la identidad, personalidad y valor de Victoria a cada punto de la marca.",
   },
   {
     number: "1.2",
-    title: "Conversión",
-    text: "Detectar y reducir fricciones que podían dificultar la decisión de compra.",
+    title: "Convertir atención en ventas",
+    text: "Convertir el tráfico ya existente a través de un diseño web con más oportunidades de venta.",
   },
   {
     number: "1.3",
-    title: "Escalabilidad",
-    text: "Construir una experiencia preparada para acompañar el crecimiento del e-commerce.",
+    title: "Construir para crecer",
+    text: "Construir un ecosistema digital capaz de convertir los leads y aumentar la recurrencia.",
   },
 ];
 
 const strategyPoints = [
   {
     number: "2.1",
-    title: "Diseño & UX",
-    text: "Mejoramos la estructura, jerarquía visual y experiencia de navegación.",
+    title: "Desarrollo Web",
+    text: "Mejorar la estructura, jerarquía visual, navegación y fluidez de la tienda sin depender de apps externas. ",
   },
   {
     number: "2.2",
-    title: "CRO",
-    text: "Identificamos oportunidades para reducir fricción dentro del funnel.",
+    title: "Optimización CRO",
+    text: "Aplicar un sistema de crossells, crear la guía de tallas y un builder de packs interactivo para eliminar fricciones.",
   },
   {
     number: "2.3",
-    title: "E-commerce 360º",
-    text: "Trabajamos el ecosistema completo para crear una experiencia coherente.",
+    title: "Estrategia 360º",
+    text: "Optimizar el ecosistema que lo rodea: pricing, envíos, email mkt, tráfico y todo lo que influye en el crecimiento.",
   },
 ];
 
@@ -446,7 +446,7 @@ export default function ViccaCaseStudy() {
               w-full
               items-center
               gap-16
-              lg:grid-cols-[0.85fr_1.15fr]
+              lg:grid-cols-[0.7fr_1.3fr]
               lg:gap-10
               xl:grid-cols-[0.8fr_1.2fr]
             "
@@ -595,16 +595,16 @@ export default function ViccaCaseStudy() {
     -translate-x-1/2
     -translate-y-1/2
     rounded-full
-    bg-[#7C3AED]/20
-    blur-[170px]
+    bg-[#D66A9A]/30
+    blur-[190px]
 
     sm:h-[560px]
     sm:w-[1100px]
-    sm:blur-[190px]
+    sm:blur-[200px]
 
-    lg:h-[600px]
-    lg:w-[1200px]
-    lg:blur-[200px]
+    lg:h-[620px]
+    lg:w-[1250px]
+    lg:blur-[210px]
   "
 />
 
@@ -631,35 +631,38 @@ export default function ViccaCaseStudy() {
 
     lg:ml-auto
     lg:mr-0
-    lg:w-[125%]
+    lg:w-[170%]
     lg:max-w-none
-    lg:translate-x-[7%]
+    lg:translate-x-[8%]
 
     sm:p-3
 
     [transform-style:preserve-3d]
 
-    lg:[transform:rotateY(-12deg)_rotateX(4deg)]
+    lg:[transform:scale(1.2)_rotateY(-10deg)_rotateX(6deg)]
     lg:[transform-origin:center_center]
 
     transition-transform
     duration-700
     ease-out
-"
+  "
 >
   <div className="flex h-5 items-center gap-1.5 px-2 sm:h-6">
-    <span className="h-1.5 w-1.5 rounded-full bg-white/15 sm:h-2 sm:w-2" />
-    <span className="h-1.5 w-1.5 rounded-full bg-white/15 sm:h-2 sm:w-2" />
+    <span className="h-1.5 w-1.5 rounded-full bg-white/65 sm:h-2 sm:w-2" />
+    <span className="h-1.5 w-1.5 rounded-full bg-white/35 sm:h-2 sm:w-2" />
     <span className="h-1.5 w-1.5 rounded-full bg-white/15 sm:h-2 sm:w-2" />
   </div>
 
-  <div className="aspect-video overflow-hidden rounded-lg bg-[#111]">
-    <img
-      src="/vicca-desktop.png"
-      alt="VICCA E-commerce"
-      className="h-full w-full object-contain"
-    />
-                </div>
+  <div className="lg:h-[350px] overflow-hidden rounded-lg bg-[#111]">
+  <video
+  src="/vicca-desktop.mp4"
+  className="h-full w-full object-contain"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
+</div>
               </div>
 
               {/* =====================================================
@@ -672,9 +675,11 @@ export default function ViccaCaseStudy() {
     bottom-[5px]
     right-[-4%]
     z-20
-    w-[25%]
-    min-w-[110px]
-    max-w-[170px]
+
+    w-[29%]
+    min-w-[125px]
+    max-w-[195px]
+
     rounded-[1.4rem]
     border
     border-white/[0.08]
@@ -684,20 +689,25 @@ export default function ViccaCaseStudy() {
 
     sm:bottom-0
     sm:right-[-4%]
-    sm:w-[23%]
-    sm:max-w-[185px]
+    sm:w-[26%]
+    sm:max-w-[205px]
+
+    lg:right-[-10%]
   "
   style={{
-   transform: "rotateY(-16deg) rotateX(8deg)",
+    transform: "rotateY(-16deg) rotateX(8deg)",
     transformStyle: "preserve-3d",
   }}
 >
   <div className="aspect-[9/19] overflow-hidden rounded-[1.1rem] bg-[#111]">
-    <img
-      src="/vicca-mobile.png"
-      alt="VICCA Mobile"
-      className="h-full w-full object-contain"
-    />
+    <video
+  src="/vicca-mobile.mp4"
+  className="h-full w-full object-contain"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
   </div>
 </div>
             </div>
@@ -758,11 +768,10 @@ export default function ViccaCaseStudy() {
                   sm:leading-9
                 "
               >
-                VICCA es una marca construida alrededor de una figura
-                fundadora con una comunidad propia y una propuesta que conecta
-                belleza, moda y lifestyle. El reto era trasladar esa identidad
-                al e-commerce y convertirla en una experiencia digital capaz
-                de acompañar el crecimiento de la marca.
+                VICCA ya contaba con algo difícil de conseguir: comunidad, reconocimiento y tráfico (en lo cual Victoria es experta).
+                El reto real era trasladar ese valor percibido a su tienda online, elevando su identidad visual y optimizando
+                la experiencia del usuario para convertir mejor. En definitiva, crear el ecosistema digital capaz de transformar
+                toda esa atención en crecimiento constante.
               </p>
             </div>
 
@@ -875,10 +884,7 @@ export default function ViccaCaseStudy() {
                 sm:text-l
               "
             >
-              No nos limitamos a rediseñar la interfaz. Trabajamos sobre los
-              principales puntos de contacto de la experiencia de compra para
-              mejorar la claridad, reducir fricción y elevar el valor
-              percibido del e-commerce.
+              En esta propuesta, no nos limitamos a “crear una web”. Optimizamos el ecosistema de VICCA para obtener mejores resultados de todo el potencial que ya tiene la marca.
             </p>
 
           </div>
