@@ -617,8 +617,8 @@ export default function ViccaCaseStudy() {
     relative
     z-10
     mx-auto
-    w-[100%]
-    max-w-3xl
+    w-[108%]
+    max-w-4xl
     overflow-hidden
     rounded-[1.15rem]
     border
@@ -627,11 +627,11 @@ export default function ViccaCaseStudy() {
     p-2
     shadow-[0_40px_120px_rgba(0,0,0,0.60)]
 
-    sm:w-[105%]
+    sm:w-[112%]
 
     lg:ml-auto
     lg:mr-0
-    lg:w-[115%]
+    lg:w-[125%]
     lg:max-w-none
     lg:translate-x-[7%]
 
@@ -657,7 +657,7 @@ export default function ViccaCaseStudy() {
     <img
       src="/vicca-desktop.png"
       alt="VICCA E-commerce"
-      className="h-full w-full object-cover"
+      className="h-full w-full object-contain"
     />
                 </div>
               </div>
@@ -672,9 +672,9 @@ export default function ViccaCaseStudy() {
     bottom-[5px]
     right-[-4%]
     z-20
-    w-[22%]
-    min-w-[95px]
-    max-w-[150px]
+    w-[25%]
+    min-w-[110px]
+    max-w-[170px]
     rounded-[1.4rem]
     border
     border-white/[0.08]
@@ -684,11 +684,11 @@ export default function ViccaCaseStudy() {
 
     sm:bottom-0
     sm:right-[-4%]
-    sm:w-[20%]
-    sm:max-w-[165px]
+    sm:w-[23%]
+    sm:max-w-[185px]
   "
   style={{
-    transform: "rotateY(-6deg) rotateX(2deg)",
+   transform: "rotateY(-16deg) rotateX(8deg)",
     transformStyle: "preserve-3d",
   }}
 >
@@ -696,7 +696,7 @@ export default function ViccaCaseStudy() {
     <img
       src="/vicca-mobile.png"
       alt="VICCA Mobile"
-      className="h-full w-full object-cover"
+      className="h-full w-full object-contain"
     />
   </div>
 </div>
