@@ -42,7 +42,7 @@ const faqItems: FAQItem[] = [
       "No. En la parte de diseño, creamos una web estructurada que puedas modificar y adaptar a las necesidades de tu marca sin tocar código. Una vez creada, podrás cambiarla a tu gusto.",
   },
   {
-    question: "¿Cuánto dura el análisis y optimización?",
+    question: "¿Cuánto dura el análisis y la optimización web?",
     answer:
 "El tiempo depende del punto de partida de cada marca y de las mejoras que necesite. Normalmente, un proceso completo y bien ejecutado se desarrolla en un plazo de entre 30 y 60 días.",
   },

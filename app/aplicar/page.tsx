@@ -473,7 +473,7 @@ ${formData.commitment}
             />
           </span>
 
-          <span>E-commerce Growth</span>
+          <span>HOLA, FUNDADOR/A</span>
         </div>
 
         {/* TÍTULO */}

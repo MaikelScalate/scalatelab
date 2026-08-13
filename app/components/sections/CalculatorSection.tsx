@@ -22,7 +22,7 @@ export default function CalculatorSection() {
     lg:text-[2.5rem]
             "
           >
-            Calcula cuánto{" "}
+            Descubre cuánto{" "}
             <span className="text-purple">
               dinero al mes
             </span>{" "}

@@ -64,7 +64,7 @@ export default function NotFound() {
         </p>
 
         <h1 className="mt-6 text-2xl font-semibold tracking-tight sm:text-5xl">
-          Parece que te has perdido.
+          Esta página está en construcción
         </h1>
 
         <p className="mt-5 max-w-xl text-base leading-7 text-white/50 sm:text-lg">
