@@ -1233,7 +1233,7 @@ export default function ViccaCaseStudy() {
         <div
   className="
     relative
-    h-[600px]
+    h-[500px]
     overflow-y-auto
     overflow-x-hidden
     rounded-[1.05rem]
@@ -1445,7 +1445,7 @@ export default function ViccaCaseStudy() {
         <div
   className="
     relative
-    h-[600px]
+    h-[500px]
     overflow-y-auto
     overflow-x-hidden
     rounded-[1.05rem]
