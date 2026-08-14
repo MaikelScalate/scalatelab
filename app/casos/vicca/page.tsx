@@ -1876,7 +1876,7 @@ lg:pb-15
     -translate-x-1/2
     -translate-y-1/2
     rounded-full
-    bg-[#7C3AED]/35
+    bg-[#7C3AED]/60
     blur-[105px]
 
     sm:top-[430px]
