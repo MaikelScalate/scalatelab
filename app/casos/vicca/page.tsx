@@ -32,6 +32,22 @@ const improvements: Improvement[] = [
     reason:
       "La Home es uno de los primeros puntos de contacto con la marca. Por eso trabajamos para que cada bloque tuviera una función clara dentro del recorrido de compra.",
   },
+    {
+    id: "look",
+    label: "Compra El Look",
+    title: "Hazte Con Tu Look, ahora de forma más sencilla",
+    intro:
+      "Creamos una experiencia de compra única a código para que la potencial clienta pueda descubrir y comprar de forma más directa los productos de moda y cosmética que utilizan Victoria, su equipo y su comunidad. Mejorando así, conversión y ticket medio.",
+    before: "/vicca-look-mobile.mp4",
+    after: "/vicca-look-desktop.mp4",
+    changes: [
+      "Experiencia de compra adaptada a móvil y ordenador.",
+      "Presentación más clara de los productos del look.",
+      "Recorrido más directo desde la inspiración hasta la compra.",
+    ],
+    reason:
+      "Facilitamos que el usuario pase de descubrir un look a encontrar y comprar los productos que lo componen.",
+  },
   {
   id: "pdp",
   label: "Product Page",
@@ -51,9 +67,9 @@ const improvements: Improvement[] = [
   {
     id: "cart",
     label: "Cart",
-    title: "Un carrito diseñado para reducir fricción",
+    title: "Un carrito diseñado para vender más",
     intro:
-      "Rediseñamos el carrito para simplificar el proceso de compra y convertir este punto del funnel en una oportunidad para mejorar la experiencia.",
+      "Simplificamos y optimizamos el proceso de compra para mayor conversión: añadimos urgencia con cuenta atrás, una barra de progreso hacia el envío gratis y un sistema de cross-sells para aumentar el ticket medio. Listo para facturar el doble sin más publi.",
     before: "/vicca-cart-before.mp4",
     after: "/vicca-cart-after.mp4",
     changes: [
@@ -66,10 +82,10 @@ const improvements: Improvement[] = [
   },
   {
     id: "creative",
-    label: "Experiencia creativa",
+    label: "Builder Pack",
     title: "Una experiencia visual a la altura de la marca",
     intro:
-      "Creamos una experiencia visual orientada a reforzar la propuesta de marca y elevar el valor percibido de la experiencia de compra.",
+      "Creamos una experiencia visual orientada a reforzar la propuesta de marca y permitir a los potenciales clientes crear su Propio Pack Vicca.",
     before: "/videos/vicca-creative-before.mp4",
     after: "/videos/vicca-creative-after.mp4",
     changes: [
@@ -1147,12 +1163,89 @@ gap-10
     }
   `}
 >
+{/* ===================================================
+    COMPRA EL LOOK — MÓVIL
+=================================================== */}
 
+{active.id === "look" && (
+  <div className="lg:hidden">
+    <div
+      className="
+        relative
+        mx-auto
+        w-full
+        max-w-[500px]
+        overflow-hidden
+        rounded-[1.5rem]
+        border
+        border-[#7C3AED]/25
+        bg-[#0A0A0C]
+        p-2
+        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+      "
+    >
+      <div className="overflow-hidden rounded-[1.05rem] bg-white">
+        <video
+          src="/vicca-look-mobile.mp4"
+          className="block h-auto w-full object-contain"
+          muted
+          loop
+          autoPlay
+          playsInline
+        />
+      </div>
+    </div>
+  </div>
+)}
+
+{/* 👇 PEGA AQUÍ EL NUEVO BLOQUE */}
+
+{active.id === "look" && (
+  <div className="group hidden lg:col-span-2 lg:block">
+
+
+    <div
+      className="
+        relative
+        mx-auto
+        w-full
+        max-w-[1400px]
+        overflow-hidden
+        rounded-[1.5rem]
+        border
+        border-[#7C3AED]/25
+        bg-[#0A0A0C]
+        p-2
+        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+      "
+    >
+
+      <div className="flex h-8 items-center gap-1.5 px-3">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+      </div>
+
+      <div className="overflow-hidden rounded-[1.05rem] bg-white">
+        <video
+          src="/vicca-look-desktop.mp4"
+          className="block h-auto w-full object-contain"
+          muted
+          loop
+          autoPlay
+          playsInline
+        />
+      </div>
+
+    </div>
+  </div>
+)}
     {/* ===================================================
         ANTES
     =================================================== */}
 
-    <div className="group">
+    {active.id !== "look" && (
+  <div className="group">
 
       {/* HEADER */}
 
@@ -1206,7 +1299,7 @@ gap-10
   active.id === "pdp"
     ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
     : active.id === "cart"
-  ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[48%] xl:w-[44%]"
+  ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[60%] xl:w-[56%]"
     : "w-full"
 }
     }
@@ -1281,7 +1374,7 @@ hide-scrollbar
 
                 </div>
 {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
-        {active.id !== "cart" && (
+        {active.id !== "cart" && active.id !== "look" && (
   <div
     className="
       absolute
@@ -1312,13 +1405,14 @@ hide-scrollbar
       </div>
 
     </div>
-
+  )}
 
     {/* ===================================================
         DESPUÉS
     =================================================== */}
 
-    <div className="group">
+    {active.id !== "look" && (
+  <div className="group">
 
       {/* HEADER */}
 
@@ -1399,7 +1493,7 @@ hide-scrollbar
   active.id === "pdp"
     ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
     : active.id === "cart"
-  ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[48%] xl:w-[44%]"
+  ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[60%] xl:w-[56%]"
     : "w-full"
 }
     }
@@ -1492,7 +1586,7 @@ hide-scrollbar
                 </div>
 
         {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
-        {active.id !== "cart" && (
+        {active.id !== "cart" && active.id !== "look" && (
   <div
     className="
       absolute
@@ -1523,6 +1617,7 @@ hide-scrollbar
       </div>
 
     </div>
+      )}
 {/* ===================================================
     ORDENADOR — MOCKUP 3D
 =================================================== */}
