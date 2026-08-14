@@ -17,13 +17,13 @@ type Improvement = {
 
 const improvements: Improvement[] = [
   {
-    id: "home",
-    label: "Home",
-    title: "Una Home pensada para convertir",
-    intro:
-      "Rediseñamos la página principal para mejorar la propuesta de valor, la jerarquía visual y la navegación, creando un recorrido más claro desde la primera impresión hasta la compra.",
-    before: "/videos/vicca-home-before.mp4",
-    after: "/videos/vicca-home-after.mp4",
+  id: "home",
+  label: "Home",
+  title: "Una Home pensada para convertir",
+  intro:
+    "Rediseñamos la página principal para mejorar la propuesta de valor y el recorrido del usuario, creando un hero interactivo con productos mostrando las zonas habituales de Victoria y su equipo, categorías a elegir, bestsellers, FAQ's y apartados creativos.",
+  before: "/vicca-home-before.png",
+  after: "/vicca-home-after.png",
     changes: [
       "Nueva jerarquía de contenidos y propuesta de valor.",
       "Navegación más clara y orientada a la intención de compra.",
@@ -734,7 +734,7 @@ export default function ViccaCaseStudy() {
           lg:py-32 
         "
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
 
           <div className="grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
 
@@ -853,7 +853,7 @@ export default function ViccaCaseStudy() {
           "
         />
 
-        <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="relative z-10 mx-auto max-w-7xl">
 
           <div className="max-w-4xl">
 
@@ -981,7 +981,7 @@ export default function ViccaCaseStudy() {
           "
         />
 
-        <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="relative z-10 mx-auto max-w-7xl">
 
           <div className="max-w-4xl">
 
@@ -1054,157 +1054,517 @@ export default function ViccaCaseStudy() {
 
           </div>
 
-          {/* ACTIVE AREA */}
+          {/* =========================================================
+    ACTIVE AREA — SHOWCASE
+========================================================= */}
 
-          <div className="mt-12">
+<div className="mt-12">
 
-            <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+  {/* CABECERA DEL CASO */}
 
-              <div>
+  <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
 
-                <span
-                  className="
-                    text-xs
-                    font-semibold
-                    uppercase
-                    tracking-[0.22em]
-                    text-[#A855F7]
-                  "
-                >
-                  {active.label}
-                </span>
+    <div>
+      <span
+        className="
+          text-xs
+          font-semibold
+          uppercase
+          tracking-[0.22em]
+          text-[#A855F7]
+        "
+      >
+        {active.label}
+      </span>
 
-                <h3
-                  className="
-                    mt-5
-                    text-3xl
-                    font-semibold
-                    tracking-[-0.035em]
-                    sm:text-4xl
-                  "
-                >
-                  {active.title}
-                </h3>
+      <h3
+        className="
+          mt-4
+          text-3xl
+          font-semibold
+          tracking-[-0.035em]
+          sm:text-4xl
+        "
+      >
+        {active.title}
+      </h3>
+    </div>
 
-              </div>
+    <p
+      className="
+        text-base
+        leading-7
+        text-white/45
+        sm:text-lg
+      "
+    >
+      {active.intro}
+    </p>
 
-              <p className="text-base leading-7 text-white/45 sm:text-lg">
-                {active.intro}
-              </p>
+  </div>
 
-            </div>
 
-            {/* VIDEOS */}
+  {/* =======================================================
+    WEB SHOWCASE — SCALATE
+======================================================= */}
 
-            <div className="mt-12 grid gap-5 lg:grid-cols-2">
+<div className="relative mt-12 lg:mt-16">
 
-              {/* Antes */}
+  {/* GLOW SCALATE */}
 
-              <div>
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-1/2
+      top-1/2
+      h-[420px]
+      w-[850px]
+      -translate-x-1/2
+      -translate-y-1/2
+      rounded-full
+      bg-[#7C3AED]/10
+      blur-[150px]
+    "
+  />
 
-                <div className="mb-3 px-1">
+  {/* DOS WEBS */}
 
-                  <span
-                    className="
-                      text-xs
-                      font-semibold
-                      uppercase
-                      tracking-[0.2em]
-                      text-white/30
-                    "
-                  >
-                    Antes
-                  </span>
+  <div
+    className="
+      relative
+      z-10
+      grid
+      grid-cols-1
+      gap-20
+      lg:grid-cols-2
+      lg:gap-6
+      xl:gap-6
+    "
+  >
+
+    {/* ===================================================
+        ANTES
+    =================================================== */}
+
+    <div className="group">
+
+      {/* HEADER */}
+
+      <div className="mb-4 flex items-center justify-between px-1">
+
+        <div className="flex items-center gap-3">
+
+          <span
+            className="
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-white/30
+            "
+          />
+
+          <span
+            className="
+              text-[10px]
+              font-semibold
+              uppercase
+              tracking-[0.28em]
+              text-white/35
+            "
+          >
+            Antes
+          </span>
+
+        </div>
+
+        <span
+          className="
+            text-[10px]
+            uppercase
+            tracking-[0.2em]
+            text-white/15
+          "
+        >
+          Original
+        </span>
+
+      </div>
+
+
+      {/* BROWSER */}
+
+      <div
+  className="
+    relative
+    overflow-visible
+    rounded-[1.5rem]
+    border
+    border-white/[0.08]
+    bg-[#0A0A0C]
+    p-2
+    shadow-[0_30px_90px_rgba(0,0,0,0.45)]
+    transition-all
+    duration-500
+    group-hover:border-white/[0.14]
+  "
+>
+  
+
+        {/* TOP BAR */}
+
+        <div
+          className="
+            flex
+            h-8
+            items-center
+            gap-1.5
+            px-3
+          "
+        >
+
+          <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
+          <span className="h-1.5 w-1.5 rounded-full bg-white/15" />
+          <span className="h-1.5 w-1.5 rounded-full bg-white/10" />
+
+        </div>
+
+
+        {/* VIEWPORT */}
+
+        <div
+          className="
+            relative
+            h-[500px]
+            overflow-y-auto
+            overflow-x-hidden
+            rounded-[1.05rem]
+            bg-white
+
+            scrollbar-thin
+            scrollbar-track-transparent
+            scrollbar-thumb-[#7C3AED]/50
+
+    sm:h-[520px]
+    lg:h-[560px]
+    xl:h-[620px]
+          "
+        >
+
+          {active.before.endsWith(".mp4") ? (
+            <video
+              key={`${active.id}-before`}
+              src={active.before}
+              className="
+                block
+                w-full
+                object-cover
+              "
+              muted
+              loop
+              autoPlay
+              playsInline
+            />
+            
+          ) : (
+            
+            <img
+              src={active.before}
+              alt={`${active.label} antes`}
+              className="
+                block
+                h-auto
+                w-full
+              "
+            />
+          )}
 
                 </div>
 
-                <div
-                  className="
-                    overflow-hidden
-                    rounded-[1.75rem]
-                    border
-                    border-white/[0.08]
-                    bg-[#0b0b0d]
-                    shadow-[0_20px_70px_rgba(0,0,0,0.3)]
-                  "
-                >
-                  <video
-                    key={`${active.id}-before`}
-                    className="aspect-video w-full object-cover"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={active.before} type="video/mp4" />
-                  </video>
+        {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
+        <div
+          className="
+            absolute
+            bottom-0
+            left-1/2
+            z-30
+            -translate-x-1/2
+            translate-y-1/2
+            rounded-2xl
+            border
+            border-black/60
+            bg-[#A3A3A3]/70
+            px-6
+            py-3
+            text-sm
+            font-medium
+            text-white
+            shadow-[0_10px_35px_rgba(0,0,0,0.35)]
+            backdrop-blur-md
+            whitespace-nowrap
+          "
+        >
+          <span className="mr-2 text-lg">↓</span>
+          Desliza para explorar
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* ===================================================
+        DESPUÉS
+    =================================================== */}
+
+    <div className="group">
+
+      {/* HEADER */}
+
+      <div className="mb-4 flex items-center justify-between px-1">
+
+        <div className="flex items-center gap-3">
+
+          <span className="relative flex h-4 w-4 items-center justify-center">
+  <span
+    className="
+      absolute
+      h-4
+      w-4
+      rounded-full
+      border
+      border-[#A855F7]/30
+      animate-ping
+    "
+  />
+
+  <span
+    className="
+      absolute
+      h-3
+      w-3
+      rounded-full
+      border
+      border-[#A855F7]/45
+    "
+  />
+
+  <span
+    className="
+      relative
+      h-1.5
+      w-1.5
+      rounded-full
+      bg-[#A855F7]
+      shadow-[0_0_12px_#A855F7]
+    "
+  />
+</span>
+
+          <span
+            className="
+              text-[10px]
+              font-semibold
+              uppercase
+              tracking-[0.28em]
+              text-white/70
+            "
+          >
+            Después
+          </span>
+
+        </div>
+
+        <span
+          className="
+            bg-gradient-to-r
+            from-[#3B82F6]
+            via-[#7C3AED]
+            to-[#D946EF]
+            bg-clip-text
+            text-[10px]
+            font-semibold
+            uppercase
+            tracking-[0.2em]
+            text-transparent
+          "
+        >
+          SCALATE
+        </span>
+
+      </div>
+
+
+      {/* BROWSER */}
+
+      <div
+        className="
+          relative
+          overflow-visible
+          rounded-[1.5rem]
+          border
+          border-[#7C3AED]/25
+          bg-[#0A0A0C]
+          p-2
+          shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+          transition-all
+          duration-500
+          group-hover:border-[#A855F7]/40
+        "
+      >
+
+        {/* GRADIENT LINE */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[8%]
+            right-[8%]
+            top-0
+            z-20
+            h-px
+            bg-gradient-to-r
+            from-transparent
+            via-[#A855F7]
+            to-transparent
+            opacity-70
+          "
+        />
+
+
+        {/* TOP BAR */}
+
+        <div
+          className="
+            flex
+            h-8
+            items-center
+            gap-1.5
+            px-3
+          "
+        >
+
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+
+
+        </div>
+
+
+        {/* VIEWPORT */}
+
+        <div
+          className="
+            relative
+            h-[500px]
+            overflow-y-auto
+            overflow-x-hidden
+            rounded-[1.05rem]
+            bg-white
+
+            scrollbar-thin
+            scrollbar-track-transparent
+            scrollbar-thumb-[#7C3AED]/50
+    sm:h-[520px]
+    lg:h-[560px]
+    xl:h-[620px]
+          "
+        >
+
+          {active.after.endsWith(".mp4") ? (
+            <video
+              key={`${active.id}-after`}
+              src={active.after}
+              className="
+                block
+                w-full
+                object-cover
+              "
+              muted
+              loop
+              autoPlay
+              playsInline
+            />
+          ) : (
+            <img
+              src={active.after}
+              alt={`${active.label} después`}
+              className="
+                block
+                h-auto
+                w-full
+              "
+            />
+          )}
+
                 </div>
 
-              </div>
+        {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
+        <div
+          className="
+            absolute
+            bottom-0
+            left-1/2
+            z-30
+            -translate-x-1/2
+            translate-y-1/2
+            rounded-2xl
+            border
+            border-[#7C3AED]/20
+            bg-[#17171C]/95
+            px-6
+            py-4
+            text-sm
+            font-medium
+            text-white/85
+            shadow-[0_10px_40px_rgba(124,58,237,0.20)]
+            backdrop-blur-md
+            whitespace-nowrap
+          "
+        >
+          <span className="mr-2 text-lg text-[#A855F7]">↓</span>
+          Desliza para explorar
+        </div>
 
-              {/* Después */}
+      </div>
 
-              <div>
+    </div>
 
-                <div className="mb-3 px-1">
+  </div>
+</div>
+  {/* =======================================================
+      CTA
+  ======================================================= */}
 
-                  <span
-                    className="
-                      text-xs
-                      font-semibold
-                      uppercase
-                      tracking-[0.2em]
-                      text-[#A855F7]
-                    "
-                  >
-                    Después
-                  </span>
+  <div
+    className="
+      mt-30
+      flex
+      w-full
+      justify-center
+    "
+  >
 
-                </div>
+    <Button
+      href="/aplicar"
+      className="
+        mx-auto
+        px-6
+        py-3
+        text-sm
+        sm:px-7
+        sm:py-3.5
+        sm:text-base
+      "
+    >
+      Quiero una transformación así
+    </Button>
 
-                <div
-                  className="
-                    overflow-hidden
-                    rounded-[1.75rem]
-                    border
-                    border-white/[0.08]
-                    bg-[#0b0b0d]
-                    shadow-[0_20px_80px_rgba(124,58,237,0.12)]
-                  "
-                >
-                  <video
-                    key={`${active.id}-after`}
-                    className="aspect-video w-full object-cover"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={active.after} type="video/mp4" />
-                  </video>
-                </div>
+  </div>
 
-              </div>
-
-            </div>
-
-            <div className="mt-10 flex justify-center">
-
-              <Button
-                href="/aplicar"
-                className="
-                  px-6
-                  py-3
-                  text-sm
-                  sm:px-7
-                  sm:py-3.5
-                  sm:text-base
-                "
-              >
-                Quiero una transformación así
-              </Button>
-
-            </div>
-
-          </div>
+</div>
 
         </div>
       </section>
@@ -1243,7 +1603,7 @@ lg:pb-15
         "
       >
 
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
 
           {/* CABECERA */}
 
