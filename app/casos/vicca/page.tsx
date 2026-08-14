@@ -33,13 +33,13 @@ const improvements: Improvement[] = [
       "La Home es uno de los primeros puntos de contacto con la marca. Por eso trabajamos para que cada bloque tuviera una función clara dentro del recorrido de compra.",
   },
   {
-    id: "pdp",
-    label: "Product Page",
-    title: "Una Product Page con menos fricción",
-    intro:
-      "Optimizamos la ficha de producto para presentar mejor la propuesta, facilitar la decisión de compra y eliminar fricciones durante la navegación.",
-    before: "/videos/vicca-pdp-before.mp4",
-    after: "/videos/vicca-pdp-after.mp4",
+  id: "pdp",
+  label: "Product Page",
+  title: "Una Product Page clara y optimizada para vender más",
+  intro:
+    "Optimizamos la ficha de producto con fotos a la altura y explicación clara, facilitamos la compra (guía de tallas) y aumentamos el ticket medio con crossells. En ciertos productos de cosmética, tenemos suscripciones para aumentar la recurrencia.",
+  before: "/vicca-pdp-before.png",
+  after: "/vicca-pdp-after.png",
     changes: [
       "Mejor organización de la información del producto.",
       "Jerarquía visual más clara para facilitar la decisión.",
@@ -1131,17 +1131,20 @@ export default function ViccaCaseStudy() {
   {/* DOS WEBS */}
 
   <div
-    className="
-      relative
-      z-10
-      grid
-      grid-cols-1
-      gap-20
-      lg:grid-cols-2
-      lg:gap-6
-      xl:gap-6
-    "
-  >
+  className={`
+    relative
+    z-10
+    grid
+    grid-cols-1
+    gap-20
+
+    ${
+      active.id === "pdp"
+  ? "lg:grid-cols-[0.72fr_0.72fr_1.56fr] lg:gap-5 xl:gap-6"
+        : "lg:grid-cols-2 lg:gap-6 xl:gap-6"
+    }
+  `}
+>
 
     {/* ===================================================
         ANTES
@@ -1178,24 +1181,13 @@ export default function ViccaCaseStudy() {
 
         </div>
 
-        <span
-          className="
-            text-[10px]
-            uppercase
-            tracking-[0.2em]
-            text-white/35
-          "
-        >
-          Original
-        </span>
-
       </div>
 
 
       {/* BROWSER */}
 
       <div
-  className="
+  className={`
     relative
     overflow-visible
     rounded-[1.5rem]
@@ -1207,7 +1199,13 @@ export default function ViccaCaseStudy() {
     transition-all
     duration-500
     group-hover:border-white/[0.14]
-  "
+
+    ${
+      active.id === "pdp"
+  ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
+  : "w-full"
+    }
+  `}
 >
   
 
@@ -1233,23 +1231,23 @@ export default function ViccaCaseStudy() {
         {/* VIEWPORT */}
 
         <div
-          className="
-            relative
-            h-[500px]
-            overflow-y-auto
-            overflow-x-hidden
-            rounded-[1.05rem]
-            bg-white
+  className="
+    relative
+    h-[600px]
+    overflow-y-auto
+    overflow-x-hidden
+    rounded-[1.05rem]
+    bg-white
 
-            scrollbar-thin
-            scrollbar-track-transparent
-            scrollbar-thumb-[#7C3AED]/50
+    scrollbar-thin
+    scrollbar-track-transparent
+    scrollbar-thumb-[#7C3AED]/50
 
-    sm:h-[520px]
-    lg:h-[560px]
-    xl:h-[620px]
-          "
-        >
+    sm:h-[450px]
+    lg:h-[470px]
+    xl:h-[500px]
+  "
+>
 
           {active.before.endsWith(".mp4") ? (
             <video
@@ -1375,43 +1373,32 @@ export default function ViccaCaseStudy() {
 
         </div>
 
-        <span
-          className="
-            bg-gradient-to-r
-            from-[#3B82F6]
-            via-[#7C3AED]
-            to-[#D946EF]
-            bg-clip-text
-            text-[10px]
-            font-semibold
-            uppercase
-            tracking-[0.2em]
-            text-transparent
-          "
-        >
-          SCALATE
-        </span>
-
       </div>
 
 
       {/* BROWSER */}
 
       <div
-        className="
-          relative
-          overflow-visible
-          rounded-[1.5rem]
-          border
-          border-[#7C3AED]/25
-          bg-[#0A0A0C]
-          p-2
-          shadow-[0_30px_100px_rgba(124,58,237,0.12)]
-          transition-all
-          duration-500
-          group-hover:border-[#A855F7]/40
-        "
-      >
+  className={`
+    relative
+    overflow-visible
+    rounded-[1.5rem]
+    border
+    border-[#7C3AED]/25
+    bg-[#0A0A0C]
+    p-2
+    shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+    transition-all
+    duration-500
+    group-hover:border-[#A855F7]/40
+
+    ${
+      active.id === "pdp"
+  ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
+  : "w-full"
+    }
+  `}
+>
 
         {/* GRADIENT LINE */}
 
@@ -1456,22 +1443,23 @@ export default function ViccaCaseStudy() {
         {/* VIEWPORT */}
 
         <div
-          className="
-            relative
-            h-[500px]
-            overflow-y-auto
-            overflow-x-hidden
-            rounded-[1.05rem]
-            bg-white
+  className="
+    relative
+    h-[600px]
+    overflow-y-auto
+    overflow-x-hidden
+    rounded-[1.05rem]
+    bg-white
 
-            scrollbar-thin
-            scrollbar-track-transparent
-            scrollbar-thumb-[#7C3AED]/50
-    sm:h-[520px]
-    lg:h-[560px]
-    xl:h-[620px]
-          "
-        >
+    scrollbar-thin
+    scrollbar-track-transparent
+    scrollbar-thumb-[#7C3AED]/50
+
+    sm:h-[450px]
+    lg:h-[470px]
+    xl:h-[500px]
+  "
+>
 
           {active.after.endsWith(".mp4") ? (
             <video
@@ -1531,7 +1519,147 @@ export default function ViccaCaseStudy() {
       </div>
 
     </div>
+{/* ===================================================
+    ORDENADOR — MOCKUP 3D
+=================================================== */}
 
+{active.id === "pdp" && (
+  <div className="group">
+
+    {/* HEADER */}
+
+    <div className="mb-4 flex items-center justify-between px-1">
+
+      <div className="flex items-center gap-3">
+
+        <span className="relative flex h-4 w-4 items-center justify-center">
+
+          <span
+            className="
+              absolute
+              h-4
+              w-4
+              rounded-full
+              border
+              border-[#A855F7]/30
+              animate-ping
+            "
+          />
+
+          <span
+            className="
+              absolute
+              h-3
+              w-3
+              rounded-full
+              border
+              border-[#A855F7]/45
+            "
+          />
+
+          <span
+            className="
+              relative
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-[#A855F7]
+              shadow-[0_0_12px_#A855F7]
+            "
+          />
+
+        </span>
+
+        <span
+          className="
+            text-[10px]
+            font-semibold
+            uppercase
+            tracking-[0.28em]
+            text-white/70
+          "
+        >
+          STICKY ADD TO CART MEJORADO (FIJO)
+        </span>
+
+      </div>
+
+    </div>
+
+
+    {/* BROWSER */}
+
+    <div
+      className="
+        relative
+        overflow-visible
+        rounded-[1.5rem]
+        border
+        border-[#7C3AED]/25
+        bg-[#0A0A0C]
+        p-2
+        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+        transition-all
+        duration-500
+        group-hover:border-[#A855F7]/40
+      "
+    >
+
+      {/* GRADIENT LINE */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-[8%]
+          right-[8%]
+          top-0
+          z-20
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-[#A855F7]
+          to-transparent
+          opacity-70
+        "
+      />
+
+      {/* TOP BAR */}
+
+      <div className="flex h-8 items-center gap-1.5 px-3">
+
+        <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+
+      </div>
+
+
+      {/* VIEWPORT */}
+
+      <div
+  className="
+    relative
+    overflow-hidden
+    rounded-[1.05rem]
+    bg-white
+  "
+>
+  <img
+    src="/vicca-pdp-desktop.png"
+    alt="Vista de la Product Page de Vicca en ordenador"
+    className="
+      block
+      h-auto
+      w-full
+    "
+  />
+</div>
+
+    </div>
+
+  </div>
+)}
   </div>
 </div>
   {/* =======================================================
@@ -1539,13 +1667,15 @@ export default function ViccaCaseStudy() {
   ======================================================= */}
 
   <div
-    className="
-      mt-30
-      flex
-      w-full
-      justify-center
-    "
-  >
+  className="
+    mt-12
+    flex
+    w-full
+    justify-center
+    sm:mt-16
+    lg:mt-20
+  "
+>
 
     <Button
       href="/aplicar"
