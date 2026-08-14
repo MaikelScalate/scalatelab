@@ -1866,28 +1866,32 @@ lg:pb-15
       >
 
         <div
-          className="
-            pointer-events-none
-            absolute
-            left-1/2
-            top-[330px]
-            h-[300px]
-            w-[330px]
-            -translate-x-1/2
-            -translate-y-1/2
-            rounded-full
-            bg-[#7C3AED]/20
-            blur-[100px]
-            sm:top-[430px]
-            sm:h-[400px]
-            sm:w-[500px]
-            sm:blur-[130px]
-            lg:top-[550px]
-            lg:h-[500px]
-            lg:w-[750px]
-            lg:blur-[170px]
-          "
-        />
+  className="
+    pointer-events-none
+    absolute
+    left-1/2
+    top-[330px]
+    h-[320px]
+    w-[360px]
+    -translate-x-1/2
+    -translate-y-1/2
+    rounded-full
+    bg-[#7C3AED]/35
+    blur-[105px]
+
+    sm:top-[430px]
+    sm:h-[400px]
+    sm:w-[500px]
+    sm:bg-[#7C3AED]/20
+    sm:blur-[130px]
+
+    lg:top-[550px]
+    lg:h-[500px]
+    lg:w-[750px]
+    lg:bg-[#7C3AED]/20
+    lg:blur-[170px]
+  "
+/>
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
 
