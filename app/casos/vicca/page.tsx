@@ -80,14 +80,14 @@ const improvements: Improvement[] = [
     reason:
       "El carrito es el último gran punto de decisión antes del checkout. Una experiencia clara ayuda a que el usuario avance con mayor confianza.",
   },
-  {
-    id: "creative",
-    label: "Builder Pack",
-    title: "Una experiencia visual a la altura de la marca",
-    intro:
-      "Creamos una experiencia visual orientada a reforzar la propuesta de marca y permitir a los potenciales clientes crear su Propio Pack Vicca.",
-    before: "/videos/vicca-creative-before.mp4",
-    after: "/videos/vicca-creative-after.mp4",
+    {
+  id: "builder",
+  label: "Builder Pack",
+  title: "Una experiencia visual a la altura de la marca",
+  intro:
+    "Creamos una experiencia visual orientada a reforzar la propuesta de marca y permitir a los potenciales clientes crear su Propio Pack Vicca.",
+  before: "/vicca-builder-mobile.mp4",
+  after: "/vicca-builder-desktop.mp4",
     changes: [
       "Mayor coherencia entre marca, producto y experiencia digital.",
       "Uso del diseño como herramienta de diferenciación.",
@@ -1164,10 +1164,10 @@ gap-10
   `}
 >
 {/* ===================================================
-    COMPRA EL LOOK — MÓVIL
+    COMPRA EL LOOK & BUILDER MOCKUP — MÓVIL
 =================================================== */}
 
-{active.id === "look" && (
+{(active.id === "look" || active.id === "builder") && (
   <div className="lg:hidden">
     <div
       className="
@@ -1186,7 +1186,11 @@ gap-10
     >
       <div className="overflow-hidden rounded-[1.05rem] bg-white">
         <video
-          src="/vicca-look-mobile.mp4"
+          src={
+  active.id === "look"
+    ? "/vicca-look-mobile.mp4"
+    : "/vicca-builder-mobile.mp4"
+}
           className="block h-auto w-full object-contain"
           muted
           loop
@@ -1198,9 +1202,9 @@ gap-10
   </div>
 )}
 
-{/* 👇 PEGA AQUÍ EL NUEVO BLOQUE */}
+{/* COMPRA EL LOOK & BUILDER MOCKUP — ORDENADOR*/}
 
-{active.id === "look" && (
+{(active.id === "look" || active.id === "builder") && (
   <div className="group hidden lg:col-span-2 lg:block">
 
 
@@ -1228,7 +1232,11 @@ gap-10
 
       <div className="overflow-hidden rounded-[1.05rem] bg-white">
         <video
-          src="/vicca-look-desktop.mp4"
+          src={
+  active.id === "look"
+    ? "/vicca-look-desktop.mp4"
+    : "/vicca-builder-desktop.mp4"
+}
           className="block h-auto w-full object-contain"
           muted
           loop
@@ -1244,7 +1252,7 @@ gap-10
         ANTES
     =================================================== */}
 
-    {active.id !== "look" && (
+    {active.id !== "look" && active.id !== "builder" && (
   <div className="group">
 
       {/* HEADER */}
@@ -1374,7 +1382,9 @@ hide-scrollbar
 
                 </div>
 {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
-        {active.id !== "cart" && active.id !== "look" && (
+        {active.id !== "cart" &&
+ active.id !== "look" &&
+ active.id !== "builder" && (
   <div
     className="
       absolute
@@ -1411,7 +1421,7 @@ hide-scrollbar
         DESPUÉS
     =================================================== */}
 
-    {active.id !== "look" && (
+    {active.id !== "look" && active.id !== "builder" && (
   <div className="group">
 
       {/* HEADER */}
@@ -1586,7 +1596,9 @@ hide-scrollbar
                 </div>
 
         {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
-        {active.id !== "cart" && active.id !== "look" && (
+        {active.id !== "cart" &&
+ active.id !== "look" &&
+ active.id !== "builder" && (
   <div
     className="
       absolute
