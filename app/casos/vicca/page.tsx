@@ -21,7 +21,7 @@ const improvements: Improvement[] = [
   label: "Home",
   title: "Una Home pensada para convertir",
   intro:
-    "Rediseñamos la página principal para mejorar la propuesta de valor y el recorrido del usuario, creando un hero interactivo con productos mostrando las zonas habituales de Victoria y su equipo, categorías a elegir, bestsellers, FAQ's y apartados creativos.",
+    "Rediseñamos la página principal para mejorar la propuesta de valor y el recorrido del usuario, creando un hero interactivo con productos (mostrando las zonas habituales de Victoria y su equipo), categorías a elegir, bestsellers, FAQ's y apartados creativos.",
   before: "/vicca-home-before.png",
   after: "/vicca-home-after.png",
     changes: [
@@ -91,7 +91,7 @@ const challengePoints = [
   {
     number: "1.2",
     title: "Convertir atención en ventas",
-    text: "Convertir el tráfico ya existente a través de un diseño web con más oportunidades de venta.",
+    text: "Convertir el tráfico actual a través de un diseño web con más oportunidades de venta.",
   },
   {
     number: "1.3",
@@ -1183,7 +1183,7 @@ export default function ViccaCaseStudy() {
             text-[10px]
             uppercase
             tracking-[0.2em]
-            text-white/15
+            text-white/35
           "
         >
           Original
@@ -1776,7 +1776,7 @@ lg:pb-15
           <h2
             className="
               mt-6
-              text-4xl
+              text-3xl
               font-bold
               tracking-[-0.05em]
               sm:text-5xl
