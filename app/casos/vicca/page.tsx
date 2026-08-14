@@ -37,7 +37,7 @@ const improvements: Improvement[] = [
   label: "Product Page",
   title: "Una Product Page clara y optimizada para vender más",
   intro:
-    "Optimizamos la ficha de producto con fotos a la altura y explicación clara, facilitamos la compra (guía de tallas) y aumentamos el ticket medio con crossells. En ciertos productos de cosmética, tenemos suscripciones para aumentar la recurrencia.",
+    "Optimizamos la ficha de producto con fotos a la altura y explicación clara, facilitamos la compra (guía de tallas) y aumentamos el ticket medio con crossells. En ciertos productos de cosmética, aplicamos suscripciones para aumentar la recurrencia.",
   before: "/vicca-pdp-before.png",
   after: "/vicca-pdp-after.png",
     changes: [
@@ -54,8 +54,8 @@ const improvements: Improvement[] = [
     title: "Un carrito diseñado para reducir fricción",
     intro:
       "Rediseñamos el carrito para simplificar el proceso de compra y convertir este punto del funnel en una oportunidad para mejorar la experiencia.",
-    before: "/videos/vicca-cart-before.mp4",
-    after: "/videos/vicca-cart-after.mp4",
+    before: "/vicca-cart-before.mp4",
+    after: "/vicca-cart-after.mp4",
     changes: [
       "Proceso de compra más limpio y comprensible.",
       "Reducción de elementos que podían generar fricción.",
@@ -1140,7 +1140,9 @@ export default function ViccaCaseStudy() {
 
     ${
       active.id === "pdp"
-  ? "lg:grid-cols-[0.72fr_0.72fr_1.56fr] lg:gap-5 xl:gap-6"
+        ? "lg:grid-cols-[0.72fr_0.72fr_1.56fr] lg:gap-5 xl:gap-6"
+        : active.id === "cart"
+        ? "lg:grid-cols-2 lg:gap-8 xl:gap-10"
         : "lg:grid-cols-2 lg:gap-6 xl:gap-6"
     }
   `}
@@ -1201,9 +1203,12 @@ export default function ViccaCaseStudy() {
     group-hover:border-white/[0.14]
 
     ${
-      active.id === "pdp"
-  ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
-  : "w-full"
+  active.id === "pdp"
+    ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
+    : active.id === "cart"
+    ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[58%] xl:w-[54%]"
+    : "w-full"
+}
     }
   `}
 >
@@ -1231,22 +1236,18 @@ export default function ViccaCaseStudy() {
         {/* VIEWPORT */}
 
         <div
-  className="
-    relative
-    h-[500px]
-    overflow-y-auto
-    overflow-x-hidden
-    rounded-[1.05rem]
-    bg-white
+  className={`
+  relative
+  overflow-hidden
+  rounded-[1.05rem]
+  bg-white
 
-    scrollbar-thin
-    scrollbar-track-transparent
-    scrollbar-thumb-[#7C3AED]/50
-
-    sm:h-[450px]
-    lg:h-[470px]
-    xl:h-[500px]
-  "
+  ${
+    active.id === "cart"
+      ? "h-auto"
+      : "h-[500px] sm:h-[450px] lg:h-[470px] xl:h-[500px]"
+  }
+`}
 >
 
           {active.before.endsWith(".mp4") ? (
@@ -1254,10 +1255,11 @@ export default function ViccaCaseStudy() {
               key={`${active.id}-before`}
               src={active.before}
               className="
-                block
-                w-full
-                object-cover
-              "
+  block
+  h-auto
+  w-full
+  object-contain
+"
               muted
               loop
               autoPlay
@@ -1278,33 +1280,34 @@ export default function ViccaCaseStudy() {
           )}
 
                 </div>
-
-        {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
-        <div
-          className="
-            absolute
-            bottom-0
-            left-1/2
-            z-30
-            -translate-x-1/2
-            translate-y-1/2
-            rounded-2xl
-            border
-            border-black/60
-            bg-[#A3A3A3]/70
-            px-6
-            py-3
-            text-sm
-            font-medium
-            text-white
-            shadow-[0_10px_35px_rgba(0,0,0,0.35)]
-            backdrop-blur-md
-            whitespace-nowrap
-          "
-        >
-          <span className="mr-2 text-lg">↓</span>
-          Desliza para explorar
-        </div>
+{/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
+        {active.id !== "cart" && (
+  <div
+    className="
+      absolute
+      bottom-0
+      left-1/2
+      z-30
+      -translate-x-1/2
+      translate-y-1/2
+      rounded-2xl
+      border
+      border-black/60
+      bg-[#A3A3A3]/70
+      px-6
+      py-3
+      text-sm
+      font-medium
+      text-white
+      shadow-[0_10px_35px_rgba(0,0,0,0.35)]
+      backdrop-blur-md
+      whitespace-nowrap
+    "
+  >
+    <span className="mr-2 text-lg">↓</span>
+    Desliza para explorar
+  </div>
+)}
 
       </div>
 
@@ -1393,9 +1396,12 @@ export default function ViccaCaseStudy() {
     group-hover:border-[#A855F7]/40
 
     ${
-      active.id === "pdp"
-  ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
-  : "w-full"
+  active.id === "pdp"
+    ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
+    : active.id === "cart"
+    ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[58%] xl:w-[54%]"
+    : "w-full"
+}
     }
   `}
 >
@@ -1442,23 +1448,19 @@ export default function ViccaCaseStudy() {
 
         {/* VIEWPORT */}
 
-        <div
-  className="
-    relative
-    h-[500px]
-    overflow-y-auto
-    overflow-x-hidden
-    rounded-[1.05rem]
-    bg-white
+       <div
+  className={`
+  relative
+  overflow-hidden
+  rounded-[1.05rem]
+  bg-white
 
-    scrollbar-thin
-    scrollbar-track-transparent
-    scrollbar-thumb-[#7C3AED]/50
-
-    sm:h-[450px]
-    lg:h-[470px]
-    xl:h-[500px]
-  "
+  ${
+    active.id === "cart"
+      ? "h-auto"
+      : "h-[500px] sm:h-[450px] lg:h-[470px] xl:h-[500px]"
+  }
+`}
 >
 
           {active.after.endsWith(".mp4") ? (
@@ -1466,10 +1468,11 @@ export default function ViccaCaseStudy() {
               key={`${active.id}-after`}
               src={active.after}
               className="
-                block
-                w-full
-                object-cover
-              "
+  block
+  h-auto
+  w-full
+  object-contain
+"
               muted
               loop
               autoPlay
@@ -1490,31 +1493,33 @@ export default function ViccaCaseStudy() {
                 </div>
 
         {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
-        <div
-          className="
-            absolute
-            bottom-0
-            left-1/2
-            z-30
-            -translate-x-1/2
-            translate-y-1/2
-            rounded-2xl
-            border
-            border-[#7C3AED]/20
-            bg-[#17171C]/95
-            px-6
-            py-4
-            text-sm
-            font-medium
-            text-white/85
-            shadow-[0_10px_40px_rgba(124,58,237,0.20)]
-            backdrop-blur-md
-            whitespace-nowrap
-          "
-        >
-          <span className="mr-2 text-lg text-[#A855F7]">↓</span>
-          Desliza para explorar
-        </div>
+        {active.id !== "cart" && (
+  <div
+    className="
+      absolute
+      bottom-0
+      left-1/2
+      z-30
+      -translate-x-1/2
+      translate-y-1/2
+      rounded-2xl
+      border
+      border-[#7C3AED]/20
+      bg-[#17171C]/95
+      px-6
+      py-4
+      text-sm
+      font-medium
+      text-white/85
+      shadow-[0_10px_40px_rgba(124,58,237,0.20)]
+      backdrop-blur-md
+      whitespace-nowrap
+    "
+  >
+    <span className="mr-2 text-lg text-[#A855F7]">↓</span>
+    Desliza para explorar
+  </div>
+)}
 
       </div>
 
