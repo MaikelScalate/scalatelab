@@ -1136,7 +1136,7 @@ export default function ViccaCaseStudy() {
     z-10
     grid
     grid-cols-1
-    gap-20
+gap-10
 
     ${
       active.id === "pdp"
@@ -1206,7 +1206,7 @@ export default function ViccaCaseStudy() {
   active.id === "pdp"
     ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
     : active.id === "cart"
-    ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[58%] xl:w-[54%]"
+  ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[48%] xl:w-[44%]"
     : "w-full"
 }
     }
@@ -1238,14 +1238,14 @@ export default function ViccaCaseStudy() {
         <div
   className={`
   relative
-  overflow-hidden
-  rounded-[1.05rem]
-  bg-white
+rounded-[1.05rem]
+bg-white
+hide-scrollbar
 
   ${
     active.id === "cart"
-      ? "h-auto"
-      : "h-[500px] sm:h-[450px] lg:h-[470px] xl:h-[500px]"
+      ? "h-auto overflow-hidden"
+      : "h-[500px] sm:h-[450px] lg:h-[470px] xl:h-[500px] overflow-y-auto overflow-x-hidden"
   }
 `}
 >
@@ -1399,7 +1399,7 @@ export default function ViccaCaseStudy() {
   active.id === "pdp"
     ? "mx-auto w-[100%] sm:w-[100%] lg:w-[100%] xl:w-[100%]"
     : active.id === "cart"
-    ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[58%] xl:w-[54%]"
+  ? "w-[96%] sm:w-[86%] lg:ml-0 lg:mr-auto lg:w-[48%] xl:w-[44%]"
     : "w-full"
 }
     }
@@ -1451,14 +1451,13 @@ export default function ViccaCaseStudy() {
        <div
   className={`
   relative
-  overflow-hidden
-  rounded-[1.05rem]
-  bg-white
-
+rounded-[1.05rem]
+bg-white
+hide-scrollbar
   ${
     active.id === "cart"
-      ? "h-auto"
-      : "h-[500px] sm:h-[450px] lg:h-[470px] xl:h-[500px]"
+      ? "h-auto overflow-hidden"
+      : "h-[500px] sm:h-[450px] lg:h-[470px] xl:h-[500px] overflow-y-auto overflow-x-hidden"
   }
 `}
 >
@@ -1645,9 +1644,9 @@ export default function ViccaCaseStudy() {
       <div
   className="
     relative
-    overflow-hidden
-    rounded-[1.05rem]
-    bg-white
+rounded-[1.05rem]
+bg-white
+hide-scrollbar
   "
 >
   <img
