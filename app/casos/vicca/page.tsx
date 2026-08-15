@@ -21,7 +21,7 @@ const improvements: Improvement[] = [
   label: "Home",
   title: "Una Home pensada para convertir",
   intro:
-    "Rediseñamos la página principal para mejorar la propuesta de valor y el recorrido del usuario, creando un hero interactivo con productos (mostrando las zonas habituales de Victoria y su equipo), categorías a elegir, bestsellers, FAQ's y apartados creativos.",
+    "Rediseñamos la página principal para mejorar la propuesta de valor y el recorrido del usuario, creando un hero interactivo con productos (mostrando las zonas concurridas por Victoria y su equipo), categorías a elegir, bestsellers, FAQ's y apartados creativos.",
   before: "/vicca-home-before.png",
   after: "/vicca-home-after.png",
     changes: [
@@ -85,7 +85,7 @@ const improvements: Improvement[] = [
   label: "Builder Pack",
   title: "Una experiencia visual a la altura de la marca",
   intro:
-    "Creamos una experiencia visual orientada a reforzar la propuesta de marca y permitir a los potenciales clientes crear su Propio Pack Vicca.",
+    "Creamos una experiencia visual orientada a reforzar la propuesta de la marca y permitir a los potenciales clientes crear su Propio Pack Vicca, ahorrando un 10% a partir de 3 productos elegidos. Aumentando así el ticket medio por pedido",
   before: "/vicca-builder-mobile.mp4",
   after: "/vicca-builder-desktop.mp4",
     changes: [
@@ -93,8 +93,41 @@ const improvements: Improvement[] = [
       "Uso del diseño como herramienta de diferenciación.",
       "Una experiencia visual más memorable y reconocible.",
     ],
+      reason:
+    "No queríamos que el rediseño se limitara a ordenar elementos. La experiencia debía transmitir mejor el valor de la marca y acompañar la intención de compra.",
+  },
+
+  {
+    id: "about",
+    label: "About Us Page",
+    title: "Una About Page pensada para conectar con la marca",
+    intro:
+      "Rediseñamos la página About Us para trasladar la historia, personalidad y propuesta de valor de VICCA a una experiencia más visual, cercana y coherente con el resto del ecosistema digital.",
+    before: "/vicca-about-before.png",
+    after: "/vicca-about-after.png",
+    changes: [
+      "Una narrativa más clara alrededor de la marca.",
+      "Mayor protagonismo para la historia y personalidad de VICCA.",
+      "Una experiencia visual más coherente con el posicionamiento de la marca.",
+    ],
     reason:
-      "No queríamos que el rediseño se limitara a ordenar elementos. La experiencia debía transmitir mejor el valor de la marca y acompañar la intención de compra.",
+      "La About Us Page no debía limitarse a contar quién está detrás de VICCA. La planteamos como una oportunidad para reforzar la conexión con la marca y transmitir mejor todo lo que representa.",
+  },
+    {
+    id: "email",
+    label: "Email Mkt",
+    title: "Una estrategia de Email Marketing para convertir",
+    intro:
+      "Creamos una estrategia  base de captación y comunicación para acompañar al usuario desde el primer contacto con la marca hasta la compra, combinando pop-ups y diseños de emails creados específicamente para VICCA. ",
+    before: "",
+    after: "",
+    changes: [
+      "Pop-ups adaptados a diferentes momentos y campañas.",
+      "Diseños de email alineados con la identidad de VICCA.",
+      "Un ecosistema pensado para captar, convertir y fidelizar.",
+    ],
+    reason:
+      "El objetivo era aprovechar el tráfico existente y convertirlo también en una relación directa con la marca.",
   },
 ];
 
@@ -786,7 +819,7 @@ export default function ViccaCaseStudy() {
               >
                 VICCA ya contaba con algo difícil de conseguir: comunidad, reconocimiento y tráfico (en lo cual Victoria es experta).
                 El reto real era trasladar ese valor percibido a su tienda online, elevando su identidad visual y optimizando
-                la experiencia del usuario para convertir mejor. En definitiva, crear el ecosistema digital capaz de transformar
+                la experiencia del usuario para convertir mejor. En definitiva, crear un ecosistema digital único, capaz de transformar
                 toda esa atención en crecimiento constante.
               </p>
             </div>
@@ -1124,7 +1157,8 @@ export default function ViccaCaseStudy() {
     WEB SHOWCASE — SCALATE
 ======================================================= */}
 
-<div className="relative mt-12 lg:mt-16">
+{active.id !== "email" && (
+  <div className="relative mt-12 lg:mt-16">
 
   {/* GLOW SCALATE */}
 
@@ -1398,7 +1432,7 @@ hide-scrollbar
       border-black/60
       bg-[#A3A3A3]/70
       px-6
-      py-3
+      py-2
       text-sm
       font-medium
       text-white
@@ -1612,7 +1646,7 @@ hide-scrollbar
       border-[#7C3AED]/20
       bg-[#17171C]/95
       px-6
-      py-4
+      py-2
       text-sm
       font-medium
       text-white/85
@@ -1770,20 +1804,319 @@ hide-scrollbar
     </div>
 
   </div>
-)}
+    )}
   </div>
 </div>
+)}
+{/* =======================================================
+    EMAIL MARKETING — SHOWCASE
+======================================================= */}
+
+{active.id === "email" && (
+  <div className="mt-12 lg:mt-16">
+
+    {/* GLOW */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        left-1/2
+        h-[700px]
+        w-[1000px]
+        -translate-x-1/2
+        rounded-full
+        bg-[#7C3AED]/10
+        blur-[180px]
+      "
+    />
+
+    {/* ===================================================
+        POP-UPS + EMAILS
+    =================================================== */}
+
+    <div className="relative z-10 grid grid-cols-1 gap-6 lg:grid-cols-[1.90fr_0.775fr_0.775fr]">
+      {/* ===================================================
+          POP-UPS
+      =================================================== */}
+
+      <div className="lg:col-span-1">
+
+        <div className="mb-6 flex items-center gap-3 px-1">
+
+          <span className="relative flex h-4 w-4 items-center justify-center">
+            <span className="absolute h-4 w-4 animate-ping rounded-full border border-[#A855F7]/30" />
+            <span className="absolute h-3 w-3 rounded-full border border-[#A855F7]/45" />
+            <span className="relative h-1.5 w-1.5 rounded-full bg-[#A855F7] shadow-[0_0_12px_#A855F7]" />
+          </span>
+
+          <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">
+            Pop-ups
+          </span>
+
+        </div>
+
+        {/* MÓVIL */}
+
+        <div className="lg:hidden">
+
+          <div
+            className="
+              relative
+              mx-auto
+              w-full
+              max-w-[500px]
+              overflow-hidden
+              rounded-[1.5rem]
+              border
+              border-[#7C3AED]/25
+              bg-[#0A0A0C]
+              p-2
+              shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+            "
+          >
+
+            <div className="h-[570px] overflow-hidden rounded-[1.05rem] bg-white">
+
+              <video
+                src="/vicca-email-mobile.mp4"
+                className="block h-full w-full object-cover object-center"
+                muted
+                loop
+                autoPlay
+                playsInline
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* ORDENADOR */}
+
+        <div className="group hidden lg:block">
+
+          <div
+            className="
+              relative
+              mx-auto
+              w-full
+              max-w-[1400px]
+              overflow-hidden
+              rounded-[1.5rem]
+              border
+              border-[#7C3AED]/25
+              bg-[#0A0A0C]
+              p-2
+              shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+              transition-all
+              duration-500
+              group-hover:border-[#A855F7]/40
+            "
+          >
+
+            <div className="flex h-8 items-center gap-1.5 px-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+            </div>
+
+            <div className="h-[430px] overflow-hidden rounded-[1.05rem] bg-black">
+
+              <video
+                src="/vicca-email-desktop.mp4"
+                className="block h-full w-full object-contain"
+                muted
+                loop
+                autoPlay
+                playsInline
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* ===================================================
+          EMAIL MARKETING
+      =================================================== */}
+
+      <div className="lg:col-span-2">
+
+        <div className="mb-6 flex items-center gap-3 px-1">
+
+          <span className="relative flex h-4 w-4 items-center justify-center">
+            <span className="absolute h-4 w-4 animate-ping rounded-full border border-[#A855F7]/30" />
+            <span className="absolute h-3 w-3 rounded-full border border-[#A855F7]/45" />
+            <span className="relative h-1.5 w-1.5 rounded-full bg-[#A855F7] shadow-[0_0_12px_#A855F7]" />
+          </span>
+
+          <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">
+            DISEÑOS EMAIL
+          </span>
+
+        </div>
+
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-6">
+
+          {/* EMAIL 1 */}
+
+          <div className="group">
+
+            <div
+              className="
+                relative
+                overflow-visible
+                rounded-[1.5rem]
+                border
+                border-[#7C3AED]/25
+                bg-[#0A0A0C]
+                p-2
+                shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+                transition-all
+                duration-500
+                group-hover:border-[#A855F7]/40
+                group-hover:-translate-y-1
+              "
+            >
+
+              <div className="flex h-8 items-center gap-1.5 px-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+              </div>
+
+              <div className="relative h-[560px] overflow-y-auto overflow-x-hidden hide-scrollbar rounded-[1.05rem] bg-white sm:h-[500px] lg:h-[430px]">
+
+  <img
+    src="/vicca-email-1.png"
+    alt="Diseño de email marketing de Vicca"
+    className="block h-auto w-full object-contain"
+  />
+
+</div>
+<div
+  className="
+    pointer-events-none
+    absolute
+    bottom-0
+    left-1/2
+    z-30
+    -translate-x-1/2
+    translate-y-1/2
+    rounded-2xl
+    border
+    border-[#7C3AED]/20
+    bg-[#17171C]/95
+    px-5
+    py-2
+    text-sm
+    font-medium
+    text-white/85
+    shadow-[0_10px_40px_rgba(124,58,237,0.20)]
+    backdrop-blur-md
+    whitespace-nowrap
+  "
+>
+  <span className="mr-2 text-lg text-[#A855F7]">↓</span>
+  Desliza para explorar
+</div>
+            </div>
+
+          </div>
+
+
+          {/* EMAIL 2 */}
+
+          <div className="group">
+
+            <div
+              className="
+                relative
+                overflow-visible
+                rounded-[1.5rem]
+                border
+                border-[#7C3AED]/25
+                bg-[#0A0A0C]
+                p-2
+                shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+                transition-all
+                duration-500
+                group-hover:border-[#A855F7]/40
+                group-hover:-translate-y-1
+              "
+            >
+
+              <div className="flex h-8 items-center gap-1.5 px-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+              </div>
+
+              <div className="relative h-[560px] overflow-y-auto overflow-x-hidden hide-scrollbar rounded-[1.05rem] bg-white sm:h-[500px] lg:h-[430px]">
+
+  <img
+    src="/vicca-email-2.png"
+    alt="Segundo diseño de email marketing de Vicca"
+    className="block h-auto w-full object-contain"
+  />
+</div>
+<div
+  className="
+    pointer-events-none
+    absolute
+    bottom-0
+    left-1/2
+    z-30
+    -translate-x-1/2
+    translate-y-1/2
+    rounded-2xl
+    border
+    border-[#7C3AED]/20
+    bg-[#17171C]/95
+    px-5
+    py-2
+    text-sm
+    font-medium
+    text-white/85
+    shadow-[0_10px_40px_rgba(124,58,237,0.20)]
+    backdrop-blur-md
+    whitespace-nowrap
+  "
+>
+  <span className="mr-2 text-lg text-[#A855F7]">↓</span>
+  Desliza para explorar
+</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+)}
   {/* =======================================================
       CTA
   ======================================================= */}
 
-  <div
+ <div
   className="
-    mt-12
+    mt-20
     flex
     w-full
     justify-center
-    sm:mt-16
+    sm:mt-20
     lg:mt-20
   "
 >
@@ -1880,78 +2213,83 @@ lg:pb-15
             </div>
 
             <p className="max-w-xl text-base leading-7 text-white/40">
-              El trabajo se planteó para que la mejora visual estuviera
-              acompañada de una mejora real de la experiencia de compra.
+              No se trataba solo de mejorar la web, sino de convertir todo el potencial de VICCA en una experiencia de compra clara, estratégica y lista para escalar.
             </p>
 
           </div>
 
           {/* BLOQUES DE IMPACTO */}
 
-          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+<div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
 
-            {[
-              "Experiencia más clara",
-              "Menor fricción",
-              "Mayor valor percibido",
-              "Marca escalable",
-            ].map((title, index) => (
-              <div
-                key={title}
-                className="
-                  flex
-                  items-center
-                  gap-4
-                  rounded-2xl
-                  border
-                  border-white/[0.08]
-                  bg-white/[0.025]
-                  p-5
-                  transition
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-white/[0.04]
-                "
-              >
+  {[
+    {
+      title: "Más oportunidades de compra",
+      text: "De una navegación pasiva a un ecosistema pensado para vender.",
+    },
+    {
+      title: "Mayor conversión",
+      text: "Menos fricción entre descubrir un producto y decidir comprarlo.",
+    },
+    {
+      title: "Mayor ticket medio y recurrencia",
+      text: "Cada compra genera más ganancia económica para Vicca.",
+    },
+    {
+      title: "Una marca preparada para crecer",
+      text: "Un ecosistema digital construido para acompañar el crecimiento de la marca.",
+    },
+  ].map((item, index) => (
+    <div
+      key={item.title}
+      className="
+        rounded-2xl
+        border
+        border-white/[0.08]
+        bg-white/[0.025]
+        p-5
+        transition
+        duration-300
+        hover:-translate-y-1
+        hover:bg-white/[0.04]
+      "
+    >
 
-                <div
-                  className="
-                    flex
-                    h-11
-                    w-11
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-white/[0.08]
-                    bg-white/[0.04]
-                    text-sm
-                    font-bold
-                    text-[#A855F7]
-                  "
-                >
-                  4.{index + 1}
-                </div>
+      <div
+        className="
+          mb-5
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/[0.08]
+          bg-white/[0.04]
+          text-sm
+          font-bold
+          text-[#A855F7]
+        "
+      >
+        4.{index + 1}
+      </div>
 
-                <div>
+      <h3 className="text-base font-semibold">
+        {item.title}
+      </h3>
 
-                  <h3 className="text-sm font-semibold">
-                    {title}
-                  </h3>
+      <p className="mt-3 text-sm leading-6 text-white/40">
+        {item.text}
+      </p>
 
-                  <p className="mt-1 text-xs text-white/30">
-                    Impacto en la experiencia digital
-                  </p>
+    </div>
+  ))}
 
-                </div>
-
-              </div>
-            ))}
+</div>
 
           </div>
 
-        </div>
       </section>
 
       {/* =========================================================
