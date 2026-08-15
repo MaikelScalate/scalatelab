@@ -83,7 +83,7 @@ const improvements: Improvement[] = [
   {
     id: "about",
     label: "About Us Page",
-    title: "Una About Page pensada para conectar con la marca",
+    title: "Una About Page pensada para conectar",
     intro:
       "Rediseñamos la página About Us para trasladar la historia, personalidad y propuesta de valor de MYWAVE a una experiencia más visual, cercana y coherente con el resto del ecosistema digital.",
     before: "/mywave-about-before.png",
@@ -115,7 +115,7 @@ const improvements: Improvement[] = [
   {
     id: "publi",
     label: "Publi & Content",
-    title: "Contenido y Publi pensado para conectar y escalar",
+    title: "Contenido y Publi pensado para escalar",
     intro:
       "Analizamos cómo comunica MYWAVE y planteamos una estrategia de contenido y publicidad orientada a mejorar la percepción de marca, generar más impacto y convertir mejor la atención de su comunidad.",
     before: "",
