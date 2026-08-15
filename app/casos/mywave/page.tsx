@@ -22,8 +22,8 @@ const improvements: Improvement[] = [
     title: "Una Home pensada para convertir",
     intro:
       "Rediseñamos la página principal para ordenar mejor la propuesta de MYWAVE, dar más protagonismo al producto y construir un recorrido más claro desde el descubrimiento hasta la compra.",
-    before: "/videos/mywave-home-before.mp4",
-    after: "/videos/mywave-home-after.mp4",
+    before: "/mywave-home-before.mp4",
+    after: "/mywave-home-after.mp4",
     changes: [
       "Nueva jerarquía de contenidos y categorías de producto.",
       "Navegación más clara para descubrir productos y colecciones.",
@@ -54,8 +54,8 @@ const improvements: Improvement[] = [
     title: "Una Product Page clara y lista para vender más",
     intro:
       "Optimizamos la ficha de producto para presentar mejor cada prenda, ordenar la información y facilitar la decisión de compra, reduciendo fricciones y reforzando las oportunidades de cross-sell.",
-    before: "/videos/mywave-pdp-before.mp4",
-    after: "/videos/mywave-pdp-after.mp4",
+    before: "/mywave-pdp-before.mp4",
+    after: "/mywave-pdp-after.mp4",
     changes: [
       "Mejor organización de características, beneficios e información del producto.",
       "Jerarquía visual más clara para facilitar la decisión.",
@@ -70,8 +70,8 @@ const improvements: Improvement[] = [
     title: "Un carrito diseñado para vender más",
     intro:
       "Rediseñamos el carrito para simplificar el proceso de compra, hacer más claro el resumen del pedido y aprovechar mejor las oportunidades de conversión y venta cruzada antes del checkout.",
-    before: "/videos/mywave-cart-before.mp4",
-    after: "/videos/mywave-cart-after.mp4",
+    before: "/mywave-cart-before.mp4",
+    after: "/mywave-cart-after.mp4",
     changes: [
       "Resumen del pedido más limpio y comprensible.",
       "Reducción de elementos innecesarios durante la revisión del pedido.",
@@ -151,18 +151,18 @@ const challengePoints = [
 const strategyPoints = [
   {
     number: "2.1",
-    title: "Diseño & UX",
-    text: "Mejoramos la estructura, jerarquía visual y experiencia de navegación.",
+    title: "Auditoría y Diseño CRO",
+    text: "Pasamos de una web promedio en Wordpress a una web diseñada a código y hecha a medida dentro de Shopify. ",
   },
   {
     number: "2.2",
-    title: "CRO",
-    text: "Identificamos oportunidades para reducir fricción dentro del funnel y aumentar la conversión.",
+    title: "Estrategia Email Mkt",
+    text: "Diseñamos mejores pop-ups y creamos una base sólida con los 11 flujos más importantes que toda tienda online debe tener.",
   },
   {
     number: "2.3",
-    title: "E-commerce 360º",
-    text: "Trabajamos el ecosistema completo para crear una experiencia coherente y preparada para crecer.",
+    title: "Atracción de clientes",
+    text: "Investigamos su competencia e implementamos una estrategia única de contenido orgánico para atraer más leads.",
   },
 ];
 
@@ -586,7 +586,7 @@ export default function MyWaveCaseStudy() {
                   sm:text-lg
                 "
               >
-                MYWAVE es una marca de swimwear con una identidad visual muy marcada. Nosotros desarrollamos una propuesta 360º de optimización CRO, diseño y experiencia de compra para llevar su e-commerce al siguiente nivel.
+                MYWAVE es una marca de ropa de baño femenina focalizada en el surf y el beach lifestyle. Sin embargo, su tienda no estaba a la altura y su estrategia estaba desorganizada e incompleta. Tras hablar con su fundadora Iris, decidimos trabajar en una estrategia holística que explicamos a continuación.
               </p>
 
               <div
@@ -699,10 +699,13 @@ export default function MyWaveCaseStudy() {
   </div>
 
   <div className="lg:h-[350px] overflow-hidden rounded-lg bg-[#111]">
-  <img
-  src="/mywave-desktop.png"
-  alt="MYWAVE E-commerce"
-  className="h-full w-full object-cover"
+  <video
+  src="/mywave-desktop.mp4"
+  className="h-full w-full object-contain"
+  autoPlay
+  muted
+  loop
+  playsInline
 />
 </div>
               </div>
@@ -741,11 +744,14 @@ export default function MyWaveCaseStudy() {
     transformStyle: "preserve-3d",
   }}
 >
-  <div className="aspect-[9/19] overflow-hidden rounded-[1.1rem] bg-[#111]">
-    <img
-  src="/mywave-mobile.png"
-  alt="MYWAVE Mobile"
-  className="h-full w-full object-cover"
+  <div className="lg:h-[350px] overflow-hidden rounded-lg bg-[#111]">
+  <video
+  src="/mywave-mobile.mp4"
+  className="h-full w-full object-contain"
+  autoPlay
+  muted
+  loop
+  playsInline
 />
   </div>
 </div>
@@ -807,7 +813,7 @@ export default function MyWaveCaseStudy() {
                   sm:leading-9
                 "
               >
-                MYWAVE ya contaba con una propuesta de producto y una identidad reconocible. El reto era trasladar ese valor al e-commerce, mejorar la experiencia de compra y construir un ecosistema digital capaz de convertir mejor y acompañar el crecimiento de la marca.
+                MYWAVE tenía una web en Wordpress con una buena propuesta de producto y una identidad reconocible. Sin embargo, el reto era trasladar ese valor al mercado, mejorar la experiencia de compra y construir un sistema de atracción de clientes simple pero efectivo para diferenciarse y comenzar a vender más (su problema principal). Iris aceptó sin ninguna duda y nos pusimos manos a la obra.
               </p>
             </div>
 
@@ -920,7 +926,7 @@ export default function MyWaveCaseStudy() {
                 sm:text-l
               "
             >
-              No nos limitamos a rediseñar la interfaz. Trabajamos sobre los principales puntos de contacto de la experiencia de compra para mejorar la claridad del catálogo, facilitar el descubrimiento de producto y construir una experiencia más coherente.
+              No solo creamos su web en Shopify, sino que aplicamos las siguientes tres claves:
             </p>
 
           </div>
@@ -2350,7 +2356,7 @@ lg:pb-15
             </div>
 
             <p className="max-w-xl text-base leading-7 text-white/40">
-              No se trataba solo de mejorar la web, sino de convertir todo el potencial de MYWAVE en una experiencia de compra clara, estratégica y lista para escalar.
+              No se trataba solo de pasar a Shopify, sino de crear una marca única para diferenciarse de la competencia y atraer más y mejores clientas.
             </p>
 
           </div>

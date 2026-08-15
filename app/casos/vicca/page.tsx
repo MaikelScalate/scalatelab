@@ -53,7 +53,7 @@ const improvements: Improvement[] = [
   label: "Product Page",
   title: "Una Product Page clara y lista para vender más",
   intro:
-    "Optimizamos la ficha de producto con fotos a la altura y explicación clara, facilitamos la compra (guía de tallas) y aumentamos el ticket medio con crossells. En ciertos productos de cosmética, aplicamos suscripciones para aumentar la recurrencia.",
+    "Optimizamos la ficha de producto con fotos a la altura y explicación clara, facilitamos la compra con una guía de tallas y aumentamos el ticket medio con crossells. En ciertos productos de cosmética, aplicamos suscripciones para aumentar la recurrencia.",
   before: "/vicca-pdp-before.png",
   after: "/vicca-pdp-after.png",
     changes: [
@@ -134,7 +134,7 @@ const improvements: Improvement[] = [
   label: "Publi & Content",
   title: "Contenido y Publi pensado para escalar",
   intro:
-    "Analizamos cómo está comunicando VICCA actualmente y planteamos una estrategia de contenido y publicidad orientada a mejorar la percepción de marca, generar más impacto y convertir mejor la atención de su comunidad.",
+    "Analizamos la estrategia de comunicación de VICCA y planteamos una estrategia de contenido y publi orientada a mejorar la percepción de marca, generar más impacto y convertir mejor a su audiencia en clientas fieles. Dejamos un pequeño vistazo.",
   before: "",
   after: "",
   changes: [
@@ -161,7 +161,7 @@ const challengePoints = [
   {
     number: "1.3",
     title: "Construir para crecer",
-    text: "Construir un ecosistema digital capaz de convertir los leads y aumentar la recurrencia.",
+    text: "Construir un ecosistema digital capaz de convertir los leads en clientes y aumentar la recurrencia.",
   },
 ];
 
@@ -174,7 +174,7 @@ const strategyPoints = [
   {
     number: "2.2",
     title: "Optimización CRO",
-    text: "Aplicar un sistema de crossells, crear la guía de tallas y un builder de packs interactivo para eliminar fricciones.",
+    text: "Aplicar un sistema de crossells, crear la guía de tallas y un builder de packs interactivo para eliminar fricciones y vender más.",
   },
   {
     number: "2.3",
@@ -603,10 +603,10 @@ export default function ViccaCaseStudy() {
                   sm:text-lg
                 "
               >
-                De la experiencia en RRSS de Victoria Caro nace Vicca.
-                Nosotros desarrollamos una propuesta 360º de optimización
-                CRO, diseño y experiencia de compra para llevar la marca
-                al siguiente nivel.
+                De la experiencia en RRSS de la fundadora Victoria Caro, nace su marca Vicca.
+                Nosotros desarrollamos una propuesta específica de optimización
+                CRO, diseño y experiencia de compra única para llevar la marca
+                al siguiente nivel en todas sus áreas.
               </p>
 
               <div
@@ -836,7 +836,7 @@ export default function ViccaCaseStudy() {
                 VICCA ya contaba con algo difícil de conseguir: comunidad, reconocimiento y tráfico (en lo cual Victoria es experta).
                 El reto real era trasladar ese valor percibido a su tienda online, elevando su identidad visual y optimizando
                 la experiencia del usuario para convertir mejor. En definitiva, crear un ecosistema digital único, capaz de transformar
-                toda esa atención en crecimiento constante.
+                toda esa atención en ventas y crecimiento constante.
               </p>
             </div>
 
@@ -949,7 +949,7 @@ export default function ViccaCaseStudy() {
                 sm:text-l
               "
             >
-              En esta propuesta, no nos limitamos a “crear una web”. Optimizamos el ecosistema de VICCA para obtener mejores resultados de todo el potencial que ya tiene la marca.
+              En esta propuesta, no nos limitamos a “crear una web”. Optimizamos el ecosistema de VICCA para obtener mejores resultados de todo el potencial que ya tiene.
             </p>
 
           </div>

@@ -505,8 +505,8 @@ ${formData.commitment}
             sm:leading-8
           "
         >
-          Queremos entender dónde está tu marca, cuáles son tus objetivos y qué está impidiendo
-          que llegues allí. Cuéntanos tu situación y estudiaremos tu caso.
+          Queremos ayudarte. Pero antes de ello, debemos entender primero en qué punto está tu marca, cuáles son tus objetivos y qué está impidiendo
+          que los consigas. Cuéntanos tu situación y estudiaremos tu caso.
         </p>
       </section>
 
