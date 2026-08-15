@@ -129,6 +129,22 @@ const improvements: Improvement[] = [
     reason:
       "El objetivo era aprovechar el tráfico existente y convertirlo también en una relación directa con la marca.",
   },
+  {
+  id: "publi",
+  label: "Publi & Content",
+  title: "Contenido y Publi pensado para conectar y escalar",
+  intro:
+    "Analizamos cómo está comunicando VICCA actualmente y planteamos una estrategia de contenido y publicidad orientada a mejorar la percepción de marca, generar más impacto y convertir mejor la atención de su comunidad.",
+  before: "",
+  after: "",
+  changes: [
+    "Diseños de anuncios estáticos alineados con la identidad de VICCA.",
+    "Mejoras sobre el contenido actual para aumentar su impacto.",
+    "Una estructura de contenido pensada para escalar.",
+  ],
+  reason:
+    "La comunidad y la atención ya existen. El objetivo es convertir ese activo en un sistema de contenido y publicidad capaz de generar más oportunidades de crecimiento.",
+},
 ];
 
 const challengePoints = [
@@ -1157,7 +1173,7 @@ export default function ViccaCaseStudy() {
     WEB SHOWCASE — SCALATE
 ======================================================= */}
 
-{active.id !== "email" && (
+{active.id !== "email" && active.id !== "publi" && (
   <div className="relative mt-12 lg:mt-16">
 
   {/* GLOW SCALATE */}
@@ -2095,6 +2111,156 @@ hide-scrollbar
 </div>
 
             </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+)}
+{/* =======================================================
+    PUBLI & CONTENT — SHOWCASE
+======================================================= */}
+
+{active.id === "publi" && (
+  <div className="mt-12 lg:mt-16">
+
+    {/* GLOW */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        left-1/2
+        top-1/2
+        h-[650px]
+        w-[1000px]
+        -translate-x-1/2
+        -translate-y-1/2
+        rounded-full
+        bg-[#7C3AED]/10
+        blur-[180px]
+      "
+    />
+
+    <div className="relative z-10">
+
+      {/* ===================================================
+          MÓVIL — UN SOLO MOCKUP
+      =================================================== */}
+
+      <div className="lg:hidden">
+
+        <div
+          className="
+            relative
+            mx-auto
+            w-full
+            max-w-[500px]
+            overflow-visible
+            rounded-[1.5rem]
+            border
+            border-[#7C3AED]/25
+            bg-[#0A0A0C]
+            p-2
+            shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+          "
+        >
+
+          {/* TOP BAR */}
+
+          <div className="flex h-8 items-center gap-1.5 px-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+          </div>
+
+          {/* CONTENIDO */}
+
+          <div
+            className="
+              relative
+              h-[570px]
+              overflow-y-auto
+              overflow-x-hidden
+              hide-scrollbar
+              rounded-[1.05rem]
+              bg-white
+            "
+          >
+
+            <video
+  src="/vicca-publi-content-mobile.mp4"
+  className="block h-auto w-full object-contain"
+  muted
+  loop
+  autoPlay
+  playsInline
+/>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* ===================================================
+          ORDENADOR — UN SOLO MOCKUP
+      =================================================== */}
+
+      <div className="hidden lg:block">
+
+        <div
+          className="
+            relative
+            mx-auto
+            w-full
+            max-w-[1400px]
+            overflow-visible
+            rounded-[1.5rem]
+            border
+            border-[#7C3AED]/25
+            bg-[#0A0A0C]
+            p-2
+            shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+          "
+        >
+
+          {/* TOP BAR */}
+
+          <div className="flex h-8 items-center gap-1.5 px-3">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+          </div>
+
+          {/* CONTENIDO */}
+
+          <div
+            className="
+              relative
+              h-[520px]
+              overflow-y-auto
+              overflow-x-hidden
+              hide-scrollbar
+              rounded-[1.05rem]
+              bg-white
+            "
+          >
+
+           <video
+  src="/vicca-publi-content-desktop.mp4"
+  className="block h-auto w-full object-contain"
+  muted
+  loop
+  autoPlay
+  playsInline
+/>
 
           </div>
 
