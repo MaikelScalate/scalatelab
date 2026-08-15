@@ -17,173 +17,156 @@ type Improvement = {
 
 const improvements: Improvement[] = [
   {
-  id: "home",
-  label: "Home",
-  title: "Una Home pensada para convertir",
-  intro:
-    "Rediseñamos la página principal para mejorar la propuesta de valor y el recorrido del usuario, creando un hero interactivo con productos (mostrando las zonas concurridas por Victoria y su equipo), categorías a elegir, bestsellers, FAQ's y apartados creativos.",
-  before: "/vicca-home-before.png",
-  after: "/vicca-home-after.png",
+    id: "home",
+    label: "Home",
+    title: "Una Home pensada para convertir",
+    intro:
+      "Rediseñamos la página principal para ordenar mejor la propuesta de MYWAVE, dar más protagonismo al producto y construir un recorrido más claro desde el descubrimiento hasta la compra.",
+    before: "/videos/mywave-home-before.mp4",
+    after: "/videos/mywave-home-after.mp4",
     changes: [
-      "Nueva jerarquía de contenidos y propuesta de valor.",
-      "Navegación más clara y orientada a la intención de compra.",
-      "Mayor protagonismo para los productos y llamadas a la acción.",
+      "Nueva jerarquía de contenidos y categorías de producto.",
+      "Navegación más clara para descubrir productos y colecciones.",
+      "Mayor protagonismo para producto, categorías y llamadas a la acción.",
     ],
     reason:
-      "La Home es uno de los primeros puntos de contacto con la marca. Por eso trabajamos para que cada bloque tuviera una función clara dentro del recorrido de compra.",
+      "La Home debía funcionar como punto de entrada a la marca y al catálogo. Por eso trabajamos para que cada bloque ayudara a descubrir MYWAVE, entender su propuesta y avanzar hacia el producto adecuado.",
   },
-    {
+  {
     id: "look",
     label: "Compra El Look",
-    title: "Hazte Con Tu Look, ahora de forma más sencilla",
+    title: "Compra el look, ahora de forma más sencilla",
     intro:
-      "Creamos una experiencia de compra única a código para que la potencial clienta pueda descubrir y comprar de forma más directa los productos de moda y cosmética que utilizan Victoria, su equipo y su comunidad. Mejorando así, conversión y ticket medio.",
-    before: "/vicca-look-mobile.mp4",
-    after: "/vicca-look-desktop.mp4",
+      "Creamos una experiencia de compra más directa para que la clienta pueda descubrir combinaciones de MYWAVE y pasar de la inspiración a la compra con menos fricción, aumentando las oportunidades de venta cruzada y ticket medio.",
+    before: "/mywave-look-mobile.mp4",
+    after: "/mywave-look-desktop.mp4",
     changes: [
       "Experiencia de compra adaptada a móvil y ordenador.",
-      "Presentación más clara de los productos del look.",
+      "Presentación más clara de los productos que componen cada look.",
       "Recorrido más directo desde la inspiración hasta la compra.",
     ],
     reason:
-      "Facilitamos que el usuario pase de descubrir un look a encontrar y comprar los productos que lo componen.",
+      "Facilitamos que la usuaria pase de descubrir una combinación a encontrar y comprar los productos que la componen.",
   },
   {
-  id: "pdp",
-  label: "Product Page",
-  title: "Una Product Page clara y lista para vender más",
-  intro:
-    "Optimizamos la ficha de producto con fotos a la altura y explicación clara, facilitamos la compra (guía de tallas) y aumentamos el ticket medio con crossells. En ciertos productos de cosmética, aplicamos suscripciones para aumentar la recurrencia.",
-  before: "/vicca-pdp-before.png",
-  after: "/vicca-pdp-after.png",
+    id: "pdp",
+    label: "Product Page",
+    title: "Una Product Page clara y lista para vender más",
+    intro:
+      "Optimizamos la ficha de producto para presentar mejor cada prenda, ordenar la información y facilitar la decisión de compra, reduciendo fricciones y reforzando las oportunidades de cross-sell.",
+    before: "/videos/mywave-pdp-before.mp4",
+    after: "/videos/mywave-pdp-after.mp4",
     changes: [
-      "Mejor organización de la información del producto.",
+      "Mejor organización de características, beneficios e información del producto.",
       "Jerarquía visual más clara para facilitar la decisión.",
-      "Experiencia más directa alrededor de la compra.",
+      "Experiencia más directa alrededor de la elección y compra.",
     ],
     reason:
-      "La ficha de producto concentra gran parte de la intención de compra. El objetivo fue que el usuario encontrara antes la información que necesitaba para decidir.",
+      "La ficha de producto concentra gran parte de la intención de compra. El objetivo fue que la usuaria encontrara antes la información necesaria para decidir.",
   },
   {
     id: "cart",
     label: "Cart",
     title: "Un carrito diseñado para vender más",
     intro:
-      "Simplificamos y optimizamos el proceso de compra para mayor conversión: añadimos urgencia con cuenta atrás, una barra de progreso hacia el envío gratis y un sistema de cross-sells para aumentar el ticket medio. Listo para facturar el doble sin más publi.",
-    before: "/vicca-cart-before.mp4",
-    after: "/vicca-cart-after.mp4",
+      "Rediseñamos el carrito para simplificar el proceso de compra, hacer más claro el resumen del pedido y aprovechar mejor las oportunidades de conversión y venta cruzada antes del checkout.",
+    before: "/videos/mywave-cart-before.mp4",
+    after: "/videos/mywave-cart-after.mp4",
     changes: [
-      "Proceso de compra más limpio y comprensible.",
-      "Reducción de elementos que podían generar fricción.",
-      "Presentación más clara del pedido antes del checkout.",
+      "Resumen del pedido más limpio y comprensible.",
+      "Reducción de elementos innecesarios durante la revisión del pedido.",
+      "Presentación más clara del pedido antes de finalizar la compra.",
     ],
     reason:
-      "El carrito es el último gran punto de decisión antes del checkout. Una experiencia clara ayuda a que el usuario avance con mayor confianza.",
+      "El carrito es el último gran punto de decisión antes del checkout. Una experiencia clara permite revisar el pedido y avanzar con menos fricción.",
   },
-    {
-  id: "builder",
-  label: "Builder Pack",
-  title: "Una experiencia visual a la altura de la marca",
-  intro:
-    "Creamos una experiencia visual orientada a reforzar la propuesta de la marca y permitir a los potenciales clientes crear su Propio Pack Vicca, ahorrando un 10% a partir de 3 productos elegidos. Aumentando así el ticket medio por pedido",
-  before: "/vicca-builder-mobile.mp4",
-  after: "/vicca-builder-desktop.mp4",
-    changes: [
-      "Mayor coherencia entre marca, producto y experiencia digital.",
-      "Uso del diseño como herramienta de diferenciación.",
-      "Una experiencia visual más memorable y reconocible.",
-    ],
-      reason:
-    "No queríamos que el rediseño se limitara a ordenar elementos. La experiencia debía transmitir mejor el valor de la marca y acompañar la intención de compra.",
-  },
-
   {
     id: "about",
     label: "About Us Page",
     title: "Una About Page pensada para conectar con la marca",
     intro:
-      "Rediseñamos la página About Us para trasladar la historia, personalidad y propuesta de valor de VICCA a una experiencia más visual, cercana y coherente con el resto del ecosistema digital.",
-    before: "/vicca-about-before.png",
-    after: "/vicca-about-after.png",
+      "Rediseñamos la página About Us para trasladar la historia, personalidad y propuesta de valor de MYWAVE a una experiencia más visual, cercana y coherente con el resto del ecosistema digital.",
+    before: "/mywave-about-before.png",
+    after: "/mywave-about-after.png",
     changes: [
       "Una narrativa más clara alrededor de la marca.",
-      "Mayor protagonismo para la historia y personalidad de VICCA.",
+      "Mayor protagonismo para la historia y personalidad de MYWAVE.",
       "Una experiencia visual más coherente con el posicionamiento de la marca.",
     ],
     reason:
-      "La About Us Page no debía limitarse a contar quién está detrás de VICCA. La planteamos como una oportunidad para reforzar la conexión con la marca y transmitir mejor todo lo que representa.",
+      "La About Us Page se plantea como una oportunidad para reforzar la conexión con MYWAVE y transmitir mejor todo lo que representa la marca.",
   },
-    {
+  {
     id: "email",
     label: "Email Mkt",
     title: "Una estrategia de Email Marketing para convertir",
     intro:
-      "Creamos una estrategia  base de captación y comunicación para acompañar al usuario desde el primer contacto con la marca hasta la compra, combinando pop-ups y diseños de emails creados específicamente para VICCA. ",
+      "Creamos una estrategia base de captación y comunicación para acompañar a la usuaria desde el primer contacto con MYWAVE hasta la compra, combinando pop-ups y diseños de emails alineados con la identidad de la marca.",
     before: "",
     after: "",
     changes: [
       "Pop-ups adaptados a diferentes momentos y campañas.",
-      "Diseños de email alineados con la identidad de VICCA.",
+      "Diseños de email alineados con la identidad de MYWAVE.",
       "Un ecosistema pensado para captar, convertir y fidelizar.",
     ],
     reason:
-      "El objetivo era aprovechar el tráfico existente y convertirlo también en una relación directa con la marca.",
+      "El objetivo es aprovechar el tráfico existente y convertirlo también en una relación directa con la marca.",
   },
   {
-  id: "publi",
-  label: "Publi & Content",
-  title: "Contenido y Publi pensado para conectar y escalar",
-  intro:
-    "Analizamos cómo está comunicando VICCA actualmente y planteamos una estrategia de contenido y publicidad orientada a mejorar la percepción de marca, generar más impacto y convertir mejor la atención de su comunidad.",
-  before: "",
-  after: "",
-  changes: [
-    "Diseños de anuncios estáticos alineados con la identidad de VICCA.",
-    "Mejoras sobre el contenido actual para aumentar su impacto.",
-    "Una estructura de contenido pensada para escalar.",
-  ],
-  reason:
-    "La comunidad y la atención ya existen. El objetivo es convertir ese activo en un sistema de contenido y publicidad capaz de generar más oportunidades de crecimiento.",
-},
+    id: "publi",
+    label: "Publi & Content",
+    title: "Contenido y Publi pensado para conectar y escalar",
+    intro:
+      "Analizamos cómo comunica MYWAVE y planteamos una estrategia de contenido y publicidad orientada a mejorar la percepción de marca, generar más impacto y convertir mejor la atención de su comunidad.",
+    before: "",
+    after: "",
+    changes: [
+      "Diseños de anuncios estáticos alineados con la identidad de MYWAVE.",
+      "Mejoras sobre el contenido actual para aumentar su impacto.",
+      "Una estructura de contenido pensada para escalar.",
+    ],
+    reason:
+      "El objetivo es convertir la atención de la marca en un sistema de contenido y publicidad capaz de generar más oportunidades de crecimiento.",
+  },
 ];
 
 const challengePoints = [
   {
     number: "1.1",
-    title: "Una marca a la altura",
-    text: "Trasladar la identidad, personalidad y valor de Victoria a cada punto de la marca.",
+    title: "Experiencia de compra",
+    text: "Replantear los principales puntos de contacto para crear una navegación más clara.",
   },
   {
     number: "1.2",
-    title: "Convertir atención en ventas",
-    text: "Convertir el tráfico actual a través de un diseño web con más oportunidades de venta.",
+    title: "Conversión",
+    text: "Detectar y reducir fricciones que podían dificultar la decisión de compra.",
   },
   {
     number: "1.3",
-    title: "Construir para crecer",
-    text: "Construir un ecosistema digital capaz de convertir los leads y aumentar la recurrencia.",
+    title: "Escalabilidad",
+    text: "Construir una experiencia preparada para acompañar el crecimiento del e-commerce.",
   },
 ];
 
 const strategyPoints = [
   {
     number: "2.1",
-    title: "Desarrollo Web",
-    text: "Mejorar la estructura, jerarquía visual, navegación y fluidez de la tienda sin depender de apps externas. ",
+    title: "Diseño & UX",
+    text: "Mejoramos la estructura, jerarquía visual y experiencia de navegación.",
   },
   {
     number: "2.2",
-    title: "Optimización CRO",
-    text: "Aplicar un sistema de crossells, crear la guía de tallas y un builder de packs interactivo para eliminar fricciones.",
+    title: "CRO",
+    text: "Identificamos oportunidades para reducir fricción dentro del funnel y aumentar la conversión.",
   },
   {
     number: "2.3",
-    title: "Estrategia 360º",
-    text: "Optimizar el ecosistema que lo rodea: pricing, envíos, email mkt, tráfico y todo lo que influye en el crecimiento.",
+    title: "E-commerce 360º",
+    text: "Trabajamos el ecosistema completo para crear una experiencia coherente y preparada para crecer.",
   },
 ];
 
-export default function ViccaCaseStudy() {
+export default function MyWaveCaseStudy() {
   const [activeImprovement, setActiveImprovement] = useState("home");
   const [hideNavbar, setHideNavbar] = useState(false);
 
@@ -575,7 +558,7 @@ export default function ViccaCaseStudy() {
                   sm:text-xs
                 "
               >
-                BEAUTY & FASHION
+                SWIMWEAR BRAND
               </p>
 
               <h1
@@ -590,7 +573,7 @@ export default function ViccaCaseStudy() {
                   xl:text-7xl
                 "
               >
-                VICCA
+                MYWAVE
               </h1>
 
               <p
@@ -603,10 +586,7 @@ export default function ViccaCaseStudy() {
                   sm:text-lg
                 "
               >
-                De la experiencia en RRSS de Victoria Caro nace Vicca.
-                Nosotros desarrollamos una propuesta 360º de optimización
-                CRO, diseño y experiencia de compra para llevar la marca
-                al siguiente nivel.
+                MYWAVE es una marca de swimwear con una identidad visual muy marcada. Nosotros desarrollamos una propuesta 360º de optimización CRO, diseño y experiencia de compra para llevar su e-commerce al siguiente nivel.
               </p>
 
               <div
@@ -719,13 +699,10 @@ export default function ViccaCaseStudy() {
   </div>
 
   <div className="lg:h-[350px] overflow-hidden rounded-lg bg-[#111]">
-  <video
-  src="/vicca-desktop.mp4"
-  className="h-full w-full object-contain"
-  autoPlay
-  muted
-  loop
-  playsInline
+  <img
+  src="/mywave-desktop.png"
+  alt="MYWAVE E-commerce"
+  className="h-full w-full object-cover"
 />
 </div>
               </div>
@@ -765,13 +742,10 @@ export default function ViccaCaseStudy() {
   }}
 >
   <div className="aspect-[9/19] overflow-hidden rounded-[1.1rem] bg-[#111]">
-    <video
-  src="/vicca-mobile.mp4"
-  className="h-full w-full object-contain"
-  autoPlay
-  muted
-  loop
-  playsInline
+    <img
+  src="/mywave-mobile.png"
+  alt="MYWAVE Mobile"
+  className="h-full w-full object-cover"
 />
   </div>
 </div>
@@ -833,10 +807,7 @@ export default function ViccaCaseStudy() {
                   sm:leading-9
                 "
               >
-                VICCA ya contaba con algo difícil de conseguir: comunidad, reconocimiento y tráfico (en lo cual Victoria es experta).
-                El reto real era trasladar ese valor percibido a su tienda online, elevando su identidad visual y optimizando
-                la experiencia del usuario para convertir mejor. En definitiva, crear un ecosistema digital único, capaz de transformar
-                toda esa atención en crecimiento constante.
+                MYWAVE ya contaba con una propuesta de producto y una identidad reconocible. El reto era trasladar ese valor al e-commerce, mejorar la experiencia de compra y construir un ecosistema digital capaz de convertir mejor y acompañar el crecimiento de la marca.
               </p>
             </div>
 
@@ -949,7 +920,7 @@ export default function ViccaCaseStudy() {
                 sm:text-l
               "
             >
-              En esta propuesta, no nos limitamos a “crear una web”. Optimizamos el ecosistema de VICCA para obtener mejores resultados de todo el potencial que ya tiene la marca.
+              No nos limitamos a rediseñar la interfaz. Trabajamos sobre los principales puntos de contacto de la experiencia de compra para mejorar la claridad del catálogo, facilitar el descubrimiento de producto y construir una experiencia más coherente.
             </p>
 
           </div>
@@ -1238,8 +1209,8 @@ gap-10
         <video
           src={
   active.id === "look"
-    ? "/vicca-look-mobile.mp4"
-    : "/vicca-builder-mobile.mp4"
+    ? "/mywave-look-mobile.mp4"
+    : "/mywave-builder-mobile.mp4"
 }
           className="block h-auto w-full object-contain"
           muted
@@ -1284,8 +1255,8 @@ gap-10
         <video
           src={
   active.id === "look"
-    ? "/vicca-look-desktop.mp4"
-    : "/vicca-builder-desktop.mp4"
+    ? "/mywave-look-desktop.mp4"
+    : "/mywave-builder-desktop.mp4"
 }
           className="block h-auto w-full object-contain"
           muted
@@ -1807,8 +1778,8 @@ hide-scrollbar
   "
 >
   <img
-    src="/vicca-pdp-desktop.png"
-    alt="Vista de la Product Page de Vicca en ordenador"
+    src="/mywave-pdp-desktop.png"
+    alt="Vista de la Product Page de MyWave en ordenador"
     className="
       block
       h-auto
@@ -1895,7 +1866,7 @@ hide-scrollbar
             <div className="h-[570px] overflow-hidden rounded-[1.05rem] bg-white">
 
               <video
-                src="/vicca-email-mobile.mp4"
+                src="/mywave-email-mobile.mp4"
                 className="block h-full w-full object-cover object-center"
                 muted
                 loop
@@ -1941,7 +1912,7 @@ hide-scrollbar
             <div className="h-[430px] overflow-hidden rounded-[1.05rem] bg-black">
 
               <video
-                src="/vicca-email-desktop.mp4"
+                src="/mywave-email-desktop.mp4"
                 className="block h-full w-full object-contain"
                 muted
                 loop
@@ -2011,8 +1982,8 @@ hide-scrollbar
               <div className="relative h-[560px] overflow-y-auto overflow-x-hidden hide-scrollbar rounded-[1.05rem] bg-white sm:h-[500px] lg:h-[430px]">
 
   <img
-    src="/vicca-email-1.png"
-    alt="Diseño de email marketing de Vicca"
+    src="/mywave-email-1.png"
+    alt="Diseño de email marketing de MyWave"
     className="block h-auto w-full object-contain"
   />
 
@@ -2078,8 +2049,8 @@ hide-scrollbar
               <div className="relative h-[560px] overflow-y-auto overflow-x-hidden hide-scrollbar rounded-[1.05rem] bg-white sm:h-[500px] lg:h-[430px]">
 
   <img
-    src="/vicca-email-2.png"
-    alt="Segundo diseño de email marketing de Vicca"
+    src="/mywave-email-2.png"
+    alt="Segundo diseño de email marketing de MyWave"
     className="block h-auto w-full object-contain"
   />
 </div>
@@ -2194,7 +2165,7 @@ hide-scrollbar
           >
 
             <video
-  src="/vicca-publi-content-mobile.mp4"
+  src="/mywave-publi-content-mobile.mp4"
   className="block h-auto w-full object-contain"
   muted
   loop
@@ -2254,7 +2225,7 @@ hide-scrollbar
           >
 
            <video
-  src="/vicca-publi-content-desktop.mp4"
+  src="/mywave-publi-content-desktop.mp4"
   className="block h-auto w-full object-contain"
   muted
   loop
@@ -2379,7 +2350,7 @@ lg:pb-15
             </div>
 
             <p className="max-w-xl text-base leading-7 text-white/40">
-              No se trataba solo de mejorar la web, sino de convertir todo el potencial de VICCA en una experiencia de compra clara, estratégica y lista para escalar.
+              No se trataba solo de mejorar la web, sino de convertir todo el potencial de MYWAVE en una experiencia de compra clara, estratégica y lista para escalar.
             </p>
 
           </div>
@@ -2399,7 +2370,7 @@ lg:pb-15
     },
     {
       title: "Mayor ticket medio y recurrencia",
-      text: "Cada compra genera más ganancia económica para Vicca.",
+      text: "Cada compra genera más ganancia económica para MyWave.",
     },
     {
       title: "Una marca preparada para crecer",
