@@ -2770,20 +2770,20 @@ lg:pb-15
 
   {[
     {
-      title: "Más oportunidades de compra",
-      text: "De una navegación pasiva a un ecosistema pensado para vender.",
+      title: "Una experiencia única",
+      text: "De descubrir la marca a comprar con menor fricción.",
     },
     {
-      title: "Mayor conversión",
-      text: "Menos fricción entre descubrir un producto y decidir comprarlo.",
+      title: "Más valor en cada compra",
+      text: "De vender una prenda a vender varias de ellas dentro de cada pedido.",
     },
     {
-      title: "Mayor ticket medio y recurrencia",
-      text: "Cada compra genera más ganancia económica para MyWave.",
+      title: "Una relación tras la compra",
+      text: "De captar visitas a construir una audiencia fiel.",
     },
     {
-      title: "Una marca preparada para crecer",
-      text: "Un ecosistema digital construido para acompañar el crecimiento de la marca.",
+      title: "Una base para crecer",
+      text: "De una presencia digital desordenada a un ecosistema listo para despuntar.",
     },
   ].map((item, index) => (
     <div
