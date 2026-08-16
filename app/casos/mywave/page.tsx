@@ -117,7 +117,7 @@ after: "",
     label: "Email Mkt",
     title: "Una estrategia de Email Marketing para convertir",
     intro:
-      "Creamos una estrategia base de captación y comunicación para acompañar a la usuaria desde el primer contacto con MYWAVE hasta la compra, combinando pop-ups y diseños de emails alineados con la identidad de la marca.",
+      "Creamos una estrategia de captación y comunicación para acompañar a la usuaria hasta la compra, combinando pop-ups y 11 flujos de emails (entre 1 y 8 emails por flujo) alineados con la identidad de la marca.",
     before: "",
     after: "",
     changes: [
@@ -1345,6 +1345,71 @@ gap-10
   </div>
 )}
 {/* ===================================================
+    MYWAVEGIRLS / MODAL / CART — MÓVIL
+    UN SOLO MOCKUP
+=================================================== */}
+
+{(active.id === "look" ||
+  active.id === "modal" ||
+  active.id === "cart") && (
+  <div className="block lg:hidden">
+
+    <div
+      className="
+        relative
+        mx-auto
+        w-full
+        max-w-[500px]
+        overflow-hidden
+        rounded-[1.5rem]
+        border
+        border-[#7C3AED]/25
+        bg-[#0A0A0C]
+        p-2
+        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+      "
+    >
+
+      {/* BARRA DEL MOCKUP */}
+
+      <div className="flex h-8 items-center gap-1.5 px-3">
+
+        <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+
+        <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+
+        <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+
+      </div>
+
+
+      {/* PANTALLA MÓVIL */}
+
+      <div className="overflow-hidden rounded-[1.05rem] bg-white">
+
+        <video
+          key={`${active.id}-mobile`}
+          src={
+            active.id === "look"
+              ? "/mywave-look-mobile.mp4"
+              : active.id === "modal"
+                ? "/mywave-modal-mobile.mp4"
+                : "/mywave-cart-mobile.mp4"
+          }
+          className="block h-auto w-full object-contain"
+          muted
+          loop
+          autoPlay
+          playsInline
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+)}
+{/* ===================================================
     ABOUT US — MOCKUPS
     ORDENADOR + MÓVIL
 =================================================== */}
@@ -2182,7 +2247,7 @@ hide-scrollbar
           </span>
 
           <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">
-            Pop-ups
+            Pop-ups + FLUJOS
           </span>
 
         </div>
@@ -2207,16 +2272,16 @@ hide-scrollbar
             "
           >
 
-            <div className="h-[570px] overflow-hidden rounded-[1.05rem] bg-white">
+            <div className="h-[200px] overflow-hidden rounded-[1.05rem] bg-[#838383]">
 
               <video
-                src="/mywave-email-mobile.mp4"
-                className="block h-full w-full object-cover object-center"
-                muted
-                loop
-                autoPlay
-                playsInline
-              />
+  src="/mywave-email-desktop.mp4"
+  className="block h-full w-full object-contain object-center"
+  muted
+  loop
+  autoPlay
+  playsInline
+/>
 
             </div>
 
@@ -2253,7 +2318,7 @@ hide-scrollbar
               <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
             </div>
 
-            <div className="h-[430px] overflow-hidden rounded-[1.05rem] bg-black">
+            <div className="h-[430px] overflow-hidden rounded-[1.05rem] bg-[#838383]">
 
               <video
                 src="/mywave-email-desktop.mp4"
@@ -2288,7 +2353,7 @@ hide-scrollbar
           </span>
 
           <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">
-            DISEÑOS EMAIL
+            EJEMPLOS EMAILS
           </span>
 
         </div>
@@ -2499,17 +2564,17 @@ hide-scrollbar
           <div
             className="
               relative
-              h-[570px]
+              h-[200px]
               overflow-y-auto
               overflow-x-hidden
               hide-scrollbar
               rounded-[1.05rem]
-              bg-white
+              bg-black
             "
           >
 
             <video
-  src="/mywave-publi-content-mobile.mp4"
+  src="/mywave-publi-content-desktop.mp4"
   className="block h-auto w-full object-contain"
   muted
   loop
@@ -2564,7 +2629,7 @@ hide-scrollbar
               overflow-x-hidden
               hide-scrollbar
               rounded-[1.05rem]
-              bg-white
+              bg-black
             "
           >
 
