@@ -1344,6 +1344,269 @@ gap-10
 
   </div>
 )}
+{/* ===================================================
+    ABOUT US — MOCKUPS
+    ORDENADOR + MÓVIL
+=================================================== */}
+
+{active.id === "about" && (
+  <div className="group hidden lg:col-span-2 lg:block">
+
+    <div className="relative w-full overflow-visible">
+
+      {/* =================================================
+          ORDENADOR
+      ================================================= */}
+
+      <div
+        className="
+          relative
+          z-10
+          w-[80%]
+          overflow-visible
+          rounded-[1.5rem]
+          border
+          border-[#7C3AED]/25
+          bg-[#0A0A0C]
+          p-2
+          shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+          transition-all
+          duration-500
+          group-hover:border-[#A855F7]/40
+        "
+      >
+
+        {/* BARRA DEL NAVEGADOR */}
+
+        <div className="flex h-8 items-center gap-1.5 px-3">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+        </div>
+
+        {/* PANTALLA CON ALTURA LIMITADA */}
+
+        <div
+          className="
+            relative
+            h-[500px]
+            overflow-y-auto
+            overflow-x-hidden
+            rounded-[1.05rem]
+            bg-white
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+          "
+        >
+
+          <img
+            src="/mywave-about-desktop.png"
+            alt="About Us MYWAVE"
+            className="block h-auto w-full"
+          />
+
+        </div>
+
+        {/* DESLIZA — ORDENADOR */}
+
+        <div
+          className="
+            absolute
+            bottom-0
+            left-1/2
+            z-30
+            -translate-x-1/2
+            translate-y-1/2
+            rounded-2xl
+            border
+            border-white/[0.08]
+            bg-[#17171C]/95
+            px-6
+            py-2
+            text-sm
+            font-medium
+            text-white/85
+            shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+            backdrop-blur-md
+            whitespace-nowrap
+          "
+        >
+          <span className="mr-2 text-lg text-[#A855F7]">
+            ↓
+          </span>
+
+          Desliza para explorar
+        </div>
+
+      </div>
+
+
+      {/* =================================================
+          MÓVIL
+      ================================================= */}
+
+      <div
+        className="
+          absolute
+          right-[-1%]
+          top-1/2
+          z-20
+          w-[19%]
+          -translate-y-1/2
+          overflow-visible
+          rounded-[1.6rem]
+          border
+          border-[#7C3AED]/30
+          bg-[#0A0A0C]
+          p-1.5
+          shadow-[0_30px_90px_rgba(0,0,0,0.70)]
+          transition-transform
+          duration-500
+          group-hover:-translate-y-[52%]
+        "
+      >
+
+        {/* PANTALLA DEL MÓVIL CON ALTURA LIMITADA */}
+
+        <div
+          className="
+            relative
+            h-[430px]
+            overflow-y-auto
+            overflow-x-hidden
+            rounded-[1.25rem]
+            bg-white
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+          "
+        >
+
+          <img
+            src="/mywave-about-mobile.png"
+            alt="About Us MYWAVE móvil"
+            className="block h-auto w-full"
+          />
+
+        </div>
+
+        {/* DESLIZA — MÓVIL */}
+
+        <div
+          className="
+            absolute
+            bottom-0
+            left-1/2
+            z-30
+            -translate-x-1/2
+            translate-y-1/2
+            rounded-2xl
+            border
+            border-white/[0.08]
+            bg-[#17171C]/95
+            px-4
+            py-2
+            text-sm
+            font-medium
+            text-white/85
+            shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+            backdrop-blur-md
+            whitespace-nowrap
+          "
+        >
+          <span className="mr-2 text-lg text-[#A855F7]">
+            ↓
+          </span>
+
+          Desliza para explorar
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+)}
+{/* ===================================================
+    ABOUT US — MOBILE
+=================================================== */}
+
+{active.id === "about" && (
+  <div className="block lg:hidden">
+
+    <div className="relative mx-auto w-full max-w-[500px]">
+
+      <div
+        className="
+          relative
+          overflow-hidden
+          rounded-[1.6rem]
+          border
+          border-[#7C3AED]/30
+          bg-[#0A0A0C]
+          p-2
+          shadow-[0_30px_90px_rgba(0,0,0,0.70)]
+        "
+      >
+
+        <div
+  className="
+    relative
+    h-[600px]
+    overflow-y-auto
+    overflow-x-hidden
+    rounded-[1.25rem]
+    bg-white
+    [scrollbar-width:none]
+    [&::-webkit-scrollbar]:hidden
+  "
+>
+  <img
+    src="/mywave-about-mobile.png"
+    alt="About Us MYWAVE móvil"
+    className="block h-auto w-full"
+  />
+</div>
+
+      </div>
+
+
+      {/* DESLIZA PARA EXPLORAR */}
+
+      <div
+        className="
+          absolute
+          bottom-0
+          left-1/2
+          z-30
+          -translate-x-1/2
+          translate-y-1/2
+          rounded-2xl
+          border
+          border-white/[0.08]
+          bg-[#17171C]/95
+          px-6
+          py-2
+          text-sm
+          font-medium
+          text-white/85
+          shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+          backdrop-blur-md
+          whitespace-nowrap
+        "
+      >
+
+        <span className="mr-2 text-lg text-[#A855F7]">
+          ↓
+        </span>
+
+        Desliza para explorar
+
+      </div>
+
+    </div>
+
+  </div>
+)}
     {/* ===================================================
         ANTES
     =================================================== */}
@@ -1351,6 +1614,7 @@ gap-10
     {active.id !== "look" &&
  active.id !== "modal" &&
  active.id !== "cart" && (
+  active.id !== "about" &&
   <div className="group">
 
       {/* HEADER */}
@@ -1522,6 +1786,7 @@ hide-scrollbar
     {active.id !== "look" &&
  active.id !== "modal" &&
  active.id !== "cart" && (
+  active.id !== "about" &&
   <div className="group">
 
       {/* HEADER */}
