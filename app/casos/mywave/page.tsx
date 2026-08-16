@@ -19,11 +19,11 @@ const improvements: Improvement[] = [
   {
     id: "home",
     label: "Home",
-    title: "Una Home pensada para convertir",
+    title: "Una Home optimizada a medida",
     intro:
-      "Rediseñamos la página principal para ordenar mejor la propuesta de MYWAVE, dar más protagonismo al producto y construir un recorrido más claro desde el descubrimiento hasta la compra.",
-    before: "/mywave-home-before.mp4",
-    after: "/mywave-home-after.mp4",
+      "Rediseñamos la página principal para ordenar mejor la web, dar más protagonismo al producto y construir un recorrido más claro hacia la compra. Usamos hero con variedad de fotos, productos por relevancia, categorías, FAQ's y apartados creativos.",
+    before: "/mywave-home-before.png",
+    after: "/mywave-home-after.png",
     changes: [
       "Nueva jerarquía de contenidos y categorías de producto.",
       "Navegación más clara para descubrir productos y colecciones.",
@@ -34,10 +34,10 @@ const improvements: Improvement[] = [
   },
   {
     id: "look",
-    label: "Compra El Look",
-    title: "Compra el look, ahora de forma más sencilla",
+    label: "MyWaveGirls Looks",
+    title: "Etiqueta a MyWave con uno de tus looks para formar parte",
     intro:
-      "Creamos una experiencia de compra más directa para que la clienta pueda descubrir combinaciones de MYWAVE y pasar de la inspiración a la compra con menos fricción, aumentando las oportunidades de venta cruzada y ticket medio.",
+      "Creamos una experiencia de compra más directa para que la clienta pueda descubrir combinaciones de MYWAVE y pasar de la inspiración a la compra con menos fricción, aumentando las oportunidades de aumentar el ticket medio.",
     before: "/mywave-look-mobile.mp4",
     after: "/mywave-look-desktop.mp4",
     changes: [
@@ -51,11 +51,11 @@ const improvements: Improvement[] = [
   {
     id: "pdp",
     label: "Product Page",
-    title: "Una Product Page clara y lista para vender más",
+    title: "Una Product Page creada para vender más",
     intro:
-      "Optimizamos la ficha de producto para presentar mejor cada prenda, ordenar la información y facilitar la decisión de compra, reduciendo fricciones y reforzando las oportunidades de cross-sell.",
-    before: "/mywave-pdp-before.mp4",
-    after: "/mywave-pdp-after.mp4",
+      "Optimizamos la ficha de producto para presentar mejor cada prenda y facilitar la decisión de compra, además de aumentar ticket medio. Para ello, usamos un sistema de cross-sells, añadimos los colores de su gama, guía de tallas y algún apartado creativo.",
+    before: "/mywave-pdp-before.png",
+    after: "/mywave-pdp-after.png",
     changes: [
       "Mejor organización de características, beneficios e información del producto.",
       "Jerarquía visual más clara para facilitar la decisión.",
@@ -64,14 +64,30 @@ const improvements: Improvement[] = [
     reason:
       "La ficha de producto concentra gran parte de la intención de compra. El objetivo fue que la usuaria encontrara antes la información necesaria para decidir.",
   },
+    {
+    id: "modal",
+    label: "Modal",
+    title: "Un modal pensado para aumentar el ticket medio",
+    intro:
+      "Creamos un modal a medida para añadir productos al carrito de forma rápida y sencilla, accesible tanto desde el botón de añadido rápido de los productos como desde el sistema de cross-sells.",
+    before: "",
+    after: "",
+    changes: [
+      "Modal desarrollado a medida para añadir productos sin abandonar la experiencia de compra.",
+      "Acceso desde el añadido rápido de producto y desde los cross-sells.",
+      "Experiencia adaptada a móvil y ordenador.",
+    ],
+    reason:
+      "El objetivo es facilitar la incorporación de nuevos productos al carrito y aprovechar los momentos de intención de compra para aumentar el ticket medio.",
+  },
   {
     id: "cart",
     label: "Cart",
     title: "Un carrito diseñado para vender más",
     intro:
-      "Rediseñamos el carrito para simplificar el proceso de compra, hacer más claro el resumen del pedido y aprovechar mejor las oportunidades de conversión y venta cruzada antes del checkout.",
-    before: "/mywave-cart-before.mp4",
-    after: "/mywave-cart-after.mp4",
+      "Rediseñamos el carrito para simplificar el proceso de compra, mostrar prueba social e incitar a comprar otros productos, aumentando así el ticket medio. Para ello, usamos una barra de prueba social, una interactiva de envío gratis y el sistema de cross-sells.",
+    before: "",
+after: "",
     changes: [
       "Resumen del pedido más limpio y comprensible.",
       "Reducción de elementos innecesarios durante la revisión del pedido.",
@@ -133,18 +149,18 @@ const improvements: Improvement[] = [
 const challengePoints = [
   {
     number: "1.1",
-    title: "Experiencia de compra",
-    text: "Replantear los principales puntos de contacto para crear una navegación más clara.",
+    title: "Una web a medida",
+    text: "Crear desde cero un diseño web en Shopify optimizado para destacar el producto y reforzar la marca.",
   },
   {
     number: "1.2",
-    title: "Conversión",
+    title: "Un mejor proceso de compra",
     text: "Detectar y reducir fricciones que podían dificultar la decisión de compra.",
   },
   {
     number: "1.3",
-    title: "Escalabilidad",
-    text: "Construir una experiencia preparada para acompañar el crecimiento del e-commerce.",
+    title: "Captación de clientes",
+    text: "Construir una estrategia simple y efectiva para atraer nuevos clientes y fidelizarlos.",
   },
 ];
 
@@ -1191,95 +1207,150 @@ gap-10
   `}
 >
 {/* ===================================================
-    COMPRA EL LOOK & BUILDER MOCKUP — MÓVIL
+    COMPRA EL LOOK & BUILDER MOCKUP — ORDENADOR
+=================================================== */}
+{/* ===================================================
+    COMPRA EL LOOK / MODAL / CART — MOCKUPS
+    COMPOSICIÓN EXACTA TIPO VICCA
 =================================================== */}
 
-{(active.id === "look" || active.id === "builder") && (
-  <div className="lg:hidden">
-    <div
-      className="
-        relative
-        mx-auto
-        w-full
-        max-w-[500px]
-        overflow-hidden
-        rounded-[1.5rem]
-        border
-        border-[#7C3AED]/25
-        bg-[#0A0A0C]
-        p-2
-        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
-      "
-    >
-      <div className="overflow-hidden rounded-[1.05rem] bg-white">
-        <video
-          src={
-  active.id === "look"
-    ? "/mywave-look-mobile.mp4"
-    : "/mywave-builder-mobile.mp4"
-}
-          className="block h-auto w-full object-contain"
-          muted
-          loop
-          autoPlay
-          playsInline
-        />
-      </div>
-    </div>
-  </div>
-)}
-
-{/* COMPRA EL LOOK & BUILDER MOCKUP — ORDENADOR*/}
-
-{(active.id === "look" || active.id === "builder") && (
+{(active.id === "look" ||
+  active.id === "modal" ||
+  active.id === "cart") && (
   <div className="group hidden lg:col-span-2 lg:block">
 
+    <div className="relative w-full overflow-visible">
 
-    <div
-      className="
-        relative
-        mx-auto
-        w-full
-        max-w-[1400px]
-        overflow-hidden
-        rounded-[1.5rem]
-        border
-        border-[#7C3AED]/25
-        bg-[#0A0A0C]
-        p-2
-        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
-      "
-    >
+      {/* =================================================
+          ORDENADOR
+      ================================================= */}
 
-      <div className="flex h-8 items-center gap-1.5 px-3">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
-        <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
-        <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+      <div
+        className="
+          relative
+          z-10
+
+          w-[80%]
+
+          overflow-hidden
+          rounded-[1.5rem]
+          border
+          border-[#7C3AED]/25
+          bg-[#0A0A0C]
+          p-2
+
+          shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+
+          transition-all
+          duration-500
+
+          group-hover:border-[#A855F7]/40
+        "
+      >
+
+        {/* BARRA DEL NAVEGADOR */}
+
+        <div className="flex h-8 items-center gap-1.5 px-3">
+
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+
+          <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+
+          <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+
+        </div>
+
+
+        {/* PANTALLA */}
+
+        <div className="overflow-hidden rounded-[1.05rem] bg-white">
+
+          <video
+            src={
+              active.id === "look"
+                ? "/mywave-look-desktop.mp4"
+                : active.id === "modal"
+                  ? "/mywave-modal-desktop.mp4"
+                  : "/mywave-cart-desktop.mp4"
+            }
+            className="block h-auto w-full object-contain"
+            muted
+            loop
+            autoPlay
+            playsInline
+          />
+
+        </div>
+
       </div>
 
-      <div className="overflow-hidden rounded-[1.05rem] bg-white">
-        <video
-          src={
-  active.id === "look"
-    ? "/mywave-look-desktop.mp4"
-    : "/mywave-builder-desktop.mp4"
-}
-          className="block h-auto w-full object-contain"
-          muted
-          loop
-          autoPlay
-          playsInline
-        />
+
+      {/* =================================================
+          MÓVIL
+      ================================================= */}
+
+      <div
+        className="
+          absolute
+
+          right-[-1%]
+          top-1/2
+          z-20
+
+          w-[19%]
+
+          -translate-y-1/2
+
+          overflow-hidden
+          rounded-[1.6rem]
+          border
+          border-[#7C3AED]/30
+          bg-[#0A0A0C]
+          p-1.5
+
+          shadow-[0_30px_90px_rgba(0,0,0,0.70)]
+
+          transition-transform
+          duration-500
+
+          group-hover:-translate-y-[52%]
+        "
+      >
+
+        {/* PANTALLA DEL MÓVIL */}
+
+        <div className="overflow-hidden rounded-[1.25rem] bg-white">
+
+          <video
+            src={
+              active.id === "look"
+                ? "/mywave-look-mobile.mp4"
+                : active.id === "modal"
+                  ? "/mywave-modal-mobile.mp4"
+                  : "/mywave-cart-mobile.mp4"
+            }
+            className="block h-auto w-full object-contain"
+            muted
+            loop
+            autoPlay
+            playsInline
+          />
+
+        </div>
+
       </div>
 
     </div>
+
   </div>
 )}
     {/* ===================================================
         ANTES
     =================================================== */}
 
-    {active.id !== "look" && active.id !== "builder" && (
+    {active.id !== "look" &&
+ active.id !== "modal" &&
+ active.id !== "cart" && (
   <div className="group">
 
       {/* HEADER */}
@@ -1410,8 +1481,8 @@ hide-scrollbar
                 </div>
 {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
         {active.id !== "cart" &&
- active.id !== "look" &&
- active.id !== "builder" && (
+ active.id !== "modal" &&
+ active.id !== "look" && (
   <div
     className="
       absolute
@@ -1448,7 +1519,9 @@ hide-scrollbar
         DESPUÉS
     =================================================== */}
 
-    {active.id !== "look" && active.id !== "builder" && (
+    {active.id !== "look" &&
+ active.id !== "modal" &&
+ active.id !== "cart" && (
   <div className="group">
 
       {/* HEADER */}
@@ -1624,8 +1697,8 @@ hide-scrollbar
 
         {/* INDICADOR DE SCROLL — FIJO AL BROWSER */}
         {active.id !== "cart" &&
- active.id !== "look" &&
- active.id !== "builder" && (
+ active.id !== "modal" &&
+ active.id !== "look" && (
   <div
     className="
       absolute
@@ -1783,15 +1856,15 @@ bg-white
 hide-scrollbar
   "
 >
-  <img
-    src="/mywave-pdp-desktop.png"
-    alt="Vista de la Product Page de MyWave en ordenador"
-    className="
-      block
-      h-auto
-      w-full
-    "
-  />
+
+              <video
+                src="/mywave-pdp-desktop.mp4"
+                className="block h-full w-full object-cover object-center"
+                muted
+                loop
+                autoPlay
+                playsInline
+              />
 </div>
 
     </div>

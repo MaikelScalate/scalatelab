@@ -994,7 +994,7 @@ export default function OrigenesCaseStudy() {
                 lg:text-5xl
               "
             >
-              Lo que transformamos
+              La Transformación
             </h2>
 
           </div>

@@ -1064,7 +1064,7 @@ export default function ViccaCaseStudy() {
                 lg:text-5xl
               "
             >
-              Lo que transformamos
+              La Transformación
             </h2>
 
           </div>
@@ -1252,50 +1252,112 @@ gap-10
   </div>
 )}
 
-{/* COMPRA EL LOOK & BUILDER MOCKUP — ORDENADOR*/}
+{/* ===================================================
+    COMPRA EL LOOK & BUILDER — ORDENADOR + MOBILE
+=================================================== */}
 
 {(active.id === "look" || active.id === "builder") && (
   <div className="group hidden lg:col-span-2 lg:block">
 
-
     <div
       className="
-        relative
-        mx-auto
+        grid
         w-full
-        max-w-[1400px]
-        overflow-hidden
-        rounded-[1.5rem]
-        border
-        border-[#7C3AED]/25
-        bg-[#0A0A0C]
-        p-2
-        shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+        grid-cols-[minmax(0,1fr)_220px]
+        items-center
+        gap-8
+        xl:grid-cols-[minmax(0,1fr)_240px]
+        xl:gap-10
       "
     >
 
-      <div className="flex h-8 items-center gap-1.5 px-3">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
-        <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
-        <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+      {/* ORDENADOR — IZQUIERDA */}
+
+      <div
+        className="
+          relative
+          w-full
+          overflow-hidden
+          rounded-[1.5rem]
+          border
+          border-[#7C3AED]/25
+          bg-[#0A0A0C]
+          p-2
+          shadow-[0_30px_100px_rgba(124,58,237,0.12)]
+        "
+      >
+
+        <div className="flex h-8 items-center gap-1.5 px-3">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#7C3AED]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#D946EF]/70" />
+        </div>
+
+        <div className="overflow-hidden rounded-[1.05rem] bg-white">
+
+          <video
+            key={`${active.id}-desktop`}
+            src={
+              active.id === "look"
+                ? "/vicca-look-desktop.mp4"
+                : "/vicca-builder-desktop.mp4"
+            }
+            className="block h-auto w-full object-contain"
+            muted
+            loop
+            autoPlay
+            playsInline
+          />
+
+        </div>
+
       </div>
 
-      <div className="overflow-hidden rounded-[1.05rem] bg-white">
-        <video
-          src={
-  active.id === "look"
-    ? "/vicca-look-desktop.mp4"
-    : "/vicca-builder-desktop.mp4"
-}
-          className="block h-auto w-full object-contain"
-          muted
-          loop
-          autoPlay
-          playsInline
-        />
+
+      {/* MOBILE — DERECHA */}
+
+      <div className="flex justify-center">
+
+        <div
+          className="
+            relative
+            w-full
+            max-w-[220px]
+            overflow-hidden
+            rounded-[1.5rem]
+            border
+            border-[#7C3AED]/25
+            bg-[#0A0A0C]
+            p-1.5
+            shadow-[0_30px_100px_rgba(124,58,237,0.18)]
+            xl:max-w-[240px]
+          "
+        >
+
+          <div className="overflow-hidden rounded-[1.15rem] bg-white">
+
+            <video
+              key={`${active.id}-mobile`}
+              src={
+                active.id === "look"
+                  ? "/vicca-look-mobile.mp4"
+                  : "/vicca-builder-mobile.mp4"
+              }
+              className="block h-auto w-full object-contain"
+              muted
+              loop
+              autoPlay
+              playsInline
+            />
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+
   </div>
 )}
     {/* ===================================================
