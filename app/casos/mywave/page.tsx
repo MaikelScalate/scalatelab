@@ -1650,7 +1650,7 @@ gap-10
           border-white/[0.08]
           bg-[#17171C]/95
           px-6
-          py-2
+          py-2=
           text-sm
           font-medium
           text-white/85
