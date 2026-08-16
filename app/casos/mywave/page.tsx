@@ -1057,7 +1057,7 @@ export default function MyWaveCaseStudy() {
                 lg:text-5xl
               "
             >
-              Lo que transformamos
+              La Transformación
             </h2>
 
           </div>
