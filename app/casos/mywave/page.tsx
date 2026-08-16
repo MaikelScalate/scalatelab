@@ -150,7 +150,7 @@ const challengePoints = [
   {
     number: "1.1",
     title: "Una web a medida",
-    text: "Crear desde cero un diseño web en Shopify optimizado para destacar el producto y reforzar la marca.",
+    text: "Crear desde cero un diseño web en Shopify optimizado para reforzar la marca.",
   },
   {
     number: "1.2",
@@ -167,18 +167,18 @@ const challengePoints = [
 const strategyPoints = [
   {
     number: "2.1",
-    title: "Auditoría y Diseño CRO",
-    text: "Pasamos de una web promedio en Wordpress a una web diseñada a código y hecha a medida dentro de Shopify. ",
+    title: "Auditoría/Diseño CRO",
+    text: "De una web promedio en Wordpress a una web diseñada a código y a medida en Shopify. ",
   },
   {
     number: "2.2",
     title: "Estrategia Email Mkt",
-    text: "Diseñamos mejores pop-ups y creamos una base sólida con los 11 flujos más importantes que toda tienda online debe tener.",
+    text: "Diseñamos mejores pop-ups y creamos una base sólida con los 11 flujos más importantes que toda marca debe tener.",
   },
   {
     number: "2.3",
     title: "Atracción de clientes",
-    text: "Investigamos su competencia e implementamos una estrategia única de contenido orgánico para atraer más leads.",
+    text: "Investigamos su competencia e implementamos una estrategia única de contenido orgánico.",
   },
 ];
 
@@ -829,7 +829,7 @@ export default function MyWaveCaseStudy() {
                   sm:leading-9
                 "
               >
-                MYWAVE tenía una web en Wordpress con una buena propuesta de producto y una identidad reconocible. Sin embargo, el reto era trasladar ese valor al mercado, mejorar la experiencia de compra y construir un sistema de atracción de clientes simple pero efectivo para diferenciarse y comenzar a vender más (su problema principal). Iris aceptó sin ninguna duda y nos pusimos manos a la obra.
+                MYWAVE tenía una web en Wordpress con una buena propuesta de producto y una identidad reconocible. Sin embargo, el reto era trasladar ese valor al mercado, mejorar la experiencia de compra y construir un sistema de atracción de clientes para diferenciarse y comenzar a vender más. Iris aceptó sin ninguna duda y nos pusimos manos a la obra.
               </p>
             </div>
 
