@@ -93,15 +93,15 @@ export default function Onboarding() {
           </h1>
 
           <p
-            className="
-              mx-auto mt-2 max-w-xl
-              text-sm leading-6 text-white/45
-              sm:mt-3 sm:text-base sm:leading-7
-            "
-          >
-            Sigue los pasos para que podamos conocer tu marca a fondo
-            y ayudarte a escalar.
-          </p>
+  className="
+    mx-auto mt-2
+    text-sm leading-6 text-white/45
+    sm:mt-3 sm:text-base sm:leading-7
+    lg:whitespace-nowrap
+  "
+>
+  Sigue los pasos para que podamos conocer tu marca a fondo y ayudarte a escalar.
+</p>
         </section>
 
         {/* =====================================================
@@ -540,17 +540,17 @@ lg:justify-center
 
                   <div className="mt-5 grid grid-cols-3 gap-2.5 sm:gap-3">
                     <ReferenceImage
-                      src="/onboarding/plantilla-1.png"
+                      src="/plantilla-1.png"
                       alt="Plantilla de onboarding 1"
                     />
 
                     <ReferenceImage
-                      src="/onboarding/plantilla-2.png"
+                      src="/plantilla-2.png"
                       alt="Plantilla de onboarding 2"
                     />
 
                     <ReferenceImage
-                      src="/onboarding/plantilla-3.png"
+                      src="/plantilla-3.png"
                       alt="Plantilla de onboarding 3"
                     />
                   </div>
