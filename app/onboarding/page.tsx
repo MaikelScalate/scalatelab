@@ -108,7 +108,7 @@ export default function Onboarding() {
           </div>
 
           <h1 className="mt-7 text-[2rem] font-semibold leading-[1.03] tracking-[-0.055em] sm:mt-8 sm:text-[3rem] lg:text-[3.4rem]">
-            Completa tu onboarding
+            Completa tu Onboarding
           </h1>
           <p className="mx-auto mt-2 text-sm leading-6 text-white/45 sm:mt-3 sm:text-base sm:leading-7 lg:whitespace-nowrap">
             Sigue los pasos para que podamos conocer tu marca a fondo y ayudarte a escalar.
