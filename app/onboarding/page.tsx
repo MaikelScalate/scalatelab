@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function Onboarding() {
   const [completed, setCompleted] = useState(false);
+  const [videoStarted, setVideoStarted] = useState(false);
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#05060b] text-white">
@@ -131,7 +132,7 @@ lg:justify-center
               rounded-[20px]
               border
               border-white/[0.09]
-              bg-[#080a12]/80
+              bg-black
               p-5
               shadow-[0_20px_70px_rgba(0,0,0,0.26)]
               backdrop-blur-xl
@@ -323,7 +324,7 @@ lg:justify-center
                 overflow-hidden
                 rounded-[20px]
                 border border-white/[0.09]
-                bg-[#080a12]/85
+                bg-black
                 shadow-[0_25px_100px_rgba(0,0,0,0.32)]
                 backdrop-blur-xl
                 lg:rounded-[22px]
@@ -376,13 +377,56 @@ lg:justify-center
                       shadow-[0_15px_60px_rgba(0,0,0,0.4)]
                     "
                   >
-                    <iframe
-                      src="https://drive.google.com/file/d/1huv13APZDsr5kvwKIJYehSgkPtlP52CL/preview"
-                      className="absolute inset-0 h-full w-full border-0"
-                      allow="autoplay"
-                      allowFullScreen
-                      title="Vídeo de onboarding Scalate"
-                    />
+                    {videoStarted ? (
+                      <iframe
+                        src="https://drive.google.com/file/d/1huv13APZDsr5kvwKIJYehSgkPtlP52CL/preview?autoplay=1"
+                        className="absolute inset-0 h-full w-full border-0"
+                        allow="autoplay"
+                        allowFullScreen
+                        title="Vídeo de onboarding Scalate"
+                      />
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setVideoStarted(true)}
+                        aria-label="Reproducir vídeo de onboarding"
+                        className="
+                          absolute inset-0
+                          h-full w-full
+                          cursor-pointer
+                          border-0
+                          bg-transparent
+                          p-0
+                        "
+                      >
+                        <img
+                          src="/onboarding-video-cover.png"
+                          alt="Vídeo de onboarding Scalate"
+                          className="h-full w-full object-cover"
+                        />
+
+                        {/* Botón Play de Google Drive, recreado sobre la portada */}
+                        <span
+                          aria-hidden="true"
+                          className="
+                            absolute left-1/2 top-1/2
+                            flex h-16 w-16
+                            -translate-x-1/2 -translate-y-1/2
+                            items-center justify-center
+                            rounded-full
+                            bg-black/75
+                            text-white
+                            shadow-[0_0_30px_rgba(0,0,0,0.45)]
+                            backdrop-blur-sm
+                            transition-transform duration-300
+                            hover:scale-105
+                            sm:h-20 sm:w-20
+                          "
+                        >
+                          <span className="ml-1 text-2xl sm:text-3xl">▶</span>
+                        </span>
+                      </button>
+                    )}
                   </div>
                 </div>
 
@@ -484,7 +528,7 @@ lg:justify-center
                       </p>
 
                       <h3 className="mt-1 text-lg font-semibold tracking-[-0.025em] sm:text-xl">
-                        Referencias de onboarding
+                        Plantillas de onboarding
                       </h3>
 
                       <p className="mt-2 max-w-3xl text-sm leading-6 text-white/45">
