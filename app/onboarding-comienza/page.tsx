@@ -212,7 +212,7 @@ export default function OnboardingComienza() {
                 ================================================= */}
 
             <Link
-              href="/onboarding-acceso"
+              href="/onboarding"
               className="
                 mt-5
                 inline-flex
