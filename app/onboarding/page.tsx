@@ -988,14 +988,17 @@ function VideoBox({
       "
     >
       {started ? (
-        <iframe
-          src={src}
-          className="absolute inset-0 h-full w-full border-0"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-          title={title}
-        />
-      ) : (
+  <video
+    className="absolute inset-0 h-full w-full object-contain"
+    src={src}
+    controls
+    playsInline
+    preload="metadata"
+    poster={cover}
+    autoPlay
+    title={title}
+  />
+) : (
         <button
           type="button"
           onClick={onPlay}
