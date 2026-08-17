@@ -7,20 +7,43 @@ export default function OnboardingAcceso() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // =====================================================
-    // CONTRASEÑA GENERAL DEL ONBOARDING
-    // =====================================================
+    if (loading) return;
 
-    if (password === "OnboardingScalateYa") {
-      window.location.href = "/onboarding";
-      return;
+    setError("");
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/onboarding-login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        window.location.href = "/onboarding";
+        return;
+      }
+
+      setError(
+        data.error ||
+          "La contraseña no es correcta. Inténtalo de nuevo."
+      );
+    } catch {
+      setError("Ha ocurrido un error. Inténtalo de nuevo.");
+    } finally {
+      setLoading(false);
     }
-
-    setError("La contraseña no es correcta. Inténtalo de nuevo.");
   };
 
   return (
@@ -39,9 +62,9 @@ export default function OnboardingAcceso() {
           w-full
           justify-center
           px-5
-         pt-6
-sm:pt-7
-lg:pt-8
+          pt-6
+          sm:pt-7
+          lg:pt-8
         "
       >
         <Link
@@ -57,12 +80,12 @@ lg:pt-8
             src="/icon.png"
             alt="Scalate"
             className="
-  h-16
-  w-16
-  object-contain
-  sm:h-14
-  sm:w-14
-"
+              h-16
+              w-16
+              object-contain
+              sm:h-14
+              sm:w-14
+            "
           />
         </Link>
       </header>
@@ -74,15 +97,15 @@ lg:pt-8
       <section
         className="
           relative
-z-10
-flex
-min-h-[78vh]
-items-center
-justify-center
-px-5
-py-6
-sm:px-8
-sm:py-8
+          z-10
+          flex
+          min-h-[78vh]
+          items-center
+          justify-center
+          px-5
+          py-6
+          sm:px-8
+          sm:py-8
         "
       >
         <div className="mx-auto w-full max-w-lg">
@@ -115,6 +138,8 @@ sm:py-8
                 sm:text-sm
               "
             >
+              {/* PUNTO ANIMADO */}
+
               <span className="relative flex h-2.5 w-2.5 items-center justify-center">
                 <span
                   className="
@@ -163,7 +188,6 @@ sm:py-8
               <br />
               antes de empezar.
             </h1>
-
           </div>
 
           {/* =================================================
@@ -312,6 +336,7 @@ sm:py-8
                     }}
                     placeholder="Introduce tu contraseña"
                     autoComplete="off"
+                    disabled={loading}
                     className="
                       h-14
                       w-full
@@ -331,6 +356,8 @@ sm:py-8
                       focus:bg-white/[0.06]
                       focus:ring-2
                       focus:ring-purple-500/10
+                      disabled:cursor-not-allowed
+                      disabled:opacity-60
                     "
                   />
 
@@ -344,6 +371,7 @@ sm:py-8
                         ? "Ocultar contraseña"
                         : "Mostrar contraseña"
                     }
+                    disabled={loading}
                     className="
                       absolute
                       right-4
@@ -352,6 +380,8 @@ sm:py-8
                       text-white/35
                       transition-colors
                       hover:text-white/70
+                      disabled:pointer-events-none
+                      disabled:opacity-50
                     "
                   >
                     {showPassword ? (
@@ -414,6 +444,7 @@ sm:py-8
 
                 <button
                   type="submit"
+                  disabled={loading || !password.trim()}
                   className="
                     mt-5
                     flex
@@ -435,10 +466,14 @@ sm:py-8
                     hover:-translate-y-1
                     hover:shadow-[0_0_45px_rgba(217,70,239,0.45)]
                     active:scale-[0.98]
+                    disabled:cursor-not-allowed
+                    disabled:opacity-50
+                    disabled:hover:translate-y-0
+                    disabled:hover:shadow-[0_0_25px_rgba(217,70,239,0.25)]
                     sm:text-base
                   "
                 >
-                  ACCEDER AL ONBOARDING
+                  {loading ? "COMPROBANDO..." : "ACCEDER AL ONBOARDING"}
                 </button>
               </form>
 
@@ -457,6 +492,7 @@ sm:py-8
               >
                 ¿No encuentras tu contraseña? Contacta con nosotros.
               </p>
+
             </div>
           </div>
 
