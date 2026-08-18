@@ -745,7 +745,14 @@ function StepTwoContent({ enabled, videoStarted, onPlayVideo, accessCompleted, o
     <div>
       <StepHeader icon="02" eyebrow="2.1 Vídeo accesos a plataformas" title="Acceso a tu Shopify, GA4 y GSC" description="Así analizaremos a detalle tu marca y podremos crear el mejor plan de acción posible." />
       <div className="mt-6">
-        <VideoBox started={videoStarted} cover="/onboarding-video-web-cover.png" src="/video-web-onboarding.mp4" title="Vídeo de acceso a Shopify, GA4 y GSC" onPlay={onPlayVideo} />
+       <VideoBox
+  started={videoStarted}
+  cover="/onboarding-video-web-cover.png"
+  src="https://fast.wistia.net/embed/iframe/hgxlqa5x0z"
+  title="Vídeo de acceso a Shopify, GA4 y GSC"
+  onPlay={onPlayVideo}
+  wistia
+/>
       </div>
       <div className="mt-6 border-t border-white/[0.07] pt-6">
         <StepHeader icon="✓" eyebrow="2.2. Accesos" title="Concede los accesos necesarios" description="Completa las instrucciones de Shopify, GA4 y Google Search Console. Si no tienes alguna de estas plataformas, crea tu cuenta en ella para ir nutriendo la plataforma de datos y apórtanos acceso para hacer los análisis correspondientes." small />
@@ -795,13 +802,14 @@ function StepThreeContent({
       />
 
       <div className="mt-6">
-        <VideoBox
-          started={videoStarted}
-          cover="/onboarding-video-publi-cover.png"
-          src="/video-publi-onboarding.mp4"
-          title="Vídeo de publicidad"
-          onPlay={onPlayVideo}
-        />
+       <VideoBox
+  started={videoStarted}
+  cover="/onboarding-video-publi-cover.png"
+  src="https://fast.wistia.net/embed/iframe/9i7y8mwmrx"
+  title="Vídeo de publicidad"
+  onPlay={onPlayVideo}
+  wistia
+/>
       </div>
 
       <div className="mt-6 border-t border-white/[0.07] pt-6">
@@ -881,12 +889,13 @@ function StepFourContent({
 
       <div className="mt-6">
         <VideoBox
-          started={videoStarted}
-          cover="/onboarding-video-email-cover.png"
-          src="/video-email-onboarding.mp4"
-          title="Vídeo de email marketing"
-          onPlay={onPlayVideo}
-        />
+  started={videoStarted}
+  cover="/onboarding-video-email-cover.png"
+  src="https://fast.wistia.net/embed/iframe/yfhfi4tyia"
+  title="Vídeo de email marketing"
+  onPlay={onPlayVideo}
+  wistia
+/>
       </div>
 
       <div className="mt-6 border-t border-white/[0.07] pt-6">
