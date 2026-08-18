@@ -715,7 +715,14 @@ function StepOneContent({ videoStarted, questionnaireCompleted, onPlayVideo, onQ
     <div>
       <div>
         <StepHeader icon="▶" eyebrow="01. Antes de continuar" title="Vídeo de onboarding" description="Visualiza este vídeo antes de continuar. Te ayudará a entender cómo funciona el proceso y qué esperamos de esta primera fase." />
-        <VideoBox started={videoStarted} cover="/onboarding-video-cover.png" src="/video-onboarding.mp4" title="Vídeo de onboarding Scalate" onPlay={onPlayVideo} />
+        <VideoBox
+  started={videoStarted}
+  cover="/onboarding-video-cover.png"
+  src="https://fast.wistia.net/embed/iframe/utwba4u0t8"
+  title="Vídeo de onboarding Scalate"
+  onPlay={onPlayVideo}
+  wistia
+/>
       </div>
 
       <div className="mt-6 border-t border-white/[0.07] pt-6">
@@ -964,12 +971,14 @@ function VideoBox({
   src,
   title,
   onPlay,
+  wistia = false,
 }: {
   started: boolean;
   cover: string;
   src: string;
   title: string;
   onPlay: () => void;
+  wistia?: boolean;
 }) {
   return (
     <div
@@ -988,17 +997,27 @@ function VideoBox({
       "
     >
       {started ? (
-  <video
-    className="absolute inset-0 h-full w-full object-contain"
-    src={src}
-    controls
-    playsInline
-    preload="metadata"
-    poster={cover}
-    autoPlay
-    title={title}
-  />
-) : (
+        wistia ? (
+          <iframe
+            src={`${src}?autoPlay=true`}
+            title={title}
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full border-0"
+          />
+        ) : (
+          <video
+            className="absolute inset-0 h-full w-full object-contain"
+            src={src}
+            controls
+            playsInline
+            preload="metadata"
+            poster={cover}
+            autoPlay
+            title={title}
+          />
+        )
+      ) : (
         <button
           type="button"
           onClick={onPlay}
@@ -1008,7 +1027,7 @@ function VideoBox({
           <img
             src={cover}
             alt={title}
-            className="h-full w-full object-contain"
+            className="h-full w-full object-cover"
           />
 
           <span
@@ -1018,8 +1037,8 @@ function VideoBox({
               left-1/2
               top-1/2
               flex
-              h-12
-              w-12
+              h-14
+              w-14
               -translate-x-1/2
               -translate-y-1/2
               items-center
@@ -1035,7 +1054,9 @@ function VideoBox({
               sm:w-20
             "
           >
-            <span className="ml-0.5 text-lg sm:ml-1 sm:text-3xl">▶</span>
+            <span className="ml-1 text-xl sm:text-3xl">
+              ▶
+            </span>
           </span>
         </button>
       )}
