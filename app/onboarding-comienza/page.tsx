@@ -51,30 +51,36 @@ export default function OnboardingComienza() {
           CONTENIDO PRINCIPAL
           ===================================================== */}
 
-      <section
-        className="
-          relative
-          z-10
-          flex
-          min-h-[calc(100vh-88px)]
-          items-center
-          justify-center
-          px-5
-          pb-8
-          pt-5
-          sm:px-8
-          sm:pb-12
-          sm:pt-8
-        "
-      >
-        <div
+<section
+  className="
+    relative
+    z-10
+    flex
+    min-h-[calc(100vh-88px)]
+    items-start
+    justify-center
+    px-5
+    pb-8
+    pt-8
+
+    sm:items-center
+    sm:px-8
+    sm:pb-12
+    sm:pt-8
+  "
+>
+<div
   className="
     mx-auto
     w-full
     max-w-4xl
     text-center
+    pt-4
+
+    sm:pt-0
   "
 >
+
 
           {/* =================================================
               ETIQUETA ONBOARDING
