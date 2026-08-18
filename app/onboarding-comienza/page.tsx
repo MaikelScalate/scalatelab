@@ -19,7 +19,7 @@ export default function OnboardingComienza() {
           w-full
           justify-center
           px-5
-          pt-12
+          pt-6
           sm:pt-8
           lg:pt-10
         "
@@ -72,9 +72,7 @@ export default function OnboardingComienza() {
     mx-auto
     w-full
     max-w-4xl
-    -translate-y-30
     text-center
-    sm:-translate-y-10
   "
 >
 
