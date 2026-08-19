@@ -37,7 +37,7 @@ const improvements: Improvement[] = [
     label: " Builder Set",
     title: "Crea tu set de joyas en menos de 1 minuto",
     intro:
-      "Aparte de crear toda la home, product page y muchos apartados más, cabe destacar el builder de verano donde decidimos agrupar todos las joyas de la marca para crear un set único, regalando la terecera pieza y aumentando el ticket medio.",
+      "Aparte de crear toda la home, product page y muchos apartados más, cabe destacar el builder de verano donde decidimos agrupar todos las joyas de la marca para crear un set único eligiendo color, regalando la terecera pieza y aumentando el ticket medio.",
     before: "",
     after: "",
     changes: [],
