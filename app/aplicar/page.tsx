@@ -599,59 +599,59 @@ ${formData.commitment}
             />
 
             <div className="mt-7 space-y-6">
-              <Field
-                label="Nombre y apellidos"
-                required
-                value={formData.name}
-                onChange={(value) =>
-                  updateField("name", value)
-                }
-                placeholder="Tu nombre"
-              />
+<Field
+  label="Nombre y apellidos"
+  required
+  value={formData.name}
+  onChange={(value) =>
+    updateField("name", value)
+  }
+  placeholder="Tu nombre"
+/>
 
-              <Field
-                label="Correo electrónico"
-                type="email"
-                required
-                value={formData.email}
-                onChange={(value) =>
-                  updateField("email", value)
-                }
-                placeholder="nombre@empresa.com"
-              />
+<Field
+  label="Página web de tu marca E-commerce"
+  required
+  value={formData.website}
+  onChange={(value) =>
+    updateField("website", value)
+  }
+  placeholder="tumarca.com"
+/>
 
-              <PhoneField
-                country={phoneCountry}
-                onCountryChange={setPhoneCountry}
-                value={formData.phone}
-                onChange={(value) => updateField("phone", value)}
-              />
+<SelectField
+  label="Tu cargo actual en la empresa"
+  required
+  value={formData.role}
+  onChange={(value) =>
+    updateField("role", value)
+  }
+  options={[
+    "Fundador/a",
+    "CEO",
+    "CMO",
+    "COO",
+    "Otro",
+  ]}
+/>
 
-              <Field
-                label="Página web de tu marca E-commerce"
-                required
-                value={formData.website}
-                onChange={(value) =>
-                  updateField("website", value)
-                }
-                placeholder="tumarca.com"
-              />
+<Field
+  label="Correo electrónico"
+  type="email"
+  required
+  value={formData.email}
+  onChange={(value) =>
+    updateField("email", value)
+  }
+  placeholder="nombre@empresa.com"
+/>
 
-              <SelectField
-                label="Tu cargo actual en la empresa"
-                required
-                value={formData.role}
-                onChange={(value) =>
-                  updateField("role", value)
-                }
-                options={[
-                  "Fundador/a",
-                  "CEO",
-                  "CMO",
-                  "COO",
-                  "Otro",
-                ]}
-              />
+<PhoneField
+  country={phoneCountry}
+  onCountryChange={setPhoneCountry}
+  value={formData.phone}
+  onChange={(value) => updateField("phone", value)}
+/>
             </div>
           </div>
 
