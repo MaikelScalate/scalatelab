@@ -94,3 +94,61 @@ timelineGlow 7s linear infinite;
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+@keyframes border-top {
+  0% {
+    transform: translateX(-140%);
+  }
+
+  100% {
+    transform: translateX(450%);
+  }
+}
+
+@keyframes border-right {
+  0% {
+    transform: translateY(-140%);
+  }
+
+  100% {
+    transform: translateY(450%);
+  }
+}
+
+@keyframes border-bottom {
+  0% {
+    transform: translateX(140%);
+  }
+
+  100% {
+    transform: translateX(-450%);
+  }
+}
+
+@keyframes border-left {
+  0% {
+    transform: translateY(140%);
+  }
+
+  100% {
+    transform: translateY(-450%);
+  }
+}
+
+.animate-border-top {
+  animation: border-top 3s linear infinite;
+}
+
+.animate-border-right {
+  animation: border-right 3s linear infinite;
+  animation-delay: 0.75s;
+}
+
+.animate-border-bottom {
+  animation: border-bottom 3s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-border-left {
+  animation: border-left 3s linear infinite;
+  animation-delay: 2.25s;
+}
