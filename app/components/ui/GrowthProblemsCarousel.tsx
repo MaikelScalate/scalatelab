@@ -128,12 +128,8 @@ export default function GrowthProblemsCarousel() {
         );
 
       if (initialCard) {
-        initialCard.scrollIntoView({
-          behavior: "instant",
-          block: "nearest",
-          inline: "center",
-        });
-      }
+  scrollToCard(carousel, initialCard, "instant");
+}
 
       updateActiveCard();
     });
@@ -163,31 +159,44 @@ export default function GrowthProblemsCarousel() {
       );
     };
   }, []);
+const scrollToCard = (
+  carousel: HTMLDivElement,
+  card: HTMLElement,
+  behavior: ScrollBehavior
+) => {
+  const carouselRect = carousel.getBoundingClientRect();
+  const cardRect = card.getBoundingClientRect();
 
+  const targetScrollLeft =
+    carousel.scrollLeft +
+    (cardRect.left + cardRect.width / 2) -
+    (carouselRect.left + carouselRect.width / 2);
+
+  carousel.scrollTo({
+    left: targetScrollLeft,
+    behavior,
+  });
+};
   /*
    * ==========================================
    * IR A UNA CARD
    * ==========================================
    */
 
-  const goToCard = (index: number) => {
-    const carousel = carouselRef.current;
+ const goToCard = (index: number) => {
+  const carousel = carouselRef.current;
 
-    if (!carousel) return;
+  if (!carousel) return;
 
-    const card =
-      carousel.querySelector<HTMLElement>(
-        `[data-index="${index}"]`
-      );
+  const card =
+    carousel.querySelector<HTMLElement>(
+      `[data-index="${index}"]`
+    );
 
-    if (!card) return;
+  if (!card) return;
 
-    card.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  };
+  scrollToCard(carousel, card, "smooth");
+};
 
   /*
    * ==========================================
