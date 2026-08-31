@@ -301,12 +301,36 @@ ${formData.commitment}
               "
             >
               Gracias por contarnos tu situación. Revisaremos
-              la información y nos pondremos en contacto contigo
-              si vemos que podemos ayudarte a escalar tu marca.
+              la información y nos pondremos en contacto contigo.
             </p>
-
+<p
+  className="
+    mx-auto
+    mt-5
+    max-w-md
+    text-xs
+    leading-6
+    text-white/35
+    sm:text-sm
+  "
+>
+  Para conocer más lo que hacemos,{" "}
+  <a
+    href="https://www.youtube.com/@maikelgudinecom"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      font-medium
+      text-purple-400
+      transition-colors
+      hover:text-purple-300
+    "
+  >
+    échale un vistazo a nuestro canal de YouTube →
+  </a>
+</p>
             <Link
-              href="/"
+              href="https://www.youtube.com/@maikelgudinecom"
               className="
                 mt-8
                 inline-flex
@@ -329,7 +353,7 @@ ${formData.commitment}
                 active:scale-95
               "
             >
-              Volver a la web
+              Ver canal YT
             </Link>
           </div>
         </section>
