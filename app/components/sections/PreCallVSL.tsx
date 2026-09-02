@@ -128,7 +128,7 @@ export default function PreCallVSL() {
             En ordenador:
             
             MIRA ESTE VÍDEO DE TAN SOLO
-            280 SEGUNDOS ANTES DE LA LLAMADA
+            260 SEGUNDOS ANTES DE LA LLAMADA
 
             El salto se fuerza únicamente desde lg.
             ========================================================= */}
@@ -186,8 +186,8 @@ export default function PreCallVSL() {
             sm:text-lg
           "
         >
-          Así sabrás de antemano los requisitos, cómo realizamos las llamadas
-          y el proceso detallado que seguimos para escalar marcas como la tuya.
+          Así sabrás de antemano los requisitos, qué veremos en la llamada
+          y el proceso exacto que seguimos para escalar marcas como la tuya.
         </p>
 
 
@@ -198,18 +198,18 @@ export default function PreCallVSL() {
 
           {/* Glow suave detrás del vídeo */}
           <div
-            className="
-              absolute
-              -inset-1
-              rounded-2xl
-              bg-gradient-to-r
-              from-blue/40
-              via-purple/40
-              to-blue/40
-              opacity-40
-              blur-xl
-            "
-          />
+  className="
+    absolute
+    -inset-2
+    rounded-2xl
+    bg-gradient-to-r
+    from-blue/70
+    via-purple/80
+    to-blue/70
+    opacity-70
+    blur-2xl
+  "
+/>
 
           {/* Marco */}
           <div
@@ -338,12 +338,12 @@ export default function PreCallVSL() {
               */}
 
               <iframe
-                className="absolute inset-0 h-full w-full"
-                src="https://www.youtube.com/embed/TU_VIDEO_ID"
-                title="VSL Scalate"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+  className="absolute inset-0 h-full w-full"
+  src="https://fast.wistia.net/embed/iframe/wq0bvwta6c"
+  title="VSL Scalate"
+  allow="autoplay; fullscreen"
+  allowFullScreen
+/>
 
               {/* Glow interior muy sutil */}
               <div

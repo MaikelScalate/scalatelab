@@ -18,12 +18,12 @@ export default function PreCallPage() {
 
       {/* Logo */}
       <header className="relative flex justify-center px-6 pt-4 sm:pt-6">
-  <img
-    src="/logo-scalate.png"
-    alt="Scalate"
-    className="h-auto w-[85px] object-contain sm:w-[100px]"
-  />
-</header>
+        <img
+          src="/logo-scalate.png"
+          alt="Scalate"
+          className="h-auto w-[85px] object-contain sm:w-[100px]"
+        />
+      </header>
 
       {/* VSL */}
       <PreCallVSL />
