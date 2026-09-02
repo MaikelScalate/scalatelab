@@ -133,10 +133,12 @@ const handleAccessSubmit = (e: FormEvent<HTMLFormElement>) => {
 
       <div className="relative z-10 mx-auto w-full max-w-[1340px] px-4 pb-10 sm:px-6 lg:px-0">
         <header className="flex justify-center pt-6 sm:pt-7 lg:pt-8">
-          <Link href="/" aria-label="Volver a Scalate" className="transition-transform duration-300 hover:scale-105">
-            <img src="/icon.png" alt="Scalate" className="h-14 w-14 object-contain sm:h-16 sm:w-16 lg:h-[72px] lg:w-[72px]" />
-          </Link>
-        </header>
+  <img
+    src="/icon.png"
+    alt="Scalate"
+    className="h-14 w-14 object-contain sm:h-16 sm:w-16 lg:h-[72px] lg:w-[72px]"
+  />
+</header>
 
         <section className="mx-auto mt-6 max-w-4xl text-center sm:mt-7 lg:mt-8">
           <div className="flex justify-center">
@@ -587,18 +589,12 @@ function AccessScreen({
       <Background />
 
       <header className="relative z-20 flex w-full justify-center px-5 pt-6 sm:pt-7 lg:pt-8">
-        <Link
-          href="/"
-          aria-label="Volver a Scalate"
-          className="transition-all duration-300 hover:scale-105"
-        >
-          <img
-            src="/icon.png"
-            alt="Scalate"
-            className="h-16 w-16 object-contain sm:h-14 sm:w-14"
-          />
-        </Link>
-      </header>
+  <img
+    src="/icon.png"
+    alt="Scalate"
+    className="h-16 w-16 object-contain sm:h-14 sm:w-14"
+  />
+</header>
 
       <section className="relative z-10 flex min-h-[78vh] items-center justify-center px-5 py-6 sm:px-8 sm:py-8">
         <div className="mx-auto w-full max-w-lg">
@@ -716,11 +712,8 @@ function StepOneContent({ videoStarted, questionnaireCompleted, onPlayVideo, onQ
       <div>
         <StepHeader icon="▶" eyebrow="01. Antes de continuar" title="Vídeo de onboarding" description="Visualiza este vídeo antes de continuar. Te ayudará a entender cómo funciona el proceso y qué esperamos de esta primera fase." />
         <VideoBox
-  started={videoStarted}
-  cover="/onboarding-video-cover.png"
   src="https://fast.wistia.net/embed/iframe/utwba4u0t8"
   title="Vídeo de onboarding Scalate"
-  onPlay={onPlayVideo}
   wistia
 />
       </div>
@@ -746,11 +739,8 @@ function StepTwoContent({ enabled, videoStarted, onPlayVideo, accessCompleted, o
       <StepHeader icon="02" eyebrow="2.1 Vídeo accesos a plataformas" title="Acceso a tu Shopify, GA4 y GSC" description="Así analizaremos a detalle tu marca y podremos crear el mejor plan de acción posible." />
       <div className="mt-6">
        <VideoBox
-  started={videoStarted}
-  cover="/onboarding-video-web-cover.png"
   src="https://fast.wistia.net/embed/iframe/hgxlqa5x0z"
   title="Vídeo de acceso a Shopify, GA4 y GSC"
-  onPlay={onPlayVideo}
   wistia
 />
       </div>
@@ -803,11 +793,8 @@ function StepThreeContent({
 
       <div className="mt-6">
        <VideoBox
-  started={videoStarted}
-  cover="/onboarding-video-publi-cover.png"
   src="https://fast.wistia.net/embed/iframe/9i7y8mwmrx"
   title="Vídeo de publicidad"
-  onPlay={onPlayVideo}
   wistia
 />
       </div>
@@ -889,11 +876,8 @@ function StepFourContent({
 
       <div className="mt-6">
         <VideoBox
-  started={videoStarted}
-  cover="/onboarding-video-email-cover.png"
   src="https://fast.wistia.net/embed/iframe/yfhfi4tyia"
   title="Vídeo de email marketing"
-  onPlay={onPlayVideo}
   wistia
 />
       </div>
@@ -975,18 +959,12 @@ function StepHeader({ icon, eyebrow, title, description, small = false }: { icon
 }
 
 function VideoBox({
-  started,
-  cover,
   src,
   title,
-  onPlay,
   wistia = false,
 }: {
-  started: boolean;
-  cover: string;
   src: string;
   title: string;
-  onPlay: () => void;
   wistia?: boolean;
 }) {
   return (
@@ -1005,69 +983,23 @@ function VideoBox({
         sm:rounded-2xl
       "
     >
-      {started ? (
-        wistia ? (
-          <iframe
-            src={`${src}?autoPlay=true`}
-            title={title}
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            className="absolute inset-0 h-full w-full border-0"
-          />
-        ) : (
-          <video
-            className="absolute inset-0 h-full w-full object-contain"
-            src={src}
-            controls
-            playsInline
-            preload="metadata"
-            poster={cover}
-            autoPlay
-            title={title}
-          />
-        )
+      {wistia ? (
+        <iframe
+          src={src}
+          title={title}
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full border-0"
+        />
       ) : (
-        <button
-          type="button"
-          onClick={onPlay}
-          aria-label={`Reproducir ${title}`}
-          className="absolute inset-0 h-full w-full cursor-pointer border-0 bg-black p-0"
-        >
-          <img
-            src={cover}
-            alt={title}
-            className="h-full w-full object-cover"
-          />
-
-          <span
-            aria-hidden="true"
-            className="
-              absolute
-              left-1/2
-              top-1/2
-              flex
-              h-14
-              w-14
-              -translate-x-1/2
-              -translate-y-1/2
-              items-center
-              justify-center
-              rounded-full
-              bg-black/80
-              text-white
-              shadow-[0_0_25px_rgba(0,0,0,0.5)]
-              backdrop-blur-sm
-              transition-transform
-              hover:scale-105
-              sm:h-20
-              sm:w-20
-            "
-          >
-            <span className="ml-1 text-xl sm:text-3xl">
-              ▶
-            </span>
-          </span>
-        </button>
+        <video
+          className="absolute inset-0 h-full w-full object-contain"
+          src={src}
+          controls
+          playsInline
+          preload="metadata"
+          title={title}
+        />
       )}
     </div>
   );

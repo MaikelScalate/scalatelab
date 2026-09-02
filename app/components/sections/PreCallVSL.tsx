@@ -164,7 +164,7 @@ export default function PreCallVSL() {
                 text-transparent
               "
             >
-              280 SEGUNDOS
+              260 SEGUNDOS
             </span>{" "}
             antes de la llamada
           </span>

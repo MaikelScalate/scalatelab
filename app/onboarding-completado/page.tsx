@@ -24,23 +24,17 @@ export default function OnboardingCompletado() {
           lg:pt-10
         "
       >
-        <Link
-          href="/"
-          aria-label="Volver a Scalate"
-          className="transition-all duration-300 hover:scale-105"
-        >
-          <img
-            src="/icon.png"
-            alt="Scalate"
-            className="
-              h-16
-              w-16
-              object-contain
-              sm:h-16
-              sm:w-16
-            "
-          />
-        </Link>
+        <img
+  src="/icon.png"
+  alt="Scalate"
+  className="
+    h-16
+    w-16
+    object-contain
+    sm:h-16
+    sm:w-16
+  "
+/>
       </header>
 
       {/* =====================================================
