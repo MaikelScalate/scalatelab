@@ -529,7 +529,7 @@ ${formData.commitment}
             sm:leading-8
           "
         >
-          Queremos ayudarte. Pero antes de ello, debemos entender primero en qué punto está tu marca, cuáles son tus objetivos y qué está impidiendo
+          Queremos ayudarte. Pero antes de ello, debemos entender en qué punto está tu marca, cuáles son tus objetivos y qué está impidiendo
           que los consigas. Cuéntanos tu situación y estudiaremos tu caso.
         </p>
       </section>
