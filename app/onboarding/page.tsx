@@ -720,7 +720,7 @@ function StepOneContent({ videoStarted, questionnaireCompleted, onPlayVideo, onQ
 
       <div className="mt-6 border-t border-white/[0.07] pt-6">
         <StepHeader icon="▣" eyebrow="1.1 Primer paso" title="Cuestionario inicial" description="Responde el siguiente cuestionario con la mayor cantidad de información posible. Cuanto mejor conozcamos tu marca, mejor podremos trabajar sobre ella." />
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQ8awNtuz400Ni4NpLB7bmHq1ac5aayLH2Z5AIC4uU4TRasA/viewform?usp=send_form" target="_blank" rel="noopener noreferrer" onClick={onQuestionnaire} className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#D946EF] px-5 py-3.5 text-sm font-semibold text-white shadow-[0_0_25px_rgba(217,70,239,0.18)] transition-all hover:-translate-y-0.5 sm:w-auto">
+        <a href="https://form.typeform.com/to/vZFbTGwA" target="_blank" rel="noopener noreferrer" onClick={onQuestionnaire} className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#D946EF] px-5 py-3.5 text-sm font-semibold text-white shadow-[0_0_25px_rgba(217,70,239,0.18)] transition-all hover:-translate-y-0.5 sm:w-auto">
           {questionnaireCompleted ? "✓ CUESTIONARIO COMPLETADO" : "COMPLETAR CUESTIONARIO"}<span className="ml-2">↗</span>
         </a>
         <p className="mt-2 text-xs text-white/25">Se abrirá en una nueva pestaña</p>
