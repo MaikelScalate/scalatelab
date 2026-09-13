@@ -44,7 +44,7 @@ const faqItems: FAQItem[] = [
   {
     question: "¿Cuánto dura el análisis y la optimización web?",
     answer:
-"El tiempo depende del punto de partida de cada marca y de las mejoras que necesite. Normalmente, un proceso completo y bien ejecutado se desarrolla en un plazo de entre 30 y 60 días.",
+"El tiempo depende del punto de partida de cada marca y de las mejoras que necesite. Normalmente, un proceso completo y bien ejecutado se desarrolla en un plazo de entre 40 y 60 días.",
   },
 {
     question: "¿Cómo es trabajar con vosotros?",
