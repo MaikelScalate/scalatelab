@@ -295,7 +295,7 @@ export default function TreePage() {
                 group-hover:text-purple-300
               "
             >
-              ↗
+              →
             </span>
           </a>
 
@@ -330,17 +330,18 @@ export default function TreePage() {
               </p>
 
               <p className="mt-0.5 text-xs text-white/40">
-                Pemítenos conocer tu marca para ayudarte a crecer.
+                Permítenos conocer tu marca para ayudarte.
               </p>
             </div>
 
             <span
               className="
                 text-lg
-                text-purple-300
-                transition-transform
+                text-white/30
+                transition-all
                 duration-300
                 group-hover:translate-x-1
+                group-hover:text-purple-300
               "
             >
               →
