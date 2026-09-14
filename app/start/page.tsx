@@ -205,7 +205,7 @@ export default function TreePage() {
                 </p>
 
                 <p className="mt-0.5 text-xs text-white/35">
-                  Descubre cómo ayudamos a founders a crecer sus marcas
+                  Descubre cómo ayudamos a founders a eliminar cuellos de botella y crecer
                 </p>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function TreePage() {
                 </p>
 
                 <p className="mt-0.5 text-xs text-white/35">
-                  Obtén mucho valor y descubre cómo escalamos marcas.
+                  Obtén mucho más valor
                 </p>
               </div>
             </div>
@@ -330,7 +330,7 @@ export default function TreePage() {
               </p>
 
               <p className="mt-0.5 text-xs text-white/40">
-                Permítenos conocer tu marca para ayudarte.
+                Permítenos conocerte para poder ayudarte.
               </p>
             </div>
 
