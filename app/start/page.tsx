@@ -124,18 +124,7 @@ export default function TreePage() {
             LLEVA TU MARCA E-COMMERCE AL SIGUIENTE NIVEL
           </h1>
 
-          <p
-            className="
-              mx-auto
-              mt-3
-              max-w-md
-              text-sm
-              leading-6
-              text-white/45
-            "
-          >
-            Análisis, estrategia y crecimiento para marcas que quieren escalar.
-          </p>
+    
         </div>
 
         {/* LINKS */}
