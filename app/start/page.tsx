@@ -201,7 +201,7 @@ export default function TreePage() {
 
               <div>
                 <p className="text-sm font-semibold text-white">
-                  Conoce Scalate
+                  Conoce Scalate (Web)
                 </p>
 
                 <p className="mt-0.5 text-xs text-white/35">
