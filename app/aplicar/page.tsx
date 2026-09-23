@@ -1076,7 +1076,7 @@ ${formData.commitment}
     }
   `}
 >
-  Enviar por WhatsApp (respuesta rápida)
+  Por WhatsApp (respuesta rápida)
 </button>
               {submitError && (
   <p className="mt-4 text-center text-sm text-red-400">
