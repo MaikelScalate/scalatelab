@@ -207,9 +207,9 @@ export default function UniqueWebSection() {
     lg:text-4xl
   "
 >
-  ¿Qué consigues con una{" "}
+  ¿Qué consigues con un{" "}
   <span className="text-purple-400">
-    web única y diferencial?
+    sistema de conversión único?
   </span>
 </h2>
 

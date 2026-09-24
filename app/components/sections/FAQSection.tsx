@@ -13,13 +13,13 @@ type FAQItem = {
 
 const faqItems: FAQItem[] = [
   {
-    question: "¿Os basáis en mejorar solo mi tienda Shopify?",
+    question: "¿Os basáis en mejorar solo el diseño de mi tienda Shopify?",
     answer:
-"No. Nuestro enfoque principal es optimizar tu tienda online, ya que da igual cuánto tráfico generes: si tu web no está preparada para convertir, estarás perdiendo dinero. Una vez optimizada, podemos trabajar otras áreas para seguir creciendo.",  },
+"No. Nuestro enfoque principal es optimizar tu tienda online, ya que da igual cuánto tráfico generes: si tus números internos y tu sistema de conversión no están preparados para convertir más y mejor, estarás perdiendo dinero. Una vez optimizado, podemos trabajar otras áreas para seguir creciendo.",  },
   {
     question: "¿Y si mi web ya está bien diseñada?",
     answer:
-      "Que una web se vea bien no significa que esté convirtiendo todo lo que podría. En Scalate, analizamos cómo interactúan los usuarios con tu tienda para potenciar lo que ya funciona y mejorar lo que frena mejores resultados.",
+      "Que una web se vea bien no significa que esté convirtiendo todo lo que podría. Además en Scalate, no solo hacemos webs, sino que diseñamos a medida sistemas de conversión únicos para las tiendas con las que colaboramos que les permiten ganar mucho más dinero con el mismo tráfico.",
   },
   {
     question: "¿Cómo sabéis qué mejorar en mi tienda?",
@@ -29,12 +29,12 @@ const faqItems: FAQItem[] = [
   {
     question: "¿Qué hacéis exactamente para analizarla?",
     answer:
-      "Realizamos un análisis exhaustivo de tu E-commerce mediante diversas plataformas (Shopify, GA4, GSC, Clarity y más) para detectar fricciones, cuellos de botella y oportunidades de mejora. Una vez realizada la auditoría, te presentamos un plan de acción claro y detallado para optimizar tu tienda.",
+      "Realizamos un análisis exhaustivo de tu E-commerce viendo los números internos y haciendo una auditoría CRO mediante diversas plataformas, con el objetivo de detectar fricciones, cuellos de botella y oportunidades de mejora. Una vez realizado, te presentamos un plan de acción claro y detallado para optimizar tu tienda.",
   },
   {
     question: "¿Qué métricas mejoráis en mi E-commerce?",
     answer:
-      "Trabajamos principalmente sobre métricas relacionadas con el crecimiento y la rentabilidad de tu marca, como son la tasa de conversión, el ticket medio y la recurrencia. Dependiendo de cada marca, también podemos identificar otras métricas relevantes.",
+      "Trabajamos principalmente sobre métricas relacionadas con el crecimiento y la rentabilidad de tu marca, como son la tasa de conversión, el ticket medio y la recurrencia. Dependiendo de cada marca, identificamos sus métricas relevantes a mejorar y actuamos sobre ellas.",
   },
   {
     question: "¿Dependeré de desarrolladores o deberé modificar código?",
@@ -49,7 +49,7 @@ const faqItems: FAQItem[] = [
 {
     question: "¿Cómo es trabajar con vosotros?",
     answer:
-"Trabajamos de forma cercana, con comunicación directa y constante. Analizamos tu marca, aportamos recomendaciones estratégicas y te acompañamos en cada mejora para hacer crecer tu E-commerce.",
+"Trabajamos de forma cercana, con comunicación directa y constante. Analizamos tu marca, aportamos recomendaciones estratégicas y te acompañamos en cada mejora para hacer crecer tu E-commerce. Tu crecimiento es nuestro objetivo principal.",
   },
 ];
 
