@@ -215,7 +215,7 @@ export default function TreePage() {
 
           {/* YOUTUBE */}
           <a
-            href="https://www.youtube.com/@maikelgudinecom"
+            href="https://yt.openinapp.co/u1fyssw"
             target="_blank"
             rel="noopener noreferrer"
             className="
