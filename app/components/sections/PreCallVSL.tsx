@@ -1,3 +1,5 @@
+import Button from "../ui/Button";
+
 export default function PreCallVSL() {
   return (
     <section className="relative overflow-hidden px-6 pb-24 pt-5">
@@ -49,6 +51,7 @@ export default function PreCallVSL() {
         {/* =========================================================
             BADGE
             ========================================================= */}
+
         <div className="mb-5 flex justify-center">
           <div
             className="
@@ -122,16 +125,10 @@ export default function PreCallVSL() {
           </div>
         </div>
 
-
         {/* =========================================================
             TÍTULO
-            En ordenador:
-            
-            MIRA ESTE VÍDEO DE TAN SOLO
-            260 SEGUNDOS ANTES DE LA LLAMADA
-
-            El salto se fuerza únicamente desde lg.
             ========================================================= */}
+
         <h1
           className="
             mx-auto
@@ -171,10 +168,10 @@ export default function PreCallVSL() {
 
         </h1>
 
-
         {/* =========================================================
             DESCRIPCIÓN
             ========================================================= */}
+
         <p
           className="
             mx-auto
@@ -190,26 +187,26 @@ export default function PreCallVSL() {
           y el proceso exacto que seguimos para escalar marcas como la tuya.
         </p>
 
-
         {/* =========================================================
             VIDEO
             ========================================================= */}
+
         <div className="group relative mx-auto mt-10 max-w-4xl">
 
           {/* Glow suave detrás del vídeo */}
           <div
-  className="
-    absolute
-    -inset-2
-    rounded-2xl
-    bg-gradient-to-r
-    from-blue/70
-    via-purple/80
-    to-blue/70
-    opacity-70
-    blur-2xl
-  "
-/>
+            className="
+              absolute
+              -inset-2
+              rounded-2xl
+              bg-gradient-to-r
+              from-blue/70
+              via-purple/80
+              to-blue/70
+              opacity-70
+              blur-2xl
+            "
+          />
 
           {/* Marco */}
           <div
@@ -225,6 +222,7 @@ export default function PreCallVSL() {
             {/* =====================================================
                 LÍNEA DE LUZ SUPERIOR
                 ===================================================== */}
+
             <div className="pointer-events-none absolute inset-0 rounded-2xl">
               <div
                 className="
@@ -243,10 +241,10 @@ export default function PreCallVSL() {
               />
             </div>
 
-
             {/* =====================================================
                 LÍNEA DE LUZ DERECHA
                 ===================================================== */}
+
             <div className="pointer-events-none absolute inset-0 rounded-2xl">
               <div
                 className="
@@ -265,10 +263,10 @@ export default function PreCallVSL() {
               />
             </div>
 
-
             {/* =====================================================
                 LÍNEA DE LUZ INFERIOR
                 ===================================================== */}
+
             <div className="pointer-events-none absolute inset-0 rounded-2xl">
               <div
                 className="
@@ -287,10 +285,10 @@ export default function PreCallVSL() {
               />
             </div>
 
-
             {/* =====================================================
                 LÍNEA DE LUZ IZQUIERDA
                 ===================================================== */}
+
             <div className="pointer-events-none absolute inset-0 rounded-2xl">
               <div
                 className="
@@ -309,10 +307,10 @@ export default function PreCallVSL() {
               />
             </div>
 
-
             {/* =====================================================
                 CONTENEDOR DEL VÍDEO
                 ===================================================== */}
+
             <div
               className="
                 relative
@@ -323,27 +321,14 @@ export default function PreCallVSL() {
               "
             >
 
-              {/*
-                ===================================================
-                WISTIA
-
-                AQUÍ debes colocar el embed de Wistia.
-
-                Cuando me pases el código de embed de Wistia,
-                sustituimos este bloque por el código exacto.
-
-                Por ahora dejo un iframe genérico para que la
-                estructura visual siga funcionando.
-                ===================================================
-              */}
-
+              {/* Wistia */}
               <iframe
-  className="absolute inset-0 h-full w-full"
-  src="https://fast.wistia.net/embed/iframe/wq0bvwta6c"
-  title="VSL Scalate"
-  allow="autoplay; fullscreen"
-  allowFullScreen
-/>
+                className="absolute inset-0 h-full w-full"
+                src="https://fast.wistia.net/embed/iframe/wq0bvwta6c"
+                title="VSL Scalate"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
 
               {/* Glow interior muy sutil */}
               <div
@@ -357,15 +342,14 @@ export default function PreCallVSL() {
               />
 
             </div>
+
           </div>
         </div>
 
-
         {/* =========================================================
-            TEXTO DEBAJO DEL VÍDEO
-            - Móvil: pequeño
-            - Ordenador: ligeramente mayor
+            TEXTO + CTA DEBAJO DEL VÍDEO
             ========================================================= */}
+
         <p
           className="
             mt-6
@@ -379,6 +363,36 @@ export default function PreCallVSL() {
         >
           Es importante ver el vídeo completo
         </p>
+
+        {/* =========================================================
+            CTA YOUTUBE
+            ========================================================= */}
+
+        <div className="mt-12 flex justify-center">
+          <Button
+            href="https://www.youtube.com/@MaikelGudinEcom"
+            className="
+              px-7
+              py-4
+              text-sm
+              sm:px-8
+              sm:py-4
+              sm:text-base
+            "
+          >
+            Obtén más valor antes de la llamada
+            <span
+              className="
+                ml-2
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            >
+              →
+            </span>
+          </Button>
+        </div>
 
       </div>
     </section>
