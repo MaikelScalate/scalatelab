@@ -314,7 +314,9 @@ useEffect(() => {
   </button>
 
 </div>
- <div className="grid grid-cols-3 gap-5">
+ 
+<div className="grid grid-cols-[1.15fr_0.75fr_0.925fr] gap-5">
+
 
   <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
 
