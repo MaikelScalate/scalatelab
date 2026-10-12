@@ -16,8 +16,8 @@ import {
 export default function ShopifyDashboard() {
     const MAX_SALES = 999_999;
 
-const [sales, setSales] = useState(48200);
-const [orders, setOrders] = useState(1248);
+const [sales, setSales] = useState(435876);
+const [orders, setOrders] = useState(11285);
 const [conversion] = useState(4.9);
 
 const [orderId, setOrderId] = useState(10542);
@@ -62,8 +62,8 @@ useEffect(() => {
       const next = prev + amount;
 
       return next >= MAX_SALES
-        ? 48200
-        : next;
+  ? 435876
+  : next;
     });
 
     setOrders((prev) => prev + 1);
