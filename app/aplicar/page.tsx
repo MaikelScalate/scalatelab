@@ -926,21 +926,7 @@ ${formData.commitment}
                 "
               >
                 Revisaremos la información que nos has
-                proporcionado para valorar si podemos ayudarte
-                realmente a conseguir tus objetivos.
-              </p>
-
-              <p
-                className="
-                  mt-4
-                  text-sm
-                  leading-6
-                  text-white/40
-                "
-              >
-                Si vemos que existe una oportunidad clara de
-                trabajar juntos, nos pondremos en contacto
-                contigo.
+                proporcionado para valorar si podemos ayudarte. Nos pondremos en contacto contigo.
               </p>
             </div>
 
