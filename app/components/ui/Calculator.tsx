@@ -52,14 +52,14 @@ let sessionsScore = 0;
 
 if (sessions >= 150000) sessionsScore = 15;
 else if (sessions >= 100000) sessionsScore = 12;
-else if (sessions >= 70000) sessionsScore = 9;
+else if (sessions >= 500000) sessionsScore = 9;
 else if (sessions >= 40000) sessionsScore = 6;
 else if (sessions >= 20000) sessionsScore = 3;
 
 let revenueScore = 0;
 
 if (revenue >= 1300000) revenueScore = 25;
-else if (revenue >= 700000) revenueScore = 20;
+else if (revenue >= 5000000) revenueScore = 20;
 else if (revenue >= 350000) revenueScore = 15;
 else if (revenue >= 150000) revenueScore = 10;
 else if (revenue >= 50000) revenueScore = 5;
@@ -211,7 +211,7 @@ lg:max-w-none
                     pattern="[0-9]*"
                     value={sessions.toLocaleString("es-ES")}
                     min={0}
-                    max={150000}
+                    max={500000}
                     step={500}
                     onChange={(e) => {
 
@@ -220,13 +220,13 @@ lg:max-w-none
                       );
 
                       if (value < 0) value = 0;
-                      if (value > 150000) value = 150000;
+                      if (value > 500000) value = 500000;
 
                       setSessions(value);
 
                       const newOrders = Math.min(
                         Math.round(value * (conversion / 100)),
-                        7000
+                        50000
                       );
 
                       setOrders(newOrders);
@@ -252,8 +252,8 @@ px-3
                   />
 
                   <span className="text-xs lg:text-sm text-white/40">
-  <span className="lg:hidden">150k</span>
-  <span className="hidden lg:inline">150.000</span>
+  <span className="lg:hidden">500k</span>
+  <span className="hidden lg:inline">500.000</span>
 </span>
 
                 </div>
@@ -263,7 +263,7 @@ px-3
               <input
                 type="range"
                 min="0"
-                max="150000"
+                max="500000"
                 step="500"
                 value={sessions}
                 onChange={(e) => {
@@ -276,7 +276,7 @@ px-3
     Math.round(
       newSessions * (conversion / 100)
     ),
-    7000
+    50000
   )
 );
                 }}
@@ -329,7 +329,7 @@ px-3
                     pattern="[0-9]*"
                     value={orders.toLocaleString("es-ES")}
                     min={1}
-                    max={7000}
+                    max={50000}
                     step={1}
                     onChange={(e) => {
 
@@ -338,7 +338,7 @@ px-3
                       );
 
                       if (value < 1) value = 1;
-                      if (value > 7000) value = 7000;
+                      if (value > 50000) value = 50000;
 
                       let newConversion =
                         (value / sessions) * 100;
@@ -374,7 +374,7 @@ px-3
                   />
 
                   <span className="text-xs lg:text-sm text-white/40">
-                  7000
+                  50000
                   </span>
 
                 </div>
@@ -384,7 +384,7 @@ px-3
               <input
                 type="range"
                 min="1"
-                max="7000"
+                max="50000"
                 step="1"
                 value={orders}
                 onChange={(e) => {
@@ -511,7 +511,7 @@ px-3
     Math.round(
       sessions * (newConversion / 100)
     ),
-    7000
+    50000
   )
 );
                 }}
