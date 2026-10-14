@@ -300,7 +300,7 @@ px-3
                   />
 
                   <span className="text-xs lg:text-sm text-white/40">
-                  50000
+                  50.000
                   </span>
 
                 </div>
