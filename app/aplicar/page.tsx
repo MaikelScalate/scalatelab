@@ -926,7 +926,8 @@ ${formData.commitment}
                 "
               >
                 Revisaremos la información que nos has
-                proporcionado para valorar si podemos ayudarte. Nos pondremos en contacto contigo.
+                proporcionado para valorar si podemos ayudarte. Nos pondremos en contacto
+                contigo.
               </p>
             </div>
 
