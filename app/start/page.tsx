@@ -112,17 +112,10 @@ export default function TreePage() {
             E-commerce Growth Company
           </p>
 
-          <h1
-            className="
-              mt-4
-              text-2xl
-              font-semibold
-              tracking-[-0.045em]
-              sm:text-3xl
-            "
-          >
-           ESCALEMOS TU MARCA E-COMMERCE
-          </h1>
+          <h1 className="mt-4 text-2xl font-semibold tracking-[-0.045em] sm:text-3xl sm:whitespace-nowrap">
+  ESCALEMOS TU MARCA <br className="sm:hidden" /> E-COMMERCE
+</h1>
+
 
     
         </div>
