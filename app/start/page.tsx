@@ -121,7 +121,7 @@ export default function TreePage() {
               sm:text-3xl
             "
           >
-            LLEVA TU MARCA E-COMMERCE AL SIGUIENTE NIVEL
+           ESCALEMOS TU MARCA E-COMMERCE
           </h1>
 
     
