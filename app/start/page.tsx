@@ -208,7 +208,7 @@ export default function TreePage() {
 
           {/* YOUTUBE */}
           <a
-            href="https://yt.openinapp.co/u1fyssw"
+            href="https://linktw.in/fnuvgf"
             target="_blank"
             rel="noopener noreferrer"
             className="
