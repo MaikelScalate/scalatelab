@@ -493,7 +493,7 @@ px-3
                     pattern="[0-9]*"
                     value={`${ticket.toLocaleString("es-ES")} €`}
                     min={0}
-                    max={250}
+                    max={1000}
                     step={1}
                     onChange={(e) => {
 
@@ -505,7 +505,7 @@ px-3
                       );
 
                       if (value < 0) value = 0;
-                      if (value > 250) value = 250;
+                      if (value > 1000) value = 1000;
 
                       setTicket(value);
 
@@ -528,7 +528,7 @@ px-3
                   />
 
                   <span className="text-xs lg:text-sm text-white/40">
-                    250€
+                    1.000€
                   </span>
 
                 </div>
@@ -538,7 +538,7 @@ px-3
               <input
                 type="range"
                 min="0"
-                max="250"
+                max="1000"
                 value={ticket}
                 onChange={(e) => setTicket(Number(e.target.value))}
                 className="
