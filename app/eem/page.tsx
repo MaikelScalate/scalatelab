@@ -300,6 +300,7 @@ const [openProductIds, setOpenProductIds] = useState<number[]>([]);
 const [openMarketingPeriods, setOpenMarketingPeriods] = useState<string[]>([]);
 const [openConversionPeriods, setOpenConversionPeriods] = useState<string[]>([]);
 const [openRetentionPeriods, setOpenRetentionPeriods] = useState<string[]>([]);
+const [openOpexPeriods, setOpenOpexPeriods] = useState<string[]>([]);
 const [opexData, setOpexData] = useState<OpexPeriodInput[]>([
   {
     period: "30D",
@@ -666,7 +667,6 @@ if (accessGranted) {
                 Datos del periodo de 30 días, salvo el margen del primer producto.
               </p>
             </div>
-
             <div className="grid gap-4 sm:grid-cols-2">
               {[
                 {
@@ -1778,12 +1778,29 @@ if (accessGranted) {
               key={periodData.period}
               className="rounded-2xl border border-white/[0.10] bg-white/[0.025] p-5 sm:p-6"
             >
-              <h4 className="mb-5 text-lg font-semibold text-purple-200">
-                Periodo: {periodData.period}
-              </h4>
+              <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+  <h4 className="text-lg font-semibold text-purple-200">
+    Periodo: {periodData.period}
+  </h4>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                {fields.map((field) => (
+  <button
+    type="button"
+    onClick={() =>
+      setOpenOpexPeriods((current) =>
+        current.includes(periodData.period)
+          ? current.filter((period) => period !== periodData.period)
+          : [...current, periodData.period]
+      )
+    }
+    className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#D946EF] px-5 py-2 text-sm font-semibold text-white transition-all hover:-translate-y-0.5"
+  >
+    {openOpexPeriods.includes(periodData.period) ? "Cerrar" : "Realizar"}
+  </button>
+</div>
+
+                            {openOpexPeriods.includes(periodData.period) && (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {fields.map((field) => (
                   <div key={field.key}>
                     <label className="mb-2 block text-sm text-white/60">
                       {field.label}
@@ -1808,8 +1825,9 @@ if (accessGranted) {
                       className="h-11 w-full rounded-xl border border-white/[0.12] bg-white/[0.04] px-4 text-sm text-white outline-none focus:border-purple-400/50"
                     />
                   </div>
-                ))}
-              </div>
+                                  ))}
+                </div>
+              )}
             </div>
           );
         })}
