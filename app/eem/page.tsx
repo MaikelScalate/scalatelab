@@ -834,7 +834,7 @@ if (accessGranted) {
           </header>
 
           {/* CONTENIDO */}
-          <div className="mx-auto max-w-[1600px] px-5 py-8 sm:px-8 lg:py-10">
+          <div className="mx-auto w-full min-w-0 max-w-[1600px] px-5 py-8 sm:px-8 lg:py-10">
 
             {/* INTRODUCCIÓN */}
             <div className="mb-9 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
@@ -909,7 +909,7 @@ if (accessGranted) {
             </div>
 
             {/* CUERPO: MENÚ + CONTENIDO */}
-            <div className="grid items-start gap-6 lg:grid-cols-[290px_minmax(0,1fr)]">
+            <div className="grid grid-cols-1 w-full min-w-0 items-start gap-6 lg:grid-cols-[290px_minmax(0,1fr)]">
 
               {/* NAVEGACIÓN LATERAL */}
               <aside className="rounded-2xl border border-white/[0.08] bg-[#090a11]/95 p-4 lg:sticky lg:top-[100px]">
@@ -969,7 +969,7 @@ if (accessGranted) {
               </aside>
 
               {/* PANEL PRINCIPAL */}
-              <section className="min-h-[560px] rounded-2xl border border-white/[0.08] bg-[#090a11]/95 p-6 sm:p-9">
+              <section className="w-full min-w-0 min-h-[560px] rounded-2xl border border-white/[0.08] bg-[#090a11]/95 p-4 sm:p-9">
 
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <span className="rounded-full border border-purple-400/20 bg-purple-500/[0.09] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-purple-300">
