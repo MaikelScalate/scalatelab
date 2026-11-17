@@ -1934,8 +1934,8 @@ if (accessGranted) {
       </header>
 
       {/* CONTENIDO */}
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-5 pb-6 pt-20">
-        <div className="mx-auto w-full max-w-lg">
+      <section className="relative z-10 flex min-h-screen items-center justify-center px-5 pt-10 pb-4">
+        <div className="mx-auto w-full max-w-lg lg:scale-90 lg:origin-center">
 
           {/* ETIQUETA */}
           <div className="flex justify-center">
@@ -1949,7 +1949,7 @@ if (accessGranted) {
           </div>
 
           {/* TÍTULO */}
-          <div className="mt-7 text-center">
+          <div className="mt-5 lg:mt-4 text-center">
             <h1 className="text-[2.5rem] font-semibold leading-[1.04] tracking-[-0.055em] sm:text-5xl">
               E-commerce
               <br />
@@ -1965,14 +1965,14 @@ if (accessGranted) {
           </div>
 
           {/* TARJETA DE ACCESO */}
-          <div className="relative mt-9 overflow-hidden rounded-[28px] border border-white/[0.10] bg-[#08090f]/90 p-6 shadow-[0_0_80px_rgba(124,58,237,0.10)] backdrop-blur-xl sm:p-8">
+          <div className="relative mt-6 overflow-hidden rounded-[28px] border border-white/[0.10] bg-[#08090f]/90 p-6 shadow-[0_0_80px_rgba(124,58,237,0.10)] backdrop-blur-xl sm:p-8">
 
             <div className="pointer-events-none absolute left-1/2 top-0 h-32 w-64 -translate-x-1/2 rounded-full bg-purple-600/10 blur-[70px]" />
 
             <div className="relative">
 
               {/* ICONO */}
-              <div className="mb-6 flex justify-center">
+              <div className="mb-4 lg:mb-3 flex justify-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-purple-400/20 bg-purple-500/[0.08] text-purple-300 shadow-[0_0_30px_rgba(168,85,247,0.12)]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2002,7 +2002,7 @@ if (accessGranted) {
               </div>
 
               {/* FORMULARIO */}
-              <form onSubmit={handleSubmit} className="mt-7">
+              <form onSubmit={handleSubmit} className="mt-5 lg:mt-4">
 
                 <label
                   htmlFor="eem-password"
@@ -2072,7 +2072,7 @@ if (accessGranted) {
           </div>
 
           {/* PIE */}
-          <p className="mt-7 text-center text-[10px] font-medium uppercase tracking-[0.18em] text-white/20">
+          <p className="mt-5 text-center text-[10px] font-medium uppercase tracking-[0.18em] text-white/20">
             SCALATE · E-COMMERCE GROWTH COMPANY
           </p>
 
