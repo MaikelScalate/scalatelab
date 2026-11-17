@@ -44,8 +44,6 @@ type RetentionPeriodInput = {
   totalPurchasingCustomers: string;
   cohortInitialCustomers: string;
   cohortRepeatCustomers: string;
-  averageTimeBetweenPurchases: string;
-  medianTimeBetweenPurchases: string;
 };
 type OpexPeriodInput = {
   period: string;
@@ -179,8 +177,6 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
-    averageTimeBetweenPurchases: "",
-    medianTimeBetweenPurchases: "",
   },
   {
     period: "90D",
@@ -188,8 +184,6 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
-    averageTimeBetweenPurchases: "",
-    medianTimeBetweenPurchases: "",
   },
   {
     period: "6M",
@@ -197,8 +191,6 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
-    averageTimeBetweenPurchases: "",
-    medianTimeBetweenPurchases: "",
   },
   {
     period: "12M",
@@ -206,8 +198,6 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
-    averageTimeBetweenPurchases: "",
-    medianTimeBetweenPurchases: "",
   },
 ]);
 
@@ -443,25 +433,42 @@ const handleFinishAnalysis = async () => {
     }),
 
     retention: retentionData.map((item) => {
-      const returning = toNumber(item.returningCustomers);
-      const total = toNumber(item.totalPurchasingCustomers);
-      const cohortInitial = toNumber(item.cohortInitialCustomers);
-      const cohortRepeat = toNumber(item.cohortRepeatCustomers);
+  const returning = toNumber(item.returningCustomers);
+  const total = toNumber(item.totalPurchasingCustomers);
+  const cohortInitial = toNumber(item.cohortInitialCustomers);
+  const cohortRepeat = toNumber(item.cohortRepeatCustomers);
 
-      return {
-        period: item.period,
-        returningCustomerRate:
-          total !== null && total > 0 && returning !== null
-            ? (returning / total) * 100
-            : null,
-        repeatPurchaseRate:
-          cohortInitial !== null &&
-          cohortInitial > 0 &&
-          cohortRepeat !== null
-            ? (cohortRepeat / cohortInitial) * 100
-            : null,
-      };
-    }),
+  const conversionPeriod = conversionData.find(
+    (period) => period.period === item.period
+  );
+
+  const orders = conversionPeriod
+    ? toNumber(conversionPeriod.orders)
+    : null;
+
+  return {
+    period: item.period,
+
+    returningCustomerRate:
+      total !== null && total > 0 && returning !== null
+        ? (returning / total) * 100
+        : null,
+
+    repeatPurchaseRate:
+      cohortInitial !== null &&
+      cohortInitial > 0 &&
+      cohortRepeat !== null
+        ? (cohortRepeat / cohortInitial) * 100
+        : null,
+
+    purchaseFrequency:
+      total !== null &&
+      total > 0 &&
+      orders !== null
+        ? orders / total
+        : null,
+  };
+}),
   };
 
   const payload = {
@@ -1654,8 +1661,8 @@ if (accessGranted) {
         Retención y recurrencia
       </h3>
       <p className="mt-1 text-sm text-white/40">
-        Recopilaremos los datos de clientes recurrentes, recompra por cohortes
-        y frecuencia temporal entre compras.
+        Recopilaremos los datos de clientes recurrentes y recompra por cohortes
+para analizar el comportamiento de retención de la marca.
       </p>
     </div>
 
@@ -1665,7 +1672,16 @@ if (accessGranted) {
 
       const totalPurchasingCustomers =
         Number(periodData.totalPurchasingCustomers) || 0;
+const conversionPeriod = conversionData.find(
+  (item) => item.period === periodData.period
+);
 
+const totalOrders = Number(conversionPeriod?.orders) || 0;
+
+const purchaseFrequency =
+  totalPurchasingCustomers > 0
+    ? totalOrders / totalPurchasingCustomers
+    : 0;
       const cohortInitialCustomers =
         Number(periodData.cohortInitialCustomers) || 0;
 
@@ -1702,16 +1718,6 @@ if (accessGranted) {
           key: "cohortRepeatCustomers",
           label: "Cohort Customers with repeat purchase",
           unit: "clientes",
-        },
-        {
-          key: "averageTimeBetweenPurchases",
-          label: "Average Time Between Purchases",
-          unit: "días",
-        },
-        {
-          key: "medianTimeBetweenPurchases",
-          label: "Median Time Between Purchases",
-          unit: "días",
         },
       ] as const;
 
@@ -1755,7 +1761,7 @@ if (accessGranted) {
                 <input
                   type="text"
                   min="0"
-                  step={field.unit === "días" ? "0.01" : "1"}
+                  step="1"
                   value={periodData[field.key]}
                   onChange={(e) =>
                     updateRetention(
@@ -1777,7 +1783,7 @@ if (accessGranted) {
             Métricas de retención calculadas
           </h5>
 
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
               <p className="text-xs text-white/40">
                 Returning Customer Rate
@@ -1801,7 +1807,19 @@ if (accessGranted) {
                 Cohort Customers with repeat purchase / Cohort Customers (initial)
               </p>
                         </div>
+                        <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+  <p className="text-xs text-white/40">
+    Purchase Frequency
+  </p>
+  <p className="mt-2 text-lg font-semibold text-purple-200">
+    {purchaseFrequency.toFixed(2)}x
+  </p>
+  <p className="mt-2 text-xs text-white/30">
+    Total Orders / Total Unique Purchasing Customers
+  </p>
+</div>
                     </div>
+                    
           </>
           )}
         </div>
@@ -1821,8 +1839,7 @@ if (accessGranted) {
 
     <p className="text-xs leading-5 text-white/35">
       Introduce los datos de los últimos 30 días, 90 días, 6 meses y 12 meses.
-      Los tiempos entre compras se expresan en días. Por ahora, la información
-      todavía no se guarda.
+      Por ahora, la información todavía no se guarda.
     </p>
   </div>
 
