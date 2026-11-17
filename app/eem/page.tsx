@@ -518,7 +518,7 @@ const [submitError, setSubmitError] = useState("");
 const [analysisSent, setAnalysisSent] = useState(false);
 
 const [activeSection, setActiveSection] = useState(0);
-
+const [sectionValidationError, setSectionValidationError] = useState("");
 const sections = [
   "Datos generales",
   "Economía del producto",
@@ -527,6 +527,87 @@ const sections = [
   "Retención y recurrencia",
   "Costes operativos",
 ];
+
+const validateSection = (section: number): string | null => {
+  if (section === 0) {
+    if (!storeUrl.trim()) return "Completa la URL de tu tienda.";
+    if (!platform.trim()) return "Selecciona tu plataforma e-commerce.";
+    if (!country.trim()) return "Completa el país de operación.";
+    if (!currency.trim()) return "Selecciona la moneda.";
+    if (!analysisPeriod.trim()) return "Selecciona el periodo del análisis.";
+  }
+
+  if (section === 1) {
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+
+      const missing = Object.entries(product).some(
+        ([key, value]) =>
+          key !== "id" &&
+          (typeof value !== "string" || !value.trim())
+      );
+
+      if (missing) {
+        return `Completa todos los campos del Producto ${i + 1}.`;
+      }
+    }
+  }
+
+  const requiredPeriods = ["30D", "90D"];
+
+  if (section === 2) {
+    for (const period of marketingData.filter((item) =>
+      requiredPeriods.includes(item.period)
+    )) {
+      const missing = Object.entries(period).some(
+        ([key, value]) =>
+          key !== "period" &&
+          (typeof value !== "string" || !value.trim())
+      );
+
+      if (missing) {
+        return `Completa todos los campos del periodo ${period.period} en Adquisición y marketing.`;
+      }
+    }
+  }
+
+  if (section === 3) {
+    for (const period of conversionData.filter((item) =>
+      requiredPeriods.includes(item.period)
+    )) {
+      const missing = Object.entries(period).some(
+        ([key, value]) =>
+          key !== "period" &&
+          (typeof value !== "string" || !value.trim())
+      );
+
+      if (missing) {
+        return `Completa todos los campos del periodo ${period.period} en Conversión y funnel.`;
+      }
+    }
+  }
+
+  if (section === 4) {
+    for (const period of retentionData.filter((item) =>
+      requiredPeriods.includes(item.period)
+    )) {
+      const missing = Object.entries(period).some(
+        ([key, value]) =>
+          key !== "period" &&
+          (typeof value !== "string" || !value.trim())
+      );
+
+      if (missing) {
+        return `Completa todos los campos del periodo ${period.period} en Retención y recurrencia.`;
+      }
+    }
+  }
+
+  // El bloque OPEX (sección 5) es opcional.
+  return null;
+};
+
+const currentSectionComplete = validateSection(activeSection) === null;
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
@@ -927,7 +1008,29 @@ if (accessGranted) {
                     <button
                       key={section}
                       type="button"
-                      onClick={() => setActiveSection(index)}
+                      onClick={() => {
+  if (index <= activeSection) {
+    setSectionValidationError("");
+    setActiveSection(index);
+    return;
+  }
+
+  for (
+    let sectionToCheck = activeSection;
+    sectionToCheck < index;
+    sectionToCheck++
+  ) {
+    const validationError = validateSection(sectionToCheck);
+
+    if (validationError) {
+      setSectionValidationError(validationError);
+      return;
+    }
+  }
+
+  setSectionValidationError("");
+  setActiveSection(index);
+}}
                       className={`flex min-w-[210px] items-center gap-3 rounded-xl border px-3 py-3 text-left transition-all lg:min-w-0 ${
                         activeSection === index
                           ? "border-purple-400/25 bg-purple-500/[0.12] text-white"
@@ -1333,7 +1436,7 @@ if (accessGranted) {
                 </label>
 
                 <input
-                  type="number"
+                  type="text"
                   min="0"
                   step="0.01"
                   value={periodData[field.key]}
@@ -1650,7 +1753,7 @@ if (accessGranted) {
                 </label>
 
                 <input
-                  type="number"
+                  type="text"
                   min="0"
                   step={field.unit === "días" ? "0.01" : "1"}
                   value={periodData[field.key]}
@@ -1870,12 +1973,25 @@ if (accessGranted) {
                   {activeSection < sections.length - 1 ? (
                     <button
                       type="button"
-                      onClick={() =>
-                        setActiveSection((current) =>
-                          Math.min(sections.length - 1, current + 1)
-                        )
-                      }
-                      className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#D946EF] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_25px_rgba(217,70,239,0.18)] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(217,70,239,0.3)]"
+                      disabled={!currentSectionComplete}
+                      onClick={() => {
+  const validationError = validateSection(activeSection);
+
+  if (validationError) {
+    setSectionValidationError(validationError);
+    return;
+  }
+
+  setSectionValidationError("");
+  setActiveSection((current) =>
+    Math.min(sections.length - 1, current + 1)
+  );
+}}
+                      className={`rounded-full px-6 py-3 text-sm font-semibold transition-all ${
+  currentSectionComplete
+    ? "bg-gradient-to-r from-[#7C3AED] to-[#D946EF] text-white shadow-[0_0_25px_rgba(217,70,239,0.18)] hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(217,70,239,0.3)]"
+    : "cursor-not-allowed bg-white/10 text-white/30"
+}`}
                     >
                       Siguiente sección →
                     </button>
