@@ -26,7 +26,7 @@ type MarketingPeriodInput = {
   marketingSpend: string;
   acquisitionCosts: string;
   newCustomersAll: string;
-  firstOrderGP: string;
+
 };
 
 type ConversionPeriodInput = {
@@ -44,6 +44,7 @@ type RetentionPeriodInput = {
   totalPurchasingCustomers: string;
   cohortInitialCustomers: string;
   cohortRepeatCustomers: string;
+  cohortRevenue: string;
 };
 type OpexPeriodInput = {
   period: string;
@@ -95,7 +96,6 @@ const [marketingData, setMarketingData] = useState<MarketingPeriodInput[]>([
     marketingSpend: "",
     acquisitionCosts: "",
     newCustomersAll: "",
-    firstOrderGP: "",
   },
   {
     period: "90D",
@@ -107,7 +107,6 @@ const [marketingData, setMarketingData] = useState<MarketingPeriodInput[]>([
     marketingSpend: "",
     acquisitionCosts: "",
     newCustomersAll: "",
-    firstOrderGP: "",
   },
   {
     period: "6M",
@@ -119,7 +118,6 @@ const [marketingData, setMarketingData] = useState<MarketingPeriodInput[]>([
     marketingSpend: "",
     acquisitionCosts: "",
     newCustomersAll: "",
-    firstOrderGP: "",
   },
   {
     period: "12M",
@@ -131,7 +129,6 @@ const [marketingData, setMarketingData] = useState<MarketingPeriodInput[]>([
     marketingSpend: "",
     acquisitionCosts: "",
     newCustomersAll: "",
-    firstOrderGP: "",
   },
 ]);
 
@@ -177,6 +174,7 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
+    cohortRevenue: "",
   },
   {
     period: "90D",
@@ -184,6 +182,7 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
+    cohortRevenue: "",
   },
   {
     period: "6M",
@@ -191,6 +190,7 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
+    cohortRevenue: "",
   },
   {
     period: "12M",
@@ -198,6 +198,7 @@ const [retentionData, setRetentionData] = useState<RetentionPeriodInput[]>([
     totalPurchasingCustomers: "",
     cohortInitialCustomers: "",
     cohortRepeatCustomers: "",
+    cohortRevenue: "",
   },
 ]);
 
@@ -357,41 +358,96 @@ const handleFinishAnalysis = async () => {
   const toNumber = (value: string) =>
     value.trim() === "" ? null : Number(value);
 
-  const calculatedMetrics = {
-    productEconomics: products.map((product) => {
-      const cpu = toNumber(product.cpu);
-      const inbound = toNumber(product.inboundTransport);
-      const pickPack = toNumber(product.pickPack);
-      const outbound = toNumber(product.outboundTransport);
-      const price = toNumber(product.netPrice);
 
-      const hasCosts =
-        cpu !== null &&
-        inbound !== null &&
-        pickPack !== null &&
-        outbound !== null;
+const productEconomicsCalculated = products.map((product) => {
+  const cpu = toNumber(product.cpu);
+  const inbound = toNumber(product.inboundTransport);
+  const pickPack = toNumber(product.pickPack);
+  const outbound = toNumber(product.outboundTransport);
+  const price = toNumber(product.netPrice);
 
-      const cogs = hasCosts ? cpu + inbound : null;
-      const cvu = hasCosts ? cogs! + pickPack + outbound : null;
-      const contributionMargin =
-        price !== null && cvu !== null ? price - cvu : null;
+  const hasCosts =
+    cpu !== null &&
+    inbound !== null &&
+    pickPack !== null &&
+    outbound !== null;
 
-      return {
-        product: product.name || `Producto ${product.id}`,
-        cogsUnitario: cogs,
-        cvu,
-        contributionMargin,
-        contributionMarginRatio:
-          price !== null && price > 0 && contributionMargin !== null
-            ? (contributionMargin / price) * 100
-            : null,
-        roasBreakEven:
-          price !== null && price > 0 && contributionMargin !== null &&
-          contributionMargin > 0
-            ? price / contributionMargin
-            : null,
-      };
-    }),
+  const cogs = hasCosts ? cpu + inbound : null;
+  const cvu = hasCosts ? cogs! + pickPack + outbound : null;
+
+  const contributionMargin =
+    price !== null && cvu !== null ? price - cvu : null;
+
+  return {
+    product: product.name || `Producto ${product.id}`,
+    netPrice: price,
+    cogsUnitario: cogs,
+    cvu,
+    contributionMargin,
+
+    contributionMarginRatio:
+      price !== null && price > 0 && contributionMargin !== null
+        ? (contributionMargin / price) * 100
+        : null,
+
+    roasBreakEven:
+      price !== null &&
+      price > 0 &&
+      contributionMargin !== null &&
+      contributionMargin > 0
+        ? price / contributionMargin
+        : null,
+
+    units30: toNumber(product.units30),
+    units90: toNumber(product.units90),
+    units6m: toNumber(product.units6m),
+    units12m: toNumber(product.units12m),
+  };
+});
+
+const productContributionByPeriod = ["30D", "90D", "6M", "12M"].map(
+  (period) => {
+    let revenue = 0;
+    let contributionMarginTotal = 0;
+    let hasValidProducts = false;
+
+    productEconomicsCalculated.forEach((product) => {
+      const units =
+        period === "30D"
+          ? product.units30
+          : period === "90D"
+          ? product.units90
+          : period === "6M"
+          ? product.units6m
+          : product.units12m;
+
+      if (
+        product.netPrice !== null &&
+        product.contributionMargin !== null &&
+        units !== null
+      ) {
+        revenue += product.netPrice * units;
+        contributionMarginTotal += product.contributionMargin * units;
+        hasValidProducts = true;
+      }
+    });
+
+    return {
+      period,
+      revenue,
+      contributionMarginTotal,
+      contributionMarginRatio:
+        revenue > 0 && hasValidProducts
+          ? (contributionMarginTotal / revenue) * 100
+          : null,
+    };
+  }
+);
+
+const calculatedMetrics = {
+  productEconomics: productEconomicsCalculated,
+  productContributionByPeriod,
+
 
     conversion: conversionData.map((item) => {
       const marketing = marketingData.find(
@@ -438,13 +494,43 @@ const handleFinishAnalysis = async () => {
   const cohortInitial = toNumber(item.cohortInitialCustomers);
   const cohortRepeat = toNumber(item.cohortRepeatCustomers);
 
+  const cohortRevenue = toNumber(item.cohortRevenue);
+
   const conversionPeriod = conversionData.find(
+    (period) => period.period === item.period
+  );
+
+  const marketingPeriod = marketingData.find(
     (period) => period.period === item.period
   );
 
   const orders = conversionPeriod
     ? toNumber(conversionPeriod.orders)
     : null;
+
+  const acquisitionCosts = marketingPeriod
+    ? toNumber(marketingPeriod.acquisitionCosts)
+    : null;
+
+  const newCustomersAll = marketingPeriod
+    ? toNumber(marketingPeriod.newCustomersAll)
+    : null;
+
+
+  const ltvRevenue =
+    cohortInitial !== null &&
+    cohortInitial > 0 &&
+    cohortRevenue !== null
+      ? cohortRevenue / cohortInitial
+      : null;
+
+
+  const cac =
+    acquisitionCosts !== null &&
+    newCustomersAll !== null &&
+    newCustomersAll > 0
+      ? acquisitionCosts / newCustomersAll
+      : null;
 
   return {
     period: item.period,
@@ -467,6 +553,13 @@ const handleFinishAnalysis = async () => {
       orders !== null
         ? orders / total
         : null,
+
+    ltvRevenue,
+
+
+    cac,
+
+
   };
 }),
   };
@@ -598,11 +691,14 @@ const validateSection = (section: number): string | null => {
     for (const period of retentionData.filter((item) =>
       requiredPeriods.includes(item.period)
     )) {
-      const missing = Object.entries(period).some(
-        ([key, value]) =>
-          key !== "period" &&
-          (typeof value !== "string" || !value.trim())
-      );
+    const optionalFields = ["cohortRevenue"];
+
+const missing = Object.entries(period).some(
+  ([key, value]) =>
+    key !== "period" &&
+    !optionalFields.includes(key) &&
+    (typeof value !== "string" || !value.trim())
+);
 
       if (missing) {
         return `Completa todos los campos del periodo ${period.period} en Retención y recurrencia.`;
@@ -1405,7 +1501,7 @@ if (accessGranted) {
         { key: "marketingSpend", label: "Inversión total en marketing (todos los canales)", unit: currency },
         { key: "acquisitionCosts", label: "Costes totales de adquisición", unit: currency },
         { key: "newCustomersAll", label: "Nuevos clientes de todos los canales", unit: "clientes" },
-        { key: "firstOrderGP", label: "Gross Profit de primeras compras de nuevos clientes", unit: currency },
+
       ] as const;
 
       return (
@@ -1697,6 +1793,125 @@ const purchaseFrequency =
         cohortInitialCustomers > 0
           ? (cohortRepeatCustomers / cohortInitialCustomers) * 100
           : 0;
+      const cohortRevenue =
+        periodData.cohortRevenue.trim() === ""
+          ? null
+          : Number(periodData.cohortRevenue);
+
+ 
+const marketingPeriod = marketingData.find(
+  (item) => item.period === periodData.period
+);
+
+const acquisitionCosts =
+  marketingPeriod?.acquisitionCosts.trim() === ""
+    ? null
+    : Number(marketingPeriod?.acquisitionCosts);
+
+const newCustomersAll =
+  marketingPeriod?.newCustomersAll.trim() === ""
+    ? null
+    : Number(marketingPeriod?.newCustomersAll);
+
+const ltvRevenue =
+  cohortInitialCustomers > 0 && cohortRevenue !== null
+    ? cohortRevenue / cohortInitialCustomers
+    : null;
+
+const cac =
+  acquisitionCosts !== null &&
+  newCustomersAll !== null &&
+  newCustomersAll > 0
+    ? acquisitionCosts / newCustomersAll
+    : null;
+
+const periodMCData = products.reduce(
+  (acc, product) => {
+    const price =
+      product.netPrice.trim() === ""
+        ? null
+        : Number(product.netPrice);
+
+    const cpu =
+      product.cpu.trim() === ""
+        ? null
+        : Number(product.cpu);
+
+    const inbound =
+      product.inboundTransport.trim() === ""
+        ? null
+        : Number(product.inboundTransport);
+
+    const pickPack =
+      product.pickPack.trim() === ""
+        ? null
+        : Number(product.pickPack);
+
+    const outbound =
+      product.outboundTransport.trim() === ""
+        ? null
+        : Number(product.outboundTransport);
+
+    const unitsValue =
+      periodData.period === "30D"
+        ? product.units30
+        : periodData.period === "90D"
+        ? product.units90
+        : periodData.period === "6M"
+        ? product.units6m
+        : product.units12m;
+
+    const units =
+      unitsValue.trim() === ""
+        ? null
+        : Number(unitsValue);
+
+    if (
+      price !== null &&
+      cpu !== null &&
+      inbound !== null &&
+      pickPack !== null &&
+      outbound !== null &&
+      units !== null
+    ) {
+      const cvu = cpu + inbound + pickPack + outbound;
+      const mcu = price - cvu;
+
+      acc.revenue += price * units;
+      acc.mcTotal += mcu * units;
+      acc.valid = true;
+    }
+
+    return acc;
+  },
+  {
+    revenue: 0,
+    mcTotal: 0,
+    valid: false,
+  }
+);
+
+const ratioMCbase =
+  periodMCData.valid && periodMCData.revenue > 0
+    ? (periodMCData.mcTotal / periodMCData.revenue) * 100
+    : null;
+
+const mcCac =
+  acquisitionCosts !== null &&
+  acquisitionCosts > 0 &&
+  periodMCData.valid
+    ? periodMCData.mcTotal / acquisitionCosts
+    : null;
+
+const ltvMC =
+  ltvRevenue !== null && ratioMCbase !== null
+    ? ltvRevenue * (ratioMCbase / 100)
+    : null;
+
+const ltvMCcac =
+  ltvMC !== null && cac !== null && cac > 0
+    ? ltvMC / cac
+    : null;
 
       const fields = [
         {
@@ -1715,10 +1930,16 @@ const purchaseFrequency =
           unit: "clientes",
         },
         {
-          key: "cohortRepeatCustomers",
-          label: "Cohort Customers with repeat purchase",
-          unit: "clientes",
-        },
+  key: "cohortRepeatCustomers",
+  label: "Cohort Customers with repeat purchase",
+  unit: "clientes",
+},
+{
+  key: "cohortRevenue",
+  label: "Cohort Revenue (acumulado)",
+  unit: currency,
+},
+
       ] as const;
 
       return (
@@ -1818,7 +2039,60 @@ const purchaseFrequency =
     Total Orders / Total Unique Purchasing Customers
   </p>
 </div>
-                    </div>
+                                <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+              <p className="text-xs text-white/40">LTV Revenue</p>
+              <p className="mt-2 text-lg font-semibold text-purple-200">
+                {ltvRevenue !== null ? ltvRevenue.toFixed(2) + " " + currency : "Sin datos"}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+              <p className="text-xs text-white/40">CAC</p>
+              <p className="mt-2 text-lg font-semibold text-purple-200">
+                {cac !== null ? cac.toFixed(2) + " " + currency : "Sin datos"}
+              </p>
+            </div>
+            <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+              <p className="text-xs text-white/40">Ratio MC base</p>
+              <p className="mt-2 text-lg font-semibold text-purple-200">
+                {ratioMCbase !== null ? ratioMCbase.toFixed(2) + "%" : "Sin datos"}
+              </p>
+              <p className="mt-2 text-xs text-white/30">
+                MC Total Base / Revenue del periodo
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+              <p className="text-xs text-white/40">MC:CAC (periodo)</p>
+              <p className="mt-2 text-lg font-semibold text-purple-200">
+                {mcCac !== null ? mcCac.toFixed(2) + "x" : "Sin datos"}
+              </p>
+              <p className="mt-2 text-xs text-white/30">
+                MC Total Base / Acquisition Costs
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+              <p className="text-xs text-white/40">LTV MC (estimado)</p>
+              <p className="mt-2 text-lg font-semibold text-purple-200">
+                {ltvMC !== null ? ltvMC.toFixed(2) + " " + currency : "Sin datos"}
+              </p>
+              <p className="mt-2 text-xs text-white/30">
+                LTV Revenue × Ratio MC base
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+              <p className="text-xs text-white/40">LTV MC:CAC (estimado)</p>
+              <p className="mt-2 text-lg font-semibold text-purple-200">
+                {ltvMCcac !== null ? ltvMCcac.toFixed(2) + "x" : "Sin datos"}
+              </p>
+              <p className="mt-2 text-xs text-white/30">
+                LTV MC estimado / CAC
+              </p>
+            </div>
+
+          </div>
                     
           </>
           )}
